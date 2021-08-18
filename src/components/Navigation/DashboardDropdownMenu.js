@@ -5,7 +5,7 @@ import PermRender from '../_common/PermRender';
 
 const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
     return (
-        <UncontrolledDropdown className="btn-rotate" nav setActiveFromChild>
+        <UncontrolledDropdown className="btn-rotate" nav active={["Dashboard Home", "Company", "Payout", "Applications"].includes(routeName)}>
             <DropdownToggle caret nav>
                 Dashboard
             </DropdownToggle>
