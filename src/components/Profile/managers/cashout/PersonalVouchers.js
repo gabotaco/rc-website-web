@@ -8,11 +8,6 @@ const PersonalVouchers = (props) => {
 
     useEffect(() => {
         Api.getTycoonData().then((response) => {
-            if (response.error === "Non-existant user") {
-                setVouchers('UNKNOWN')
-                return;
-            }
-    
             let pigsVouchers = 0;
             let rtsVouchers = 0;
     

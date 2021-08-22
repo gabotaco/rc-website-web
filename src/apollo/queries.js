@@ -79,6 +79,14 @@ export const GET_AUTH_USER_PROGRESS = gql(`
     }
 `)
 
+export const GET_AUTH_USER_PIGS_VOUCHERS = gql(`
+    query GetAuthUserPigsVouchers {
+        getAuthUserPigsVouchers {
+            vouchers
+        }
+    }
+`)
+
 export const GET_AUTH_USER_TURNINS = gql(`
     query GetAuthUserTurnins {
         getAuthUserTurnins {
