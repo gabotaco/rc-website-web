@@ -63,26 +63,26 @@ function initGUI() {
         }
     }
 
-    L.Control.Watermark = L.Control.extend({
-        onAdd: function (map) {
-            // const overalDiv = L.DomUtil.create('div', 'leaflet-control-attribution leaflet-control')
-            // overalDiv.innerHTML = `<a href="http://ttmap.online/" title="The original TT Map" style="outline: currentcolor none medium;">TTMap</a>`
+    // L.Control.Watermark = L.Control.extend({
+    //     onAdd: function (map) {
+    //         // const overalDiv = L.DomUtil.create('div', 'leaflet-control-attribution leaflet-control')
+    //         // overalDiv.innerHTML = `<a href="http://ttmap.online/" title="The original TT Map" style="outline: currentcolor none medium;">TTMap</a>`
 
-            // return overalDiv;
-        },
+    //         // return overalDiv;
+    //     },
 
-        onRemove: function (map) {
-            // Nothing to do here
-        }
-    });
+    //     onRemove: function (map) {
+    //         // Nothing to do here
+    //     }
+    // });
 
-    L.control.watermark = function (opts) {
-        return new L.Control.Watermark(opts);
-    }
+    // L.control.watermark = function (opts) {
+    //     return new L.Control.Watermark(opts);
+    // }
 
-    L.control.watermark({
-        position: 'bottomleft'
-    }).addTo(map);
+    // L.control.watermark({
+    //     position: 'bottomleft'
+    // }).addTo(map);
 }
 
 function toggleGUIblock(el) {
