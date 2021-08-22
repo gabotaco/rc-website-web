@@ -14,7 +14,7 @@ class AppLayout extends React.Component {
             if (prop.collapse) {
                 return this.getRoutes(prop.views);
             }
-            if (prop.layout === "/app") {
+            if (prop.layout === "/home") {
                 return (
                     <Route
                         path={prop.layout + prop.path}

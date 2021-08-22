@@ -5,7 +5,7 @@ import AppConfigs from "../../config/app_configs"
 
 class ApplyNow extends React.Component {
     render() {
-        let applyText = <h1>You aren't a member! Apply <a href="/app/apply/">here</a></h1>
+        let applyText = <h1>You aren't a member! Apply <a href="/home/apply/">here</a></h1>
         if (this.props.ttools) {
             applyText = <React.Fragment>
                 <h1>

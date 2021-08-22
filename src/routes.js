@@ -25,37 +25,37 @@ const routes = [
         path: "/",
         name: "Home",
         component: HomeScreen,
-        layout: "/app"
+        layout: "/home"
     },
     {
         path: "/dashboard",
         name: "Dashboard Home",
         component: DashboardScreen,
-        layout: "/app"
+        layout: "/home"
     },
     {
         path: "/dashboard/hire",
         name: "Applications",
         component: ApplicationsScreen,
-        layout: "/app"
+        layout: "/home"
     },
     {
         path: "/dashboard/payout",
         name: "Payout",
         component: PayoutScreen,
-        layout: "/app"
+        layout: "/home"
     },
     {
         path: "/ttools/admin",
         name: "Admin",
         component: TToolsAdminScreen,
-        layout: "/app"
+        layout: "/home"
     },
     {
         path: "/profile",
         name: "Profile",
         component: ProfileScreen,
-        layout: "/app"
+        layout: "/home"
     },
     {
         path: "*",
@@ -67,7 +67,7 @@ const routes = [
         path: "*",
         name: "404",
         component: ErrorPage,
-        layout: "/app",
+        layout: "/home",
     },
 ]
 

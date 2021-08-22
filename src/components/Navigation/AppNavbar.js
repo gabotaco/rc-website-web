@@ -22,7 +22,7 @@ const AppNavbar = (props) => {
 
   return (
     <Navbar dark expand="md" style={Styles.Navbar} id="navbar">
-      <NavbarBrand href="/app">
+      <NavbarBrand href="/home">
         <img src={require("../../assets/img/logo.png")} style={Styles.logo}
           className="d-inline-block align-top" alt="" />
         Rockwell Corporation
@@ -34,7 +34,7 @@ const AppNavbar = (props) => {
           <DashboardDropdownMenu routeName={props.routeName} />
           <PermRender perms={[3,2,1]} authorizedUser={props.authorizedUser}>
             <NavItem active={props.routeName === "Profile"}>
-              <NavLink href="/app/profile">Profile</NavLink>
+              <NavLink href="/home/profile">Profile</NavLink>
             </NavItem>
           </PermRender>
         </Nav>

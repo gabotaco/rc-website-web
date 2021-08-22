@@ -17,12 +17,12 @@ const HomeScreen = () => {
         }
         document.body.appendChild(leafScript)
         
-        document.body.appendChild(useScript('/app/js/map.js'))
-        document.body.appendChild(useScript("/app/js/icons.js"))
-        document.body.appendChild(useScript("/app/js/hud.js"))
-        document.body.appendChild(useScript("/app/js/markers.js"))
-        document.body.appendChild(useScript("/app/js/serverscan.js"))
-        document.body.appendChild(useScript("/app/js/canvas.js"))
+        document.body.appendChild(useScript('/home/js/map.js'))
+        document.body.appendChild(useScript("/home/js/icons.js"))
+        document.body.appendChild(useScript("/home/js/hud.js"))
+        document.body.appendChild(useScript("/home/js/markers.js"))
+        document.body.appendChild(useScript("/home/js/serverscan.js"))
+        document.body.appendChild(useScript("/home/js/canvas.js"))
     }, [])
 
     return (

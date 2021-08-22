@@ -11,8 +11,8 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
             </DropdownToggle>
             <DropdownMenu right>
                 <DropdownItem
-                    href="/app/dashboard"
-                    onClick={()=> history.push('/app/dashboard')}
+                    href="/home/dashboard"
+                    onClick={()=> history.push('/home/dashboard')}
                     active={routeName === "Dashboard Home"}
                 >
                     <i className={"bi bi-house"} style={Styles.icon}/>
@@ -20,8 +20,8 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem
-                    href="/app/dashboard/company"
-                    onClick={()=> history.push('/app/dashboard/company')}
+                    href="/home/dashboard/company"
+                    onClick={()=> history.push('/home/dashboard/company')}
                     active={routeName === "Company"}
                 >
                     <i className={"bi bi-kanban"} style={Styles.icon}/>
@@ -29,8 +29,8 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 </DropdownItem>
                 <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
                     <DropdownItem
-                        href="/app/dashboard/payout"
-                        onClick={()=> history.push('/app/dashboard/payout')}
+                        href="/home/dashboard/payout"
+                        onClick={()=> history.push('/home/dashboard/payout')}
                         active={routeName === "Payout"}
                     >
                         <i className={"bi bi-wallet"} style={Styles.icon}/>
@@ -39,8 +39,8 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 </PermRender>
                 <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                     <DropdownItem
-                        href="/app/dashboard/hire"
-                        onClick={()=> history.push('/app/dashboard/hire')}
+                        href="/home/dashboard/hire"
+                        onClick={()=> history.push('/home/dashboard/hire')}
                         active={routeName === "Applications"}
                     >
                         <i className={"bi bi-file-person"} style={Styles.icon}/>

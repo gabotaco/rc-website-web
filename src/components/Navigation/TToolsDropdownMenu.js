@@ -10,8 +10,8 @@ const TToolsDropdownMenu = ({history, routeName}) => {
             </DropdownToggle>
             <DropdownMenu right>
                 <DropdownItem
-                    href="/app/ttools"
-                    onClick={()=> history.push('/app/ttools')}
+                    href="/home/ttools"
+                    onClick={()=> history.push('/home/ttools')}
                     active={routeName === "TTools Home"}
                 >
                     <i className={"bi bi-house"} style={Styles.icon}/>
@@ -19,24 +19,24 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 </DropdownItem>
                 <DropdownItem divider />
                 <DropdownItem
-                    href="/app/ttools/biz"
-                    onClick={()=> history.push('/app/ttools/biz')}
+                    href="/home/ttools/biz"
+                    onClick={()=> history.push('/home/ttools/biz')}
                     active={routeName === "Businesses"}
                 >
                     <i className={"bi bi-building"} style={Styles.icon}/>
                     Businesses
                 </DropdownItem>
                 <DropdownItem
-                    href="/app/ttools/storage"
-                    onClick={()=> history.push('/app/ttools/storage')}
+                    href="/home/ttools/storage"
+                    onClick={()=> history.push('/home/ttools/storage')}
                     active={routeName === "Storages"}
                 >
                     <i className={"bi bi-archive"} style={Styles.icon}/>
                     Storages
                 </DropdownItem>
                 <DropdownItem
-                    href="/app/ttools/trucking"
-                    onClick={()=> history.push('/app/ttools/trucking')}
+                    href="/home/ttools/trucking"
+                    onClick={()=> history.push('/home/ttools/trucking')}
                     active={routeName === "Trucking"}
                 >
                     <i className={"bi bi-truck"} style={Styles.icon}/>

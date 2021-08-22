@@ -28,7 +28,7 @@ const TToolsAdminScreen = () => {
                         <AdminPanel authorizedUser={authorizedUser} />
                     </PermRender>
                     <PermRender ttperms={[2,1,0]} authorizedUser={authorizedUser}>
-                        <Redirect to="/app/ttools" />
+                        <Redirect to="/home/ttools" />
                     </PermRender>
                 </React.Fragment>
                 )
