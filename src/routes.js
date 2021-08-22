@@ -5,7 +5,8 @@ import HomeScreen from "./components/Home/HomeScreen"
 import ProfileScreen from "./components/Profile/ProfileScreen"
 import DashboardScreen from "./components/Dashboard/Home/DashboardScreen"
 import TToolsAdminScreen from "./components/TTools/Admin/TToolsAdminScreen"
-import ApplicationsScene from "./components/Dashboard/Applications/ApplicationsScene"
+import ApplicationsScreen from "./components/Dashboard/Applications/ApplicationsScreen"
+import PayoutScreen from "./components/Dashboard/Payout/PayoutScreen"
 
 const routes = [
     {
@@ -35,7 +36,13 @@ const routes = [
     {
         path: "/dashboard/hire",
         name: "Applications",
-        component: ApplicationsScene,
+        component: ApplicationsScreen,
+        layout: "/app"
+    },
+    {
+        path: "/dashboard/payout",
+        name: "Payout",
+        component: PayoutScreen,
         layout: "/app"
     },
     {

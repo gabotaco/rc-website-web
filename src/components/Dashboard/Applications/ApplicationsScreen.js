@@ -8,7 +8,7 @@ import ApplyNow from "../../_common/ApplyNow"
 import ApplicationsTable from "./ApplicationsTable"
 import SearchUserDetails from "./SearchUserDetails"
 
-const ApplicationsScene = () => {
+const ApplicationsScreen = () => {
 
     useEffect(() => {
         document.title = `RC - Applications`
@@ -43,4 +43,4 @@ const ApplicationsScene = () => {
     )
 }
 
-export default ApplicationsScene
+export default ApplicationsScreen
