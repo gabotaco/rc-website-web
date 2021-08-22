@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import { Container, Row, Col, Navbar, NavbarToggler, Collapse, Nav, NavItem, Input } from 'reactstrap';
+import { Container, Row, Col, Navbar, NavbarToggler, Collapse, Nav, NavItem } from 'reactstrap';
 import * as Api from "../../../library/Api/api"
 import LoadingIcon from "../../_presentational/LoadingIcon";
 import FormattedNumber from "../../_common/FormattedNumber"
