@@ -29,6 +29,7 @@ const ApplicationsScene = () => {
                     <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                         <h1>Applications</h1>
                         <ApplicationsTable />
+                        <h1>Get user details</h1>
                         <SearchUserDetails />
                     </PermRender>
                     <PermRender perms={[0]} authorizedUser={authorizedUser}>

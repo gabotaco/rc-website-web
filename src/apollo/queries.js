@@ -146,6 +146,18 @@ export const SET_USER_ID = gql(`
     }
 `)
 
+export const SET_APPLICANT_CONTACTED = gql(`
+    mutation SetApplicantContacted($id: Int!) {
+        setApplicantContacted: set_applicant_contacted(id: $id)
+    }
+`)
+
+export const SET_APPLICANT_REJECTED = gql(`
+    mutation SetApplicantRejected($id: Int!, $reason: String!) {
+        setApplicantRejected: set_applicant_rejected(id: $id, reason: $reason)
+    }
+`)
+
 export const GET_ACTIVE_APPLICANTS = gql(`
     query GetActiveApplicants {
         getActiveApplicants {
@@ -158,5 +170,11 @@ export const GET_ACTIVE_APPLICANTS = gql(`
             status_info,
             createdAt
         }
+    }
+`)
+
+export const UPDATE_APPLICANT_STATUS_INFO = gql(`
+    mutation UpdateApplicantStatusInfo($id: Int!, $status_info: String!) {
+        updateApplicantStatusInfo: update_applicant_status_info(id: $id, status_info: $status_info)
     }
 `)

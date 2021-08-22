@@ -3,7 +3,7 @@ import {makeApiRequest} from "./makeApiRequest"
 export const restartAlfred = () => {
     return makeApiRequest({
         method: 'GET',
-        url: '/manager/restart'
+        url: '/alfred/restart'
     }).then((response) => {
         if (response.ok) return response;
         else throw response;
@@ -56,5 +56,26 @@ export const getCharges = () => {
     return makeApiRequest({
         method: 'GET',
         url: '/tycoon/key'
+    })
+}
+
+export const getApplicantDetails = (uid) => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/applicant/${uid}/details`
+    })
+}
+
+export const hire = (company, name, game_id, discord, app_id) => {
+    return makeApiRequest({
+        method: 'POST',
+        url: `/member/hire`,
+        body: {
+            name: name,
+            member: game_id,
+            company: company,
+            discord: discord,
+            app_id: app_id
+        }
     })
 }

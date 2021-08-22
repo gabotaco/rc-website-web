@@ -31,8 +31,8 @@ const ApplicationsTable = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {applications.map((applicant) => {
-                                return <ApplicantRow applicant={applicant} />
+                            {applications.map((applicant, i) => {
+                                return <ApplicantRow applicant={applicant} key={i} />
                             })}
                         </tbody>
                     </Table>
