@@ -15,16 +15,21 @@ export const makeApiRequest = (params) => {
     return fetch(getUrl(params.url), {
         method: params.method,
         headers: apiHeaders,
-        body: params.body,
+        body: JSON.stringify(params.body),
         credentials: 'include'
     })
     .then((response) => {
 		if(response.ok) {
 			return response.json()
 		} else {
-			throw response
+			return response.json().then((err) => {
+                if (err.error === "Unable to authenticate user") {
+                    alert("Access token expired, please log in again")
+                    return window.location.href = "/auth/login"
+                } else {
+                    throw err
+                }
+            })
 		}
-	}).catch((error) => {
-        throw new Error(error)
 	})
 }
