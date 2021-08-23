@@ -53,8 +53,11 @@ const VehicleMods = () => {
             const usedVehicles = [];
 
             response.forEach(vehicle => {
-                if (usedVehicles.includes(vehicle)) return;
-                usedVehicles.push(vehicle)
+                if (usedVehicles.filter((value) => value.inner === vehicle).length > 0) return;
+                usedVehicles.push({
+                    inner: vehicle,
+                    searchString: vehicle
+                })
             });
             setBennysData(usedVehicles)
             setIsLoading(false)
@@ -67,7 +70,7 @@ const VehicleMods = () => {
 
     function carSelected(vehicle) {
         setIsLoading(true)
-        Api.searchBennys(vehicle).then((response) => {
+        Api.searchBennys(vehicle.inner).then((response) => {
             setVehicledata(response)
             setIsLoading(false)
         }).catch(err => {
@@ -90,8 +93,8 @@ const VehicleMods = () => {
                     </Col>
                     <Col>
                         <FormGroup>
-                            <Label for="vehicle-mod-search">Search</Label>
-                            <SearchableDropdown id="vehicle-mod-search" placeholder="Vehicle name" data={bennysData} onSelected={carSelected} isLoading={isLoading} />
+                            <Label>Search</Label>
+                            <SearchableDropdown placeholder="Vehicle name" data={bennysData} onSelected={carSelected} isLoading={isLoading} />
                         </FormGroup>
                     </Col>
                 </Row>

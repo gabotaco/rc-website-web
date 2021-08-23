@@ -23,9 +23,12 @@ const SearchableDropdown = (props) => {
     }, [])
 
     function filterFunction(value) {
+        if (!Array.isArray(props.data)) {
+            return <DropdownItem disabled>props.data</DropdownItem>
+        }
         const searchButtons = props.data.reduce((buttons, data) => {
-            if (data.toUpperCase().indexOf(value.toUpperCase()) > -1) {
-                buttons.push(<DropdownItem key={data} onClick={() => props.onSelected(data)}>{data}</DropdownItem>)
+            if (data.searchString.toUpperCase().indexOf(value.toUpperCase()) > -1) {
+                buttons.push(<DropdownItem key={buttons.length} onClick={() => props.onSelected(data)}>{data.inner}</DropdownItem>)
             }
             return buttons;
         }, [])
