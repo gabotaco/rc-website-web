@@ -9,7 +9,10 @@ const StolenMoneyCalculator = (props) => {
     const [stolenMoney, setStolenMoney] = useState(undefined)
     const [inventoryStolenMoney, setInventoryStolenMoney] = useState(null)
 
-    const {data, error, loading} = useQuery(queries.GET_AUTH_USER_PIGS_VOUCHERS)
+    const {data, error} = useQuery(queries.GET_AUTH_USER_PIGS_VOUCHERS)
+    if (error) {
+        alert("Unable to get your voucher count")
+    }
     
     useEffect(() => {
         Api.getTycoonData().then((response) => {
@@ -27,6 +30,7 @@ const StolenMoneyCalculator = (props) => {
     }, [])
 
     function voucherWorth(playerTotalVouchers, voucherAmount) { //get how much to pay the person
+        /* eslint-disable */
         if (playerTotalVouchers < 6000) { //Hustler
             var RankVouchers = 6000
             var rankWorth = 3500
@@ -49,7 +53,7 @@ const StolenMoneyCalculator = (props) => {
             var RankVouchers = Infinity
             var rankWorth = 9000
         }
-
+        /* eslint-enable */
         if (playerTotalVouchers + voucherAmount >= RankVouchers) { //rank up
             const NextRankVouchers = voucherWorth(playerTotalVouchers + RankVouchers - playerTotalVouchers, voucherAmount - (RankVouchers - playerTotalVouchers))
             const CurrentRankVouchers = (RankVouchers - playerTotalVouchers) * rankWorth

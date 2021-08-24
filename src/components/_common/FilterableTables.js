@@ -16,6 +16,8 @@ const FilterableTables = (props) => {
             {props.tables.map((table, i) => {
                 if (activeFilter === table.filter) {
                     return <CustomTable key={i} headers={table.headers} data={table.data} format={table.formatter} config={table.config} />
+                } else {
+                    return null
                 }
             })}
         </div>

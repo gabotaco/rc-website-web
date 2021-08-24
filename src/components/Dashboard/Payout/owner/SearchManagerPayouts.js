@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState} from 'react';
 import { Label } from 'reactstrap';
 import SearchableDropdown from '../../../_common/SearchableDropdown';
 import { useQuery } from 'react-apollo-hooks';
@@ -10,6 +10,10 @@ const SearchManagerPayouts = (props) => {
     const [managerTable, setManagerTable] = useState(null)
 
     const {data, error, loading} = useQuery(queries.GET_ACTIVE_MANAGERS)
+    if (error) {
+        console.error(error)
+        alert("There was an error loading active managers")
+    }
     function makeData(data) {
         return {
             inner: `${data.member.in_game_id} ${data.member.in_game_name}`,
@@ -26,7 +30,7 @@ const SearchManagerPayouts = (props) => {
     return (
         <React.Fragment>
             <Label>Manager</Label>
-            <SearchableDropdown placeholder="Manager name, game id, or discord" data={data.getActiveManagers ? data.getActiveManagers.map(makeData) : 'ERROR LOADING MANAGERS'} onSelected={managerSelected} isLoading={isLoading || loading} />
+            <SearchableDropdown placeholder="Manager name, game id, or discord" data={loading ? 'LOADING' : (error ? 'ERROR LOADING' : data.getActiveManagers.map(makeData))} onSelected={managerSelected} isLoading={isLoading || loading} />
             {managerTable}
         </React.Fragment>
     )

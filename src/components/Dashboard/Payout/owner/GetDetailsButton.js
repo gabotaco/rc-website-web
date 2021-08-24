@@ -8,7 +8,7 @@ const GetDetailsButton = (props) => {
     const [details, setDetails] = useState(null);
 
     function updateLoading(status) {
-        if (status != loading) setLoading(status)
+        if (status !== loading) setLoading(status)
     }
     function getDetails() {
         setLoading(true)
