@@ -166,6 +166,12 @@ export const SET_APPLICANT_REJECTED = gql(`
     }
 `)
 
+export const SET_REF_PAID = gql(`
+    mutation SetRefPaid($id: Int!) {
+        setRefPaid: set_ref_paid(id: $id)
+    }
+`)
+
 export const GET_ACTIVE_APPLICANTS = gql(`
     query GetActiveApplicants {
         getActiveApplicants {
@@ -211,6 +217,40 @@ export const GET_MANAGER_PAYOUTS = gql(`
                 in_game_id,
                 in_game_name
             }
+        }
+    }
+`)
+
+export const GET_COMPLETED_REFERRALS = gql(`
+    query GetCompletedReferrals {
+        getCompletedReferrals {
+            paid {
+                in_game_name,
+                in_game_id,
+                discord_id
+            },
+            unpaid {
+                in_game_name,
+                in_game_id,
+                discord_id
+            },
+            both {
+                in_game_name,
+                in_game_id,
+                discord_id
+            },
+            moneyOwned
+        }
+    }
+`)
+
+export const GET_REFERRAL_DETAILS = gql(`
+    query GetReferralDetails($referred_id: Int!, $paid: String!) {
+        getReferralDetails (referred_id: $referred_id, paid: $paid) {
+            in_game_name,
+            in_game_id,
+            discord_id,
+            total_vouchers
         }
     }
 `)

@@ -7,6 +7,7 @@ import { Container } from 'reactstrap';
 import ApplyNow from '../../_common/ApplyNow';
 import StolenMoneyCalculator from "./member/StolenMoneyCalculator"
 import SearchManagerPayouts from "./owner/SearchManagerPayouts"
+import CompletedReferrals from "./owner/CompletedReferrals"
 
 const PayoutScreen = () => {
 
@@ -34,7 +35,7 @@ const PayoutScreen = () => {
                         </PermRender>
                         <PermRender perms={[3]} authorizedUser={authorizedUser}>
                             <h1>Completed Referrals</h1>
-                            {/* <CompletedReferrals /> */}
+                            <CompletedReferrals />
                             <h1>Search Manager Payouts</h1>
                             <SearchManagerPayouts />
                         </PermRender>
