@@ -82,9 +82,9 @@ const SearchUserDetails = () => {
 
     function makeSkillContainer(currentLevel, maxLevel, skillName) {
         return <Progress multi className = "my-1" style={Styles.skillProgressContainer}>
-            <div className="progress-bar" role="progressbar" style={{width: `${currentLevel >= maxLevel ? '100%' : `${(currentLevel / maxLevel) * 100}%`}`, backgroundColor: `${currentLevel >= maxLevel ? '#b39700' : '#0063ca'}`}}>
+            <Progress striped={currentLevel >= maxLevel} bar color={currentLevel >= maxLevel ? 'warning' : 'primary'} min={1} max={maxLevel} value={currentLevel}>
                 <span className="text-white font-weight-bold" style={Styles.levelText}>{skillName} | Level {<FormattedNumber num={currentLevel}/>} / {<FormattedNumber num={maxLevel} />}</span>
-            </div>
+            </Progress>
         </Progress>
     }
 
