@@ -37,7 +37,7 @@ const CustomTable = (props) => {
                 <tbody>
                     {
                         props.data.map((data, key) => {
-                            return props.format(data)
+                            return props.format(data, key)
                         })
                     }
                 </tbody>
