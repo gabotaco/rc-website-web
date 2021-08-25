@@ -9,6 +9,7 @@ import StolenMoneyCalculator from "./member/StolenMoneyCalculator"
 import SearchManagerPayouts from "./owner/SearchManagerPayouts"
 import CompletedReferrals from "./owner/CompletedReferrals"
 import CompanyActiveReferrals from "./managers/CompanyActiveReferrals"
+import UserActiveReferrals from './member/UserActiveReferrals';
 
 const PayoutScreen = () => {
 
@@ -38,7 +39,7 @@ const PayoutScreen = () => {
                             <h1>Calculate a payout</h1>
                             {/* <PayoutContainer /> */}
                             <h1>Active Referrals</h1>
-                            {/* <UserActiveReferrals /> */}
+                            <UserActiveReferrals />
                         </PermRender>
                         <PermRender perms={[3]} authorizedUser={authorizedUser}>
                             <h1>Completed Referrals</h1>
