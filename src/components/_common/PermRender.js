@@ -7,7 +7,7 @@ import LoadingIcon from "../_presentational/LoadingIcon";
 const PermRender = (props) => {
     function handle(authorizedUser) {
         if (props.perms) {
-            return props.perms.includes(authorizedUser.ttpermission)
+            return props.perms.includes(authorizedUser.permission)
             ? (
                 <React.Fragment>
                     {props.children}
