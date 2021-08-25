@@ -269,6 +269,16 @@ export const GET_ACTIVE_REFERRALS = gql(`
     }
 `)
 
+export const GET_AUTH_USER_ACTIVE_REFERRALS = gql(`
+    query GetAuthUserActiveReferrals {
+        getAuthUserActiveReferrals {
+            employee_name,
+            employee_id,
+            total_vouchers,
+        }
+    }
+`)
+
 export const SET_REFERRER_ID = gql(`
     mutation SetReferrerID($app_id: Int!, $new_id: Int!) {
         setReferrerID: set_referrer_id(app_id: $app_id, new_id: $new_id)
