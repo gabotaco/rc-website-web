@@ -254,3 +254,23 @@ export const GET_REFERRAL_DETAILS = gql(`
         }
     }
 `)
+
+export const GET_ACTIVE_REFERRALS = gql(`
+    query GetAciveReferrals {
+        getActiveReferrals {
+            app_id,
+            employee_name,
+            employee_id,
+            total_vouchers,
+            re_name,
+            re_in_game_id,
+            re_discord_id
+        }
+    }
+`)
+
+export const SET_REFERRER_ID = gql(`
+    mutation SetReferrerID($app_id: Int!, $new_id: Int!) {
+        setReferrerID: set_referrer_id(app_id: $app_id, new_id: $new_id)
+    }
+`)

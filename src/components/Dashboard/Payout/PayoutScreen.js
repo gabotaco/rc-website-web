@@ -8,6 +8,7 @@ import ApplyNow from '../../_common/ApplyNow';
 import StolenMoneyCalculator from "./member/StolenMoneyCalculator"
 import SearchManagerPayouts from "./owner/SearchManagerPayouts"
 import CompletedReferrals from "./owner/CompletedReferrals"
+import CompanyActiveReferrals from "./managers/CompanyActiveReferrals"
 
 const PayoutScreen = () => {
 
@@ -31,7 +32,13 @@ const PayoutScreen = () => {
                             <h1>Perform a payout</h1>
                             {/* <PayoutContainer /> */}
                             <h1>Active Referrals</h1>
-                            {/* <ActiveReferrals /> */}
+                            <CompanyActiveReferrals owner={authorizedUser.permission === 3} />
+                        </PermRender>
+                        <PermRender perms={[1]} authorizedUser={authorizedUser}>
+                            <h1>Calculate a payout</h1>
+                            {/* <PayoutContainer /> */}
+                            <h1>Active Referrals</h1>
+                            {/* <UserActiveReferrals /> */}
                         </PermRender>
                         <PermRender perms={[3]} authorizedUser={authorizedUser}>
                             <h1>Completed Referrals</h1>
