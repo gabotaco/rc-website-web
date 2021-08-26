@@ -39,7 +39,6 @@ function getServerData(checkbox) {
         if (!res.ok) throw res;
         return res.json();
     }).then((res) => {
-        console.log(res);
         let looptimestamp = Date.now();
         for (let i = 0; i < res.players.length; i++) {
             if (res.players[i][3] === null || !members.includes(res.players[i][2])) continue;
