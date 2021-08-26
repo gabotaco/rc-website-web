@@ -24,7 +24,7 @@ const SearchableDropdown = (props) => {
 
     function filterFunction(value) {
         if (!Array.isArray(props.data)) {
-            return <DropdownItem disabled>props.data</DropdownItem>
+            return <DropdownItem disabled>{props.data}</DropdownItem>
         }
         const searchButtons = props.data.reduce((buttons, data) => {
             if (data.searchString.toUpperCase().indexOf(value.toUpperCase()) > -1) {
@@ -45,7 +45,7 @@ const SearchableDropdown = (props) => {
     return (
         <Dropdown isOpen={dropdownOpen} toggle={toggle}>
             <DropdownToggle color={'primary'} className="form-control" caret>
-                Search
+                {props.title ? props.title : 'Search'}
             </DropdownToggle>
             <DropdownMenu className="dropdown-menu-extended" >
                 <Input type="text" placeholder={props.placeholder || "Search"} onChange={(e) => setButtons(filterFunction(e.target.value))} autoComplete="off" className="dropdown-item" />
