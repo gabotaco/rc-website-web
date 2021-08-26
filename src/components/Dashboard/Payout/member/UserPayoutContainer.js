@@ -1,32 +1,46 @@
-import React, {useState} from 'react';
-import { Form, Row, Col, FormGroup, Label, Input, FormFeedback, Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress, Alert } from 'reactstrap';
-import MemberDropdown from './MemberDropdown';
+import React, {useState, useEffect} from 'react';
+import { Form, Row, Col, FormGroup, Label, Input, FormFeedback, Button, Modal, ModalHeader, ModalBody, ModalFooter, Progress, Dropdown, DropdownToggle } from 'reactstrap';
 import * as Api from "../../../../library/Api/api"
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import FormattedNumber from '../../../_common/FormattedNumber';
-import CopyTextButton from "../../../_common/CopyTextButton"
 
-const PayoutContainer = (props) => {
+const UserPayoutContainer = (props) => {
     const [modal, setModal] = useState(false)
-    const [member, setMember] = useState(null)
     const [company, setCompany] = useState('')
-    const [pigsVouchers, setPigsVouchers] = useState()
-    const [rtsHeavyVouchers, setRtsHeavyVouchers] = useState()
-    const [rtsVouchers, setRtsVouchers] = useState()
-    const [rtsAviatorVouchers, setRtsAviatorVouchers] = useState()
+    const [pigsVouchers, setPigsVouchers] = useState(undefined)
+    const [rtsHeavyVouchers, setRtsHeavyVouchers] = useState(undefined)
+    const [rtsVouchers, setRtsVouchers] = useState(undefined)
+    const [rtsAviatorVouchers, setRtsAviatorVouchers] = useState(undefined)
     const [response, setResponse] = useState(null)
     const [loading, setLoading] = useState(false)
-    const [bootAlert, setAlert] = useState(false)
 
-    const toggleAlert = () => setAlert(!bootAlert)
     const toggle = () => setModal(!modal)
+
+    useEffect(() => {
+        Api.getTycoonData().then((res) => {
+            if (res.data.inventory.rts_voucher_air && rtsAviatorVouchers === undefined) {
+                setRtsAviatorVouchers(res.data.inventory.rts_voucher_air.amount)
+            }
+            if (res.data.inventory.rts_voucher && rtsVouchers === undefined) {
+                setRtsVouchers(res.data.inventory.rts_voucher.amount)
+            }
+            if (res.data.inventory.rts_voucher_heavy && rtsHeavyVouchers === undefined) {
+                setRtsHeavyVouchers(res.data.inventory.rts_voucher_heavy.amount)
+            }
+            if (res.data.inventory.pigs_voucher && pigsVouchers === undefined) {
+                setPigsVouchers(res.data.inventory.pigs_voucher.amount)
+            }
+        }).catch((err) => {
+            console.error(err)
+        })
+    }, [])
 
     function getTotalRtsVouchers() {
         return rtsHeavyVouchers + rtsVouchers + rtsAviatorVouchers;
     }
 
     function validForm() {
-        if (!member || !company) return false;
+        if (!company) return false;
         let voucherNum = 0
         if (company === 'pigs') {
             voucherNum = pigsVouchers
@@ -49,7 +63,7 @@ const PayoutContainer = (props) => {
             voucherNum = getTotalRtsVouchers();
         }
 
-        Api.calculatePayout(member.id, voucherNum, company).then((response) => {
+        Api.getPayoutDetails(voucherNum, company).then((response) => {
             setLoading(false);
             setResponse(response)
             toggle();
@@ -60,30 +74,8 @@ const PayoutContainer = (props) => {
         })
     }
 
-    function handleConfirm() {
-        setLoading(true);
-
-        Api.confirmPayout(response.pin).then(() => {
-            setLoading(false);
-            setAlert(true);
-            toggle();
-        }).catch((err) => {
-            console.error(err);
-            setLoading(false);
-            alert("There was an error confirming this payout")
-        })
-    }
-
-    function formatNumber(num) {
-        if (!num) return "0"
-        return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //fancy regex
-    }
-
     return (
         <Form noValidate autoComplete="off">
-            <Alert color="success" fade isOpen={bootAlert} toggle={toggleAlert}>
-                <strong>Payout Success!</strong> You can now do another payout.
-            </Alert>
             <Row form>
                 <Col>
                     <FormGroup>
@@ -104,7 +96,11 @@ const PayoutContainer = (props) => {
                 <Col>
                     <FormGroup>
                         <Label>Member</Label>
-                        <MemberDropdown onSelected={(member) => setMember(member)} />
+                        <Dropdown toggle={() => {}}>
+                            <DropdownToggle color={'primary'} className="form-control" disabled>
+                                You
+                            </DropdownToggle>
+                        </Dropdown>
                     </FormGroup>
                 </Col>
             </Row>
@@ -151,26 +147,25 @@ const PayoutContainer = (props) => {
                 </FormGroup>
             </div>}
             <Button color="primary" disabled={!validForm() || modal || loading} onClick={handleSubmit}>{modal || loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Submit'}</Button>
-            {member && response && <Modal fade isOpen={modal} toggle={toggle} backdrop={"static"}>
-                <ModalHeader toggle={toggle}>Payout Summary for {member.in_game_name} ({member.in_game_id})</ModalHeader>
+            {response && <Modal fade isOpen={modal} toggle={toggle}>
+                <ModalHeader toggle={toggle}>Payout Summary</ModalHeader>
                 <ModalBody>
                     <b>Progress</b>: <Progress multi>
                         <Progress bar striped animated color="info" min={0} max={100} value={response.oldProgress} />
                         <Progress bar striped animated color="success" min={0} max={100} value={response.do_rank ? 100 : response.newProgress - response.oldProgress} />
                     </Progress>
-                    <b>Money</b>: $<FormattedNumber num={response.money} /> <CopyTextButton className="mt-2" id="copy-money-button" text={response.money} color="info" />
+                    <b>Money</b>: $<FormattedNumber num={response.money} />
                     <br />
                     <b>Rank up</b>? {response.do_rank ? <span className="text-success">{response.do_rank}</span> : <span className="text-danger">No</span>}
                     <br />
-                    <CopyTextButton id="copy-message-button" color="info" className="mt-2" text={`Your payout will be $${formatNumber(response.money)}.`} label="Copy message" />
+                    <b>New Deadline</b>: {new Date(response.deadline).toDateString()}
                 </ModalBody>
                 <ModalFooter>
-                    <Button color="secondary" onClick={toggle}>Cancel</Button>
-                    <Button color="primary" onClick={handleConfirm} disabled={loading}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Confirm'}</Button>
+                    <Button color="secondary" onClick={toggle}>Close</Button>
                 </ModalFooter>
             </Modal>}
         </Form>
     )
 }
 
-export default PayoutContainer
+export default UserPayoutContainer

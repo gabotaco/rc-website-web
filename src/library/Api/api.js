@@ -101,3 +101,10 @@ export const confirmPayout = (payout_id) => {
         }
     })
 }
+
+export const getPayoutDetails = (vouchers, company) => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/payout/calculate?vouchers=${vouchers}&company=${company}`,
+    })
+}

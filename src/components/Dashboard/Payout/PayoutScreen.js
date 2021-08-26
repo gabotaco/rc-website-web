@@ -11,6 +11,7 @@ import CompletedReferrals from "./owner/CompletedReferrals"
 import CompanyActiveReferrals from "./managers/CompanyActiveReferrals"
 import UserActiveReferrals from './member/UserActiveReferrals';
 import PayoutContainer from "./managers/PayoutContainer"
+import UserPayoutContainer from './member/UserPayoutContainer';
 
 const PayoutScreen = () => {
 
@@ -38,7 +39,7 @@ const PayoutScreen = () => {
                         </PermRender>
                         <PermRender perms={[1]} authorizedUser={authorizedUser}>
                             <h1>Calculate a payout</h1>
-                            {/* <PayoutContainer /> */}
+                            <UserPayoutContainer />
                             <h1>Active Referrals</h1>
                             <UserActiveReferrals />
                         </PermRender>
