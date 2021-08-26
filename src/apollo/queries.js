@@ -284,3 +284,14 @@ export const SET_REFERRER_ID = gql(`
         setReferrerID: set_referrer_id(app_id: $app_id, new_id: $new_id)
     }
 `)
+
+export const GET_CURRENT_EMPLOYEES = gql(`
+    query GetCurrentEmployees {
+        getCurrentEmployees {
+            id,
+            in_game_id,
+            in_game_name,
+            discord_id
+        }
+    }
+`)

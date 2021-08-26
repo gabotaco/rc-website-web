@@ -79,3 +79,25 @@ export const hire = (company, name, game_id, discord, app_id) => {
         }
     })
 }
+
+export const calculatePayout = (member_id, vouchers, company) => {
+    return makeApiRequest({
+        method: 'POST',
+        url: `/payout/calculate`,
+        body: {
+            member_id: member_id,
+            vouchers: vouchers,
+            company: company
+        }
+    })
+}
+
+export const confirmPayout = (payout_id) => {
+    return makeApiRequest({
+        method: 'POST',
+        url: `/payout/confirm`,
+        body: {
+            payout_id: payout_id
+        }
+    })
+}

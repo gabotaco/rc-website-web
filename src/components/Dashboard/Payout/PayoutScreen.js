@@ -10,6 +10,7 @@ import SearchManagerPayouts from "./owner/SearchManagerPayouts"
 import CompletedReferrals from "./owner/CompletedReferrals"
 import CompanyActiveReferrals from "./managers/CompanyActiveReferrals"
 import UserActiveReferrals from './member/UserActiveReferrals';
+import PayoutContainer from "./managers/PayoutContainer"
 
 const PayoutScreen = () => {
 
@@ -31,7 +32,7 @@ const PayoutScreen = () => {
                     <Container>
                         <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                             <h1>Perform a payout</h1>
-                            {/* <PayoutContainer /> */}
+                            <PayoutContainer />
                             <h1>Active Referrals</h1>
                             <CompanyActiveReferrals owner={authorizedUser.permission === 3} />
                         </PermRender>
