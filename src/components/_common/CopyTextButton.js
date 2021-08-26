@@ -3,7 +3,7 @@ import React, {useState} from 'react'
 import { Button, UncontrolledTooltip } from "reactstrap";
 
 const CopyTextButton = (props) => {
-    const [tooltipText, setTooltipText] = useState("Copy to clipboard")
+    const [tooltipText, setTooltipText] = useState(props.tootipText || "Copy to clipboard")
 
     function fallbackCopyTextToClipboard(text) {
         var textArea = document.createElement("input");
@@ -33,12 +33,12 @@ const CopyTextButton = (props) => {
     }
 
     return (
-        <div>
-            <Button color="secondary" size="sm" onClick={() => copyTextToClipboard(props.text)} id={props.id}>{props.label || "Copy"}</Button>
-            <UncontrolledTooltip placement="top" target={props.id}>
+        <React.Fragment>
+            <Button className={props.className} color={props.color || "secondary"} size={props.size} onClick={() => copyTextToClipboard(props.text)} id={props.id}>{props.label || "Copy"}</Button>
+            <UncontrolledTooltip placement={props.placement || "top"} target={props.id}>
                 {tooltipText}
             </UncontrolledTooltip>
-        </div>
+        </React.Fragment>
     )
 }
 
