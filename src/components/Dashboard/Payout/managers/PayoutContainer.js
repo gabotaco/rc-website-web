@@ -39,7 +39,7 @@ const PayoutContainer = (props) => {
     }
 
     function handleSubmit() {
-        if (!validForm) return;
+        if (!validForm()) return;
         setLoading(true)
 
         let voucherNum = 0
