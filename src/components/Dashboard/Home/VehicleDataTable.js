@@ -20,7 +20,7 @@ const VehicleDataTable = (props) => {
                             <tr key={vehicle.name}>
                                 <td>{vehicle.name}</td>
                                 <td>{vehicle.class}</td>
-                                <td><CopyTextButton text={vehicle.code} id={`vehicle-${i}`} label="Copy Code"/></td>
+                                <td><CopyTextButton text={vehicle.code} size="sm" id={`vehicle-${i}`} label="Copy Code"/></td>
                                 <td>{vehicle.author || "Unknown"}</td>
                             </tr>
                         )
