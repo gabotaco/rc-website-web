@@ -80,4 +80,13 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
   </body>
+
+  <script>
+    window.onkeydown = (ev) => {
+      if (ev.keyCode == 13) {
+          event.preventDefault();
+          return false;
+        }
+    }
+  </script>
 </html>
