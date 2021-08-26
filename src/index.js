@@ -24,7 +24,7 @@ const RcApp = () => {
 	return (
 		<Router history={hist}>
 			<Switch>
-				<Redirect from="/auth" exact to="/auth/login" />} />
+				<Redirect from="/auth" exact to="/auth/login" />
 				<Route path="/auth" render={props => <AuthLayout {...props} />} />
 				<Route path="/home" render={props => <AppLayout {...props} />} />
 			</Switch>
