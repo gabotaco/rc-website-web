@@ -32,7 +32,7 @@ const PayReferralButton = (props) => {
     return (
         <React.Fragment>
             <Button color="success" onClick={toggle} disabled={modal || done}>{modal ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : (done ? 'Paid.' : 'Pay')}</Button>
-            <Modal isOpen={modal} toggle={toggle}>
+            <Modal isOpen={modal} toggle={toggle} fade>
                 <ModalHeader toggle={toggle}>Pay {props.name}</ModalHeader>
                 <ModalBody>
                     Are you sure you want to pay them?

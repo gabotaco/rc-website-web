@@ -103,7 +103,7 @@ const ApplicantRow = ({applicant}) => {
 
     return (
         <tr key={app.id}>
-            <Modal isOpen={modal} toggle={toggle} size="lg">
+            <Modal isOpen={modal} toggle={toggle} size="lg" fade>
                 <ModalHeader toggle={toggle}>Details for {app.in_game_name} ({app.in_game_id}) {app.in_discord ? <span className="font-weight-bold text-success">This member is in Discord!</span> : <span className="font-weight-bold text-danger">This member isn't in Discord!</span>} ({app.discord_id})</ModalHeader>
                 <ModalBody>
                     <Form noValidate>

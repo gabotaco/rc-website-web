@@ -33,7 +33,7 @@ const ChangeInGameIDButton = (props) => {
     return (
         <React.Fragment>
             <Button color="success" className="ml-1" onClick={toggle} disabled={modal}>{modal ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Change'}</Button>
-            <Modal isOpen={modal} toggle={toggle}>
+            <Modal isOpen={modal} toggle={toggle} fade>
                 <ModalHeader toggle={toggle}>Change {props.employee_name}'s referrer</ModalHeader>
                 <ModalBody>
                     <Form>

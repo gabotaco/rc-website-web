@@ -24,7 +24,7 @@ const ReferralDetails = (props) => {
                     }
                     const details = data.getReferralDetails
 
-                    return <Modal isOpen={modal} toggle={toggle} size={"xl"}>
+                    return <Modal isOpen={modal} toggle={toggle} size={"xl"} fade>
                         <ModalHeader toggle={toggle}>{props.name}'s Refferals</ModalHeader>
                         <ModalBody>
                             <CustomTable config={config} headers={headers} data={details} format={formatter} />
