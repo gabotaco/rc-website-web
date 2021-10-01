@@ -295,3 +295,15 @@ export const GET_CURRENT_EMPLOYEES = gql(`
         }
     }
 `)
+
+export const GET_TOP_TURNINS = gql(`
+    query GetTopTurnins($num_players: Int!, $from: String!, $to: String!, $company: String!) {
+        getTopTurnins (num_players: $num_players, from: $from, to: $to, company: $company) {
+            in_game_name,
+            in_game_id,
+            place,
+            vouchers,
+            money
+        }
+    }
+`)

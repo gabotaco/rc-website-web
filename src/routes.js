@@ -7,6 +7,7 @@ import DashboardScreen from "./components/Dashboard/Home/DashboardScreen"
 import TToolsAdminScreen from "./components/TTools/Admin/TToolsAdminScreen"
 import ApplicationsScreen from "./components/Dashboard/Applications/ApplicationsScreen"
 import PayoutScreen from "./components/Dashboard/Payout/PayoutScreen"
+import CompanyManagementScreen from "./components/Dashboard/Management/CompanyManagementScreen"
 
 const routes = [
     {
@@ -31,6 +32,12 @@ const routes = [
         path: "/dashboard",
         name: "Dashboard Home",
         component: DashboardScreen,
+        layout: "/home"
+    },
+    {
+        path: "/dashboard/company",
+        name: "Company",
+        component: CompanyManagementScreen,
         layout: "/home"
     },
     {

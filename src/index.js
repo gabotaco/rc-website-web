@@ -5,6 +5,7 @@ import { InMemoryCache } from 'apollo-cache-inmemory';
 import { createBrowserHistory } from "history";
 import { Router, Switch, Route, Redirect } from "react-router";
 import { ApolloProvider } from "react-apollo";
+import { ApolloProvider as ApolloClientProvider} from '@apollo/client';
 import {ApolloProvider as ApolloHooksProvider} from 'react-apollo-hooks';
 import AuthLayout from "./layouts/Auth/AuthLayout";
 import AppLayout from "./layouts/App/AppLayout";
@@ -34,11 +35,13 @@ const RcApp = () => {
 
 ReactDOM.render(
 	<ApolloProvider client={client}>
-		<ApolloHooksProvider client={client}>
-			<Suspense fallback={<div>Loading...</div>}>
-				<RcApp />
-			</Suspense>
-		</ApolloHooksProvider>
+		<ApolloClientProvider client={client}>
+			<ApolloHooksProvider client={client}>
+				<Suspense fallback={<div>Loading...</div>}>
+					<RcApp />
+				</Suspense>
+			</ApolloHooksProvider>
+		</ApolloClientProvider>
 	</ApolloProvider>,
   	document.getElementById('root')
 );
