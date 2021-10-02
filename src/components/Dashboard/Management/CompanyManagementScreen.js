@@ -7,6 +7,7 @@ import { Container } from 'reactstrap';
 import ApplyNow from '../../_common/ApplyNow';
 import TopTurninForm from "./TopTurninForm"
 import ManagerCashoutContainer from './ManagerCashoutContainer';
+import CompanyCurrentMembersContainer from './CompanyCurrentMembersContainer';
 
 const CompanyManagementScreen = () => {
 
@@ -27,9 +28,13 @@ const CompanyManagementScreen = () => {
 
                 return (
                     <Container>
-                        <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
+                        <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                             <h1>Company Members</h1>
-                            {/* <CompanyMembersTable /> */}
+                            {/* <CompanyMembersContainer /> */}
+                        </PermRender>
+                        <PermRender perms={[1]} authorizedUser={authorizedUser}>
+                            <h1>Company Members</h1>
+                            <CompanyCurrentMembersContainer />
                         </PermRender>
                         <PermRender perms={[3]} authorizedUser={authorizedUser}>
                             <h1>Managers Cashouts</h1>

@@ -41,6 +41,23 @@ export const GET_ALL_MEMBERS = gql(`
     }
 `)
 
+export const GET_MEMBER_RANKINGS = gql(`
+    query GetMemberRankings {
+        getMemberRankings {
+            in_game_id,
+            in_game_name,
+            company,
+            last_turnin,
+            pigs {
+                vouchers
+            },
+            rts {
+                vouchers
+            }
+        }
+    }
+`)
+
 export const GET_ALL_MEMBERS_SIMPLE = gql(`
     query GetAllMembers {
         getAllMembers {
