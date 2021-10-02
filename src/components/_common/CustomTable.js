@@ -20,7 +20,10 @@ $.fn.DataTable = function ( opts ) {
 const CustomTable = (props) => {
     useEffect(() => {
         if (!props.config.disabled) {
-            $(`#${props.config.id}`).DataTable(props.config.jquery)
+            const table = $(`#${props.config.id}`).DataTable(props.config.jquery)
+            if (props.onCreated) {
+                props.onCreated(table)
+            }
         }
     }, [])
 

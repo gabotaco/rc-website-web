@@ -7,20 +7,22 @@ const FilterableTables = (props) => {
     const [activeFilter, setActiveFilter] = useState(props.startingFilter || props.filters[0])
 
     return (
-        <div>
+        <React.Fragment>
             <ButtonGroup className="mb-2">
                 {props.filters.map((filter, i) => {
                     return <Button color="primary" key={i} active={activeFilter === filter} onClick={() => setActiveFilter(filter)}>{filter}</Button>
                 })}
             </ButtonGroup>
             {props.tables.map((table, i) => {
-                if (activeFilter === table.filter) {
-                    return <CustomTable key={i} headers={table.headers} data={table.data} format={table.formatter} config={table.config} />
-                } else {
-                    return null
-                }
+                return <div key={i} style={{display: activeFilter === table.filter ? 'block': 'none'}}>
+                    <CustomTable onCreated={(newTable) => {
+                        if (props.onCreated) {
+                            props.onCreated(table.filter, newTable)
+                        }
+                    }} headers={table.headers} data={table.data} format={table.formatter} config={table.config} />
+                </div>
             })}
-        </div>
+        </React.Fragment>
     )
 }
 

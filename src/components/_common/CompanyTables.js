@@ -4,7 +4,7 @@ import FilterableTables from './FilterableTables'
 
 const CompanyTables = (props) => {
     return (
-        <FilterableTables startingFilter={props.startingCompany ? props.startingCompany.toUpperCase() : null} filters={['RTS', 'PIGS', 'BOTH']}
+        <FilterableTables onCreated={props.onCreated} startingFilter={props.startingCompany ? props.startingCompany.toUpperCase() : null} filters={['RTS', 'PIGS', 'BOTH']}
             tables={[
                 {
                     filter: 'RTS',
