@@ -34,7 +34,7 @@ const ManagerCashoutTable = (props) => {
 
     const Formatters = {
         rts: (cashout, i) => {
-            const paid = cashout.rts_cashout == 0;
+            const paid = cashout.rts_cashout === 0;
             return (
                 <tr key={i}>
                     <th scope="row">{cashout.member.in_game_id} {cashout.member.in_game_name}</th>
@@ -44,7 +44,7 @@ const ManagerCashoutTable = (props) => {
                     <td>$<FormattedNumber num={Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5)} /></td>
                     <td>$<FormattedNumber num={Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5) + cashout.rts_cashout_worth} /></td>
                     <td>$<FormattedNumber num={cashout.total_money} /></td>
-                    <td data-search={cashout.active == "1" ? "active" : ""}>
+                    <td data-search={cashout.active === "1" ? "active" : ""}>
                         <Button color={paid ? "success" : "secondary"} disabled={paid} onClick={() => {
                             setPayMember({
                                 id: cashout.id,
@@ -59,7 +59,7 @@ const ManagerCashoutTable = (props) => {
             )
         },
         pigs: (cashout, i) => {
-            const paid = cashout.pigs_cashout == 0;
+            const paid = cashout.pigs_cashout === 0;
             return (
                 <tr key={i}>
                     <th scope="row">{cashout.member.in_game_id} {cashout.member.in_game_name}</th>
@@ -69,7 +69,7 @@ const ManagerCashoutTable = (props) => {
                     <td>$<FormattedNumber num={Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5)} /></td>
                     <td>$<FormattedNumber num={Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5) + cashout.pigs_cashout_worth} /></td>
                     <td>$<FormattedNumber num={cashout.total_money} /></td>
-                    <td data-search={cashout.active == "1" ? "active" : ""}>
+                    <td data-search={cashout.active === "1" ? "active" : ""}>
                         <Button color={paid ? "success" : "secondary"} disabled={paid} onClick={() => {
                             setPayMember({
                                 id: cashout.id,
@@ -84,7 +84,7 @@ const ManagerCashoutTable = (props) => {
             )
         },
         both: (cashout, i) => {
-            const paid = cashout.rts_cashout + cashout.pigs_cashout == 0
+            const paid = cashout.rts_cashout + cashout.pigs_cashout === 0
             return (
                 <tr key={i}>
                     <th scope="row">{cashout.member.in_game_id} {cashout.member.in_game_name}</th>
@@ -94,7 +94,7 @@ const ManagerCashoutTable = (props) => {
                     <td>$<FormattedNumber num={(Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5)) + (Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5))} /></td>
                     <td>$<FormattedNumber num={(Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5) + cashout.rts_cashout_worth) + (Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5) + cashout.pigs_cashout_worth)} /></td>
                     <td>$<FormattedNumber num={cashout.total_money} /></td>
-                    <td data-search={cashout.active == "1" ? "active" : ""}>
+                    <td data-search={cashout.active === "1" ? "active" : ""}>
                         <Button color={paid ? "success" : "secondary"} disabled={paid} onClick={() => {
                             setPayMember({
                                 id: cashout.id,
@@ -137,7 +137,7 @@ const ManagerCashoutTable = (props) => {
             {payMember && <Modal isOpen={modal} toggle={toggle} fade scrollable>
                 <ModalHeader toggle={toggle}>Pay {payMember.in_game_id} {payMember.in_game_name}</ModalHeader>
                 <ModalBody>
-                    Are you sure you want to pay them for {payMember.company == 'both' ? 'BOTH companys' : payMember.company.toUpperCase()}?
+                    Are you sure you want to pay them for {payMember.company === 'both' ? 'BOTH companys' : payMember.company.toUpperCase()}?
                 </ModalBody>
                 <ModalFooter>
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
