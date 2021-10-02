@@ -19,6 +19,7 @@ const ReferralDetails = (props) => {
                     if (loading) return null
                     props.setLoading(loading)
                     if (error) {
+                        console.error(error)
                         alert("There was an error getting their details")
                         return null
                     }

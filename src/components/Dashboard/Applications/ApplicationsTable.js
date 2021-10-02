@@ -11,9 +11,10 @@ const ApplicationsTable = () => {
         <Query query={queries.GET_ACTIVE_APPLICANTS}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
-                    return null
+                    console.error(error)
+                    return "There was an error getting active applicants"
                 }
 
                 const applications = data.getActiveApplicants;

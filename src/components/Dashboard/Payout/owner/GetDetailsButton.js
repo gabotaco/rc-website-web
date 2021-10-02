@@ -17,7 +17,7 @@ const GetDetailsButton = (props) => {
 
     return (
         <React.Fragment>
-            <Button color="info" onClick={getDetails} disabled={loading}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Details'}</Button>
+            <Button color="info" onClick={getDetails} disabled={loading}>{loading ? <LoadingIcon /> : 'Details'}</Button>
             {details}
         </React.Fragment>
     )

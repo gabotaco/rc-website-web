@@ -11,9 +11,10 @@ const MangagerCashout = () => {
         <Query query={queries.GET_AUTH_USER_CASHOUT}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
-                    return null
+                    console.error(error)
+                    return "There was an error getting your cashout"
                 }
 
                 const cashout = data.getAuthUserCashout;

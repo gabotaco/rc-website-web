@@ -22,7 +22,7 @@ const RestartButton = ({history, authorizedUser}) => {
 
     return (
         <>
-            <Button color="danger" id="restart-button" type="button" size="lg" onClick={restartAlfred} disabled={loading}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : content}</Button>
+            <Button color="danger" id="restart-button" type="button" size="lg" onClick={restartAlfred} disabled={loading}>{loading ? <LoadingIcon /> : content}</Button>
         </>
     )
 }

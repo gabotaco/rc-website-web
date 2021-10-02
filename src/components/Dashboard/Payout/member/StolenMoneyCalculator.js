@@ -11,6 +11,7 @@ const StolenMoneyCalculator = (props) => {
 
     const {data, error} = useQuery(queries.GET_AUTH_USER_PIGS_VOUCHERS)
     if (error) {
+        console.error(error)
         alert("Unable to get your voucher count")
     }
     

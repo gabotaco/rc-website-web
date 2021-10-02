@@ -21,9 +21,10 @@ const DashboardScreen = () => {
             <Query query={queries.GET_AUTH_USER}>
             {
                 ({loading, error, data}) => {
-                    if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                    if (loading) return <LoadingIcon />
                     if (error) {
-                        return null
+                        console.error(error)
+                        return "There was an error authenticating your request"
                     }
                     const {authorizedUser} = data
 

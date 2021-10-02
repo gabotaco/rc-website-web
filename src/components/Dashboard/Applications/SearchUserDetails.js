@@ -128,7 +128,7 @@ const SearchUserDetails = () => {
             </Modal>}
             <Label className="sr-only">In Game ID</Label>
             <Input invalid={(inGameID !== undefined && inGameID < 1) || member === "INVALID"} type="number" className="mr-sm-2" min="2" placeholder="In game ID" required value={inGameID || ''} onChange={(ev) => setInGameID(parseInt(ev.target.value))} />
-            <Button color="success" outline className="my-2 my-sm-0" onClick={handleSubmitClick}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Search'}</Button>
+            <Button color="success" outline className="my-2 my-sm-0" onClick={handleSubmitClick}>{loading ? <LoadingIcon /> : 'Search'}</Button>
             <FormFeedback>Please specify a valid member ID.</FormFeedback>
         </Form>
     )

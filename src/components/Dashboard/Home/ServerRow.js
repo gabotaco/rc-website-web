@@ -60,11 +60,11 @@ const ServerRow = (props) => {
         return (
             <tr>
                 <td>{props.name}</td>
-                <td><LoadingIcon sizeClass={'glimpsicon-32'} /></td>
-                <td><LoadingIcon sizeClass={'glimpsicon-32'} /></td>
-                <td><LoadingIcon sizeClass={'glimpsicon-32'} /></td>
-                <td><LoadingIcon sizeClass={'glimpsicon-32'} /></td>
-                <td><Button color={"info"} disabled><LoadingIcon sizeClass={'glimpsicon-32'} /></Button></td>
+                <td><LoadingIcon /></td>
+                <td><LoadingIcon /></td>
+                <td><LoadingIcon /></td>
+                <td><LoadingIcon /></td>
+                <td><Button color={"info"} disabled><LoadingIcon /></Button></td>
             </tr>
         )
     } else if (serverData === 'OFFLINE') {

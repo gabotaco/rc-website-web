@@ -9,9 +9,10 @@ const PlayerMap = () => {
         <Query query={queries.GET_ALL_MEMBERS}>
             {
                 ({loading, error, data}) => {
-                    if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'}/>
+                    if (loading) return <LoadingIcon />
                     if (error) {
-                        return <p>Error getting company members.</p>
+                        console.error(error)
+                        return "Error getting company members"
                     }
 
                     const {members, managers, applicants} = data.getAllMembers

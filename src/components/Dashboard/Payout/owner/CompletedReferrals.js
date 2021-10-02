@@ -12,11 +12,10 @@ const CompletedReferrals = (props) => {
         <Query query={queries.GET_COMPLETED_REFERRALS}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
                     console.error(error)
-                    alert("There was an error getting completed referrals")
-                    return null
+                    return "There was an error getting completed referrals"
                 }
                 
                 const referralData = data.getCompletedReferrals;

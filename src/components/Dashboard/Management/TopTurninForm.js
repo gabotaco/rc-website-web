@@ -72,7 +72,7 @@ const TopTurninForm = (props) => {
                         </FormGroup>
                     </Col>
                 </Row>
-                <Button color="primary" onClick={handleClick}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : "Submit"}</Button>
+                <Button color="primary" onClick={handleClick}>{loading ? <LoadingIcon /> : "Submit"}</Button>
             </Form>
             {data && <CustomTable config={config} headers={headers} data={data.getTopTurnins} format={formatter}  />}
         </React.Fragment>

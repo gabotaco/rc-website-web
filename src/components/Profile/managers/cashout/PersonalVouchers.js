@@ -41,7 +41,7 @@ const PersonalVouchers = (props) => {
     }, [])
 
     if (vouchers === 'LOADING') {
-        return <LoadingIcon sizeClass={'glimpsicon-32'} />
+        return <LoadingIcon />
     } else if (vouchers === 'UNKNOWN') {
         return 'UNKNOWN'
     } else {

@@ -146,7 +146,7 @@ const UserPayoutContainer = (props) => {
                     </FormFeedback>
                 </FormGroup>
             </div>}
-            <Button color="primary" disabled={!validForm() || modal || loading} onClick={handleSubmit}>{modal || loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Submit'}</Button>
+            <Button color="primary" disabled={!validForm() || modal || loading} onClick={handleSubmit}>{modal || loading ? <LoadingIcon /> : 'Submit'}</Button>
             {response && <Modal fade isOpen={modal} toggle={toggle}>
                 <ModalHeader toggle={toggle}>Payout Summary</ModalHeader>
                 <ModalBody>

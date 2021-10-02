@@ -8,7 +8,7 @@ const SearchableDropdown = (props) => {
         return (
             <Dropdown isOpen={false} toggle={() => {}}>
                 <DropdownToggle color={'primary'} className='form-control' disabled={true}>
-                    {props.isLoading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Error loading options'}
+                    {props.isLoading ? <LoadingIcon /> : 'Error loading options'}
                 </DropdownToggle>
             </Dropdown>
         )

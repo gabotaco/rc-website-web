@@ -14,10 +14,10 @@ const ManagerPayoutTable = (props) => {
         }>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
-                    alert("There was an error getting that managers payouts")
-                    return null
+                    console.error(error)
+                    return "There was an error getting manager payouts"
                 }
                 
                 const payouts = data.getManagerPayouts;

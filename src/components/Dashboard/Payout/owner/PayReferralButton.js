@@ -31,7 +31,7 @@ const PayReferralButton = (props) => {
 
     return (
         <React.Fragment>
-            <Button color="success" onClick={toggle} disabled={modal || done}>{modal ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : (done ? 'Paid.' : 'Pay')}</Button>
+            <Button color="success" onClick={toggle} disabled={modal || done}>{modal ? <LoadingIcon /> : (done ? 'Paid.' : 'Pay')}</Button>
             <Modal isOpen={modal} toggle={toggle} fade>
                 <ModalHeader toggle={toggle}>Pay {props.name}</ModalHeader>
                 <ModalBody>
@@ -39,7 +39,7 @@ const PayReferralButton = (props) => {
                 </ModalBody>
                 <ModalFooter>
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
-                    <Button color="primary" onClick={handlePay} disabled={loading}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Confirm'}</Button>
+                    <Button color="primary" onClick={handlePay} disabled={loading}>{loading ? <LoadingIcon /> : 'Confirm'}</Button>
                 </ModalFooter>
             </Modal>
         </React.Fragment>

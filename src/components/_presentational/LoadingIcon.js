@@ -3,7 +3,7 @@ import * as React from 'react';
 const LoadingIcon = (props) => {
     return (
         <div style={Style.container}>
-            <i className={`glimpsicon glimpsicon-circle-02 ${props.sizeClass ? props.sizeClass : 'glimpsicon-64'} glimpsicon-is-spinning`} />
+            <i className={`glimpsicon glimpsicon-circle-02 ${props.sizeClass ? props.sizeClass : 'glimpsicon-32'} glimpsicon-is-spinning`} />
         </div>
     )
 }

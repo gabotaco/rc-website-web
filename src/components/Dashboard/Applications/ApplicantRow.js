@@ -120,18 +120,18 @@ const ApplicantRow = ({applicant}) => {
                             <Input type="text" value={app.play_per_week} readOnly />
                         </FormGroup>
                     </Form>
-                    <Button color="primary" className="mr-1" onClick={handleContactClick}>{contactStatus === 'WAITING' ? 'Contact' : (contactStatus === 'LOADING' ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
-                    <Button color="success" disabled={!app.in_discord} onClick={handleHireClick}>{hireStatus === 'WAITING' ? 'Hire' : (hireStatus === 'LOADING' ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
+                    <Button color="primary" className="mr-1" onClick={handleContactClick}>{contactStatus === 'WAITING' ? 'Contact' : (contactStatus === 'LOADING' ? <LoadingIcon /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
+                    <Button color="success" disabled={!app.in_discord} onClick={handleHireClick}>{hireStatus === 'WAITING' ? 'Hire' : (hireStatus === 'LOADING' ? <LoadingIcon /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
                     <Form inline className="my-2" noValidate>
                         <Label className="sr-only">Status Reason</Label>
                         <Input disabled={app.status !== 'Contacted'} invalid={newStatus !== undefined && newStatus.length === 0} type="text" className="mr-1" placeholder="New Status" required value={newStatus} onChange={(ev) => setNewStatus(ev.target.value)} />
-                        <Button disabled={app.status !== 'Contacted'} color="secondary" onClick={handleNewStatusClick}>{newStatusStatus === 'WAITING' ? 'Update Status' : (newStatusStatus === 'LOADING' ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
+                        <Button disabled={app.status !== 'Contacted'} color="secondary" onClick={handleNewStatusClick}>{newStatusStatus === 'WAITING' ? 'Update Status' : (newStatusStatus === 'LOADING' ? <LoadingIcon /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
                         <FormFeedback>Please specify a status and make sure the applicant has been contacted.</FormFeedback>
                     </Form>
                     <Form inline className="my-2" noValidate>
                         <Label className="sr-only">Rejected Reason</Label>
                         <Input invalid={rejectReason !== undefined && rejectReason.length === 0} type="text" className="mr-1" placeholder="Reject reason" required value={rejectReason} onChange={(ev) => setRejectReason(ev.target.value)} />
-                        <Button color="danger" onClick={handleRejectClick}>{rejectStatus === 'WAITING' ? 'Reject' : (rejectStatus === 'LOADING' ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
+                        <Button color="danger" onClick={handleRejectClick}>{rejectStatus === 'WAITING' ? 'Reject' : (rejectStatus === 'LOADING' ? <LoadingIcon /> : <DoneIcon sizeClass={'glimpsicon-btn'} />)}</Button>
                         <FormFeedback>Please specify a reason.</FormFeedback>
                     </Form>
                 </ModalBody>
@@ -144,7 +144,7 @@ const ApplicantRow = ({applicant}) => {
             <td>{app.in_game_id} {app.in_game_name}</td>
             <td>{app.country}</td>
             <td data-order={new Date(app.createdAt).toISOString()}>{new Date(app.createdAt).toDateString()}</td>
-            <td><Button color="info" onClick={handleDetailsClick} disabled={loading}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Details'}</Button></td>
+            <td><Button color="info" onClick={handleDetailsClick} disabled={loading}>{loading ? <LoadingIcon /> : 'Details'}</Button></td>
         </tr>
     )
 }

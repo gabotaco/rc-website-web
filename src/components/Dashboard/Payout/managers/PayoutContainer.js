@@ -150,7 +150,7 @@ const PayoutContainer = (props) => {
                     </FormFeedback>
                 </FormGroup>
             </div>}
-            <Button color="primary" disabled={!validForm() || modal || loading} onClick={handleSubmit}>{modal || loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Submit'}</Button>
+            <Button color="primary" disabled={!validForm() || modal || loading} onClick={handleSubmit}>{modal || loading ? <LoadingIcon /> : 'Submit'}</Button>
             {member && response && <Modal fade isOpen={modal} toggle={toggle} backdrop={"static"}>
                 <ModalHeader toggle={toggle}>Payout Summary for {member.in_game_name} ({member.in_game_id})</ModalHeader>
                 <ModalBody>
@@ -166,7 +166,7 @@ const PayoutContainer = (props) => {
                 </ModalBody>
                 <ModalFooter>
                     <Button color="secondary" onClick={toggle}>Cancel</Button>
-                    <Button color="primary" onClick={handleConfirm} disabled={loading}>{loading ? <LoadingIcon sizeClass={'glimpsicon-32'} /> : 'Confirm'}</Button>
+                    <Button color="primary" onClick={handleConfirm} disabled={loading}>{loading ? <LoadingIcon /> : 'Confirm'}</Button>
                 </ModalFooter>
             </Modal>}
         </Form>

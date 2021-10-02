@@ -9,11 +9,10 @@ const UserActiveReferrals = (props) => {
         <Query query={queries.GET_AUTH_USER_ACTIVE_REFERRALS}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
                     console.error(error)
-                    alert("There was an error getting active referrals")
-                    return null
+                    return "There was an error getting your referrals"
                 }
                 
                 const applicants = data.getAuthUserActiveReferrals;

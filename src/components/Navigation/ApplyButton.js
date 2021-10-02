@@ -11,9 +11,10 @@ const ApplyButton = ({history, authorizedUser}) => {
             <Query query={queries.GET_AUTH_USER_STATUS}>
                 {
                     ({loading, error, data}) => {
-                        if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                        if (loading) return <LoadingIcon />
                         if (error) {
-                            return null
+                            console.error(error)
+                            return "Error getting your application status"
                         }
                         const {status} = data;
                         if (status) {

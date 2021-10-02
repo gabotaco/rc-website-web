@@ -11,9 +11,10 @@ const ServerUptime = () => {
         <Query query={queries.GET_ALL_MEMBERS_SIMPLE}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
-                    return null
+                    console.error(error)
+                    return "There was an error getting all members"
                 }
                 const memberArray = data.getAllMembers.members
                 

@@ -11,7 +11,7 @@ const $ = require( 'jquery' );
 
 const AdminPanel = (props) => {
     const [collapsed, setCollapsed] = useState(false);
-    const [charges, setCharges] = useState(<LoadingIcon sizeClass={'glimpsicon-32'} />)
+    const [charges, setCharges] = useState(<LoadingIcon />)
     const toggleNavbar = () => setCollapsed(!collapsed);
 
     function getVisible() {
@@ -69,9 +69,10 @@ const AdminPanel = (props) => {
                     <Query query={queries.GET_WEB_USERS}>
                     {
                         ({loading, error, data}) => {
-                            if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                            if (loading) return <LoadingIcon />
                             if (error) {
-                                return null
+                                console.error(error)
+                                return "There was an error getting web users"
                             }
                             const {getWebUsers} = data
                             

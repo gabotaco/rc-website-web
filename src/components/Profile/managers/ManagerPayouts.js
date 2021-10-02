@@ -10,9 +10,10 @@ const ManagerPayouts = () => {
         <Query query={queries.GET_AUTH_USER_PAYOUTS}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
-                    return null
+                    console.error(error)
+                    return "There was an error getting your payouts"
                 }
 
                 const payouts = data.getAuthUserPayouts;

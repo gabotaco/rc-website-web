@@ -52,7 +52,7 @@ class AppLayout extends React.Component {
                     <Query query={queries.GET_AUTH_USER}>
                         {
                             ({loading, error, data}) => {
-                                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'}/>
+                                if (loading) return <LoadingIcon />
                                 if (error || !data) {
                                     this.props.history.push('/auth/login')
                                     return <p>You are being redirected</p>
