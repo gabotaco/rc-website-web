@@ -108,3 +108,14 @@ export const getPayoutDetails = (vouchers, company) => {
         url: `/payout/calculate?vouchers=${vouchers}&company=${company}`,
     })
 }
+
+export const payManager = (manager, company) => {
+    return makeApiRequest({
+        method: 'PATCH',
+        url: `/manager/pay`,
+        body: {
+            manager: manager,
+            company: company
+        }
+    })
+}

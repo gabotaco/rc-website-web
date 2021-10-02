@@ -6,6 +6,7 @@ import LoadingIcon from "../../_presentational/LoadingIcon";
 import { Container } from 'reactstrap';
 import ApplyNow from '../../_common/ApplyNow';
 import TopTurninForm from "./TopTurninForm"
+import ManagerCashoutContainer from './ManagerCashoutContainer';
 
 const CompanyManagementScreen = () => {
 
@@ -17,9 +18,10 @@ const CompanyManagementScreen = () => {
         <Query query={queries.GET_AUTH_USER}>
         {
             ({loading, error, data}) => {
-                if (loading) return <LoadingIcon sizeClass={'glimpsicon-32'} />
+                if (loading) return <LoadingIcon />
                 if (error) {
-                    return null
+                    console.error(error)
+                    return "There was an error authenticating your request"
                 }
                 const {authorizedUser} = data
 
@@ -31,7 +33,7 @@ const CompanyManagementScreen = () => {
                         </PermRender>
                         <PermRender perms={[3]} authorizedUser={authorizedUser}>
                             <h1>Managers Cashouts</h1>
-                            {/* <ManagerCashoutTable /> */}
+                            <ManagerCashoutContainer />
                         </PermRender>
                         <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                             <h1>Get Top Turnins</h1>

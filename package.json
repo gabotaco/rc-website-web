@@ -28,7 +28,7 @@
     "react-jvectormap": "0.0.6",
     "react-router": "^5.0.0",
     "react-router-dom": "^5.0.0",
-    "reactstrap": "^7.1.0"
+    "reactstrap": "^8.10.0"
   },
   "devDependencies": {
     "react-scripts": "2.1.8"

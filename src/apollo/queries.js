@@ -206,6 +206,25 @@ export const GET_ACTIVE_MANAGERS = gql(`
     }
 `)
 
+export const GET_ALL_MANAGERS = gql(`
+    query GetAllManagers {
+        getAllManagers {
+            id,
+            active,
+            rts_cashout,
+            rts_cashout_worth,
+            pigs_cashout,
+            pigs_cashout_worth,
+            total_money,
+            member {
+                in_game_id,
+                in_game_name,
+                discord_id
+            }
+        }
+    }
+`)
+
 export const GET_MANAGER_PAYOUTS = gql(`
     query GetManagerPayouts($manager_id: Int!) {
         getManagerPayouts(manager_id: $manager_id) {
@@ -307,3 +326,4 @@ export const GET_TOP_TURNINS = gql(`
         }
     }
 `)
+
