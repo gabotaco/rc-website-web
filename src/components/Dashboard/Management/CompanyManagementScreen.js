@@ -8,6 +8,7 @@ import ApplyNow from '../../_common/ApplyNow';
 import TopTurninForm from "./TopTurninForm"
 import ManagerCashoutContainer from './ManagerCashoutContainer';
 import CompanyCurrentMembersContainer from './CompanyCurrentMembersContainer';
+import CompanyMembersContainer from './CompanyMembersContainer';
 
 const CompanyManagementScreen = () => {
 
@@ -30,7 +31,7 @@ const CompanyManagementScreen = () => {
                     <Container>
                         <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                             <h1>Company Members</h1>
-                            {/* <CompanyMembersContainer /> */}
+                            <CompanyMembersContainer perms={authorizedUser.permission} />
                         </PermRender>
                         <PermRender perms={[1]} authorizedUser={authorizedUser}>
                             <h1>Company Members</h1>

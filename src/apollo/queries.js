@@ -58,6 +58,32 @@ export const GET_MEMBER_RANKINGS = gql(`
     }
 `)
 
+export const GET_ALL_MEMBER_DETAILS = gql(`
+    query GetAllMemberDetails {
+        getAllMemberDetails {
+            id,
+            discord_id,
+            fire_reason,
+            pigs {
+                vouchers
+            },
+            rts {
+                vouchers
+            },
+            in_game_id,
+            in_game_name,
+            company,
+            welcome,
+            last_turnin,
+            deadline,
+            vouchers_turned_in,
+            pigs_rank,
+            rts_rank,
+            manager
+        }
+    }
+`)
+
 export const GET_ALL_MEMBERS_SIMPLE = gql(`
     query GetAllMembers {
         getAllMembers {
@@ -132,6 +158,24 @@ export const GET_AUTH_USER_PAYOUTS = gql(`
             amount,
             worth,
             createdAt
+        }
+    }
+`)
+
+export const GET_MEMBER_PAYOUTS = gql(`
+    query GetMemberPayouts($member_id: Int!) {
+        getMemberPayouts(member_id: $member_id) {
+            id,
+            company,
+            amount,
+            createdAt,
+            worth,
+            manager {
+                member {
+                    in_game_name,
+                    in_game_id    
+                }
+            }
         }
     }
 `)
@@ -318,6 +362,60 @@ export const GET_AUTH_USER_ACTIVE_REFERRALS = gql(`
 export const SET_REFERRER_ID = gql(`
     mutation SetReferrerID($app_id: Int!, $new_id: Int!) {
         setReferrerID: set_referrer_id(app_id: $app_id, new_id: $new_id)
+    }
+`)
+
+export const SET_MEMBER_IDENTIFIERS = gql(`
+    mutation SetMemberIdentifiers($uid: Int!, $new_name: String!, $new_id: Int!, $new_discord: String!) {
+        setMemberIdentifiers: set_member_identifiers(uid: $uid, new_name: $new_name, new_id: $new_id, new_discord: $new_discord)
+    }
+`)
+
+export const SET_MEMBER_MANAGER = gql(`
+    mutation SetMemberManager($uid: Int!, $manager: Boolean!) {
+        set_member_manager(uid: $uid, manager: $manager) {
+            id
+            manager
+        }
+    }
+`)
+
+export const SET_MEMBER_COMPANY = gql(`
+    mutation SetMemberCompany($uid: Int!, $company: String!) {
+        set_member_company(uid: $uid, company: $company) {
+            id
+            company
+        }
+    }
+`)
+
+export const SET_MEMBER_DEADLINE = gql(`
+    mutation SetMemberDeadline($uid: Int!, $deadline: String!) {
+        set_member_deadline(uid: $uid, deadline: $deadline) {
+            id
+            deadline
+        }
+    }
+`)
+
+export const SET_MEMBER_WELCOME = gql(`
+    mutation SetMemberWelcome($uid: Int!, $welcome: Boolean!) {
+        set_member_welcome(uid: $uid, welcome: $welcome) {
+            id
+            welcome
+        }
+    }
+`)
+
+export const FIRE_MEMBER = gql(`
+    mutation FireMember($uid: Int!, $reason: String!, $welcome: Boolean!) {
+        fire_member(uid: $uid, reason: $reason, welcome: $welcome) {
+            id
+            company
+            fire_reason
+            welcome
+            deadline
+        }
     }
 `)
 
