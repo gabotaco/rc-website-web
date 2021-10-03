@@ -28,7 +28,6 @@ const EditInGameButton = (props) => {
         }).then(() => {
             setLoading(false)
             toggle();
-            props.refetch()
         }).catch((err) => {
             console.error(err);
             setLoading(false)

@@ -361,13 +361,21 @@ export const GET_AUTH_USER_ACTIVE_REFERRALS = gql(`
 
 export const SET_REFERRER_ID = gql(`
     mutation SetReferrerID($app_id: Int!, $new_id: Int!) {
-        setReferrerID: set_referrer_id(app_id: $app_id, new_id: $new_id)
+        set_referrer_id(app_id: $app_id, new_id: $new_id) {
+            id
+            referred_id
+        }
     }
 `)
 
 export const SET_MEMBER_IDENTIFIERS = gql(`
     mutation SetMemberIdentifiers($uid: Int!, $new_name: String!, $new_id: Int!, $new_discord: String!) {
-        setMemberIdentifiers: set_member_identifiers(uid: $uid, new_name: $new_name, new_id: $new_id, new_discord: $new_discord)
+        set_member_identifiers(uid: $uid, new_name: $new_name, new_id: $new_id, new_discord: $new_discord) {
+            id
+            in_game_name
+            in_game_id
+            discord_id
+        }
     }
 `)
 
