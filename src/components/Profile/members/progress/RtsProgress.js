@@ -1,11 +1,9 @@
-import React, {useState} from 'react';
-import {Table, Progress, Tooltip} from 'reactstrap'
+import React from 'react';
+import {Table, Progress} from 'reactstrap'
 import FormattedNumber from "../../../_common/FormattedNumber"
+import Tooltip from '../../../_common/Tooltip'
 
 const RtsProgress = (props) => {
-    const [tooltipOpen, setTooltipOpen] = useState(false);
-
-    const toggle = () => setTooltipOpen(!tooltipOpen);
 
     let NextRank, RankVouchers, CurrentVouchers, CompanyProgress, Rank, RequiredVouchers
     if (props.rts.vouchers < 9600) {
@@ -93,7 +91,7 @@ const RtsProgress = (props) => {
             <Progress id="rts-progress-bar" multi>
                 <Progress animated bar striped value={CurrentVouchers} min={0} max={RankVouchers} Style={Styles.ProgressBar} />
             </Progress>
-            <Tooltip placement="top" target={"rts-progress-bar"} isOpen={tooltipOpen} toggle={toggle}>
+            <Tooltip placement="top" target={"rts-progress-bar"}>
                 <FormattedNumber num={CurrentVouchers} />/<FormattedNumber num={RankVouchers} />
             </Tooltip>
         </div>

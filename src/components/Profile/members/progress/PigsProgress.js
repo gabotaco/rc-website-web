@@ -1,12 +1,9 @@
-import React, {useState} from 'react';
-import {Table, Progress, Tooltip} from 'reactstrap'
+import React from 'react';
+import {Table, Progress} from 'reactstrap'
 import FormattedNumber from "../../../_common/FormattedNumber"
+import Tooltip from '../../../_common/Tooltip'
 
 const PigsProgress = (props) => {
-    const [tooltipOpen, setTooltipOpen] = useState(false);
-
-    const toggle = () => setTooltipOpen(!tooltipOpen);
-
     let Rank, RequiredVouchers, NextRank, RankVouchers, CurrentVouchers, CompanyProgress
     if (props.pigs.vouchers < 6000) {
         Rank = "Hustler"
@@ -107,7 +104,7 @@ const PigsProgress = (props) => {
             <Progress id="pigs-progress-bar" multi>
                 <Progress animated bar striped value={CurrentVouchers} min={0} max={RankVouchers} Style={Styles.ProgressBar} />
             </Progress>
-            <Tooltip placement="top" target={"pigs-progress-bar"} isOpen={tooltipOpen} toggle={toggle}>
+            <Tooltip placement="top" target={"pigs-progress-bar"}>
                 <FormattedNumber num={CurrentVouchers} />/<FormattedNumber num={RankVouchers} />
             </Tooltip>
         </div>
