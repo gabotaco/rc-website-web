@@ -8,6 +8,7 @@ import TToolsAdminScreen from "./components/TTools/Admin/TToolsAdminScreen"
 import ApplicationsScreen from "./components/Dashboard/Applications/ApplicationsScreen"
 import PayoutScreen from "./components/Dashboard/Payout/PayoutScreen"
 import CompanyManagementScreen from "./components/Dashboard/Management/CompanyManagementScreen"
+import TToolsScreen from "./components/TTools/Home/TToolsScreen";
 
 const routes = [
     {
@@ -56,6 +57,12 @@ const routes = [
         path: "/ttools/admin",
         name: "Admin",
         component: TToolsAdminScreen,
+        layout: "/home"
+    },
+    {
+        path: "/ttools",
+        name: "TTools Home",
+        component: TToolsScreen,
         layout: "/home"
     },
     {
