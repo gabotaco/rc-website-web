@@ -1,0 +1,3361 @@
+[{
+    "name": "Jonny Tung",
+    "bonus": 776557,
+    "id": "biz_tung",
+    "cost": 25000000,
+    "visuallvl": "62",
+    "position": {
+        "name": "Jonny Tung",
+        "x": -902.894836,
+        "y": -227.015121,
+        "z": 39.818169,
+        "h": 331.733337
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -905.682617,
+            "y": -232.291809,
+            "z": 39.818180,
+            "h": 137.194992
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -900.111206,
+            "y": -201.733612,
+            "z": 38.247940,
+            "h": 71.658554
+        }
+    ]
+},
+{
+    "name": "Cayo Perico",
+    "bonus": 2038284,
+    "id": "biz_fyrecay",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Cayo Perico - Buy Point",
+        "x": 5011.8671875,
+        "y": -5753.5625,
+        "z": 28.845277786255
+    },
+    "special": [
+        {"type": "special", "name":"Bonus Point", "x": 4985.3989257812, "y": -5719.4213867188, "z": 19.880222320557},
+        {"type": "garage", "name": "Garage", "x": 5090.5561523438, "y": -5724.8081054688, "z": 15.773634910583},
+        {"type": "helipad", "name": "Garage", "x": 4890.4775390625, "y": -5736.67578125, "z": 26.350877761841},
+        {"type": "atm", "name": "Garage", "x": 4973.3618164062, "y": -5763.8071289062, "z": 20.878234863281},
+        {"type": "spawn", "tier": 10, "name": "Cayo Perico", "x": 4998.056640625, "y": -5713.3544921875, "z": 19.880207061768},
+        {"type": "self_storage_train", "name": "Train / Ship Network", "x": 4902.7143554688, "y": -5194.22265625, "z": 2.4385457038879, "size": 16000, "fee": 250, "id": "biz_train", "area": "fyre"},
+        {"type": "self_storage_train", "name": "Train / Ship Network", "x": 4940.45703125, "y": -5132.0825195312, "z": 0.87203848361969, "size": 16000, "fee": 250, "id": "biz_train", "area": "fyre2"}
+    ]
+},
+{
+    "name": "KO RTZ",
+    "bonus": 1025219,
+    "id": "biz_kortz",
+    "cost": 35000000,
+    "visuallvl": "68",
+    "position": {
+        "name": "KO RTZ",
+        "x": -2286.076172,
+        "y": 354.228271,
+        "z": 174.601730,
+        "h": 204.291183
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -2253.6479492188,
+            "y": 234.14573669434,
+            "z": 174.60688781738,
+            "h": 178.58203125
+        },
+        {
+            "type": "atm",
+            "name": "ATM",
+            "x": -2294.1076660156,
+            "y": 356.62368774414,
+            "z": 174.60159301758,
+            "h": 113.46423339844
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "KO RTZ",
+            "x": -2273.8010253906,
+            "y": 326.85568237305,
+            "z": 174.60188293457,
+            "h": 294.74661254883
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -2322.8994140625,
+            "y": 294.60205078125,
+            "z": 169.46705627441,
+            "h": 203.3572845459
+        },
+        {
+            "type": "helipad",
+            "name": "Helipad",
+            "x": -2193.2224121094,
+            "y": 204.94387817383,
+            "z": 194.60144042969,
+            "h": 26.13817024231
+        }
+    ]
+},
+{
+    "name": "Fort Zancudo",
+    "bonus": 1025219,
+    "id": "biz_zancudo",
+    "cost": 35000000,
+    "visuallvl": "68",
+    "position": {
+        "name": "Fort Zancudo",
+        "x": -2435.660645,
+        "y": 3288.332520,
+        "z": 34.893108,
+        "h": 320.774597
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -2410.542725,
+            "y": 3268.244629,
+            "z": 32.977753,
+            "h": 217.933258
+        },
+        {
+            "type": "jobcenter",
+            "name": "Job Center",
+            "x": -2348.3247070313,
+            "y": 3268.966796875,
+            "z": 32.81075668335,
+            "h": 23.382320404053
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Fort Zancudo",
+            "x": -2355.4631347656,
+            "y": 3249.2490234375,
+            "z": 101.45071411133,
+            "h": 236.48278808594
+        },
+        {
+            "type": "vehicle",
+            "name": "Lazer Spawner",
+            "vehicle": "LAZER",
+            "plate": "ZANMAJET",
+            "x": -2290.0092773438,
+            "y": 3183.3862304688,
+            "z": 32.809997558594,
+            "h": 237.90628051758
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -2329.6457519531,
+            "y": 3342.6062011719,
+            "z": 32.832901000977,
+            "h": 143.8809967041
+        },
+        {
+            "type": "market",
+            "name": "Market",
+            "market": "General Store",
+            "x": -2282.1494140625,
+            "y": 3248.0676269531,
+            "z": 34.910537719727,
+            "h": 148.49826049805
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Zancudo Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Zancudo Icon",
+            "group": "chat.prefix.biz_zancudo"
+        }
+    ]
+},
+{
+    "name": "Jetsam Paleto Bay",
+    "bonus": 157069,
+    "id": "biz_jetsam_pb",
+    "cost": 3500000,
+    "visuallvl": "24",
+    "position": {
+        "name": "Jetsam Paleto Bay",
+        "x": -249.036179,
+        "y": 6160.130371,
+        "z": 31.505112,
+        "h": 119.687325
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -275.364197,
+            "y": 6146.388672,
+            "z": 31.518791,
+            "h": 69.519981
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -256.989532,
+            "y": 6140.452148,
+            "z": 31.256048,
+            "h": 133.286194
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Jetsam Paleto Bay",
+            "x": -245.36122131348,
+            "y": 6155.986328125,
+            "z": 31.413055419922,
+            "h": 286.85388183594
+        }
+    ]
+},
+{
+    "name": "Union Grain Inc Grapeseed",
+    "bonus": 192169,
+    "id": "biz_uginc_gs",
+    "cost": 4500000,
+    "visuallvl": "29",
+    "position": {
+        "name": "Union Grain Inc Grapeseed",
+        "x": 2016.427612,
+        "y": 4987.384766,
+        "z": 42.098263,
+        "h": 309.796021
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 2030.423706,
+            "y": 4980.169922,
+            "z": 42.098289,
+            "h": 129.227173
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 2018.731201,
+            "y": 4977.042969,
+            "z": 41.232029,
+            "h": 228.677032
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Union Grain Inc Grapeseed",
+            "x": 2008.4189453125,
+            "y": 4986.8974609375,
+            "z": 41.299877166748,
+            "h": 228.82843017578
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Union Grain Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Union Grain Icon",
+            "group": "chat.prefix.biz_uginc_gs"
+        }
+    ]
+},
+{
+    "name": "Harmony Gas Station",
+    "bonus": 120056,
+    "id": "biz_gas_harmony",
+    "cost": 2500000,
+    "visuallvl": "20",
+    "position": {
+        "name": "Harmony Gas Station",
+        "x": 1039.297607,
+        "y": 2664.792725,
+        "z": 39.551064,
+        "h": 186.639130
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 1048.512695,
+            "y": 2652.438477,
+            "z": 39.551098,
+            "h": 8.995404
+        },
+        {
+            "type": "garage",
+            "name": "(actual garage)",
+            "x": 1026.557007,
+            "y": 2659.007568,
+            "z": 39.551113,
+            "h": 172.896744
+        }
+    ]
+},
+{
+    "name": "Sisyphus Theater",
+    "bonus": 209176,
+    "id": "biz_sisyphus",
+    "cost": 5000000,
+    "visuallvl": "32",
+    "position": {
+        "name": "Sisyphus Theatre",
+        "x": 225.960815,
+        "y": 1171.997070,
+        "z": 225.550034,
+        "h": 80.265289
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 217.670364,
+            "y": 1192.190430,
+            "z": 225.594696,
+            "h": 104.392563
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 241.178223,
+            "y": 1154.804688,
+            "z": 225.460007,
+            "h": 188.894913
+        }
+    ]
+},
+{
+    "name": "Bristols Storage",
+    "bonus": 579217,
+    "id": "biz_merryweather",
+    "cost": 17500000,
+    "visuallvl": "56",
+    "position": {
+        "name": "Merryweather Port",
+        "x": 448.08303833008,
+        "y": -2761.4575195313,
+        "z": 7.1031231880188,
+        "h": 173.207230
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 556.72247314453,
+            "y": -2716.5305175781,
+            "z": 7.1123142242432,
+            "h": 87.856361
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 586.31188964844,
+            "y": -2816.7937011719,
+            "z": 6.0556945800781,
+            "h": 354.747833
+        },
+        {
+            "type": "helipad",
+            "name": "Garage",
+            "x": 541.71917724609,
+            "y": -2840.1064453125,
+            "z": 6.0453672409058,
+            "h": 260.20361328125
+        },
+        {
+            "type": "marina",
+            "name": "Garage",
+            "x": 546.54815673828,
+            "y": -2886.9399414063,
+            "z": 0.55597174167633,
+            "h": 177.82246398926
+        }
+    ]
+},
+{
+    "name": "Alphamail Couriers LSIA",
+    "bonus": 242317,
+    "id": "biz_alphamail_lsia",
+    "cost": 6000000,
+    "visuallvl": "35",
+    "position": {
+        "name": "Alphamail Couriers LSIA",
+        "x": -742.542419,
+        "y": -2486.499023,
+        "z": 15.522549,
+        "h": 237.228561
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -710.611755,
+            "y": -2527.533936,
+            "z": 13.944402,
+            "h": 39.859001
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -693.272156,
+            "y": -2472.235840,
+            "z": 13.828461,
+            "h": 305.080719
+        }
+    ]
+},
+{
+    "name": "Venetian",
+    "bonus": 290267,
+    "id": "biz_venetian",
+    "cost": 7500000,
+    "visuallvl": "38",
+    "position": {
+        "name": "Venetian",
+        "x": -1362.374268,
+        "y": -1078.276855,
+        "z": 3.604913,
+        "h": 296.208160
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -1325.057495,
+            "y": -1026.905884,
+            "z": 7.745650,
+            "h": 300.566162
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -1327.796509,
+            "y": -1008.937927,
+            "z": 7.657144,
+            "h": 121.039688
+        }
+    ]
+},
+{
+    "name": "Davis Quartz Quarry",
+    "bonus": 592757,
+    "id": "biz_quarry",
+    "cost": 18000000,
+    "visuallvl": "58",
+    "position": {
+        "name": "Davis Quartz Quarry",
+        "x": 2569.720947,
+        "y": 2719.580322,
+        "z": 42.894650,
+        "h": 28.396019
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 2830.898682,
+            "y": 2799.941406,
+            "z": 57.535835,
+            "h": 271.382172
+        },
+        {
+            "type": "jobcenter",
+            "name": "Job Center",
+            "x": 2663.4077148438,
+            "y": 2891.9985351563,
+            "z": 36.861583709717,
+            "h": 18.775999069214
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 2558.691895,
+            "y": 2741.412842,
+            "z": 42.711212,
+            "h": 293.194214
+        }
+    ]
+},
+{
+    "name": "Catfish View",
+    "bonus": 174818,
+    "id": "biz_catfish",
+    "cost": 4000000,
+    "visuallvl": "27",
+    "position": {
+        "name": "Catfish View",
+        "x": 3807.947510,
+        "y": 4478.325195,
+        "z": 6.365398,
+        "h": 25.853491
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 3818.485840,
+            "y": 4442.225098,
+            "z": 2.811247,
+            "h": 90.468796
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 3787.235352,
+            "y": 4463.950195,
+            "z": 5.927025,
+            "h": 83.322021
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Catfish Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Catfish Icon",
+            "group": "chat.prefix.biz_catfish"
+        }
+    ]
+},
+{
+    "name": "Medical Center Parking Garage",
+    "bonus": 242317,
+    "id": "biz_hospital_parking_strawberry",
+    "cost": 6000000,
+    "visuallvl": "35",
+    "position": {
+        "name": "Medical Center Parking Garage",
+        "x": 407.020325,
+        "y": -1347.439453,
+        "z": 41.053566,
+        "h": 140.181442
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": 407.043976,
+            "y": -1347.062744,
+            "z": 31.053698,
+            "h": 146.199310
+        },
+        {
+            "type": "garage",
+            "name": "Actual Garage",
+            "x": 425.320679,
+            "y": -1286.293213,
+            "z": 30.248810,
+            "h": 64.224564
+        }
+    ]
+},
+{
+    "name": "Maze Bank Arena",
+    "bonus": 305862,
+    "id": "biz_mazebank_arena",
+    "cost": 8000000,
+    "visuallvl": "40",
+    "position": {
+        "name": "Maze Bank Arena",
+        "x": -253.743683,
+        "y": -1992.382690,
+        "z": 30.145952,
+        "h": 349.734161
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -245.629089,
+            "y": -2009.842896,
+            "z": 24.685692,
+            "h": 161.249603
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -215.409607,
+            "y": -2060.311768,
+            "z": 27.620415,
+            "h": 232.188568
+        }
+    ]
+},
+{
+    "name": "LT Weld Supply Co",
+    "bonus": 1073468,
+    "id": "biz_ltweld",
+    "cost": 37000000,
+    "visuallvl": "70",
+    "position": {
+        "name": "LT Weld Supply Co",
+        "x": 1165.875854,
+        "y": -1347.488647,
+        "z": 35.739605,
+        "h": 86.833298
+    },
+    "special": [{
+            "type": "jobcenter",
+            "name": "Job Center",
+            "x": 1145.940063,
+            "y": -1403.583374,
+            "z": 34.805027,
+            "h": 83.470665
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 1127.341796875,
+            "y": -1404.7739257813,
+            "z": 34.549327850342,
+            "h": 87.447807312012
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 1151.427490,
+            "y": -1326.743408,
+            "z": 34.690792,
+            "h": 84.063354
+        },
+        {
+            "type": "repair",
+            "name": "Repair",
+            "x": 1189.666015625,
+            "y": -1394.9415283203,
+            "z": 35.113430023193,
+            "h": 174.77655029297
+        },
+        {
+            "type": "self_storage",
+            "name": "LT Weld Supply Co",
+            "x": 1161.1551513672,
+            "y": -1315.3598632813,
+            "z": 34.742721557617,
+            "h": 174.53958129883,
+            "fee": 0,
+            "size": 50000
+        }
+    ]
+},
+{
+    "name": "4 Integrity Way",
+    "bonus": 22963,
+    "id": "biz_integrity",
+    "cost": 300000,
+    "visuallvl": "7",
+    "position": {
+        "name": "Pillbox Hill Apartments",
+        "x": -14.722967,
+        "y": -612.844543,
+        "z": 35.861488,
+        "h": 65.343918
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -37.817242,
+            "y": -614.784912,
+            "z": 35.112984,
+            "h": 64.945610
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -12.911951,
+            "y": -631.864563,
+            "z": 35.724201,
+            "h": 269.145844
+        }
+    ]
+},
+{
+    "name": "Larss & Elboo",
+    "bonus": 80078,
+    "id": "biz_elboo",
+    "cost": 1500000,
+    "visuallvl": "18",
+    "position": {
+        "name": "Larss & Elboo",
+        "x": 109.517204,
+        "y": -153.314957,
+        "z": 54.770302,
+        "h": 29.112928
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 106.003174,
+            "y": -134.262878,
+            "z": 54.747799,
+            "h": 343.970947
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 125.923721,
+            "y": -125.999405,
+            "z": 54.834618,
+            "h": 73.245033
+        }
+    ]
+},
+{
+    "name": "Bishops Chicken",
+    "bonus": 80078,
+    "id": "biz_bishops_chicken",
+    "cost": 1500000,
+    "visuallvl": "18",
+    "position": {
+        "name": "Bishops Chicken",
+        "x": 2581.094971,
+        "y": 463.547485,
+        "z": 108.607735,
+        "h": 3.425383
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 2579.044922,
+            "y": 445.989349,
+            "z": 108.455704,
+            "h": 275.246094
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 2590.941895,
+            "y": 483.934906,
+            "z": 108.676399,
+            "h": 117.825127
+        }
+    ]
+},
+{
+    "name": "Millars Boat Shop",
+    "bonus": 439813,
+    "id": "biz_millars",
+    "cost": 12500000,
+    "visuallvl": "49",
+    "position": {
+        "name": "Millars Boat Shop",
+        "x": 1310.075317,
+        "y": 4361.746094,
+        "z": 41.314323,
+        "h": 79.378807
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 1311.698120,
+            "y": 4325.804199,
+            "z": 38.116539,
+            "h": 130.771423
+        },
+        {
+            "type": "marina",
+            "name": "Marina",
+            "x": 1300.7429199219,
+            "y": 4223.8203125,
+            "z": 33.908641815186,
+            "h": 178.01054382324,
+            "spawnPos": {
+                "x": 1258.0555419922,
+                "y": 4222.8662109375,
+                "z": 33.482830047607,
+                "h": 167.52336120605
+            }
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 1334.756714,
+            "y": 4306.681152,
+            "z": 38.084881,
+            "h": 357.985840
+        },
+        {
+            "type": "boatshop",
+            "name": "Boat Shop",
+            "outside": {
+                "x": 1320.4479980469,
+                "y": 4314.7358398438,
+                "z": 38.142887115479,
+                "h": 259.10403442383
+            },
+            "inside": {
+                "x": 1326.5261230469,
+                "y": 4249.3979492188,
+                "z": 30.933372497559,
+                "h": 191.37142944336
+            }
+        }
+    ]
+},
+{
+    "name": "Rebel Radio",
+    "bonus": 336557,
+    "id": "biz_rebel",
+    "cost": 9000000,
+    "visuallvl": "43",
+    "position": {
+        "name": "Rebel Radio",
+        "x": 733.491028,
+        "y": 2523.361328,
+        "z": 73.223778,
+        "h": 88.752457
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 746.726196,
+            "y": 2522.248047,
+            "z": 73.186623,
+            "h": 0.344389
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 739.997925,
+            "y": 2577.856934,
+            "z": 75.415062,
+            "h": 24.015219
+        }
+    ]
+},
+{
+    "name": "Jetsam Terminal",
+    "bonus": 138848,
+    "id": "biz_jetsam_ls",
+    "cost": 3000000,
+    "visuallvl": "24",
+    "position": {
+        "name": "Jetsam Terminal",
+        "x": 813.867249,
+        "y": -2982.500000,
+        "z": 6.020937,
+        "h": 93.817680
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 807.230286,
+            "y": -3034.975586,
+            "z": 5.742127,
+            "h": 27.457205
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 805.218750,
+            "y": -2949.115967,
+            "z": 6.020655,
+            "h": 198.357697
+        }
+    ]
+},
+{
+    "name": "Los Santos International Airport",
+    "bonus": 2961540,
+    "id": "biz_lsia",
+    "cost": 125000000,
+    "visuallvl": "87",
+    "position": {
+        "name": "Los Santos International Airport",
+        "x": -1045.683472,
+        "y": -2750.869873,
+        "z": 21.363428,
+        "h": 150.896927
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": -1032.416504,
+            "y": -2726.411621,
+            "z": 20.202898,
+            "h": 234.933395
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": -966.20050048828,
+            "y": -2609.45703125,
+            "z": 13.981004714966,
+            "h": 148.454987
+        },
+        {
+            "type": "marketplace",
+            "name": "L.S.I.A. Marketplace",
+            "x": -1009.7116088867,
+            "y": -2850.1669921875,
+            "z": 13.94952583313,
+            "h": 54.407833099365
+        },
+        {
+            "type": "atm",
+            "name": "ATM",
+            "x": -1009.793030,
+            "y": -2745.704590,
+            "z": 13.758937,
+            "h": 148.297592
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "L.S.I.A.",
+            "x": -1037.7359619141,
+            "y": -2738.0634765625,
+            "z": 20.169271469116,
+            "h": 322.95446777344
+        },
+        {
+            "type": "self_storage",
+            "name": "L.S.I.A.",
+            "x": -1205.3310546875,
+            "y": -2630.728515625,
+            "z": 13.944932937622,
+            "h": 325.30377197266,
+            "fee": 0,
+            "size": 150000,
+            "area": "plane"
+        },
+        {
+            "type": "self_storage",
+            "name": "L.S.I.A.",
+            "x": -1079.0277099609,
+            "y": -2865.3129882813,
+            "z": 13.950700759888,
+            "h": 326.36962890625,
+            "fee": 0,
+            "size": 150000,
+            "area": "truck"
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "LSIA Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "LSIA Icon",
+            "group": "chat.prefix.biz_lsia"
+        }
+    ]
+},
+{
+    "name": "Clucking Bell Co.",
+    "bonus": 396262,
+    "id": "biz_cluckingbell_co",
+    "cost": 11000000,
+    "visuallvl": "47",
+    "position": {
+        "name": "Cluckin Bell Farms",
+        "x": -137.179993,
+        "y": 6199.277832,
+        "z": 32.381268,
+        "h": 220.684494
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -122.364189,
+            "y": 6205.578613,
+            "z": 32.386753,
+            "h": 220.248123
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -131.528809,
+            "y": 6221.184570,
+            "z": 31.201303,
+            "h": 177.020447
+        },
+        {
+            "type": "marketplace",
+            "name": "Clucking Bell Co. Marketplace",
+            "x": 77.00764465332,
+            "y": 6330.1640625,
+            "z": 31.225763320923,
+            "h": 19.598230361938
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Cluckingbell Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Cluckingbell Icon",
+            "group": "chat.prefix.biz_cluckingbell_co"
+        }
+    ]
+},
+{
+    "name": "Sandy Shores Liquor",
+    "bonus": 19990,
+    "id": "biz_liquor_ss",
+    "cost": 250000,
+    "visuallvl": "5",
+    "position": {
+        "name": "Sandy Shores Liquor",
+        "x": 1952.636353,
+        "y": 3842.005371,
+        "z": 32.178314,
+        "h": 119.186943
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 1966.119507,
+            "y": 3847.662842,
+            "z": 31.996519,
+            "h": 27.844551
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 1946.172852,
+            "y": 3848.775146,
+            "z": 32.169601,
+            "h": 159.006577
+        },
+        {
+            "type": "marketplace",
+            "name": "Sandy Shores Liquor Marketplace",
+            "x": 1964.1575927734,
+            "y": 3831.8950195313,
+            "z": 32.012573242188,
+            "h": 19.598230361938
+        }
+    ]
+},
+{
+    "name": "You Tool Sandy Shores",
+    "bonus": 33974,
+    "id": "biz_youtool_ss",
+    "cost": 500000,
+    "visuallvl": "10",
+    "position": {
+        "name": "You Tool Sandy Shores",
+        "x": 2748.741943,
+        "y": 3472.372559,
+        "z": 55.677402,
+        "h": 67.460403
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 2777.550049,
+            "y": 3462.514648,
+            "z": 55.485081,
+            "h": 103.396164
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 2684.907715,
+            "y": 3515.794678,
+            "z": 53.303848,
+            "h": 247.452454
+        }
+    ]
+},
+{
+    "name": "Opium Nights Hotel",
+    "bonus": 565612,
+    "id": "biz_opium_hotel",
+    "cost": 17000000,
+    "visuallvl": "54",
+    "position": {
+        "name": "Opium Nights Hotel",
+        "x": -702.941895,
+        "y": -2276.212646,
+        "z": 13.455383,
+        "h": 44.473534
+    },
+    "special": [{
+            "type": "special",
+            "name": "Location",
+            "x": -720.270813,
+            "y": -2235.061279,
+            "z": 7.234416,
+            "h": 176.770889
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -748.083496,
+            "y": -2204.749756,
+            "z": 6.003607,
+            "h": 90.322311
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Opium Nights Hotel",
+            "x": -737.56066894531,
+            "y": -2276.6120605469,
+            "z": 13.437445640564,
+            "h": 134.3366394043
+        }
+    ]
+},
+{
+    "name": "Korean Plaza",
+    "bonus": 46515,
+    "id": "biz_korean_plaza",
+    "cost": 750000,
+    "visuallvl": "13",
+    "position": {
+        "name": "Korean Plaza",
+        "x": -601.426819,
+        "y": -1135.726685,
+        "z": 22.324245,
+        "h": 268.430786
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": -588.205322,
+            "y": -1127.000122,
+            "z": 22.178249,
+            "h": 179.269531
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": -606.245056,
+            "y": -1095.213135,
+            "z": 25.855106,
+            "h": 117.927704
+        },
+        {
+            "type": "market",
+            "name": "Market",
+            "x": -581.34875488281,
+            "y": -1020.3291015625,
+            "z": 22.329704284668,
+            "h": 83.893669128418
+        },
+        {
+            "type": "market",
+            "name": "Market",
+            "market": "Traffic Permits",
+            "x": -569.82836914063,
+            "y": -1046.4194335938,
+            "z": 22.329685211182,
+            "h": 266.53021240234
+        }
+    ]
+},
+{
+    "name": "Los Santos Docks",
+    "bonus": 80078,
+    "id": "biz_docks_ls",
+    "cost": 1500000,
+    "visuallvl": "18",
+    "position": {
+        "name": "Los Santos Docks",
+        "x": -52.509109,
+        "y": -2523.930176,
+        "z": 7.401169,
+        "h": 53.279678
+    },
+    "special": [{
+            "type": "repair",
+            "name": "Repair",
+            "x": -56.987484,
+            "y": -2529.986816,
+            "z": 6.010001,
+            "h": 228.748993,
+            "cost": 0
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -109.37397003174,
+            "y": -2535.4501953125,
+            "z": 5.9999966621399,
+            "h": 148.75277709961
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": -62.922676,
+            "y": -2509.439209,
+            "z": 11.344394,
+            "h": 233.855225
+        },
+        {
+            "type": "fuel",
+            "name": "Fuel",
+            "x": -67.479691,
+            "y": -2527.118896,
+            "z": 6.012727,
+            "h": 232.805786
+        },
+        {
+            "type": "atm",
+            "name": "ATM",
+            "x": -48.097378,
+            "y": -2508.034668,
+            "z": 7.396175,
+            "h": 141.084473
+        }
+    ]
+},
+{
+    "name": "Pala Springs Aerial Tramway",
+    "bonus": 19990,
+    "id": "biz_cablecar",
+    "cost": 250000,
+    "visuallvl": "5",
+    "position": {
+        "name": "Pala Springs Aerial Tramway",
+        "x": -754.82794189453,
+        "y": 5566.1762695313,
+        "z": 36.7096824646,
+        "h": 274.40832519531
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": -773.02392578125,
+            "y": 5547.9541015625,
+            "z": 33.497329711914,
+            "h": 63.477397918701
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": -740.24694824219,
+            "y": 5571.8115234375,
+            "z": 36.709648132324,
+            "h": 87.674461364746
+        },
+        {
+            "type": "market",
+            "name": "Market",
+            "x": -754.77941894531,
+            "y": 5578.8168945313,
+            "z": 36.70964050293,
+            "h": 293.53768920898
+        }
+    ]
+},
+{
+    "name": "Vinewood Racetrack",
+    "bonus": 1603569,
+    "id": "biz_racetrack_vw",
+    "cost": 60000000,
+    "visuallvl": "74",
+    "position": {
+        "name": "Vinewood Racetrack",
+        "x": 1044.225342,
+        "y": 191.897537,
+        "z": 80.999908,
+        "h": 236.220352
+    },
+    "special": [{
+            "type": "atm",
+            "name": "ATM",
+            "x": 1026.928345,
+            "y": 168.919769,
+            "z": 80.990486,
+            "h": 234.097809
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 1098.511475,
+            "y": 258.143433,
+            "z": 80.855652,
+            "h": 91.325836
+        },
+        {
+            "type": "market",
+            "name": "Market",
+            "x": 995.680847,
+            "y": 119.749214,
+            "z": 80.990875,
+            "h": 255.642212
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 1000.631287,
+            "y": 101.659729,
+            "z": 80.990860,
+            "h": 247.590805
+        },
+        {
+            "type": "casino",
+            "name": "Casino",
+            "x": 929.726685,
+            "y": 43.321415,
+            "z": 81.092865,
+            "h": 329.700348
+        }
+    ]
+},
+{
+    "name": "Sandy Shores Airfield",
+    "bonus": 1308944,
+    "id": "biz_airfield_ss",
+    "cost": 47000000,
+    "visuallvl": "72",
+    "position": {
+        "name": "Sandy Shores Airfield",
+        "x": 1701.5467529297,
+        "y": 3290.9489746094,
+        "z": 48.921897888184,
+        "h": 212.20622253418
+    },
+    "special": [{
+            "type": "hangar",
+            "name": "Hangar",
+            "x": 1730.8034667969,
+            "y": 3312.8254394531,
+            "z": 41.223518371582,
+            "h": 191.94409179688
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 1787.25390625,
+            "y": 3303.3627929688,
+            "z": 41.573261260986,
+            "h": 138.53515625
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Sandy Shores Airfield",
+            "x": 1697.0987548828,
+            "y": 3291.197265625,
+            "z": 48.920478820801,
+            "h": 229.33622741699
+        },
+        {
+            "type": "market",
+            "name": "Market",
+            "x": 1776.8463134766,
+            "y": 3327.5766601563,
+            "z": 41.433288574219,
+            "h": 121.26036834717
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 1758.7580566406,
+            "y": 3327.189453125,
+            "z": 41.352851867676,
+            "h": 287.45043945313
+        },
+        {
+            "type": "helipad",
+            "name": "Helipad",
+            "x": 1770.3217773438,
+            "y": 3239.7375488281,
+            "z": 42.128204345703,
+            "h": 9.7918891906738
+        }
+    ]
+},
+{
+    "name": "Aircraft Carrier",
+    "bonus": 1714115,
+    "id": "biz_carrier",
+    "cost": 65000000,
+    "visuallvl": "77",
+    "position": {
+        "name": "Aircraft Carrier",
+        "x": 3084.3718261719,
+        "y": -4686.8374023438,
+        "z": 27.252155303955,
+        "h": 12.245030403137
+    },
+    "special": [{
+            "type": "hangar",
+            "name": "Hangar",
+            "x": 3057.4885253906,
+            "y": -4672.7446289063,
+            "z": 15.262234687805,
+            "h": 16.425481796265
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Aircraft Carrier",
+            "x": 3094.0891113281,
+            "y": -4715.2641601563,
+            "z": 25.778638839722,
+            "h": 183.80400085449
+        },
+        {
+            "type": "repair",
+            "name": "Aircraft Carrier",
+            "x": 3091.0793457031,
+            "y": -4792.8354492188,
+            "z": 15.261617660522,
+            "h": 183.80400085449
+        },
+        {
+            "type": "fuel",
+            "name": "Aircraft Carrier",
+            "x": 3078.5361328125,
+            "y": -4798.587890625,
+            "z": 15.261057853699,
+            "h": 183.80400085449
+        },
+        {
+            "type": "special",
+            "name": "Location",
+            "x": 3092.5412597656,
+            "y": -4712.9125976563,
+            "z": 15.262617111206,
+            "h": 332.83547973633
+        }
+    ]
+},
+{
+    "name": "La Vaca Loco",
+    "bonus": 13604,
+    "id": "biz_vacaloco",
+    "cost": 150000,
+    "visuallvl": "3",
+    "position": {
+        "name": "La Vaca Loco",
+        "x": 142.927383,
+        "y": -1520.104736,
+        "z": 29.836950,
+        "h": 137.086761
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 156.249451,
+            "y": -1511.876831,
+            "z": 29.140926,
+            "h": 50.301353
+        },
+        {
+            "type": "special",
+            "name": "Daily Bonus",
+            "x": 144.475327,
+            "y": -1540.986572,
+            "z": 29.142031,
+            "h": 327.836792
+        }
+    ]
+},
+{
+    "name": "Collins Petrochemical Corp.",
+    "bonus": 2961540,
+    "id": "biz_murrietta_oil",
+    "cost": 125000000,
+    "visuallvl": "87",
+    "position": {
+        "name": "CollinsCo",
+        "x": 1708.917725,
+        "y": -1610.068481,
+        "z": 113.814720,
+        "h": 190.878906
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Garage",
+            "x": 1715.076782,
+            "y": -1650.649170,
+            "z": 112.516853,
+            "h": 192.533920
+        },
+        {
+            "type": "special",
+            "name": "Special",
+            "x": 1713.027954,
+            "y": -1555.523438,
+            "z": 113.942116,
+            "h": 37.124844
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "CollinsCo",
+            "x": 1714.748535,
+            "y": -1598.130737,
+            "z": 113.814629,
+            "h": 280.117676
+        },
+        {
+            "type": "self_storage",
+            "name": "CollinsCo",
+            "x": 1735.635620,
+            "y": -1538.411499,
+            "z": 112.705345,
+            "h": 314.896423,
+            "fee": 0,
+            "size": 150000,
+            "area": "truck"
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Murrietta Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Murrietta Icon",
+            "group": "chat.prefix.biz_murrietta_oil"
+        }
+    ]
+},
+{
+    "name": "Fridgit Co.",
+    "bonus": 305862,
+    "id": "biz_stay_frosty",
+    "cost": 8000000,
+    "visuallvl": "40",
+    "position": {
+        "name": "Fridgit Co.",
+        "x": 868.230469,
+        "y": -1629.213745,
+        "z": 30.247114,
+        "h": 87.668678
+    },
+    "special": [{
+            "type": "special",
+            "name": "Special",
+            "x": 952.91882324219,
+            "y": -1712.3009033203,
+            "z": 30.346538543701,
+            "h": 69.35213470459
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 867.587341,
+            "y": -1663.824585,
+            "z": 30.095900,
+            "h": 210.233643
+        },
+        {
+            "type": "helipad",
+            "name": "Helipad",
+            "x": 910.197510,
+            "y": -1681.197144,
+            "z": 51.132278,
+            "h": 177.552917
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Fridgit Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Fridgit Icon",
+            "group": "chat.prefix.biz_stay_frosty"
+        }
+    ]
+},
+{
+    "name": "Yellowjack",
+    "bonus": 55935,
+    "id": "biz_yellowjack",
+    "cost": 950000,
+    "visuallvl": "15",
+    "position": {
+        "name": "Yellowjack",
+        "x": 1983.276489,
+        "y": 3026.855713,
+        "z": 47.523186,
+        "h": 148.360931
+    },
+    "special": [{
+            "type": "market",
+            "name": "Market",
+            "x": 1985.441650,
+            "y": 3052.603760,
+            "z": 47.215130,
+            "h": 326.449585
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 2008.302612,
+            "y": 3071.468018,
+            "z": 47.061764,
+            "h": 257.242065
+        },
+        {
+            "type": "special",
+            "name": "Special",
+            "x": 1980.305176,
+            "y": 3048.955078,
+            "z": 50.431862,
+            "h": 330.493835
+        },
+        {
+            "type": "self_storage",
+            "name": "Yellowjack",
+            "x": 1995.205444,
+            "y": 3036.047119,
+            "z": 47.026821,
+            "h": 325.128418,
+            "fee": 10,
+            "size": 35000,
+            "area": "truck"
+        }
+    ]
+},
+{
+    "name": "Bahama Mamas",
+    "bonus": 952001,
+    "id": "biz_bahama_mamas",
+    "cost": 32000000,
+    "visuallvl": "66",
+    "position": {
+        "name": "Bahama Mamas",
+        "x": -1383.363647,
+        "y": -612.322021,
+        "z": 31.757839,
+        "h": 119.286682
+    },
+    "special": [{
+            "type": "market",
+            "name": "Market",
+            "x": -1378.181763,
+            "y": -626.898132,
+            "z": 30.819565,
+            "h": 206.535278
+        },
+        {
+            "type": "atm",
+            "name": "ATM",
+            "x": -1390.876709,
+            "y": -590.812866,
+            "z": 30.319572,
+            "h": 352.726135
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Bahama Mamas",
+            "x": -1387.978516,
+            "y": -618.909302,
+            "z": 30.819576,
+            "h": 307.011322
+        },
+        {
+            "type": "special",
+            "name": "Daily",
+            "x": -1386.148438,
+            "y": -627.076721,
+            "z": 30.819559,
+            "h": 307.644745
+        },
+        {
+            "type": "garage",
+            "name": "Daily",
+            "x": -1372.306640625,
+            "y": -574.00933837891,
+            "z": 30.235149383545,
+            "h": 31.803773880005
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Bahama Mamas Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Bahama Mamas Icon",
+            "group": "chat.prefix.biz_bahama_mamas"
+        }
+    ]
+},
+{
+    "name": "Banner Hotel & Spa",
+    "bonus": 174818,
+    "id": "biz_banner",
+    "cost": 4000000,
+    "visuallvl": "27",
+    "position": {
+        "name": "Banner Hotel & Spa",
+        "x": -286.34310913086,
+        "y": -1062.0539550781,
+        "z": 27.205402374268,
+        "h": 249.81948852539
+    },
+    "special": [{
+            "type": "spawn",
+            "tier": 2,
+            "name": "Banner Hotel & Spa",
+            "x": -306.35440063477,
+            "y": -1073.6545410156,
+            "z": 29.385011672974,
+            "h": 268.02471923828
+        },
+        {
+            "type": "special",
+            "name": "Daily",
+            "x": -297.72506713867,
+            "y": -1044.0821533203,
+            "z": 36.350997924805,
+            "h": 10.312854766846
+        },
+        {
+            "type": "garage",
+            "name": "Daily",
+            "x": -339.06344604492,
+            "y": -1082.8693847656,
+            "z": 23.025793075562,
+            "h": 354.91156005859
+        }
+    ]
+},
+{
+    "name": "San Andreas Telecom Network",
+    "bonus": 13493131,
+    "id": "biz_satn",
+    "cost": 750000000,
+    "visuallvl": "100",
+    "position": {
+        "name": "San Andreas Telecom",
+        "x": 781.62677001953,
+        "y": 1296.8873291016,
+        "z": 361.36175537109
+    },
+    "special": [{
+            "type": "spawn",
+            "tier": 2,
+            "name": "San Andreas Telecom Network",
+            "x": 781.39593505859,
+            "y": 1296.9387207031,
+            "z": 361.36175537109,
+            "h": 259.46548461914
+        },
+        {
+            "type": "special",
+            "name": "Daily",
+            "x": 662.40716552734,
+            "y": 1282.4750976563,
+            "z": 360.29614257813,
+            "h": 88.48641204834
+        },
+        {
+            "type": "garage",
+            "name": "Daily",
+            "x": 791.12365722656,
+            "y": 1276.9466552734,
+            "z": 360.29650878906,
+            "h": 303.72805786133
+        },
+        {
+            "type": "chat",
+            "name": "SATN Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "name": "SATN Perk",
+            "group": "biz_satn"
+        }
+    ]
+},
+{
+    "name": "Ron Alternates Wind Farm",
+    "bonus": 7057315,
+    "id": "biz_windfarm",
+    "cost": 350000000,
+    "visuallvl": "94",
+    "position": {
+        "name": "Ron Alternates Wind Farm",
+        "x": 2462.0830078125,
+        "y": 1575.7342529297,
+        "z": 33.112606048584,
+        "h": 87.020378112793
+    },
+    "special": [{
+            "type": "special",
+            "name": "Daily",
+            "x": 2455.4624023438,
+            "y": 1594.7769775391,
+            "z": 32.875354766846,
+            "h": 255.55401611328
+        },
+        {
+            "type": "garage",
+            "name": "Daily",
+            "x": 2504.7087402344,
+            "y": 1592.7062988281,
+            "z": 32.015502929688,
+            "h": 292.72180175781
+        }
+    ]
+},
+{
+    "name": "Wenger Institute",
+    "bonus": 2590,
+    "id": "biz_wenger",
+    "cost": 15000,
+    "visuallvl": "1",
+    "position": {
+        "name": "Wenger Institute",
+        "x": -368.79766845703,
+        "y": -240.53649902344,
+        "z": 36.080070495605,
+        "h": 175.37205505371
+    },
+    "special": [{
+            "type": "special",
+            "name": "Daily",
+            "x": -325.63018798828,
+            "y": -255.60180664063,
+            "z": 34.390846252441,
+            "h": 87.368705749512
+        },
+        {
+            "type": "garage",
+            "name": "Daily",
+            "x": -359.1682434082,
+            "y": -226.19747924805,
+            "z": 37.262523651123,
+            "h": 31.434759140015
+        }
+    ]
+},
+{
+    "name": "Vanilla Unicorn",
+    "bonus": 902575,
+    "id": "biz_stripclub",
+    "cost": 30000000,
+    "visuallvl": "64",
+    "position": {
+        "name": "Vanilla Unicorn - Buy point",
+        "x": 126.014801,
+        "y": -1283.903198,
+        "z": 29.282330,
+        "h": 203.052200
+    },
+    "special": [{
+            "type": "atm",
+            "name": "Vanilla Unicorn - ATM",
+            "x": 129.543274,
+            "y": -1291.885620,
+            "z": 29.269524,
+            "h": 299.878174
+        },
+        {
+            "type": "special",
+            "name": "Vanilla Unicorn - Bonus point",
+            "x": 93.780701,
+            "y": -1292.122803,
+            "z": 29.268766,
+            "h": 297.499878
+        },
+        {
+            "type": "garage",
+            "name": "Vanilla Unicorn - Vehicle Garage",
+            "x": 148.213455,
+            "y": -1305.821045,
+            "z": 29.202311,
+            "h": 278.457397
+        },
+        {
+            "type": "self_storage",
+            "name": "Vanilla Unicorn",
+            "x": 138.807602,
+            "y": -1277.245728,
+            "z": 29.318634,
+            "h": 118.814560,
+            "size": 10000,
+            "fee": 0,
+            "area": "truck"
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Vanilla Unicorn",
+            "x": 107.032562,
+            "y": -1305.037476,
+            "z": 28.768797,
+            "h": 348.094055
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Unicorn Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Unicorn Icon",
+            "group": "chat.prefix.biz_stripclub"
+        }
+    ]
+},
+{
+    "name": "Parsons Rehabilitation Center",
+    "bonus": 192169,
+    "id": "biz_persons",
+    "cost": 4500000,
+    "visuallvl": "29",
+    "position": {
+        "name": "Parsons Rehabilitation Center - Buy Point",
+        "x": -1516.673828,
+        "y": 852.379761,
+        "z": 181.594666,
+        "h": 78.718536
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Parsons Rehabilitation Center - Vehicle Garage",
+            "x": -1528.161255,
+            "y": 888.755615,
+            "z": 181.843719,
+            "h": 169.342880
+        },
+        {
+            "type": "special",
+            "name": "Parsons Rehabilitation Center - Bonus Point",
+            "x": -1502.169800,
+            "y": 858.104065,
+            "z": 181.594666,
+            "h": 32.427231
+        },
+        {
+            "type": "market",
+            "market": "Traffic Permits",
+            "name": "Parsons Rehabilitation Center - Market (Traffic Permits)",
+            "x": -1571.994385,
+            "y": 771.868530,
+            "z": 189.194489,
+            "h": 21.390676
+        }
+    ]
+},
+{
+    "name": "Grandma's House",
+    "bonus": 33974,
+    "id": "biz_granny",
+    "cost": 500000,
+    "visuallvl": "10",
+    "position": {
+        "name": "Grandmas House - Buy Point",
+        "x": 2220.858154,
+        "y": 5614.331543,
+        "z": 54.714058,
+        "h": 284.201660
+    },
+    "special": [{
+            "type": "special",
+            "name": "Grandmas House - Bonus Point",
+            "x": 2224.441895,
+            "y": 5604.611328,
+            "z": 54.922382,
+            "h": 286.514130
+        },
+        {
+            "type": "garage",
+            "name": "Grandmas House - Garage",
+            "x": 2214.056396,
+            "y": 5596.330078,
+            "z": 53.932392,
+            "h": 20.762671
+        },
+        {
+            "type": "helipad",
+            "name": "Grandmas House - Heli Garage",
+            "x": 2202.688477,
+            "y": 5573.490234,
+            "z": 53.725433,
+            "h": 347.494110
+        },
+        {
+            "type": "self_storage",
+            "name": "Grandma's House",
+            "x": 2195.722412,
+            "y": 5606.561035,
+            "z": 53.540730,
+            "h": 336.438324,
+            "size": 10000,
+            "fee": 0,
+            "area": "truck"
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Grandma Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Grandma Icon",
+            "group": "chat.prefix.biz_granny"
+        }
+    ]
+},
+{
+    "name": "Mt. Chiliad Base",
+    "bonus": 4397437,
+    "id": "biz_chiliad_base",
+    "cost": 200000000,
+    "visuallvl": "90",
+    "position": {
+        "name": "MT Chiliad Base - Buy Point",
+        "x": 517.348389,
+        "y": 5582.300293,
+        "z": 782.589783,
+        "h": 178.094589
+    },
+    "special": [{
+            "type": "spawn",
+            "tier": 2,
+            "name": "Mt. Chiliad Base",
+            "x": 454.276703,
+            "y": 5571.912598,
+            "z": 781.184326,
+            "h": 91.870201
+        },
+        {
+            "type": "special",
+            "name": "MT Chiliad Base - Bonus Point",
+            "x": 470.623077,
+            "y": 5549.953613,
+            "z": 793.367676,
+            "h": 302.335632
+        },
+        {
+            "type": "helipad",
+            "name": "MT Chiliad Base - Heli Garage",
+            "x": 439.990936,
+            "y": 5525.470215,
+            "z": 793.449341,
+            "h": 127.437241
+        },
+        {
+            "type": "garage",
+            "name": "MT Chiliad Base - Vehicle Garage",
+            "x": 521.909424,
+            "y": 5570.144043,
+            "z": 782.589600,
+            "h": 347.666595,
+            "spawnPos": {
+                "x": 524.38842773438,
+                "y": 5618.6245117188,
+                "z": 780.78814697266
+            }
+        },
+        {
+            "type": "helipad",
+            "name": "MT Chiliad Base - Heli Garage 2",
+            "x": 529.733826,
+            "y": 5520.782227,
+            "z": 793.418274,
+            "h": 223.622620
+        },
+        {
+            "type": "helipad",
+            "name": "MT Chiliad Base - Heli Garage 3",
+            "x": 440.347809,
+            "y": 5617.488281,
+            "z": 793.419373,
+            "h": 49.333408
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Chiliad Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Chiliad Icon",
+            "group": "chat.prefix.biz_chiliad_base"
+        }
+    ]
+},
+{
+    "name": "Oil Platform",
+    "bonus": 2961540,
+    "id": "biz_oilrig",
+    "cost": 125000000,
+    "visuallvl": "87",
+    "hidden": true,
+    "position": {
+        "name": "Oilrig Platform - HIDDEN ICON Buy point",
+        "x": -4169.881348,
+        "y": 8913.024414,
+        "z": 24.945295,
+        "h": 142.318909
+    },
+    "special": [{
+            "type": "garage",
+            "name": "Oil Platform - Vehicle Garage",
+            "x": -4174.84375,
+            "y": 8902.2275390625,
+            "z": 19.753803253174,
+            "spawnPos": {
+                "x": -4174.84375,
+                "y": 8902.2275390625,
+                "z": 19.753803253174
+            }
+        },
+        {
+            "type": "special",
+            "name": "Oilrig Platform - Bonus Point",
+            "x": -4168.999023,
+            "y": 8900.979492,
+            "z": 19.753553,
+            "h": 231.016586
+        },
+        {
+            "type": "helipad",
+            "name": "Oilrig Platform - Heli Garage",
+            "x": -4192.656738,
+            "y": 8881.894531,
+            "z": 26.350149,
+            "h": 321.839081
+        },
+        {
+            "type": "marina",
+            "name": "Oil Platform",
+            "x": -4152.684082,
+            "y": 8934.459961,
+            "z": 3.469843,
+            "h": 230.711456,
+            "spawnPos": {
+                "x": -4130.8237304688,
+                "y": 8885.779296875,
+                "z": -0.47749879956245,
+                "h": 253.00744628906
+            }
+        },
+        {
+            "type": "atm",
+            "name": "Oilrig Platform - ATM",
+            "x": -4168.686035,
+            "y": 8910.688477,
+            "z": 22.353851,
+            "h": 48.982681
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Oil Platform",
+            "x": -4180.719727,
+            "y": 8897.704102,
+            "z": 19.754526,
+            "h": 315.897644
+        },
+        {
+            "type": "market",
+            "name": "Oilrig Platform - Market (Food/drink)",
+            "x": -4166.974609375,
+            "y": 8912.498046875,
+            "z": 22.347826004028
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Oilrig Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Oilrig Icon",
+            "group": "chat.prefix.biz_oilrig"
+        }
+    ]
+},
+{
+    "name": "Hookies",
+    "bonus": 22963,
+    "id": "biz_hookies",
+    "cost": 300000,
+    "visuallvl": "7",
+    "position": {
+        "name": "Hookies - Buy Point",
+        "x": -2193.330811,
+        "y": 4286.322754,
+        "z": 49.175159,
+        "h": 321.513428
+    },
+    "special": [{
+            "type": "special",
+            "name": "Hookies - Special",
+            "x": -2174.7578125,
+            "y": 4293.8950195313,
+            "z": 49.050552368164,
+            "h": 60.389320373535
+        },
+        {
+            "type": "market",
+            "name": "Hookies - Market (Food/drink)",
+            "x": -2193.779785,
+            "y": 4290.165039,
+            "z": 49.174187,
+            "h": 237.995483
+        },
+        {
+            "type": "garage",
+            "name": "Hookies - Vehicle Garage",
+            "x": -2221.232910,
+            "y": 4235.166016,
+            "z": 47.093376,
+            "h": 328.200287
+        },
+        {
+            "type": "self_storage",
+            "name": "Hookies - Self Storage",
+            "x": -2209.091553,
+            "y": 4246.667480,
+            "z": 47.557930,
+            "h": 340.259369,
+            "size": 10000,
+            "fee": 0,
+            "area": "truck"
+        }
+    ]
+},
+{
+    "name": "Barracuda Cafe",
+    "bonus": 46515,
+    "id": "biz_baracuda",
+    "cost": 750000,
+    "visuallvl": "13",
+    "position": {
+        "name": "Baracuda Cafe - Buy Point",
+        "x": -3276.633545,
+        "y": 965.100159,
+        "z": 8.347157,
+        "h": 176.848923
+    },
+    "special": [{
+            "type": "marina",
+            "name": "Barracuda Cafe - Boat Garage (Where you look at your boats)",
+            "x": -3424.493652,
+            "y": 981.182434,
+            "z": 8.346682,
+            "h": 320.229675,
+            "spawnPos": {
+                "x": -3426.7348632813,
+                "y": 1009.2990722656,
+                "z": -0.4799690246582,
+                "h": 132.80058288574
+            }
+        },
+        {
+            "type": "special",
+            "name": "Barracuda Cafe - Bonus Point",
+            "x": -3418.193359,
+            "y": 964.936157,
+            "z": 11.935834,
+            "h": 179.558502
+        }
+    ]
+},
+{
+    "name": "Pacific Bluffs Country Club",
+    "bonus": 592757,
+    "id": "biz_pbcc",
+    "cost": 18000000,
+    "visuallvl": "58",
+    "position": {
+        "name": "Pacific Bluffs Country Club - Buy Point",
+        "x": -3023.455322,
+        "y": 81.415039,
+        "z": 11.608119,
+        "h": 142.129105
+    },
+    "special": [{
+            "type": "special",
+            "name": "Pacific Bluffs Country Club - Bonus Point",
+            "x": -3028.739014,
+            "y": 73.377396,
+            "z": 12.902237,
+            "h": 326.536987
+        },
+        {
+            "type": "market",
+            "market": "Country Club",
+            "name": "Pacific Bluffs Country Club - CUSTOM MARKET",
+            "x": -2974.807861,
+            "y": 19.670259,
+            "z": 7.372063,
+            "h": 334.930878
+        }, {
+            "type": "garage",
+            "name": "Pacific Bluffs Country Club - Vehicle Garage",
+            "x": -2990.966064,
+            "y": 80.633118,
+            "z": 11.608496,
+            "h": 47.025192
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "pbcc Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "pbcc Icon",
+            "group": "chat.prefix.biz_pbcc"
+        }
+    ]
+},
+{
+    "name": "Del Perro Pier",
+    "bonus": 7057315,
+    "id": "biz_dp_pier",
+    "cost": 350000000,
+    "visuallvl": "94",
+    "position": {
+        "name": "Del Perro Pier - Buy Point",
+        "x": -1812.495239,
+        "y": -1205.709717,
+        "z": 19.169615,
+        "h": 312.719574
+    },
+    "special": [{
+            "type": "special",
+            "name": "Del Perro Pier - Bonus Point",
+            "x": -1800.878662,
+            "y": -1205.954224,
+            "z": 14.304766,
+            "h": 297.654510
+        },
+        {
+            "type": "garage",
+            "name": "Del Perro Pier - Vehicle Garage",
+            "x": -1602.391846,
+            "y": -1045.242310,
+            "z": 13.036755,
+            "h": 319.287292
+        },
+        {
+            "type": "repair",
+            "name": "Del Perro Pier - Repair point",
+            "x": -1476.936157,
+            "y": -1005.860535,
+            "z": 6.278881,
+            "h": 339.248291
+        },
+        {
+            "type": "marina",
+            "name": "Del Perro Pier",
+            "x": -1848.802734,
+            "y": -1246.498291,
+            "z": 8.615790,
+            "h": 154.191315,
+            "spawnPos": {
+                "x": -1877.2231445313,
+                "y": -1281.8366699219,
+                "z": 0.28344595432281
+            }
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Pier Icon"
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Pier Icon"
+        },
+        {
+            "type": "group",
+            "tier": 100,
+            "name": "Pier Icon",
+            "group": "chat.prefix.biz_dp_pier.1"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Pier Icon",
+            "group": "chat.prefix.biz_dp_pier.2"
+        }
+    ]
+},
+{
+    "name": "Vespucci Movie Masks",
+    "bonus": 13604,
+    "id": "biz_vespucci_masks",
+    "cost": 150000,
+    "visuallvl": "3",
+    "position": {
+        "name": "Vespucci Movie Masks - Buy Point",
+        "x": -1337.976440,
+        "y": -1276.094116,
+        "z": 4.895197,
+        "h": 258.556213
+    },
+    "special": [{
+        "type": "special",
+        "name": "Vespucci Movie Masks - Bonus Point",
+        "x": -1337.141724,
+        "y": -1279.103882,
+        "z": 4.857801,
+        "h": 283.663849
+    }]
+},
+{
+    "name": "Mr. Spoke's Bike Rental",
+    "bonus": 19990,
+    "id": "biz_spoke_bikes",
+    "cost": 250000,
+    "visuallvl": "5",
+    "position": {
+        "name": "Mr Spoke Bike rental - Buy Point",
+        "x": -1106.429565,
+        "y": -1695.158203,
+        "z": 4.373420,
+        "h": 138.722427
+    },
+    "special": [{
+            "type": "special",
+            "name": "Mr Spoke Bike rental - Bonus point",
+            "x": -1107.908203,
+            "y": -1693.208984,
+            "z": 4.374210,
+            "h": 125.991684
+        },
+        {
+            "type": "atm",
+            "name": "Mr Spoke Bike rental - ATM",
+            "x": -1109.669678,
+            "y": -1690.732788,
+            "z": 4.374995,
+            "h": 127.622559
+        },
+        {
+            "type": "vehicle",
+            "vehicle": "blazer",
+            "name": "Mr Spoke Bike rental - 'Blazer' Quad bike spawn point",
+            "x": -1105.632690,
+            "y": -1686.532715,
+            "z": 4.282356,
+            "h": 143.944611
+        },
+        {
+            "type": "vehicle",
+            "vehicle": "scorcher",
+            "name": "Mr Spoke Bike rental - 'Scorcher' Bike Spawn",
+            "x": -1100.323364,
+            "y": -1693.083740,
+            "z": 4.277090,
+            "h": 98.081772
+        }
+    ]
+},
+{
+    "name": "Horny's Burgers",
+    "bonus": 22963,
+    "id": "biz_horny_burgie",
+    "cost": 300000,
+    "visuallvl": "7",
+    "position": {
+        "name": "Horny's Burgers - Buy Point",
+        "x": 1241.158325,
+        "y": -367.413361,
+        "z": 69.082199,
+        "h": 338.509918
+    },
+    "special": [{
+            "type": "special",
+            "name": "Horny's Burgers - Bonus Point",
+            "x": 1247.772217,
+            "y": -348.337677,
+            "z": 69.082207,
+            "h": 165.276779
+        },
+        {
+            "type": "garage",
+            "name": "Horny's Burgers - Vehicle Garage",
+            "x": 1262.573853,
+            "y": -340.856812,
+            "z": 69.082146,
+            "h": 89.092758
+        }
+    ]
+},
+{
+    "name": "Casey's Diner",
+    "bonus": 25831,
+    "id": "biz_caseys_diner",
+    "cost": 350000,
+    "visuallvl": "8",
+    "position": {
+        "name": "Casey's Diner - Buy point",
+        "x": 792.384338,
+        "y": -735.770691,
+        "z": 27.482983,
+        "h": 270.720306
+    },
+    "special": [{
+            "type": "special",
+            "name": "Casey's Diner - Bonus point",
+            "x": 812.890869,
+            "y": -750.298828,
+            "z": 26.727577,
+            "h": 82.237343
+        },
+        {
+            "type": "garage",
+            "name": "Casey's Diner - Vehicle Garage",
+            "x": 819.378052,
+            "y": -762.103882,
+            "z": 26.727320,
+            "h": 108.180382
+        }
+    ]
+},
+{
+    "name": "Playboy Mansion",
+    "bonus": 10359526,
+    "id": "biz_playboi",
+    "cost": 550000000,
+    "visuallvl": "97",
+    "position": {
+        "name": "Playboy Mansion - Buy Point",
+        "x": -1537.704224,
+        "y": 129.575684,
+        "z": 57.371269,
+        "h": 315.550293
+    },
+    "special": [{
+            "type": "special",
+            "name": "Playboy Mansion - Bonus Point",
+            "x": -1534.463867,
+            "y": 96.771317,
+            "z": 56.749710,
+            "h": 50.077282
+        },
+        {
+            "type": "garage",
+            "name": "Playboy Mansion - Vehicle Garage",
+            "x": -1529.330933,
+            "y": 85.526779,
+            "z": 56.655930,
+            "h": 307.902466
+        },
+        {
+            "type": "helipad",
+            "name": "Playboy Mansion - Heli Garage",
+            "x": -1608.549316,
+            "y": 107.671402,
+            "z": 61.133209,
+            "h": 268.107300
+        },
+        {
+            "type": "self_storage",
+            "name": "Playboy Mansion - Self Storage",
+            "x": -1550.971924,
+            "y": 130.134979,
+            "z": 56.787189,
+            "h": 131.729889,
+            "size": 50000,
+            "fee": 0,
+            "area": "truck"
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Playboy Mansion",
+            "x": -1504.735840,
+            "y": 135.670197,
+            "z": 55.652969,
+            "h": 319.440063
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Playboy Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Playboy Icon",
+            "group": "chat.prefix.biz_playboi"
+        }
+    ]
+},
+{
+    "name": "Pacific Standard Bank",
+    "bonus": 0,
+    "id": "biz_pacific_standard",
+    "cost": 500000000,
+    "visuallvl": "96",
+    "no_bonus": true,
+    "position": {
+        "name": "Pacific Standard",
+        "x": 260.769348,
+        "y": 205.027145,
+        "z": 110.286949,
+        "h": 342.328796
+    },
+    "special": [{
+            "type": "biz_collection",
+            "name": "Pacific Standard Teller",
+            "x": 240.139389,
+            "y": 211.651917,
+            "z": 110.352989,
+            "h": 251.047852
+        },
+        {
+            "type": "spawn",
+            "name": "Pacific Standard",
+            "x": 235.49876403809,
+            "y": 216.98777770996,
+            "z": 110.28279876709,
+            "h": 287.76287841797
+        },
+        {
+            "type": "garage",
+            "name": "Pacific Standard - Vehicle Garage",
+            "x": 370.75765991211,
+            "y": 273.21566772461,
+            "z": 103.1176071167,
+            "h": 251.90481567383
+        }
+    ]
+},
+{
+    "name": "Tongva Hills Vineyard",
+    "bonus": 11155977,
+    "id": "biz_vineyard",
+    "cost": 600000000,
+    "visuallvl": "99",
+    "position": {
+        "name": "Tongva Hills Vineyard - Buy Point",
+        "x": -1888.2740478516,
+        "y": 2049.98828125,
+        "z": 140.98390197754
+    },
+    "special": [{
+            "type": "special",
+            "name": "Vineyard - Bonus Point",
+            "x": -1889.6013183594,
+            "y": 2045.1693115234,
+            "z": 140.87199401855
+        },
+        {
+            "type": "garage",
+            "name": "Vineyard - Vehicle Garage",
+            "x": -1896.1896972656,
+            "y": 2029.3939208984,
+            "z": 140.73764038086
+        },
+        {
+            "type": "helipad",
+            "name": "Vineyard - Heli Garage",
+            "x": -1898.302734375,
+            "y": 2009.8988037109,
+            "z": 141.49560546875
+        },
+        {
+            "type": "self_storage",
+            "name": "Vineyard - Self Storage",
+            "x": -1922.0493164063,
+            "y": 2047.1319580078,
+            "z": 140.73503112793,
+            "size": 50000,
+            "fee": 0,
+            "area": "truck"
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Tongva Hills Vineyard",
+            "x": -1911.80078125,
+            "y": 2071.5505371094,
+            "z": 140.38899230957
+        },
+        {
+            "type": "chat",
+            "tier": 100,
+            "name": "Vineyard Icon"
+        },
+        {
+            "hidden": true,
+            "type": "group",
+            "tier": 100,
+            "name": "Vineyard Icon",
+            "group": "chat.prefix.biz_vineyard"
+        }
+    ]
+},
+{
+    "name": "Walker Logistics",
+    "bonus": 2861836,
+    "id": "biz_walker",
+    "cost": 120000000,
+    "visuallvl": "83",
+    "position": {
+        "name": "Walker Logistics - Buy Point",
+        "x": 152.12530517578,
+        "y": -3210.3564453125,
+        "z": 5.8797378540039
+    },
+    "special": [{
+            "type": "special",
+            "name": "Vineyard - Bonus Point",
+            "x": 156.57215881348,
+            "y": -3217.5297851563,
+            "z": 7.0316400527954
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 138.56004333496,
+            "y": -3200.3269042969,
+            "z": 5.8575897216797
+        },
+        {
+            "type": "helipad",
+            "name": "Helipad",
+            "x": 166.39878845215,
+            "y": -3226.5815429688,
+            "z": 5.8778810501099
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Walker Logistics",
+            "x": 141.33074951172,
+            "y": -3181.2609863281,
+            "z": 5.8575911521912
+        },
+        {
+            "type": "self_storage",
+            "name": "Walker Logistics",
+            "x": 126.76761627197,
+            "y": -3212.6791992188,
+            "z": 5.8929586410522,
+            "size": 50000,
+            "fee": 0,
+            "area": "walker"
+        }
+    ]
+},
+{
+    "name": "Train Yard - Paleto Bay",
+    "bonus": 2038284,
+    "id": "biz_train_paleto",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - Paleto Bay - Buy Point",
+        "x": 147.79327392578,
+        "y": 6361.9321289063,
+        "z": 31.52921295166
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 190.03636169434,
+            "y": 6379.1401367188,
+            "z": 32.333835601807,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "pb"
+        }
+    ]
+},
+{
+    "name": "Train Yard - Grapeseed",
+    "bonus": 2038284,
+    "id": "biz_train_grapeseed",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - Grapeseed - Buy Point",
+        "x": 2932.4145507813,
+        "y": 4617.755859375,
+        "z": 48.71703338623
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 2928.67578125,
+            "y": 4627.6127929688,
+            "z": 48.545486450195,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "gs"
+        }
+    ]
+},
+{
+    "name": "Train Yard - Davis Quartz",
+    "bonus": 2038284,
+    "id": "biz_train_davis",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - Davis Quartz - Buy Point",
+        "x": 2745.3869628906,
+        "y": 2788.5668945313,
+        "z": 35.4485206604
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 2687.3676757813,
+            "y": 2767.3159179688,
+            "z": 37.877990722656,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "dq"
+        }
+    ]
+},
+{
+    "name": "Train Yard - LS Docks",
+    "bonus": 2038284,
+    "id": "biz_train_docks",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - LS Docks - Buy Point",
+        "x": -175.61352539063,
+        "y": -2581.3151855469,
+        "z": 6.0010290145874
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": -114.83979034424,
+            "y": -2576.6413574219,
+            "z": 6.0007061958313,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "dx"
+        }
+    ]
+},
+{
+    "name": "Train Yard - LS Terminal",
+    "bonus": 2038284,
+    "id": "biz_train_terminal",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - LS Terminal - Buy Point",
+        "x": 858.45727539063,
+        "y": -3203.8115234375,
+        "z": 5.9949970245361
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 796.67376708984,
+            "y": -3215.5600585938,
+            "z": 5.8998837471008,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "tx"
+        }
+    ]
+},
+{
+    "name": "Train Yard - Sandy Shores",
+    "bonus": 2038284,
+    "id": "biz_train_sandy",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - Sandy Shores - Buy Point",
+        "x": 2009.6743164063,
+        "y": 3630.4052734375,
+        "z": 39.78341293335
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 2002.7016601563,
+            "y": 3650.0861816406,
+            "z": 34.648063659668,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "ss"
+        }
+    ]
+},
+{
+    "name": "Train Yard - La Mesa",
+    "bonus": 2038284,
+    "id": "biz_train_lm",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - La Mesa - Buy Point",
+        "x": 696.9375,
+        "y": -874.43109130859,
+        "z": 24.658582687378
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 713.36706542969,
+            "y": -891.95922851563,
+            "z": 23.699142456055,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "lm"
+        }
+    ]
+},
+{
+    "name": "Train Yard - Mirror Park",
+    "bonus": 2038284,
+    "id": "biz_train_mp",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Train Yard - Mirror Park - Buy Point",
+        "x": 486.76611328125,
+        "y": -591.54602050781,
+        "z": 26.210861206055
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train Network",
+            "x": 501.36944580078,
+            "y": -624.58654785156,
+            "z": 24.759960174561,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "mp"
+        }
+    ]
+},
+{
+    "name": "Ship Yard - Portland",
+    "bonus": 2038284,
+    "id": "biz_train_lc",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Ship Yard - Portland",
+        "x": -1505.7915039063,
+        "y": 6647.837890625,
+        "z": 11.887263298035
+    },
+    "special": [
+
+        {
+            "type": "self_storage_train",
+            "name": "Train / Ship Network",
+            "x": -1490.9998779297,
+            "y": 6598.751953125,
+            "z": 11.509660720825,
+            "size": 16000,
+            "fee": 250,
+            "id": "biz_train",
+            "area": "lc"
+        }
+    ]
+},
+{
+    "name": "Pacific Allied Shipyard",
+    "bonus": 2038284,
+    "id": "biz_shipyard_pa",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "position": {
+        "name": "Pacific Allied Shipyard - Buy Point",
+        "x": 94.309379577637,
+        "y": -2694.9694824219,
+        "z": 6.0004138946533
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": 31.293899536133,
+            "y": -2666.236328125,
+            "z": 12.045051574707
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 73.913352966309,
+            "y": -2730.0964355469,
+            "z": 6.0046491622925
+        }
+    ]
+},
+{
+    "name": "Pier 400",
+    "bonus": 2038284,
+    "id": "biz_pier_400",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "position": {
+        "name": "Pier 400 - Buy Point",
+        "x": -101.20858764648,
+        "y": -2693.1262207031,
+        "z": 6.1955623626709
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -95.854286193848,
+            "y": -2767.4626464844,
+            "z": 6.0821285247803
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -154.87942504883,
+            "y": -2691.9230957031,
+            "z": 6.0114750862122
+        }
+    ]
+},
+{
+    "name": "Raven Slaughterhouse",
+    "bonus": 2038284,
+    "id": "biz_raven",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "position": {
+        "name": "Pier 400 - Buy Point",
+        "x": 941.13537597656,
+        "y": -2142.7016601563,
+        "z": 30.51904296875
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": 991.09924316406,
+            "y": -2149.591796875,
+            "z": 30.20534324646
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": 946.88616943359,
+            "y": -2185.0324707031,
+            "z": 30.551580429077
+        }
+    ]
+},
+{
+    "name": "Portland Safehouse",
+    "bonus": 46515,
+    "id": "biz_lcport_house",
+    "cost": 750000,
+    "visuallvl": "13",
+    "position": {
+        "name": "Portland Safehouse - Buy Point",
+        "x": -2189.1530761719,
+        "y": 6992.7895507813,
+        "z": 8.7821102142334
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -2217.2224121094,
+            "y": 6982.6235351563,
+            "z": 10.208455085754
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Portland Safehouse",
+            "x": -2197.2009277344,
+            "y": 6992.7578125,
+            "z": 9.5984935760498
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -2211.2197265625,
+            "y": 6993.2138671875,
+            "z": 8.3550186157227
+        }
+    ]
+},
+{
+    "name": "Portland Mansion",
+    "bonus": 1025219,
+    "id": "biz_lcport_mansion",
+    "cost": 35000000,
+    "visuallvl": "68",
+    "position": {
+        "name": "Portland Safehouse - Buy Point",
+        "x": -1612.5910644531,
+        "y": 7106.7553710938,
+        "z": 55.5129737854
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -1649.3221435547,
+            "y": 7125.1391601563,
+            "z": 52.386394500732
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Portland Safehouse",
+            "x": -1630.2764892578,
+            "y": 7112.6020507813,
+            "z": 55.418853759766
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -1667.8529052734,
+            "y": 7129.5493164063,
+            "z": 50.889350891113
+        }
+    ]
+},
+{
+    "name": "Staunton Island Safehouse",
+    "bonus": 209176,
+    "id": "biz_lcstau_house",
+    "cost": 5000000,
+    "visuallvl": "32",
+    "position": {
+        "name": "Staunton Island Safehouse - Buy Point",
+        "x": -2981.9851074219,
+        "y": 6815.8100585938,
+        "z": 15.982629776001
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -2955.3779296875,
+            "y": 6822.1235351563,
+            "z": 16.001016616821
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Staunton Island Safehouse",
+            "x": -2983.3874511719,
+            "y": 6821.974609375,
+            "z": 17.011686325073
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -2973.5,
+            "y": 6834.7998046875,
+            "z": 16.107721328735
+        }
+    ]
+},
+{
+    "name": "Staunton Island Casino",
+    "bonus": 510497,
+    "id": "biz_lcstau_casino",
+    "cost": 15000000,
+    "visuallvl": "51",
+    "position": {
+        "name": "Staunton Island - Buy Point",
+        "x": -2642.5981445313,
+        "y": 5876.7041015625,
+        "z": 34.412357330322
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -2617.9633789063,
+            "y": 5880.2358398438,
+            "z": 26.195936203003
+        },
+        {
+            "type": "helipad",
+            "name": "Garage",
+            "x": -2640.1711425781,
+            "y": 5853.5815429688,
+            "z": 44.393650054932
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -2621.0070800781,
+            "y": 5814.3129882813,
+            "z": 18.740196228027
+        },
+        {
+            "type": "casino",
+            "name": "Garage",
+            "x": -2628.4030761719,
+            "y": 5891.3212890625,
+            "z": 26.196584701538
+        }
+    ]
+},
+{
+    "name": "Shoreside Vale Safehouse",
+    "bonus": 646313,
+    "id": "biz_lcssv_house",
+    "cost": 20000000,
+    "visuallvl": "60",
+    "position": {
+        "name": "Shoreside Vale Safehouse - Buy Point",
+        "x": -3749.3127441406,
+        "y": 7311.9458007813,
+        "z": 19.002645492554
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -3744.8098144531,
+            "y": 7257.2514648438,
+            "z": 18.922008514404
+        },
+        {
+            "type": "spawn",
+            "tier": 2,
+            "name": "Shoreside Vale Safehouse",
+            "x": -3750.6433105469,
+            "y": 7306.5029296875,
+            "z": 20.002649307251
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -3727.7917480469,
+            "y": 7266.8134765625,
+            "z": 18.921998977661
+        }
+    ]
+},
+{
+    "name": "Francis Intl. Airport",
+    "bonus": 3451593,
+    "id": "biz_lcssv_aeroport",
+    "cost": 150000000,
+    "visuallvl": "89",
+    "position": {
+        "name": "Shoreside Vale - Buy Point",
+        "x": -3856.79296875,
+        "y": 6699.666015625,
+        "z": 11.377080917358
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -4176.50390625,
+            "y": 6694.4682617188,
+            "z": 11.177491188049
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -3834.46875,
+            "y": 6684.21875,
+            "z": 8.9415140151978
+        },
+        {
+            "type": "helipad",
+            "name": "Garage",
+            "x": -4639.1401367188,
+            "y": 6390.5795898438,
+            "z": 14.644359588623
+        }
+    ]
+},
+{
+    "name": "Cochrane Dam",
+    "bonus": 5308689,
+    "id": "biz_lcssv_dam",
+    "cost": 250000000,
+    "visuallvl": "92",
+    "position": {
+        "name": "Shoreside Vale - Buy Point",
+        "x": -4276.0356445313,
+        "y": 7626.4375,
+        "z": 3.4900457859039
+    },
+    "special": [{
+            "type": "special",
+            "name": "Bonus Point",
+            "x": -4178.24609375,
+            "y": 7773.2705078125,
+            "z": 35.588367462158
+        },
+        {
+            "type": "garage",
+            "name": "Garage",
+            "x": -4267.1440429688,
+            "y": 7585.408203125,
+            "z": 3.7719495296478
+        }
+    ]
+}
+]

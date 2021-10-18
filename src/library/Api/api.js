@@ -31,6 +31,13 @@ export const getTycoonData = (uid) => {
     })
 }
 
+export const getTycoonBiz = (uid) => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/tycoon/biz?${uid ? `id=${uid}` : ''}`
+    })
+}
+
 export const getServerPlayers = (server) => {
     return makeApiRequest({
         method: 'GET',
