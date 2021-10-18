@@ -25,7 +25,7 @@ const BizHomeScreen = (props) => {
         if (!document.getElementById("navbar")) {
             return setTimeout(() => {
                 getVisible()
-            }, 500);
+            }, 1);
         }
         var $el = $('#navbar'),
             scrollTop = $(this).scrollTop(),

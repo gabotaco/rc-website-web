@@ -3,6 +3,7 @@ import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "
 import {withRouter} from "react-router";
 
 const TToolsDropdownMenu = ({history, routeName}) => {
+    console.log(routeName)
     return (
         <UncontrolledDropdown nav inNavbar setActiveFromChild>
             <DropdownToggle caret nav>

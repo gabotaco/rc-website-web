@@ -9,7 +9,6 @@ import ApplicationsScreen from "./components/Dashboard/Applications/Applications
 import PayoutScreen from "./components/Dashboard/Payout/PayoutScreen"
 import CompanyManagementScreen from "./components/Dashboard/Management/CompanyManagementScreen"
 import TToolsScreen from "./components/TTools/Home/TToolsScreen";
-import BizScreen from "./components/TTools/Biz/BizScreen";
 import BizMapScreen from "./components/TTools/Biz/map/BizMapScreen";
 import BizHomeScreen from "./components/TTools/Biz/BizHomeScreen";
 
@@ -63,19 +62,19 @@ const routes = [
         layout: "/home"
     },
     {
-        path: "/ttools",
+        path: "/ttools/",
         name: "TTools Home",
         component: TToolsScreen,
         layout: "/home"
     },
     {
-        path: "/ttools/biz",
+        path: "/ttools/biz/",
         name: "Businesses",
         component: BizHomeScreen,
         layout: "/home"
     },
     {
-        path: "/ttools/biz/map",
+        path: "/ttools/biz/map/",
         name: "Biz Map",
         component: BizMapScreen,
         layout: "/home"
