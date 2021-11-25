@@ -48,7 +48,7 @@ const BizHomeScreen = (props) => {
 
     useEffect(() => {
         Api.getTycoonData(props.game_id).then((response) => {
-            if (response.error === 'Invalid user id') {
+            if (response.error) {
                 setBizLevel('None')
                 return;
             }
@@ -59,7 +59,7 @@ const BizHomeScreen = (props) => {
         })
 
         Api.getTycoonBiz(props.game_id).then((response) => {
-            if (response.error === 'Invalid user id') {
+            if (response.error) {
                 setSumTotalBonus('ERROR')
                 setSumTotalInvestment('ERROR')
                 setBusinessTable(null)
