@@ -45,6 +45,7 @@ class AppLayout extends React.Component {
                             ({loading, error, data}) => {
                                 if (loading) return <LoadingIcon />
                                 if (error || !data) {
+                                    sessionStorage.setItem("redirect", this.props.location.pathname);
                                     this.props.history.push('/auth/login')
                                     return <p>You are being redirected</p>
                                 }
