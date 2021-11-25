@@ -11,9 +11,6 @@ import Footer from "../../components/Navigation/Footer"
 class AppLayout extends React.Component {
     getRoutes = routes => {
         return routes.map((prop, key) => {
-            if (prop.collapse) {
-                return this.getRoutes(prop.views);
-            }
             if (prop.layout === "/home") {
                 return (
                     <Route
@@ -30,15 +27,9 @@ class AppLayout extends React.Component {
     };
 
     getNameOfCurrentRoute = routes => {
+        const pathname = this.props.location.pathname.endsWith("/") ? this.props.location.pathname.slice(0, -1) : this.props.location.pathname;
         for(const route of routes){
-          if(route.collapse){
-              for(const subroute of route.views){
-                  if(subroute.layout+subroute.path === this.props.location.pathname){
-                      return subroute.name
-                  }
-              }
-          }
-          if(route.layout+route.path === this.props.location.pathname){
+          if(route.layout+route.path === pathname){
               return route.name
           }
         }
