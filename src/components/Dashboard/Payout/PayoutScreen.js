@@ -53,7 +53,7 @@ const PayoutScreen = () => {
                         <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
                             <h1>Stolen Money Calculator</h1>
                             <StolenMoneyCalculator />
-                            <small>Auto-populated values will only refresh once per minute</small>
+                            <small>Auto-populated values will only refresh once per every 2 minutes</small>
                         </PermRender>
                         <PermRender perms={[0]} authorizedUser={authorizedUser}>
                             <ApplyNow />

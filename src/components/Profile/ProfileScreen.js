@@ -39,7 +39,7 @@ const ProfileScreen = () => {
                         <ManagerPayouts />
                         <h1>Your cashout</h1>
                         <ManagerCashout />
-                        <small>Auto-populated values will only refresh once per minute</small>
+                        <small>Auto-populated values will only refresh once per every 2 minutes</small>
                     </PermRender>
                     <PermRender perms={[0]} authorizedUser={authorizedUser}>
                         <ApplyNow />

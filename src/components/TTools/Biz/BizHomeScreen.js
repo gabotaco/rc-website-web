@@ -152,7 +152,7 @@ const BizHomeScreen = (props) => {
                 <Col xl="10" style={Style.rightColumn}>
                     <h1 className="text-center">Businesses</h1>
                     {businessTable}
-                    <small>Auto-populated values will only refresh once per minute</small>
+                    <small>Auto-populated values will only refresh once per every 2 minutes</small>
                 </Col>
             </Row>
         </Container>

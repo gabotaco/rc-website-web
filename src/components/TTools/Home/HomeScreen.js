@@ -488,7 +488,7 @@ const HomeScreen = (props) => {
 
                     <h1 className="text-center">Inventory</h1>
                     {inventory}
-                    <small>Auto-populated values will only refresh once per minute</small>
+                    <small>Auto-populated values will only refresh once per every 2 minutes</small>
                 </Col>
             </Row>
         </Container>
