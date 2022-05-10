@@ -1,0 +1,124 @@
+FALTA:
+
+- Implementar cache para los SQL Query
+
+
+The benefit of adding their amount of vouchers from Discord is that we can automatically tie their entries to their Discord ID and in-game ID. If we make that like on a website, trolls could possibly just add random stuff and screw up the system.
+
+It would be cool to have a page listing all cars/vouchers available, sorted by the vehicles themselves but with no information on who is selling them. Sort of like our current stock
+"Comet RS:
+<Picture of car>
+<Current Stock>"
+And that would automatically total the amount from all users
+
+
+Each car they add in should create it's own database entry with <discord ID> <ingame ID> <vehicle ID> <voucher amount> <status (sold/available)>
+
+
+
+Have pending transactions and completed transactions in the database
+When the website is showing current stock, subtract pending transactions
+Well, all transactions should be in the database with a status field. Pending/complete/cancelled
+Err
+If a transaction is cancelled, the stock will show the vouchers again
+
+CAMBIOS
+
+
+So it should restrict them, not necessarily how many orders they have at a time
+If the max LVL1s at a time is 10, they should be able to have multiple orders under LVL1.
+
+4 of one type, 2 of another, 4 of another is fine, as long as they're all LVL1. Once they hit 10 LVL1's, 48 hour cooldown before they can order more LVL1s
+But that doesn't apply to the order cap on LVL2s or any other level
+Is that possible?
+
+LVL1 10
+LVL2 8
+LVL3 5
+LVL4 3
+LVL5 2
+
+IDEAS
+
+* add filters for car class and car LVLs
+* short swooping animation when changing between pages of cars
+
+48 hour cooldown before someone can submit an order after completion of a previous order.
+
+A cap on the amount of each level of card can be included in each order
+
+
+Some sort of "snooze" button for people that have voucher cards - a way for them not to receive notifications when people want to purchase. This "snooze" button would temporarily remove their cards from the public stock page but keep them on the user's private page.
+
+
+Are we planning on having our members sign in as well as having customers sign in?
+If customers are to sign in, we should have them specify three windows of time that they will be available to receive their order.
+That way if the first person to respond fails to fulfill in the window of time, it can fall to the person that responded second and so forth
+I know this is getting really complicated :joy:
+
+
+
+
+So the only problem with .stock add adder is that there are too many variables. If a person misspells the car, there will be trouble. If there are variants of the car like the Comets or Progen Italis, there will be a problem.
+
+I'm hoping to add a webpage interface that looks like where you purchase, a person can scroll through the cars and select how many vouchers they have of that car, then select apply somewhere.
+"TX have list of currents order, and state of them, we can replicate that, put ID for oders and employee that have card in stock will put him self as a worker on that order. When employee put him self onto order, amount on stock could be automaticly changed. Than if employee call us out for collection an order we will do something like .done"
+
+I do like a lot of this:
+The order should be opened, just as we'd discussed with a Transaction ID.
+Anyone who isn't "snoozed" should get a ping from Discord, where they can accept or decline the transaction. The status of their accepted orders should be listed in their login page with contact information for the person that ordered. There can also be a web interface of open orders that can be manually accepted through the RTS employee's "landing page" after they log in.
+
+
+ @Nicole  - there will be collectors, a small subset of people that will buy spawn cards from everyone else and they'll have a special role in the RTS Discord. Collector's pages need to have the ability to search other people's inventory from their login page, using that URL I showed you. In that page, it should analyze a person's inventory and give a value of how much a collector will pay for all the cards in their inventory. We will instruct people to ONLY have the cards they intend to sell in their inventory. Collectors will purchase each card for 80% of it's price on the marketplace. Collector's login page should show the 80% value, the total value, and the amount of profit.
+
+
+https://www.gtabase.com/grand-theft-auto-v/vehicles/sugoi
+https://es.socialclub.rockstargames.com/games/gtav/pc/career/overview/gtaonline
+
+https://github.com/thiswallz/gta-v-legendary-motor-sport/blob/master/src
+https://gta.fandom.com/wiki/Vehicle_Brands
+
+Crear inicio de sesion con discord api
+
+https://gist.github.com/Jengas/ad128715cb4f73f5cde9c467edf64b00
+
+Permisos
+
+
+But moreso whether they can access their own inventory, or other people's inventory
+Clients can only see their own active orders
+Employees can only see their own inventory but no active orders besides if they have made an order to purchase some
+Collectors can see active orders, as well as their own orders to purchase some
+
+
+Comandos
+
+.setprice <card ID> <price>
+.cancel <order ID>
+.sold <transaction ID>
+.market-unavailable
+.done [ID order]
+
+Carasteristicas
+
+Solo pueden tener 1 orden abierta
+
+
+https://sqlizer.io 
+A1:S163
+Luzak RTS Collection
+
+
+API http://server.tycoon.community:30120/status/inventory/84971
+
+https://jsfiddle.net/solodev/36o96dm2/
+
+https://datatables.net/
+
+https://jsfiddle.net/lesson8/AyGAM/
+
+
+<label class="quantity-label">Quantity:<input class="quantity-input" type="number" name="quantity" min="1" max="20" value="<?php echo $row["quantity"]; ?>" required></label>
+
+
+https://gta.fandom.com/wiki/Legendary_Motorsport
