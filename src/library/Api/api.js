@@ -31,6 +31,20 @@ export const getTycoonData = (uid) => {
     })
 }
 
+export const getTycoonFaction = (uid) => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/tycoon/faq?${uid ? `id=${uid}` : ''}`
+    })
+}
+
+export const getTycoonVehicles = (uid) => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/tycoon/vehciels?${uid ? `id=${uid}`: ''}`
+    })
+}
+
 export const getTycoonBiz = (uid) => {
     return makeApiRequest({
         method: 'GET',

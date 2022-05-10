@@ -1,0 +1,287 @@
+[{
+        "id": "pbsf",
+        "fee": 200,
+        "name": "Paleto Bay Self Storage",
+        "size": 60000,
+        "cost": 1000000,
+        "storage_locations": [{
+                "x": 46.444091796875,
+                "y": 6458.7602539063,
+                "z": 31.425287246704
+            },
+            {
+                "x": -37.641159057617,
+                "y": 7057.8452148438,
+                "z": 2.0027375221252
+            },
+            {
+                "x": -455.48385620117,
+                "y": 6552.7553710938,
+                "z": 10.766058921814
+            }
+        ]
+    },
+    {
+        "id": "bhsl",
+        "fee": 100,
+        "name": "Big House Storage LSIA",
+        "size": 250000,
+        "cost": 1000000,
+        "storage_locations": [{
+            "x": -512.517578125,
+            "y": -2200.123046875,
+            "z": 6.3940262794495
+        }]
+    },
+    {
+        "id": "tsu",
+        "fee": 200,
+        "name": "The Secure Unit",
+        "size": 150000,
+        "cost": 1000000,
+        "storage_locations": [{
+            "x": 911.31066894531,
+            "y": -1256.2835693359,
+            "z": 25.5778465271
+        }]
+    },
+    {
+        "id": "dpss",
+        "fee": 100,
+        "name": "Del Perro Self Storage",
+        "size": 80000,
+        "cost": 1000000,
+        "storage_locations": [{
+            "x": -1614.7346191406,
+            "y": -821.41516113281,
+            "z": 10.070293426514
+        }]
+    },
+    {
+        "id": "gohq",
+        "fee": 100,
+        "name": "Globe Oil HQ Self Storage",
+        "size": 45000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": 2674.7131347656,
+            "y": 1429.8662109375,
+            "z": 24.500797271729
+        }]
+    },
+    {
+        "id": "fthq",
+        "fee": 0,
+        "name": "FRLLC HQ Self Storage",
+        "size": 50000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": 340.37985229492,
+            "y": -561.98333740234,
+            "z": 28.743785858154
+        }]
+    },
+    {
+        "id": "bats",
+        "fee": 100,
+        "name": "Bay Area Towing HQ Self Storage",
+        "size": 100000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": -639.17358398438,
+            "y": -1727.0373535156,
+            "z": 24.31266784668
+        }]
+    },
+    {
+        "id": "rts",
+        "fee": 0,
+        "name": "R.T.S. HQ Self Storage",
+        "size": 20000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": 959.29248046875,
+            "y": -3005.3996582031,
+            "z": -39.63988494873
+        }]
+    },
+    {
+        "id": "pigs",
+        "fee": 0,
+        "name": "P.I.G.S. HQ Self Storage",
+        "size": 20000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": 950.20416259766,
+            "y": -122.37786102295,
+            "z": 74.353050231934
+        }]
+    },
+    {
+        "id": "collins",
+        "fee": 0,
+        "name": "CollinsCo HQ Self Storage",
+        "size": 20000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": 823.35955810547,
+            "y": -1370.6256103516,
+            "z": 26.136484146118
+        }]
+    },
+    {
+        "id": "lc2",
+        "fee": 50,
+        "name": "Staunton Island Self Storage",
+        "size": 40000,
+        "cost": 0,
+        "storage_locations": [{
+            "x": -3032.9343261719,
+            "y": 6938.701171875,
+            "z": 16.235837936401
+        }]
+    }, {
+        "id": "bctp",
+        "fee": 50,
+        "name": "Blaine County Tractor Parts",
+        "size": 40000,
+        "cost": 1000000,
+        "storage_locations": [{
+            "x": 388.36904907227,
+            "y": 3586.8146972656,
+            "z": 33.29222869873
+        }]
+    },
+    {
+        "id": "biz_ltweld",
+        "fee": 0,
+        "name": "LT Weld Supply Co",
+        "size": 50000,
+        "cost": 37000000,
+        "storage_locations": [{
+            "x": 1161.1551513672,
+            "y": -1315.3598632813,
+            "z": 34.742721557617
+        }]
+    },
+    {
+        "id": "biz_lsia",
+        "fee": 0,
+        "name": "L.S.I.A.",
+        "size": 150000,
+        "cost": 125000000,
+        "storage_locations": [{
+            "x": -1205.3310546875,
+            "y": -2630.728515625,
+            "z": 13.944932937622
+        }]
+    },
+    {
+        "name": "CollinsCo",
+        "id": "biz_murrietta_oil",
+        "fee": 0,
+        "cost": 125000000,
+        "size": 150000,
+        "storage_locations": [{
+            "x": 1735.635620,
+            "y": -1538.411499,
+            "z": 112.705345
+        }]
+    },
+    {
+        "name": "Yellowjack",
+        "id": "biz_yellowjack",
+        "cost": 950000,
+        "fee": 10,
+        "size": 35000,
+        "storage_locations": [{
+            "x": 1995.205444,
+            "y": 3036.047119,
+            "z": 47.026821
+        }]
+    },
+    {
+        "name": "Vanilla Unicorn",
+        "id": "biz_stripclub",
+        "cost": 30000000,
+        "fee": 0,
+        "size": 10000,
+        "storage_locations": [{
+            "x": 138.807602,
+            "y": -1277.245728,
+            "z": 29.318634
+        }]
+    },
+    {
+        "name": "Grandma's House",
+        "id": "biz_granny",
+        "cost": 500000,
+        "fee": 0,
+        "size": 10000,
+        "storage_locations": [{
+            "x": 2195.722412,
+            "y": 5606.561035,
+            "z": 53.540730
+        }]
+    },
+    {
+        "name": "Hookies - Self Storage",
+        "id": "biz_hookies",
+        "cost": 300000,
+        "size": 10000,
+        "fee": 0,
+        "storage_locations": [{
+            "x": -2209.091553,
+            "y": 4246.667480,
+            "z": 47.557930
+        }]
+    },
+    {
+        "name": "Playboy Mansion - Self Storage",
+        "id": "biz_playboi",
+        "cost": 550000000,
+        "size": 50000,
+        "fee": 0,
+        "storage_locations": [{
+            "x": -1550.971924,
+            "y": 130.134979,
+            "z": 56.787189
+        }]
+    },
+    {
+        "name": "Vineyard - Self Storage",
+        "id": "biz_vineyard",
+        "cost": 600000000,
+        "size": 50000,
+        "fee": 0,
+        "storage_locations": [{
+            "x": -1922.0493164063,
+            "y": 2047.1319580078,
+            "z": 140.73503112793
+        }]
+    },
+    {
+        "name": "Walker Logistics",
+        "id": "biz_walker",
+        "cost": 120000000,
+        "size": 50000,
+        "fee": 0,
+        "storage_locations": [{
+            "x": 126.76761627197,
+            "y": -3212.6791992188,
+            "z": 5.8929586410522
+        }]
+    },
+    {
+        "name": "Train Network",
+        "id": "biz_train",
+        "cost": 80000000,
+        "size": 16000,
+        "fee": 250,
+        "storage_locations": [{
+            "x": 190.03636169434,
+            "y": 6379.1401367188,
+            "z": 32.333835601807
+        }]
+    }
+]
