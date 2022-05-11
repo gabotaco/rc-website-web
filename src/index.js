@@ -18,7 +18,6 @@ const cache = new InMemoryCache({addTypename: true});
 const client = new ApolloClient({
 	uri: `${AppConfigs.server_url}/graphql`,
 	cache,
-  	connectToDevTools: true, // we can remove this if we put a flag in .env saying we're in development mode
 	credentials: 'include'
 });
 
