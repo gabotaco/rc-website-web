@@ -4,8 +4,8 @@ function initMap(businesses) {
             initMap(businesses)
         }, 500);
     }
-    const mapFolder = "./images/maps/";
-    const customEmojiFolder = "./images/bizblips/"
+    const mapFolder = "home/images/maps/";
+    const customEmojiFolder = "home/images/bizblips/"
     
     const isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
     
