@@ -11,6 +11,7 @@ import CompanyManagementScreen from "./components/Dashboard/Management/CompanyMa
 import TToolsScreen from "./components/TTools/Home/TToolsScreen";
 import BizMapScreen from "./components/TTools/Biz/map/BizMapScreen";
 import BizHomeScreen from "./components/TTools/Biz/BizHomeScreen";
+import UnderConstruction from "./components/_common/UnderConstruction";
 
 const routes = [
     {
@@ -77,6 +78,30 @@ const routes = [
         path: "/ttools/biz/map/",
         name: "Biz Map",
         component: BizMapScreen,
+        layout: "/home"
+    },
+    {
+        path: "/ttools/storage/",
+        name: "Storage",
+        component: UnderConstruction,
+        layout: "/home"
+    },
+    {
+        path: "/ttools/storage/map/",
+        name: "Storage Map",
+        component: UnderConstruction,
+        layout: "/home"
+    },
+    {
+        path: "/ttools/trucking/",
+        name: "Trucking",
+        component: UnderConstruction,
+        layout: "/home"
+    },
+    {
+        path: "/ttools/trucking/map/",
+        name: "Trucking Map",
+        component: UnderConstruction,
         layout: "/home"
     },
     {
