@@ -1,3 +1,5 @@
+import AppConfigs from "../../config/app_configs"
+
 const apiHeaders = {
     Accept: 'application/json, text/javascript, */*; q=0.01',
     'Content-Type': 'application/json',
@@ -5,7 +7,7 @@ const apiHeaders = {
 }
 
 const getUrl = (uri) => {
-    return "/api"+uri
+    return AppConfigs.server_url + "/api" + uri
 }
 
 
