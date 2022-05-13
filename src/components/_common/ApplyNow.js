@@ -1,7 +1,6 @@
 // @flow
 import * as React from 'react'
 import { Form, Row, Col, FormGroup, Label, Input, Button } from "reactstrap";
-import AppConfigs from "../../config/app_configs"
 
 class ApplyNow extends React.Component {
     render() {
@@ -30,7 +29,7 @@ class ApplyNow extends React.Component {
                 </div>
                 <div>
                     <h1>Hire member: (MANAGEMENT ONLY)</h1>
-                    <Form action={`${AppConfigs.server_url}/api/hire`}>
+                    <Form action={`${process.env.BACKEND_URL}/api/hire`}>
                         <Row form>
                             <Col md={6}>
                                 <FormGroup>
