@@ -22,7 +22,7 @@ const PayoutContainer = (props) => {
     const toggle = () => setModal(!modal)
 
     function getTotalRtsVouchers() {
-        return rtsHeavyVouchers + rtsVouchers + rtsAviatorVouchers;
+        return parseInt(rtsHeavyVouchers) + parseInt(rtsVouchers) + parseInt(rtsAviatorVouchers);
     }
 
     function validForm() {
