@@ -44,7 +44,7 @@ const ManagerCashoutTable = (props) => {
                     <td>$<FormattedNumber num={Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5)} /></td>
                     <td>$<FormattedNumber num={Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5) + cashout.rts_cashout_worth} /></td>
                     <td>$<FormattedNumber num={cashout.total_money} /></td>
-                    <td data-search={cashout.active === "1" ? "active" : ""}>
+                    <td data-search={cashout.active ? "active" : ""}>
                         <Button color={paid ? "success" : "secondary"} disabled={paid} onClick={() => {
                             setPayMember({
                                 id: cashout.id,
@@ -69,7 +69,7 @@ const ManagerCashoutTable = (props) => {
                     <td>$<FormattedNumber num={Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5)} /></td>
                     <td>$<FormattedNumber num={Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5) + cashout.pigs_cashout_worth} /></td>
                     <td>$<FormattedNumber num={cashout.total_money} /></td>
-                    <td data-search={cashout.active === "1" ? "active" : ""}>
+                    <td data-search={cashout.active ? "active" : ""}>
                         <Button color={paid ? "success" : "secondary"} disabled={paid} onClick={() => {
                             setPayMember({
                                 id: cashout.id,
@@ -94,7 +94,7 @@ const ManagerCashoutTable = (props) => {
                     <td>$<FormattedNumber num={(Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5)) + (Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5))} /></td>
                     <td>$<FormattedNumber num={(Math.floor(((cashout.rts_cashout * 10000) - cashout.rts_cashout_worth) * 0.5) + cashout.rts_cashout_worth) + (Math.floor(((cashout.pigs_cashout * 10000) - cashout.pigs_cashout_worth) * 0.5) + cashout.pigs_cashout_worth)} /></td>
                     <td>$<FormattedNumber num={cashout.total_money} /></td>
-                    <td data-search={cashout.active === "1" ? "active" : ""}>
+                    <td data-search={cashout.active ? "active" : ""}>
                         <Button color={paid ? "success" : "secondary"} disabled={paid} onClick={() => {
                             setPayMember({
                                 id: cashout.id,
