@@ -81,7 +81,7 @@ const CompanySelector = (props) => {
     return (
         <React.Fragment>
             <ButtonGroup>
-                {perms > 2 && <Button onClick={managerOnClick} color="primary" active={member.manager} disabled={!member.welcome || member.company === 'fired' || member.manager}>Manager</Button>}
+                {perms > 2 && <Button onClick={managerOnClick} color={member.manager ? 'success' : 'primary'} disabled={!member.welcome || member.company === 'fired'}>Manager</Button>}
                 <Button onClick={rtsOnClick} color="rts" active={member.company === 'rts'} disabled={!member.welcome}>RTS</Button>
                 <Button onClick={pigsOnClick} color="pigs" active={member.company === 'pigs'} disabled={!member.welcome}>PIGS</Button>
                 <Button onClick={toggle} color="yeet" active={member.company === 'fired'} disabled={modal}>YEET</Button>
