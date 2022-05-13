@@ -9,14 +9,13 @@ import { ApolloProvider as ApolloClientProvider} from '@apollo/client';
 import {ApolloProvider as ApolloHooksProvider} from 'react-apollo-hooks';
 import AuthLayout from "./layouts/Auth/AuthLayout";
 import AppLayout from "./layouts/App/AppLayout";
-import AppConfigs from './config/app_configs';
 // import "bootswatch/dist/darkly/bootstrap.min.css";
 // import "bootstrap/dist/css/bootstrap.css";
 const hist = createBrowserHistory();
 const cache = new InMemoryCache({addTypename: true});
 
 const client = new ApolloClient({
-	uri: `${AppConfigs.server_url}/graphql`,
+	uri: `${process.env.BACKEND_URL}/graphql`,
 	cache,
 	credentials: 'include'
 });
