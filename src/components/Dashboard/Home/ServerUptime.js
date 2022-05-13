@@ -37,16 +37,8 @@ const ServerUptime = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            <ServerRow server={"tycoon-w8r4q4.users.cfx.re"} name={"Server #1 (One Sync)"} members={members} />
                             <ServerRow server={"tycoon-2epova.users.cfx.re"} name={"Server #2"} members={members} />
-                            <ServerRow server={"tycoon-2epovd.users.cfx.re"} name={"Server #3"} members={members} />
-                            <ServerRow server={"tycoon-wdrypd.users.cfx.re"} name={"Server #4"} members={members} />
                             <ServerRow server={"tycoon-njyvop.users.cfx.re"} name={"Server #5 (Beta)"} members={members} />
-                            <ServerRow server={"tycoon-2r4588.users.cfx.re"} name={"Server #6"} members={members} />
-                            <ServerRow server={"tycoon-npl5oy.users.cfx.re"} name={"Server #7"} members={members} />
-                            <ServerRow server={"tycoon-2vzlde.users.cfx.re"} name={"Server #8"} members={members} />
-                            <ServerRow server={"tycoon-wmapod.users.cfx.re"} name={"Server #9"} members={members} />
-                            <ServerRow server={"tycoon-wxjpge.users.cfx.re"} name={"Server #A"} members={members} />
                         </tbody>
                     </Table>
                 )
