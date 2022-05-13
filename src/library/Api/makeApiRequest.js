@@ -7,7 +7,8 @@ const apiHeaders = {
 }
 
 const getUrl = (uri) => {
-    return AppConfigs.server_url+uri
+    //return AppConfigs.server_url+uri
+    return "/api"+uri
 }
 
 

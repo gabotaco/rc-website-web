@@ -23,7 +23,7 @@ const ApplyButton = ({history, authorizedUser}) => {
                             if (authorizedUser.permission === 0) {
                                 return <Button color="warning" type="button" size="lg" onClick={() => history.push("/home/apply")}>Apply!</Button>
                             } else {
-                                return <Button color="success" type="button" size="lg" onClick={() => history.push("/home/apply")}>Rejoin RC</Button>
+                                return <Button color="success" type="button" size="lg" onClick={() => history.push("/home/apply")}>Re-Join RC</Button>
                             }
                         }
                     }

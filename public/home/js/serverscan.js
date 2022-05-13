@@ -34,7 +34,7 @@ function scanServers() {
 
 
 function getServerData(checkbox) {
-    fetch(`http://localhost:4000/tycoon/positions/${checkbox[0]}`)
+    fetch(`/api/tycoon/positions/${checkbox[0]}`)
     .then((res) => {
         if (!res.ok) throw res;
         return res.json();
