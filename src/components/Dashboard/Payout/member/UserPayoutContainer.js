@@ -15,7 +15,7 @@ const UserPayoutContainer = (props) => {
     const [loading, setLoading] = useState(false)
 
     const toggle = () => setModal(!modal)
-
+    
     useEffect(() => {
         Api.getTycoonData().then((res) => {
             if (res.data.inventory.rts_voucher_air && rtsAviatorVouchers === undefined) {
@@ -36,7 +36,7 @@ const UserPayoutContainer = (props) => {
     }, [])
 
     function getTotalRtsVouchers() {
-        return rtsHeavyVouchers + rtsVouchers + rtsAviatorVouchers;
+        return parseInt(rtsHeavyVouchers) + parseInt(rtsVouchers) + parseInt(rtsAviatorVouchers);
     }
 
     function validForm() {
