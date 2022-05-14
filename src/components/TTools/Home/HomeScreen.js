@@ -162,7 +162,7 @@ const HomeScreen = (props) => {
         } else if (data.citizen) {
             return "Unemployed";
         } else if (data.rts_professional) {
-            return "R.T.S. Professsional";
+            return "R.T.S. Professional";
         } else if (data.rts_aviator) {
             return "R.T.S. Aviator";
         } else if (data.rts_job) {
