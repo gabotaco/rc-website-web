@@ -15,10 +15,6 @@ const UserPayoutContainer = (props) => {
     const [loading, setLoading] = useState(false)
 
     const toggle = () => setModal(!modal)
-
-    function getTotalRtsVouchers() {
-        return parseInt(rtsHeavyVouchers) + parseInt(rtsVouchers) + parseInt(rtsAviatorVouchers);
-    }
     
     useEffect(() => {
         Api.getTycoonData().then((res) => {
