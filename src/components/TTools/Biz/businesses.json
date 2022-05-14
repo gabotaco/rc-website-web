@@ -2858,6 +2858,56 @@
     ]
 },
 {
+    "name": "Palmer-Taylor Power Station",
+    "bonus": 2038284,
+    "id": "biz_refinery",
+    "cost": 80000000,
+    "visuallvl": "80",
+    "is_taxed": true,
+    "position": {
+        "name": "Palmer-Taylor Power Station - Buy Point",
+        "x": 2761.4274902344,
+        "y": 1548.5849609375,
+        "z": 30.792221069336
+    },
+    "special": [
+        {
+            "type": "atm", 
+            "name": "Palmer-Taylor Power Station", 
+            "x": 2760.5751953125, 
+            "y": 1546.3438720703, 
+            "z": 30.791902542114
+        },
+        {
+            "type": "spawn", 
+            "tier": 10, 
+            "name": "Palmer-Taylor Power Station", 
+            "x": 2748.068359375, 
+            "y": 1453.0616455078, 
+            "z": 24.495775222778, 
+            "h": 161.6213684082
+        },
+        {
+            "type": "garage", 
+            "name": "Garage", 
+            "x": 2727.236328125, 
+            "y": 1415.6801757812, 
+            "z": 24.439430236816
+        },
+        {
+            "type": "self_storage_train", 
+            "name": "Train Network", 
+            "x": 2690.7902832031, 
+            "y": 1356.7669677734, 
+            "z": 24.520862579346, 
+            "size": 16000, 
+            "fee": 250, 
+            "id": "biz_train",
+            "area": "refinery"
+        }
+    ]
+},
+{
     "name": "Train Yard - LS Docks",
     "bonus": 2038284,
     "id": "biz_train_docks",
