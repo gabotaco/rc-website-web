@@ -12,7 +12,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
             <DropdownMenu right>
                 <DropdownItem
                     href="/home/dashboard"
-                    onClick={()=> history.push('/home/dashboard')}
+                    onClick={()=> history.push('/home/dashboard') && false}
                     active={routeName === "Dashboard Home"}
                 >
                     <i className={"bi bi-house"} style={Styles.icon}/>
@@ -21,7 +21,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <DropdownItem divider />
                 <DropdownItem
                     href="/home/dashboard/company"
-                    onClick={()=> history.push('/home/dashboard/company')}
+                    onClick={()=> history.push('/home/dashboard/company') && false}
                     active={routeName === "Company"}
                 >
                     <i className={"bi bi-kanban"} style={Styles.icon}/>
@@ -30,7 +30,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
                     <DropdownItem
                         href="/home/dashboard/payout"
-                        onClick={()=> history.push('/home/dashboard/payout')}
+                        onClick={()=> history.push('/home/dashboard/payout') && false}
                         active={routeName === "Payout"}
                     >
                         <i className={"bi bi-wallet"} style={Styles.icon}/>
@@ -40,7 +40,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                     <DropdownItem
                         href="/home/dashboard/hire"
-                        onClick={()=> history.push('/home/dashboard/hire')}
+                        onClick={()=> history.push('/home/dashboard/hire') && false}
                         active={routeName === "Applications"}
                     >
                         <i className={"bi bi-file-person"} style={Styles.icon}/>

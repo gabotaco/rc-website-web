@@ -11,7 +11,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
             <DropdownMenu right>
                 <DropdownItem
                     href="/home/ttools"
-                    onClick={()=> history.push('/home/ttools')}
+                    onClick={()=> history.push('/home/ttools') && false}
                     active={routeName === "TTools Home"}
                 >
                     <i className={"bi bi-house"} style={Styles.icon}/>
@@ -20,7 +20,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 <DropdownItem divider />
                 <DropdownItem
                     href="/home/ttools/biz"
-                    onClick={()=> history.push('/home/ttools/biz')}
+                    onClick={()=> history.push('/home/ttools/biz') && false}
                     active={routeName === "Businesses"}
                 >
                     <i className={"bi bi-building"} style={Styles.icon}/>
@@ -28,7 +28,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 </DropdownItem>
                 <DropdownItem
                     href="/home/ttools/storage"
-                    onClick={()=> history.push('/home/ttools/storage')}
+                    onClick={()=> history.push('/home/ttools/storage') && false}
                     active={routeName === "Storages"}
                 >
                     <i className={"bi bi-archive"} style={Styles.icon}/>
@@ -36,7 +36,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 </DropdownItem>
                 <DropdownItem
                     href="/home/ttools/trucking"
-                    onClick={()=> history.push('/home/ttools/trucking')}
+                    onClick={()=> history.push('/home/ttools/trucking') && false}
                     active={routeName === "Trucking"}
                 >
                     <i className={"bi bi-truck"} style={Styles.icon}/>

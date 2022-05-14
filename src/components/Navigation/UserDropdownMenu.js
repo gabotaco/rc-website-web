@@ -18,7 +18,7 @@ const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <PermRender ttperms={[3]} authorizedUser={authorizedUser}>
                         <DropdownItem
                             href="/home/ttools/admin"
-                            onClick={()=> history.push('/home/ttools/admin')}
+                            onClick={()=> history.push('/home/ttools/admin') && false}
                             active={routeName === "Admin"}
                         >
                             <i className={"bi bi-cone"} style={Styles.icon}/>
@@ -28,7 +28,7 @@ const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
                     <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
                         <DropdownItem
                             href="/home/profile"
-                            onClick={()=> history.push('/home/profile')}
+                            onClick={()=> history.push('/home/profile') && false}
                             active={routeName === "Profile"}
                         >
                             <i className={"bi bi-person-circle"} style={Styles.icon}/>
