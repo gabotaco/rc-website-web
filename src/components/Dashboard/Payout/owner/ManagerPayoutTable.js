@@ -118,8 +118,8 @@ const Formatters = {
                 <td>{payout.member.in_game_name} ({payout.member.in_game_id})</td>
                 <td><FormattedNumber num={payout.amount} /></td>
                 <td>$<FormattedNumber num={payout.worth} /></td>
-                <td>{new Date(payout.createdAt).toDateString()}</td>
-                <td data-order={new Date(payout.createdAt).toISOString()}>{payout.company.toUpperCase()}</td>
+                <td data-order={new Date(payout.createdAt).toISOString()}>{new Date(payout.createdAt).toDateString()}</td>
+                <td>{payout.company.toUpperCase()}</td>
             </tr>
         )
     }
