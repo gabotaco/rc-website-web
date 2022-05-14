@@ -382,9 +382,9 @@ const HomeScreen = (props) => {
                         <Collapse navbar isOpen={!collapsed}>
                             <Nav navbar>
                                 <NavItem>
-                                    {props.ttperm >= 1 && <Form inline className="my-2 my-lg-0">
+                                    <Form inline className="my-2 my-lg-0">
                                         <Input className="mr-sm-2" type="search" placeholder="In Game ID" name="id" data-do-enter />
-                                    </Form>}
+                                    </Form>
                                 </NavItem>
                                 <NavItem>
                                     <h4 className="my-4">Player ID: {props.game_id}</h4>

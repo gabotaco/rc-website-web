@@ -30,7 +30,7 @@ const TToolsScreen = () => {
                         <ApplyNow ttools />
                     </PermRender>
                     <PermRender ttperms={[3,2,1,0]} authorizedUser={authorizedUser}>
-                        <HomeScreen ttperm={authorizedUser.ttpermission} game_id={authorizedUser.ttpermission >= 1 && IDParam ? IDParam : authorizedUser.in_game_id} />
+                        <HomeScreen ttperm={authorizedUser.ttpermission} game_id={IDParam || authorizedUser.in_game_id} />
                     </PermRender>
                 </React.Fragment>
                 )
