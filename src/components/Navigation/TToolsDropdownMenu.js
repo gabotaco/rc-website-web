@@ -2,6 +2,12 @@ import React from 'react'
 import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
 import {withRouter} from "react-router";
 
+function redirect(event, page) {
+    event.preventDefault();
+    history.push(page);
+    return false;
+}
+
 const TToolsDropdownMenu = ({history, routeName}) => {
     return (
         <UncontrolledDropdown nav inNavbar setActiveFromChild>
@@ -11,7 +17,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
             <DropdownMenu right>
                 <DropdownItem
                     href="/home/ttools"
-                    onClick={()=> history.push('/home/ttools') && false}
+                    onClick={(e)=> redirect(e, '/home/ttools')}
                     active={routeName === "TTools Home"}
                 >
                     <i className={"bi bi-house"} style={Styles.icon}/>
@@ -20,7 +26,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 <DropdownItem divider />
                 <DropdownItem
                     href="/home/ttools/biz"
-                    onClick={()=> history.push('/home/ttools/biz') && false}
+                    onClick={(e)=> redirect(e, '/home/ttools/biz')}
                     active={routeName === "Businesses"}
                 >
                     <i className={"bi bi-building"} style={Styles.icon}/>
@@ -28,7 +34,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 </DropdownItem>
                 <DropdownItem
                     href="/home/ttools/storage"
-                    onClick={()=> history.push('/home/ttools/storage') && false}
+                    onClick={(e)=> redirect(e, '/home/ttools/storage')}
                     active={routeName === "Storages"}
                 >
                     <i className={"bi bi-archive"} style={Styles.icon}/>
@@ -36,7 +42,7 @@ const TToolsDropdownMenu = ({history, routeName}) => {
                 </DropdownItem>
                 <DropdownItem
                     href="/home/ttools/trucking"
-                    onClick={()=> history.push('/home/ttools/trucking') && false}
+                    onClick={(e)=> redirect(e, '/home/ttools/trucking')}
                     active={routeName === "Trucking"}
                 >
                     <i className={"bi bi-truck"} style={Styles.icon}/>
