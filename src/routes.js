@@ -12,6 +12,7 @@ import TToolsScreen from "./components/TTools/Home/TToolsScreen";
 import BizMapScreen from "./components/TTools/Biz/map/BizMapScreen";
 import BizScreen from "./components/TTools/Biz/BizScreen";
 import UnderConstruction from "./components/_common/UnderConstruction";
+import ApplyScreen from "./components/Apply/ApplyScreen"
 
 const routes = [
     {
@@ -30,6 +31,12 @@ const routes = [
         path: "/",
         name: "Home",
         component: HomeScreen,
+        layout: "/home"
+    },
+    {
+        path: "/apply",
+        name: "Apply",
+        component: ApplyScreen,
         layout: "/home"
     },
     {

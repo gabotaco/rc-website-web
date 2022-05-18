@@ -10,7 +10,10 @@ export const GET_AUTH_USER = gql(`
             ttpermission,
             in_game_id,
             permission,
-            permission_title
+            permission_title,
+            company,
+            welcome,
+            in_game_name
 	    }
 	}
 `);

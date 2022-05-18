@@ -31,6 +31,14 @@ export const getTycoonData = (uid) => {
     })
 }
 
+
+export const getInGameId = () => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/tycoon/id`
+    })
+}
+
 export const getTycoonBiz = (uid) => {
     return makeApiRequest({
         method: 'GET',
@@ -73,6 +81,13 @@ export const getApplicantDetails = (uid) => {
     })
 }
 
+export const getIsInDiscord = (company) => {
+    return makeApiRequest({
+        method: 'GET',
+        url: `/discord?company=${company}`
+    })
+}
+
 export const hire = (company, name, game_id, discord, app_id) => {
     return makeApiRequest({
         method: 'POST',
@@ -83,6 +98,24 @@ export const hire = (company, name, game_id, discord, app_id) => {
             company: company,
             discord: discord,
             app_id: app_id
+        }
+    })
+}
+
+export const apply = (in_game_name, in_game_id, referred_id, cooldown, play_per_week, company, country, why, anything) => {
+    return makeApiRequest({
+        method: 'POST',
+        url: '/apply',
+        body: {
+            in_game_name: encodeURIComponent(in_game_name),
+            in_game_id: in_game_id,
+            referred_id: referred_id,
+            cooldown: cooldown,
+            play_per_week: play_per_week,
+            company: company,
+            country: encodeURIComponent(country),
+            why: encodeURIComponent(why),
+            anything: encodeURIComponent(anything)
         }
     })
 }
