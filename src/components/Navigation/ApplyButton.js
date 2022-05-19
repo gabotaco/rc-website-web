@@ -16,7 +16,9 @@ const ApplyButton = ({history, authorizedUser}) => {
                             console.error(error)
                             return "Error getting your application status"
                         }
-                        const {status} = data;
+                        if (data.getAuthUserStatus) {
+                            var {status} = data.getAuthUserStatus;
+                        }
                         if (status) {
                             return <Button color="success" type="button" size="lg" disabled>{status}</Button>
                         } else {

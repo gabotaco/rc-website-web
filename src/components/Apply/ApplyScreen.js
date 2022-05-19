@@ -43,7 +43,7 @@ const ApplyScreen = () => {
 
     useEffect(() => {
         if (!authorizedUser) return;
-        if (/*authorizedUser.permission > 1 ||*/ authorizedUser.company === "rts" || authorizedUser.company === "pigs") {
+        if (authorizedUser.permission > 1 || authorizedUser.company === "rts" || authorizedUser.company === "pigs") {
             setisHired(true);
         } else if (authorizedUser.company === 'fired' && authorizedUser.welcome) {
             setItems([
