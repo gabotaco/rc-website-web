@@ -5,7 +5,7 @@ import PermRender from '../_common/PermRender';
 
 function redirect(event, page) {
     event.preventDefault();
-    history.push(page);
+    window.history.push(page);
     return false;
 }
 
