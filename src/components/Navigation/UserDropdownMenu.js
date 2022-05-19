@@ -10,7 +10,7 @@ const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
    
     function redirect(event, page) {
         event.preventDefault();
-        window.history.push(page);
+        history.push(page);
         return false;
     }    
     
