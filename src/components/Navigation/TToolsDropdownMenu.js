@@ -2,13 +2,13 @@ import React from 'react'
 import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "reactstrap";
 import {withRouter} from "react-router";
 
-function redirect(event, page) {
-    event.preventDefault();
-    window.history.push(page);
-    return false;
-}
-
 const TToolsDropdownMenu = ({history, routeName}) => {
+    function redirect(event, page) {
+        event.preventDefault();
+        window.history.push(page);
+        return false;
+    }
+   
     return (
         <UncontrolledDropdown nav inNavbar setActiveFromChild>
             <DropdownToggle caret nav>

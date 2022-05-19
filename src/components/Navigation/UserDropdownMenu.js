@@ -3,17 +3,17 @@ import {Dropdown, DropdownToggle, DropdownMenu, DropdownItem} from "reactstrap";
 import {withRouter} from "react-router";
 import PermRender from '../_common/PermRender';
 
-function redirect(event, page) {
-    event.preventDefault();
-    window.history.push(page);
-    return false;
-}
-
 const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggle = () => setDropdownOpen(prevState => !prevState)
-
+   
+    function redirect(event, page) {
+        event.preventDefault();
+        window.history.push(page);
+        return false;
+    }    
+    
     return (
         <Dropdown isOpen={dropdownOpen} toggle={toggle} setActiveFromChild className="mx-2">
             <DropdownToggle caret style={Styles.toggle}>
