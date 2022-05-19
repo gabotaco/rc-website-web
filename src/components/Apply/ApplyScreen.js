@@ -142,6 +142,8 @@ const ApplyScreen = () => {
                 console.error(err);
                 if (err.error === "Non-existant user") {
                     alert("We were unable to find your Tycoon user")
+                } else if (err.error === "Tycoon Servers Offline") {
+                    alert("Unable to get your data because the Tycoon servers are offline. Please try again later.")
                 } else {
                     alert("There was an error getting their data")
                 }
@@ -182,7 +184,11 @@ const ApplyScreen = () => {
                 setInGameId(response.user_id)
             }).catch((err) => {
                 console.error(err)
-                alert("Unable to get your in game ID");
+                if (err.error === "Tycoon Servers Offline") {
+                    alert("Unable to get your data because the Tycoon servers are offline. Please try again later.")
+                } else {
+                    alert("Unable to get your in game ID");
+                }
             })
         }
     }, [newHire])
@@ -198,7 +204,7 @@ const ApplyScreen = () => {
             body: <Form noValidate>
                 <FormGroup>
                     <Label>In-Game Name:</Label>
-                    <Input valid={!!inGameName && /[a-zA-Z0-9]*/.test(inGameName)} invalid={!inGameName || !/[a-zA-Z0-9]*/.test(inGameName)} type="text" placeholder='Your answer' required value={inGameName} onChange={(ev) => setInGameName(ev.target.value)}/>
+                    <Input valid={!!inGameName && /[a-zA-Z0-9]*/.test(inGameName)} invalid={!inGameName || !/[a-zA-Z0-9]*/.test(inGameName)} type="text" placeholder='Your answer' required value={inGameName} onChange={(ev) => setInGameName(ev.target.value.replace(/\n/g, "").replace(/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g, ''))}/>
                     <FormFeedback valid>
                         Looks good!
                     </FormFeedback>
@@ -344,7 +350,6 @@ const ApplyScreen = () => {
                 return;
             }
 
-
             setLoading(true);
 
             Api.getTycoonData(inGameId).then((response) => { 
@@ -381,7 +386,7 @@ const ApplyScreen = () => {
                 const groups = JSON.stringify(response.data.groups);
                 for (let i = 0; i < Object.keys(companys).length; i++) {
                     if (groups.includes(Object.keys(companys)[i])) {
-                        // validMember = false;
+                        validMember = false;
                         break;
                     }
                 }
@@ -389,7 +394,7 @@ const ApplyScreen = () => {
                 if (!response.data.gaptitudes_v) response.data.gaptitudes_v = response.data.gaptitudes
                 const level = calculateLevel(response.data.gaptitudes_v.physical.strength)
                 if (level < 30) {
-                    // validMember = false;
+                    validMember = false;
                 }
 
                 if (!validMember) {
@@ -402,6 +407,8 @@ const ApplyScreen = () => {
                 if (err.error === "Non-existant user") {
                     setInGameIdErr(true);
                     return;
+                } else if (err.error === "Tycoon Servers Offline") {
+                    alert("Unable to get your data because the Tycoon servers are offline. Please try again later.")
                 } else {
                     console.error(err)
                     alert("There was a problem getting that in game ID")
