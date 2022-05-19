@@ -6,7 +6,7 @@ import PermRender from '../_common/PermRender';
 const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
     function redirect(event, page) {
         event.preventDefault();
-        window.history.push(page);
+        history.push(page);
         return false;
     }
     
