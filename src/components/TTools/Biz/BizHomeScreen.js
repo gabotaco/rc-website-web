@@ -56,6 +56,8 @@ const BizHomeScreen = (props) => {
             if (!response.data.gaptitudes_v) response.data.gaptitudes_v = response.data.gaptitudes
 
             setBizLevel(calculateLevel(response.data.gaptitudes_v.business.business))
+        }).catch((err) => { 
+            console.error(err)
         })
 
         Api.getTycoonBiz(props.game_id).then((response) => {
@@ -99,7 +101,11 @@ const BizHomeScreen = (props) => {
             setBusinessTable(<CustomTable config={config} headers={headers} data={businesses} format={formatter}  />)
         }).catch((err) => {
             console.error(err)
-            alert("There was an error getting their tycoon businesses")
+            if (err.error === "Tycoon Servers Offline") {
+                alert("Unable to get your data because the Tycoon servers are offline. Please try again later.")
+            } else {
+                alert("There was an error getting their tycoon businesses")
+            }
         })
 
         getVisible();

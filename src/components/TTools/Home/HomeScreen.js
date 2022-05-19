@@ -347,7 +347,11 @@ const HomeScreen = (props) => {
             setInventory(<CustomTable config={config} headers={headers} data={Object.keys(response.data.inventory)} format={formatter}  />)
         }).catch((err) => {
             console.error(err)
-            alert("There was an error getting their tycoon data")
+            if (err.error === "Tycoon Servers Offline") {
+                alert("Unable to get your data because the Tycoon servers are offline. Please try again later.")
+            } else {
+                alert("There was an error getting their tycoon data")
+            }
         })
 
         getVisible();

@@ -70,6 +70,8 @@ const SearchUserDetails = () => {
             console.error(err);
             if (err.error === "Non-existant user") {
                 setMember("INVALID")
+            } else if (err.error === "Tycoon Servers Offline") {
+                alert("Unable to get your data because the Tycoon servers are offline. Please try again later.")
             } else {
                 alert("There was an error getting their data")
             }
