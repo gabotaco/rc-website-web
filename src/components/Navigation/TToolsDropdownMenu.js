@@ -5,7 +5,7 @@ import {withRouter} from "react-router";
 const TToolsDropdownMenu = ({history, routeName}) => {
     function redirect(event, page) {
         event.preventDefault();
-        window.history.push(page);
+        history.push(page);
         return false;
     }
    
