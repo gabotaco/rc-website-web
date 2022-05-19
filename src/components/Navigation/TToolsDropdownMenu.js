@@ -4,7 +4,7 @@ import {withRouter} from "react-router";
 
 function redirect(event, page) {
     event.preventDefault();
-    history.push(page);
+    window.history.push(page);
     return false;
 }
 
