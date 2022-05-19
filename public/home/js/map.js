@@ -1,6 +1,6 @@
-const emojiFolder = "home/images/openmoji/";
-const mapFolder = "home/images/maps/";
-const customEmojiFolder = "home/images/companyemoji/";
+const emojiFolder = "/home/images/openmoji/";
+const mapFolder = "/home/images/maps/";
+const customEmojiFolder = "/home/images/companyemoji/";
 
 var serversList = [
     ["tycoon-w8r4q4.users.cfx.re","OS", "OS"],
@@ -25,6 +25,7 @@ let managerIDs = []
 let members = [];
 let memberDetails = {};
 let followedMember = false;
+
 function initMap(memb, mang, apps) {
     if (!L) return setTimeout(() => {
         initMap(memb, mang, apps)
@@ -57,7 +58,7 @@ function initMap(memb, mang, apps) {
         zoomSnap: 0.25,
         crs: L.CRS.Simple
     });
-    
+
     var bounds = [[-4642,-6296],[8958,7318]];
     L.imageOverlay(imglink, bounds).addTo(map);
     map.fitBounds(bounds);

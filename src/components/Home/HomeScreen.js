@@ -1,7 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
+
 import PlayerMap from "./PlayerMap"
 
 const HomeScreen = () => {
+    const [loaded, setLoaded] = useState(false)
 
     useStyles(Styles.raw)
     useLink("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css")
@@ -9,24 +11,29 @@ const HomeScreen = () => {
     useEffect(() => {
         document.title = `RC - Home`
 
-        document.body.style = Styles.body    
+        document.body.style = Styles.body
 
         const leafScript = useScript("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js")
         leafScript.onload = () => {
-            document.body.appendChild(useScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js"))
+            const layerScript = useScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js")
+            layerScript.onload = () => {
+                setLoaded(true)
+            }
+            document.body.appendChild(layerScript)
         }
         document.body.appendChild(leafScript)
-        
+
         document.body.appendChild(useScript('/home/js/map.js'))
         document.body.appendChild(useScript("/home/js/icons.js"))
         document.body.appendChild(useScript("/home/js/hud.js"))
         document.body.appendChild(useScript("/home/js/markers.js"))
         document.body.appendChild(useScript("/home/js/serverscan.js"))
-        document.body.appendChild(useScript("/home/js/canvas.js"))
+        document.body.appendChild((useScript("/home/js/canvas.js")))
+
     }, [])
 
     return (
-        <PlayerMap />
+        <PlayerMap loaded={loaded}/>
     )
 }
 
@@ -77,7 +84,7 @@ function useScript(url) {
     const script = document.createElement("script")
 
     script.src = url;
-    
+
     return script;
 }
 

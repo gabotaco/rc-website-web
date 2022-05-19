@@ -1,10 +1,11 @@
-import React from 'react';
-import {Query} from "react-apollo";
-import LoadingIcon from "../../components/_presentational/LoadingIcon";
 import * as queries from "../../apollo/queries";
-import Map from './Map'
 
-const PlayerMap = () => {
+import LoadingIcon from "../../components/_presentational/LoadingIcon";
+import Map from './Map'
+import {Query} from "react-apollo";
+import React from 'react';
+
+const PlayerMap = (props) => {
     return (
         <Query query={queries.GET_ALL_MEMBERS}>
             {
@@ -16,7 +17,7 @@ const PlayerMap = () => {
                     }
 
                     const {members, managers, applicants} = data.getAllMembers
-                    return <Map members={members} managers={managers} applicants={applicants} />;
+                    return <Map members={members} managers={managers} applicants={applicants} loaded={props.loaded}/>;
                 }
             }
         </Query>
