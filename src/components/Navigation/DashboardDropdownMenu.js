@@ -3,13 +3,13 @@ import {DropdownItem, DropdownMenu, DropdownToggle, UncontrolledDropdown} from "
 import {withRouter} from "react-router";
 import PermRender from '../_common/PermRender';
 
-function redirect(event, page) {
-    event.preventDefault();
-    history.push(page);
-    return false;
-}
-
 const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
+    function redirect(event, page) {
+        event.preventDefault();
+        window.history.push(page);
+        return false;
+    }
+    
     return (
         <UncontrolledDropdown className="btn-rotate" nav active={["Dashboard Home", "Company", "Payout", "Applications"].includes(routeName)}>
             <DropdownToggle caret nav>
