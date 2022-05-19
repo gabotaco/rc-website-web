@@ -4,6 +4,12 @@ import {withRouter} from "react-router";
 import PermRender from '../_common/PermRender';
 
 const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
+    function redirect(event, page) {
+        event.preventDefault();
+        history.push(page);
+        return false;
+    }
+    
     return (
         <UncontrolledDropdown className="btn-rotate" nav active={["Dashboard Home", "Company", "Payout", "Applications"].includes(routeName)}>
             <DropdownToggle caret nav>
@@ -12,7 +18,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
             <DropdownMenu right>
                 <DropdownItem
                     href="/home/dashboard"
-                    onClick={()=> history.push('/home/dashboard')}
+                    onClick={(e)=> redirect(e, '/home/dashboard')}
                     active={routeName === "Dashboard Home"}
                 >
                     <i className={"bi bi-house"} style={Styles.icon}/>
@@ -21,7 +27,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <DropdownItem divider />
                 <DropdownItem
                     href="/home/dashboard/company"
-                    onClick={()=> history.push('/home/dashboard/company')}
+                    onClick={(e)=> redirect(e, '/home/dashboard/company')}
                     active={routeName === "Company"}
                 >
                     <i className={"bi bi-kanban"} style={Styles.icon}/>
@@ -30,7 +36,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
                     <DropdownItem
                         href="/home/dashboard/payout"
-                        onClick={()=> history.push('/home/dashboard/payout')}
+                        onClick={(e)=> redirect(e, '/home/dashboard/payout')}
                         active={routeName === "Payout"}
                     >
                         <i className={"bi bi-wallet"} style={Styles.icon}/>
@@ -40,7 +46,7 @@ const DashboardDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <PermRender perms={[3,2]} authorizedUser={authorizedUser}>
                     <DropdownItem
                         href="/home/dashboard/hire"
-                        onClick={()=> history.push('/home/dashboard/hire')}
+                        onClick={(e)=> redirect(e, '/home/dashboard/hire')}
                         active={routeName === "Applications"}
                     >
                         <i className={"bi bi-file-person"} style={Styles.icon}/>

@@ -7,7 +7,13 @@ const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
     const [dropdownOpen, setDropdownOpen] = useState(false);
 
     const toggle = () => setDropdownOpen(prevState => !prevState)
-
+   
+    function redirect(event, page) {
+        event.preventDefault();
+        history.push(page);
+        return false;
+    }    
+    
     return (
         <Dropdown isOpen={dropdownOpen} toggle={toggle} setActiveFromChild className="mx-2">
             <DropdownToggle caret style={Styles.toggle}>
@@ -18,7 +24,7 @@ const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
                 <PermRender ttperms={[3]} authorizedUser={authorizedUser}>
                         <DropdownItem
                             href="/home/ttools/admin"
-                            onClick={()=> history.push('/home/ttools/admin')}
+                            onClick={(e)=> redirect(e, '/home/ttools/admin')}
                             active={routeName === "Admin"}
                         >
                             <i className={"bi bi-cone"} style={Styles.icon}/>
@@ -28,7 +34,7 @@ const UserDropdownMenu = ({history, authorizedUser, routeName}) => {
                     <PermRender perms={[3,2,1]} authorizedUser={authorizedUser}>
                         <DropdownItem
                             href="/home/profile"
-                            onClick={()=> history.push('/home/profile')}
+                            onClick={(e)=> redirect(e, '/home/profile')}
                             active={routeName === "Profile"}
                         >
                             <i className={"bi bi-person-circle"} style={Styles.icon}/>
