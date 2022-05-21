@@ -1,7 +1,9 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
+
 import PlayerMap from "./PlayerMap"
 
 const HomeScreen = () => {
+    const [loaded, setLoaded] = useState(false)
 
     useStyles(Styles.raw)
     useLink("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css")
@@ -9,24 +11,52 @@ const HomeScreen = () => {
     useEffect(() => {
         document.title = `RC - Home`
 
-        document.body.style = Styles.body    
+        document.body.style = Styles.body
+
+        var localJs = false
+        var tries = 0
 
         const leafScript = useScript("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js")
         leafScript.onload = () => {
-            document.body.appendChild(useScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js"))
+            loadScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js").then(() => {
+                if (localJs) {
+                    setLoaded(true);
+                } else {
+                    const int = setInterval(() => {
+                        if (localJs) {
+                            setLoaded(true);
+                        }
+
+                        // 1 minute
+                        if (tries > 120) {
+                            clearInterval(int)
+                        }
+
+                        tries++
+                    }, 500);
+                }
+            })
+
         }
         document.body.appendChild(leafScript)
-        
-        document.body.appendChild(useScript('/home/js/map.js'))
-        document.body.appendChild(useScript("/home/js/icons.js"))
-        document.body.appendChild(useScript("/home/js/hud.js"))
-        document.body.appendChild(useScript("/home/js/markers.js"))
-        document.body.appendChild(useScript("/home/js/serverscan.js"))
-        document.body.appendChild(useScript("/home/js/canvas.js"))
+
+        Promise.all([
+                (loadScript('/home/js/map.js')),
+                (loadScript("/home/js/icons.js")),
+                (loadScript("/home/js/hud.js")),
+                (loadScript("/home/js/markers.js")),
+                (loadScript("/home/js/serverscan.js")),
+                (loadScript("/home/js/canvas.js"))
+            ])
+            .then(() => {
+                localJs = true
+            })
+
+
     }, [])
 
     return (
-        <PlayerMap />
+        <PlayerMap loaded={loaded}/>
     )
 }
 
@@ -77,8 +107,20 @@ function useScript(url) {
     const script = document.createElement("script")
 
     script.src = url;
-    
+
     return script;
+}
+
+function loadScript(url) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement("script")
+        script.src = url;
+
+        script.onload = resolve
+        script.onerror = reject
+
+        document.body.appendChild(script)
+    })
 }
 
 function useLink(url) {

@@ -1,4 +1,5 @@
 import React, {useEffect, useState} from 'react';
+
 import BizMap from "./BizMap"
 
 const BizMapScreen = () => {
@@ -10,19 +11,19 @@ const BizMapScreen = () => {
     useEffect(() => {
         document.title = `RC - Home`
 
-        document.body.style = Styles.body    
+        document.body.style = Styles.body
 
         const leafScript = useScript("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js")
         leafScript.onload = () => {
-            document.body.appendChild(useScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js"))
+            const layerScript = (useScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js"))
+            layerScript.onload = () => {
+                setLoaded(true)
+            }
+            document.body.appendChild(layerScript)
         }
         document.body.appendChild(leafScript)
-        
-        const mapScript = useScript('/home/ttools/biz/map/js/map.js');
-        mapScript.onload = () => {
-            setLoaded(true)
-        }
-        document.body.appendChild(mapScript)
+
+        document.body.appendChild(useScript('/home/ttools/biz/map/js/map.js'))
     }, [])
 
     return (
@@ -77,7 +78,7 @@ function useScript(url) {
     const script = document.createElement("script")
 
     script.src = url;
-    
+
     return script;
 }
 

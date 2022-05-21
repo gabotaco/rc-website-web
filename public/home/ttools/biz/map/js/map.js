@@ -4,13 +4,13 @@ function initMap(businesses) {
             initMap(businesses)
         }, 500);
     }
-    const mapFolder = "home/images/maps/";
-    const customEmojiFolder = "home/images/bizblips/"
-    
+    const mapFolder = "/home/images/maps/";
+    const customEmojiFolder = "/home/images/bizblips/"
+
     const isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
-    
+
     var hdMap = !isMobileDevice;
-    var imglink = (hdMap === true ? mapFolder + "updatedmap.png" : mapFolder + "updatedmobilemap.png");    
+    var imglink = (hdMap === true ? mapFolder + "updatedmap.png" : mapFolder + "updatedmobilemap.png");
     console.log(imglink)
 
     const mapdiv = document.getElementById("map");
@@ -45,7 +45,7 @@ function initMap(businesses) {
         return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","); //fancy regex
     }
     function capitalizeString(special) {
-    
+
         if (special.includes("_")) {
             let cap = ""
             special.split("_").forEach(word => {
