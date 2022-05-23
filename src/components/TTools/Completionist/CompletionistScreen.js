@@ -15,45 +15,32 @@ const CompletionistScreen = props => {
 
 	useStyles(Style.raw);
 
-	function getData() {
-		let inv = false;
-		let backpack = false;
-		Api.getTycoonData().then(response => {
-			let inventory = response.data.inventory,
-				ownedVehicles = backpack ? ownedVehiclesData : [];
+	async function getData() {
+		let inv = (await Api.getTycoonData()).data.inventory;
+		let backpack = (await Api.getBackpack()).data;
+		let data = {};
+		let ownedVehicles = [];
 
-			const rtsCardsNames = Object.keys(inventory).filter(key => {
-				return key.includes("rts_card|");
-			});
-
-			rtsCardsNames.forEach(key => {
-				let keyName = key.split("|")[1];
-
-				if (!ownedVehicles[keyName]) ownedVehicles[keyName] = inventory[key];
-				else ownedVehicles[keyName].count += inventory[key].count;
-			});
-
-			setOwnedVehiclesData(ownedVehicles);
-			inv = true;
+		Object.keys(inv).forEach(key => {
+			data[key] = inv[key];
 		});
 
-		Api.getBackpack().then(response => {
-			let ownedVehicles = inv ? ownedVehiclesData : [];
-
-			const rtsCardsNames = Object.keys(response.data).filter(key => {
-				return key.includes("rts_card|");
-			});
-
-			rtsCardsNames.forEach(key => {
-				let keyName = key.split("|")[1];
-				if (!ownedVehicles[keyName])
-					ownedVehicles[keyName] = response.data[key];
-				else ownedVehicles[keyName].amount += response.data[key].amount;
-			});
-
-			setOwnedVehiclesData(ownedVehicles);
-			backpack = true;
+		Object.keys(backpack).forEach(key => {
+			if (data[key]) data[key].amount += backpack[key].amount;
+			else data[key] = backpack[key];
 		});
+
+		const rtsCardsNames = Object.keys(data).filter(key => {
+			return key.includes("rts_card|");
+		});
+
+		rtsCardsNames.forEach(key => {
+			let keyName = key.split("|")[1];
+			if (!ownedVehicles[keyName]) ownedVehicles[keyName] = data[key];
+			else ownedVehicles[keyName].amount += data[key].amount;
+		});
+
+		setOwnedVehiclesData(ownedVehicles);
 
 		Api.getCurrentVehicles().then(response => {
 			setCurrentVehiclesData(response.vehicles);
