@@ -1,18 +1,19 @@
-import LoginScreen from "./components/Authentication/LoginScreen";
-import ErrorPage from "./components/_common/ErrorPage"
-import LogoutScreen from "./components/Authentication/LogoutScreen";
-import HomeScreen from "./components/Home/HomeScreen"
-import ProfileScreen from "./components/Profile/ProfileScreen"
-import DashboardScreen from "./components/Dashboard/Home/DashboardScreen"
-import TToolsAdminScreen from "./components/TTools/Admin/TToolsAdminScreen"
 import ApplicationsScreen from "./components/Dashboard/Applications/ApplicationsScreen"
-import PayoutScreen from "./components/Dashboard/Payout/PayoutScreen"
-import CompanyManagementScreen from "./components/Dashboard/Management/CompanyManagementScreen"
-import TToolsScreen from "./components/TTools/Home/TToolsScreen";
+import ApplyScreen from "./components/Apply/ApplyScreen"
 import BizMapScreen from "./components/TTools/Biz/map/BizMapScreen";
 import BizScreen from "./components/TTools/Biz/BizScreen";
+import CompanyManagementScreen from "./components/Dashboard/Management/CompanyManagementScreen"
+import CompletionistScreen from "./components/TTools/Completionist/CompletionistScreen";
+import DashboardScreen from "./components/Dashboard/Home/DashboardScreen"
+import ErrorPage from "./components/_common/ErrorPage"
+import HomeScreen from "./components/Home/HomeScreen"
+import LoginScreen from "./components/Authentication/LoginScreen";
+import LogoutScreen from "./components/Authentication/LogoutScreen";
+import PayoutScreen from "./components/Dashboard/Payout/PayoutScreen"
+import ProfileScreen from "./components/Profile/ProfileScreen"
+import TToolsAdminScreen from "./components/TTools/Admin/TToolsAdminScreen"
+import TToolsScreen from "./components/TTools/Home/TToolsScreen";
 import UnderConstruction from "./components/_common/UnderConstruction";
-import ApplyScreen from "./components/Apply/ApplyScreen"
 
 const routes = [
     {
@@ -109,6 +110,12 @@ const routes = [
         path: "/ttools/trucking/map/",
         name: "Trucking Map",
         component: UnderConstruction,
+        layout: "/home"
+    },
+    {
+        path: "/ttools/completionist",
+        name: "Completionist",
+        component: CompletionistScreen,
         layout: "/home"
     },
     {
