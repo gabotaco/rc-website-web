@@ -13,17 +13,36 @@ const BizMapScreen = () => {
 
         document.body.style = Styles.body
 
+        var localJs = false
+        var tries = 0
+
         const leafScript = useScript("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js")
         leafScript.onload = () => {
-            const layerScript = (useScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js"))
-            layerScript.onload = () => {
-                setLoaded(true)
-            }
-            document.body.appendChild(layerScript)
+            loadScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js")
+                .then(() => {
+                    if (localJs) {
+                        setLoaded(true);
+                    } else {
+                        const int = setInterval(() => {
+                            if (localJs) {
+                                setLoaded(true);
+                            }
+
+                            // 1 minute
+                            if (tries > 120) {
+                                clearInterval(int)
+                            }
+
+                            tries++
+                        }, 500);
+                    }
+                })
         }
         document.body.appendChild(leafScript)
 
-        document.body.appendChild(useScript('/home/ttools/biz/map/js/map.js'))
+        loadScript('/home/ttools/biz/map/js/map.js').then(() => {
+            localJs = true
+        })
     }, [])
 
     return (
@@ -80,6 +99,18 @@ function useScript(url) {
     script.src = url;
 
     return script;
+}
+
+function loadScript(url) {
+    return new Promise((resolve, reject) => {
+        const script = document.createElement("script")
+        script.src = url;
+
+        script.onload = resolve
+        script.onerror = reject
+
+        document.body.appendChild(script)
+    })
 }
 
 function useLink(url) {
