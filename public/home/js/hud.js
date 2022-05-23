@@ -54,6 +54,17 @@ function initGUI() {
         return DIVBLOCK
     })
 
+    createGUIblock(DIVBLOCK => {
+        DIVBLOCK.innerHTML = `
+        <div class="divBlock">
+        <button type="button" class="btn btn-rts" data-toggle="button" aria-pressed="false" autocomplete="off" onclick="toggleRTSDestinations()">
+        Toggle Dropoff Destinations
+    </button>
+        </div>`
+
+        return DIVBLOCK
+    })
+
     document.getElementById('findplayerinputfield').onkeypress = function (e) {
         if (!e) e = window.event;
         let keyCode = e.keyCode || e.which;
@@ -105,6 +116,15 @@ document.getElementsByTagName('head')[0].appendChild(pigsLocationClass);
 
 function togglePIGSLocations() {
     (pigsLocationClass.innerHTML == '.heist {display: none !important;}' ? pigsLocationClass.innerHTML = '.heist {display: block !important;}' : pigsLocationClass.innerHTML = '.heist {display: none !important;}')
+}
+
+const rtsDestinationClass = document.createElement("style")
+rtsDestinationClass.type = "text/css"
+rtsDestinationClass.innerHTML = '.rts-destination {display: none !important;}'
+document.getElementsByTagName('head')[0].appendChild(rtsDestinationClass);
+
+function toggleRTSDestinations() {
+    (rtsDestinationClass.innerHTML == '.rts-destination {display: none !important;}' ? rtsDestinationClass.innerHTML = '.rts-destination {display: block !important;}' : rtsDestinationClass.innerHTML = '.rts-destination {display: none !important;}')
 }
 
 const rtsHqClass = document.createElement("style")
