@@ -54,6 +54,7 @@ const TToolsDropdownMenu = ({ history, routeName }) => {
 					<i className={"bi bi-truck"} style={Styles.icon} />
 					Trucking
 				</DropdownItem>
+				<DropdownItem divider />
 				<DropdownItem
 					href="/home/ttools/completionist"
 					onClick={e => redirect(e, "/home/ttools/completionist")}
