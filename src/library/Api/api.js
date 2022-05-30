@@ -31,10 +31,10 @@ export const getTycoonData = uid => {
 	});
 };
 
-export const getInGameId = () => {
+export const getInGameId = (discord_id) => {
 	return makeApiRequest({
 		method: "GET",
-		url: `/tycoon/id`
+		url: `/tycoon/id?${discord_id ? `discord_id=${discord_id}` : ""}`
 	});
 };
 

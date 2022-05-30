@@ -17,6 +17,7 @@ const HomeScreen = (props) => {
     const [hunger, setHunger] = useState(0)
     const [thirst, setThirst] = useState(0)
     const [capacity, setCapacity] = useState(0)
+    const [playerID, setPlayerID] = useState(props.game_id)
     const [premium, setPremium] = useState('LOADING')
     const [dxp, setDxp] = useState('LOADING')
     const [boost, setBoost] = useState('LOADING')
@@ -202,8 +203,9 @@ const HomeScreen = (props) => {
 
     useStyles(Style.raw)
 
-    useEffect(() => {
-        Api.getTycoonData(props.game_id).then((response) => {
+    function getData(gameId) {
+        setPlayerID(gameId);
+        Api.getTycoonData(gameId).then((response) => {
             let hasPremium = false;
             if (response.data.groups.license_premium) {
                 hasPremium = true;
@@ -353,6 +355,23 @@ const HomeScreen = (props) => {
                 alert("There was an error getting their tycoon data")
             }
         })
+    }
+
+    useEffect(() => {
+        if (props.game_id.length > 11) {
+            Api.getInGameId(props.game_id).then((response) => { 
+                getData(response.user_id)
+            }).catch((err) => {
+                console.error(err)
+                if (err.error === "Tycoon Servers Offline") {
+                    alert("Unable to get their in game ID because the Tycoon servers are offline. Please try again later.")
+                } else {
+                    alert("Unable to get their in game ID");
+                }
+            })
+        } else {
+            getData(props.game_id);
+        }
 
         getVisible();
         $(window).on('scroll resize', getVisible);
@@ -387,11 +406,11 @@ const HomeScreen = (props) => {
                             <Nav navbar>
                                 <NavItem>
                                     <Form inline className="my-2 my-lg-0">
-                                        <Input className="mr-sm-2" type="search" placeholder="In Game ID" name="id" data-do-enter />
+                                        <Input className="mr-sm-2" type="search" placeholder="In Game ID or Discord ID" name="id" data-do-enter />
                                     </Form>
                                 </NavItem>
                                 <NavItem>
-                                    <h4 className="my-4">Player ID: {props.game_id}</h4>
+                                    <h4 className="my-4">Player ID: {playerID}</h4>
                                 </NavItem>
                                 <NavItem>
                                     <p>Company: {company}</p>
