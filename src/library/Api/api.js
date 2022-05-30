@@ -176,10 +176,10 @@ export const getCurrentVehicles = () => {
 	});
 };
 
-export const getBackpack = () => {
+export const getBackpack = (game_id) => {
 	return makeApiRequest({
 		method: "GET",
-		url: "/tycoon/backpack"
+		url: `/tycoon/backpack?${game_id ? `id=${game_id}` : ""}`
 	});
 };
 
