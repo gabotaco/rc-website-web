@@ -3,7 +3,7 @@ import { Container, Row, Col, Navbar, NavbarToggler, Collapse, Nav, NavItem, For
 import LoadingIcon from "../../_presentational/LoadingIcon";
 import * as Api from "../../../library/Api/api"
 import FormattedNumber from '../../_common/FormattedNumber';
-import CustomTable from '../../_common/CustomTable';
+import FilterableTables from '../../_common/FilterableTables';
 const $ = require( 'jquery' );
 
 const HomeScreen = (props) => {
@@ -17,6 +17,7 @@ const HomeScreen = (props) => {
     const [hunger, setHunger] = useState(0)
     const [thirst, setThirst] = useState(0)
     const [capacity, setCapacity] = useState(0)
+    const [playerID, setPlayerID] = useState(props.game_id)
     const [premium, setPremium] = useState('LOADING')
     const [dxp, setDxp] = useState('LOADING')
     const [boost, setBoost] = useState('LOADING')
@@ -202,8 +203,9 @@ const HomeScreen = (props) => {
 
     useStyles(Style.raw)
 
-    useEffect(() => {
-        Api.getTycoonData(props.game_id).then((response) => {
+    function getData(gameId) {
+        setPlayerID(gameId);
+        Api.getTycoonData(gameId).then((response) => {
             let hasPremium = false;
             if (response.data.groups.license_premium) {
                 hasPremium = true;
@@ -336,15 +338,83 @@ const HomeScreen = (props) => {
             const totalLevels = calculateLevel(response.data.gaptitudes.physical.strength || 10) + calculateLevel(response.data.gaptitudes.piloting.piloting || 10) + calculateLevel(response.data.gaptitudes.train.bus || 10) + calculateLevel(response.data.gaptitudes.business.business || 10) + calculateLevel(response.data.gaptitudes.piloting.cargos || 10) + calculateLevel(response.data.gaptitudes.train.train || 10) + calculateLevel(response.data.gaptitudes.ems.ems || 10) + calculateLevel(response.data.gaptitudes.ems.fire || 10) + calculateLevel(response.data.gaptitudes.farming.farming || 10) + calculateLevel(response.data.gaptitudes.farming.fishing || 10) + calculateLevel(response.data.gaptitudes.casino.casino || 10) + calculateLevel(response.data.gaptitudes.trucking.garbage || 10) + calculateLevel(response.data.gaptitudes.piloting.heli || 10) + calculateLevel(response.data.gaptitudes.hunting.skill || 10) + calculateLevel(response.data.gaptitudes.trucking.mechanic || 10) + calculateLevel(response.data.gaptitudes.farming.mining || 10) + calculateLevel(response.data.gaptitudes.player.player || 10) + calculateLevel(response.data.gaptitudes.trucking.postop || 10) + calculateLevel(response.data.gaptitudes.player.racing || 10) + calculateLevel(response.data.gaptitudes.trucking.trucking || 10)
             setCompletionist(addSkill(totalLevels, 1930, "Completionist"))
 
-            const formatter = (key, i) => {
-                const item = response.data.inventory[key]
-                return <tr key={i}>
-                    <td dangerouslySetInnerHTML={{__html: item.name}}></td>
-                    <td><FormattedNumber num={item.amount} /></td>
-                    <td><FormattedNumber num={Math.floor((item.weight * item.amount) * 100) / 100} /></td>
-                </tr>
-            }
-            setInventory(<CustomTable config={config} headers={headers} data={Object.keys(response.data.inventory)} format={formatter}  />)
+            Api.getBackpack(gameId).then(res => {
+                if (!res.data) res.data = {};
+
+                const both = $.extend(true, {}, response.data.inventory)
+
+                Object.keys(res.data).forEach(key => {
+                    if (both[key]) both[key].amount += res.data[key].amount;
+                    else both[key] = res.data[key];
+                });
+                        
+                const formatters = {
+                    inventory: (key, i) => {
+                        const item = response.data.inventory[key]
+                        return (
+                            <tr key={i}>
+                                <td dangerouslySetInnerHTML={{__html: item.name}}></td>
+                                <td><FormattedNumber num={item.amount} /></td>
+                                <td><FormattedNumber num={Math.floor((item.weight * item.amount) * 100) / 100} /></td>
+                            </tr>
+                        )
+                    },
+                    backpack: (key, i) => {
+                        const item = res.data[key]
+                        return (
+                            <tr key={i}>
+                                <td dangerouslySetInnerHTML={{__html: key}}></td>
+                                <td><FormattedNumber num={item.amount} /></td>
+                                <td><FormattedNumber num={Math.floor((item.weight * item.amount) * 100) / 100} /></td>
+                            </tr>
+                        )
+                    },
+                    both: (key, i) => {
+                        const item = both[key]
+                        return (
+                            <tr key={i}>
+                                <td dangerouslySetInnerHTML={{__html: item.name || key}}></td>
+                                <td><FormattedNumber num={item.amount} /></td>
+                                <td><FormattedNumber num={Math.floor((item.weight * item.amount) * 100) / 100} /></td>
+                            </tr>
+                        )
+                    }
+                }
+
+                setInventory(
+                    <FilterableTables filters={['Inventory', 'Backpack', 'Both']}
+                    tables={[
+                        {
+                            filter: 'Inventory',
+                            headers: headers.inventory,
+                            data: Object.keys(response.data.inventory),
+                            formatter: formatters.inventory,
+                            config: config.inventory
+                        },
+                        {
+                            filter: 'Backpack',
+                            headers: headers.backpack,
+                            data: Object.keys(res.data),
+                            formatter: formatters.backpack,
+                            config: config.backpack
+                        },
+                        {
+                            filter: 'Both',
+                            headers: headers.both,
+                            data: Object.keys(both),
+                            formatter: formatters.both,
+                            config: config.both
+                        }
+                    ]}
+                />)    
+            }).catch((err) => {
+                console.error(err);
+                if (err.error === "Tycoon Servers Offline") {
+                    alert("Unable to get your backpack because the Tycoon servers are offline. Please try again later.")
+                } else {
+                    alert("There was an error getting your backpack")
+                }
+            })
         }).catch((err) => {
             console.error(err)
             if (err.error === "Tycoon Servers Offline") {
@@ -353,6 +423,23 @@ const HomeScreen = (props) => {
                 alert("There was an error getting their tycoon data")
             }
         })
+    }
+
+    useEffect(() => {
+        if (props.game_id.length > 11) {
+            Api.getInGameId(props.game_id).then((response) => { 
+                getData(response.user_id)
+            }).catch((err) => {
+                console.error(err)
+                if (err.error === "Tycoon Servers Offline") {
+                    alert("Unable to get their in game ID because the Tycoon servers are offline. Please try again later.")
+                } else {
+                    alert("Unable to get their in game ID");
+                }
+            })
+        } else {
+            getData(props.game_id);
+        }
 
         getVisible();
         $(window).on('scroll resize', getVisible);
@@ -387,11 +474,11 @@ const HomeScreen = (props) => {
                             <Nav navbar>
                                 <NavItem>
                                     <Form inline className="my-2 my-lg-0">
-                                        <Input className="mr-sm-2" type="search" placeholder="In Game ID" name="id" data-do-enter />
+                                        <Input className="mr-sm-2" type="search" placeholder="In Game ID or Discord ID" name="id" data-do-enter />
                                     </Form>
                                 </NavItem>
                                 <NavItem>
-                                    <h4 className="my-4">Player ID: {props.game_id}</h4>
+                                    <h4 className="my-4">Player ID: {playerID}</h4>
                                 </NavItem>
                                 <NavItem>
                                     <p>Company: {company}</p>
@@ -584,17 +671,49 @@ function useStyles(body) {
 }
 
 const config = {
-    id: 'item-table',
-    jquery: {
-        "language": {
-            "emptyTable": "There are no items in inventory."
-        },
-        "order": [[1, 'desc']]
+    inventory: {
+        id: 'inventory-item-table',
+        jquery: {
+            "language": {
+                "emptyTable": "There are no items in inventory."
+            },
+            "order": [[1, 'desc']]
+        }
+    },
+    backpack: {
+        id: 'backpack-item-table',
+        jquery: {
+            "language": {
+                "emptyTable": "There are no items in backpack."
+            },
+            "order": [[1, 'desc']]
+        }
+    },
+    both: {
+        id: 'both-item-table',
+        jquery: {
+            "language": {
+                "emptyTable": "There are no items in inventory."
+            },
+            "order": [[1, 'desc']]
+        }
     }
 }
 
-const headers = [
-    'Item Name',
-    'Item Quantity',
-    'Item Total Weight (in kg)'
-]
+const headers = {
+    inventory: [
+        'Item Name',
+        'Item Quantity',
+        'Item Total Weight (in kg)'    
+    ],
+    backpack: [
+        'Item Name',
+        'Item Quantity',
+        'Item Total Weight (in kg)'    
+    ],
+    both: [
+        'Item Name',
+        'Item Quantity',
+        'Item Total Weight (in kg)'    
+    ]
+}

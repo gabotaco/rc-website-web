@@ -31,10 +31,10 @@ export const getTycoonData = uid => {
 	});
 };
 
-export const getInGameId = () => {
+export const getInGameId = (discord_id) => {
 	return makeApiRequest({
 		method: "GET",
-		url: `/tycoon/id`
+		url: `/tycoon/id?${discord_id ? `discord_id=${discord_id}` : ""}`
 	});
 };
 
@@ -176,10 +176,10 @@ export const getCurrentVehicles = () => {
 	});
 };
 
-export const getBackpack = () => {
+export const getBackpack = (game_id) => {
 	return makeApiRequest({
 		method: "GET",
-		url: "/tycoon/backpack"
+		url: `/tycoon/backpack?${game_id ? `id=${game_id}` : ""}`
 	});
 };
 
