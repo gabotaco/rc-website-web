@@ -107,7 +107,7 @@ const CompletionistScreen = props => {
 					<p>To retrieve your public API key, follow these steps:</p>
 					<ol>
 						<li>Open the chat in Transport Tycoon</li>
-						<li>Type /api key copy</li>
+						<li>Type /api public copy</li>
 						<li>Copy the API key</li>
 						<li>Paste it into the box below and click 'Submit'.</li>
 					</ol>
