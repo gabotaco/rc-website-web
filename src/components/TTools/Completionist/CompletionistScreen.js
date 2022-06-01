@@ -1,7 +1,7 @@
 import * as Api from '../../../library/Api/api';
 
 import { Button, Form, Input } from 'reactstrap';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import VehicleCard from './Vehicle';

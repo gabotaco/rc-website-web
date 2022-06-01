@@ -1,21 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import * as Api from '../../../library/Api/api';
+
 import {
-	Container,
-	Row,
 	Col,
-	Navbar,
-	NavbarToggler,
 	Collapse,
-	Nav,
-	NavItem,
+	Container,
 	Form,
 	Input,
+	Nav,
+	NavItem,
+	Navbar,
+	NavbarToggler,
 	Progress,
+	Row,
 } from 'reactstrap';
-import LoadingIcon from '../../_presentational/LoadingIcon';
-import * as Api from '../../../library/Api/api';
-import FormattedNumber from '../../_common/FormattedNumber';
+import React, { useEffect, useState } from 'react';
+
 import FilterableTables from '../../_common/FilterableTables';
+import FormattedNumber from '../../_common/FormattedNumber';
+import LoadingIcon from '../../_presentational/LoadingIcon';
+
 const $ = require('jquery');
 
 const HomeScreen = props => {
@@ -28,8 +31,6 @@ const HomeScreen = props => {
 	);
 	const [job, setJob] = useState(<LoadingIcon inline />);
 	const [health, setHealth] = useState(0);
-	const [hunger, setHunger] = useState(0);
-	const [thirst, setThirst] = useState(0);
 	const [capacity, setCapacity] = useState(0);
 	const [playerID, setPlayerID] = useState(props.game_id);
 	const [premium, setPremium] = useState('LOADING');
@@ -126,7 +127,7 @@ const HomeScreen = props => {
 		var hour = a.getHours();
 		var min = a.getMinutes();
 		var sec = a.getSeconds();
-		if (sec.length == 1) sec = '0' + sec;
+		if (sec.toString().length === 1) sec = '0' + sec;
 		var time =
 			date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
 		return time;
@@ -197,8 +198,6 @@ const HomeScreen = props => {
 			return 'Transformer Repair';
 		} else if (data.delivery_server) {
 			return 'Server Repair';
-		} else if (data.emergency) {
-			return 'EMS / Paramedic';
 		} else if (data.firefighter) {
 			return 'Firefighter';
 		} else if (data.citizen) {
@@ -359,8 +358,6 @@ const HomeScreen = props => {
 				setJob(getJob(response.data.groups));
 
 				setHealth(parseFloat(response.data.health - 100).toFixed(2));
-				setHunger(parseFloat(response.data.hunger).toFixed(2));
-				setThirst(parseFloat(response.data.thirst).toFixed(2));
 
 				let storageUsed = 0;
 				let capacity =
@@ -643,12 +640,13 @@ const HomeScreen = props => {
 	function addSkill(xp, maxLevel, skillName) {
 		if (!xp) xp = 10;
 		xp = Math.round(xp);
-		if (skillName != 'Completionist') {
-			var currentLevel = calculateLevel(xp);
-			var lvlPercent = levelPercentage(xp);
-		} else {
-			var currentLevel = xp;
-			var lvlPercent = (currentLevel / maxLevel) * 100;
+
+		let currentLevel = xp;
+		let lvlPercent = (currentLevel / maxLevel) * 100;
+
+		if (skillName !== 'Completionist') {
+			currentLevel = calculateLevel(xp);
+			lvlPercent = levelPercentage(xp);
 		}
 
 		return (

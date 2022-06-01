@@ -1,28 +1,30 @@
-import React, { useEffect, useState } from 'react';
+import * as Api from '../../library/Api/api';
+import * as queries from '../../apollo/queries';
+
 import {
-	Container,
-	Jumbotron,
 	Button,
-	Modal,
-	ModalBody,
-	ModalHeader,
-	ModalFooter,
+	ButtonGroup,
 	Carousel,
-	CarouselItem,
 	CarouselCaption,
 	CarouselControl,
-	ButtonGroup,
+	CarouselItem,
+	Container,
 	Form,
-	FormGroup,
-	Label,
-	Input,
 	FormFeedback,
+	FormGroup,
 	FormText,
+	Input,
+	Jumbotron,
+	Label,
+	Modal,
+	ModalBody,
+	ModalFooter,
+	ModalHeader,
 } from 'reactstrap';
-import { Query } from 'react-apollo';
-import * as queries from '../../apollo/queries';
+import React, { useEffect, useState } from 'react';
+
 import LoadingIcon from '../_presentational/LoadingIcon';
-import * as Api from '../../library/Api/api';
+import { Query } from 'react-apollo';
 
 const ApplyScreen = () => {
 	const [modal, setModal] = useState(false);
@@ -110,13 +112,15 @@ const ApplyScreen = () => {
 										You must join{' '}
 										<a
 											href="https://discord.com/invite/9WRV87P"
-											target="_blank">
+											target="_blank"
+											rel="noopener noreferrer">
 											the company Discord
 										</a>{' '}
 										before you can be hired!{' '}
 										<a
 											href="https://discord.com/invite/9WRV87P"
 											target="_blank"
+											rel="noopener noreferrer"
 											className="btn btn-rts btn-lg ml-1 mt-2">
 											Join
 										</a>
@@ -128,13 +132,15 @@ const ApplyScreen = () => {
 										You must join{' '}
 										<a
 											href="https://discord.com/invite/eSyN6BJ"
-											target="_blank">
+											target="_blank"
+											rel="noopener noreferrer">
 											the company Discord
 										</a>{' '}
 										before you can be hired!{' '}
 										<a
 											href="https://discord.com/invite/eSyN6BJ"
 											target="_blank"
+											rel="noopener noreferrer"
 											className="btn btn-pigs btn-lg ml-1 mt-2">
 											Join
 										</a>
@@ -192,12 +198,14 @@ const ApplyScreen = () => {
 										<a
 											href="https://docs.google.com/document/d/1FWgrc_7kowBbWLx2Ce0WHOIXy-vAcUCROe6UTMOszjM/edit"
 											target="_blank"
+											rel="noopener noreferrer"
 											className="btn btn-rts btn-lg mr-1 mt-2">
 											Handbook
 										</a>
 										<a
 											href="https://discord.com/invite/9WRV87P"
 											target="_blank"
+											rel="noopener noreferrer"
 											className="btn btn-rts btn-lg ml-1 mt-2">
 											Discord
 										</a>
@@ -211,12 +219,14 @@ const ApplyScreen = () => {
 										<a
 											href="https://docs.google.com/document/d/1NTAP7AkkNBiQehwCn8A-OTAExUVsIUbpXjNXAYmGmsk/edit"
 											target="_blank"
+											rel="noopener noreferrer"
 											className="btn btn-pigs btn-lg ml-1 mt-2">
 											Handbook
 										</a>
 										<a
 											href="https://discord.com/invite/eSyN6BJ"
 											target="_blank"
+											rel="noopener noreferrer"
 											className="btn btn-pigs btn-lg ml-1 mt-2">
 											Discord
 										</a>
@@ -314,7 +324,6 @@ const ApplyScreen = () => {
 				},
 			]);
 			setRehire(true);
-		} else {
 		}
 	}, [authorizedUser]);
 
@@ -484,7 +493,8 @@ const ApplyScreen = () => {
 											<a
 												className="text-primary font-italic font-weight-bold"
 												href="https://discord.com/invite/9WRV87P"
-												target="_blank">
+												target="_blank"
+												rel="noopener noreferrer">
 												the company Discord
 											</a>
 											.
@@ -495,7 +505,8 @@ const ApplyScreen = () => {
 											<a
 												className="text-primary font-italic font-weight-bold"
 												href="https://discord.com/invite/eSyN6BJ"
-												target="_blank">
+												target="_blank"
+												rel="noopener noreferrer">
 												the company Discord
 											</a>
 											.

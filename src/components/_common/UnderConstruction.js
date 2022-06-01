@@ -1,12 +1,14 @@
 // @flow
 import * as React from 'react';
-import { Container, Col, Row, Card } from 'reactstrap';
+
+import { Card, Col, Container, Row } from 'reactstrap';
+
 import { NavLink } from 'react-router-dom';
 
 class UnderConstruction extends React.Component {
 	render() {
 		return (
-			<>
+			<NavLink to="/home/profile">
 				<Container className="my-6">
 					<Row>
 						<Col lg={6} md={9} sm={12}>
@@ -17,7 +19,7 @@ class UnderConstruction extends React.Component {
 						</Col>
 					</Row>
 				</Container>
-			</>
+			</NavLink>
 		);
 	}
 }

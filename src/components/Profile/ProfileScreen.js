@@ -1,14 +1,15 @@
-import React, { useEffect } from 'react';
-import PermRender from '../_common/PermRender';
-import { Query } from 'react-apollo';
 import * as queries from '../../apollo/queries';
-import LoadingIcon from '../_presentational/LoadingIcon';
-import { Container } from 'reactstrap';
+
 import ApplyNow from '../_common/ApplyNow';
+import { Container } from 'reactstrap';
+import LoadingIcon from '../_presentational/LoadingIcon';
+import ManagerCashout from './managers/ManagerCashout';
+import ManagerPayouts from './managers/ManagerPayouts';
 import MemberProgress from './members/MemberProgress';
 import MemberTurnins from './members/MemberTurnins';
-import ManagerPayouts from './managers/ManagerPayouts';
-import ManagerCashout from './managers/ManagerCashout';
+import PermRender from '../_common/PermRender';
+import { Query } from 'react-apollo';
+import React from 'react';
 import { withRouter } from 'react-router';
 
 class ProfileScreen extends React.Component {

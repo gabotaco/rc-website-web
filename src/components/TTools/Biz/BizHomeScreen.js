@@ -1,23 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import * as Api from '../../../library/Api/api';
+
 import {
-	Container,
-	Row,
 	Col,
-	Navbar,
-	NavbarToggler,
 	Collapse,
-	Nav,
-	NavItem,
+	Container,
 	Form,
 	Input,
 	InputGroup,
 	InputGroupAddon,
 	InputGroupText,
+	Nav,
+	NavItem,
+	Navbar,
+	NavbarToggler,
+	Row,
 } from 'reactstrap';
-import LoadingIcon from '../../_presentational/LoadingIcon';
-import * as Api from '../../../library/Api/api';
-import FormattedNumber from '../../_common/FormattedNumber';
+import React, { useEffect, useState } from 'react';
+
 import CustomTable from '../../_common/CustomTable';
+import FormattedNumber from '../../_common/FormattedNumber';
+import LoadingIcon from '../../_presentational/LoadingIcon';
+
 const $ = require('jquery');
 const businesses = require('./businesses.json');
 
@@ -143,7 +146,8 @@ const BizHomeScreen = props => {
 								<a
 									className="btn btn-info"
 									href={`/home/ttools/biz/map/?biz=${business.id}`}
-									target="_blank">
+									target="_blank"
+									rel="noopener noreferrer">
 									Go
 								</a>
 							</td>
