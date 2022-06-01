@@ -1,17 +1,17 @@
-import * as Api from "../../../library/Api/api";
+import * as Api from '../../../library/Api/api';
 
-import { Button, Form, Input } from "reactstrap";
-import React, { useEffect, useRef, useState } from "react";
+import { Button, Form, Input } from 'reactstrap';
+import React, { useEffect, useRef, useState } from 'react';
 
-import LoadingIcon from "../../_presentational/LoadingIcon";
-import VehicleCard from "./Vehicle";
+import LoadingIcon from '../../_presentational/LoadingIcon';
+import VehicleCard from './Vehicle';
 
 const CompletionistScreen = props => {
 	document.title = `RC - Completionist`;
 
 	const [currentVehiclesData, setCurrentVehiclesData] = useState(null);
 	const [ownedVehiclesData, setOwnedVehiclesData] = useState([]);
-	const [publicKeyVal, setPublicKeyVal] = useState("");
+	const [publicKeyVal, setPublicKeyVal] = useState('');
 
 	useStyles(Style.raw);
 
@@ -31,11 +31,11 @@ const CompletionistScreen = props => {
 		});
 
 		const rtsCardsNames = Object.keys(data).filter(key => {
-			return key.includes("rts_card|");
+			return key.includes('rts_card|');
 		});
 
 		rtsCardsNames.forEach(key => {
-			let keyName = key.split("|")[1];
+			let keyName = key.split('|')[1];
 			if (!ownedVehicles[keyName]) ownedVehicles[keyName] = data[key];
 			else ownedVehicles[keyName].amount += data[key].amount;
 		});
@@ -58,7 +58,7 @@ const CompletionistScreen = props => {
 	// Every 30 seconds refresh the data
 	setInterval(() => {
 		getData();
-		console.log("Refreshing data");
+		console.log('Refreshing data');
 	}, 120000);
 
 	useEffect(() => {
@@ -127,10 +127,10 @@ const CompletionistScreen = props => {
 							onChange={e =>
 								setPublicKeyVal(
 									e.target.value
-										.replace(/\n/g, "")
+										.replace(/\n/g, '')
 										.replace(
 											/([\uE000-\uF8FF]|\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDDFF])/g,
-											""
+											''
 										)
 								)
 							}
@@ -180,12 +180,12 @@ const Style = {
 			width: 100%;
 			height: auto;
 		}
-    `
+    `,
 };
 
 function useStyles(body) {
 	useEffect(() => {
-		const style = document.createElement("style");
+		const style = document.createElement('style');
 		style.innerHTML = body;
 
 		document.body.appendChild(style);
