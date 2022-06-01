@@ -31,6 +31,8 @@ const HomeScreen = props => {
 	);
 	const [job, setJob] = useState(<LoadingIcon inline />);
 	const [health, setHealth] = useState(0);
+	const [hunger, setHunger] = useState(0);
+	const [thirst, setThirst] = useState(0);
 	const [capacity, setCapacity] = useState(0);
 	const [playerID, setPlayerID] = useState(props.game_id);
 	const [premium, setPremium] = useState('LOADING');
@@ -127,7 +129,7 @@ const HomeScreen = props => {
 		var hour = a.getHours();
 		var min = a.getMinutes();
 		var sec = a.getSeconds();
-		if (sec.toString().length === 1) sec = '0' + sec;
+		if (sec.toString().length == 1) sec = '0' + sec;
 		var time =
 			date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
 		return time;
@@ -248,7 +250,11 @@ const HomeScreen = props => {
 		Api.getTycoonData(gameId)
 			.then(response => {
 				let hasPremium = false;
-				if (response.data.groups.license_premium) {
+				if (
+					response.data.groups.license_premium || // Brought in-game
+					response.data.groups.license_patreon_premium || // Brought via Patreon
+					response.data.groups.license_premium_p2w // Brought via Tebex
+				) {
 					hasPremium = true;
 				}
 
@@ -358,6 +364,8 @@ const HomeScreen = props => {
 				setJob(getJob(response.data.groups));
 
 				setHealth(parseFloat(response.data.health - 100).toFixed(2));
+				setHunger(parseFloat(response.data.hunger).toFixed(2));
+				setThirst(parseFloat(response.data.thirst).toFixed(2));
 
 				let storageUsed = 0;
 				let capacity =
@@ -641,10 +649,10 @@ const HomeScreen = props => {
 		if (!xp) xp = 10;
 		xp = Math.round(xp);
 
-		let currentLevel = xp;
-		let lvlPercent = (currentLevel / maxLevel) * 100;
+		let currentLevel = xp,
+			lvlPercent = (currentLevel / maxLevel) * 100;
 
-		if (skillName !== 'Completionist') {
+		if (skillName != 'Completionist') {
 			currentLevel = calculateLevel(xp);
 			lvlPercent = levelPercentage(xp);
 		}
