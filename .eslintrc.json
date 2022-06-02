@@ -1,0 +1,16 @@
+{
+	"extends": ["strongloop", "prettier"],
+	"parserOptions": {
+		"sourceType": "module"
+	},
+	"plugins": ["prettier"],
+	"env": {
+		"browser": true
+	},
+	"rules": {
+		"indent": ["error", "tab"],
+		"arrow-parens": ["error", "as-needed"],
+		"object-curly-spacing": ["error", "always"],
+		"no-var": "error"
+	}
+}

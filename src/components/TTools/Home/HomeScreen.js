@@ -1,4 +1,4 @@
-import * as Api from "../../../library/Api/api";
+import * as Api from '../../../library/Api/api';
 
 import {
 	Col,
@@ -11,15 +11,15 @@ import {
 	Navbar,
 	NavbarToggler,
 	Progress,
-	Row
-} from "reactstrap";
-import React, { useEffect, useState } from "react";
+	Row,
+} from 'reactstrap';
+import React, { useEffect, useState } from 'react';
 
-import FilterableTables from "../../_common/FilterableTables";
-import FormattedNumber from "../../_common/FormattedNumber";
-import LoadingIcon from "../../_presentational/LoadingIcon";
+import FilterableTables from '../../_common/FilterableTables';
+import FormattedNumber from '../../_common/FormattedNumber';
+import LoadingIcon from '../../_presentational/LoadingIcon';
 
-const $ = require("jquery");
+const $ = require('jquery');
 
 const HomeScreen = props => {
 	const [collapsed, setCollapsed] = useState(false);
@@ -31,16 +31,14 @@ const HomeScreen = props => {
 	);
 	const [job, setJob] = useState(<LoadingIcon inline />);
 	const [health, setHealth] = useState(0);
-	const [hunger, setHunger] = useState(0);
-	const [thirst, setThirst] = useState(0);
 	const [capacity, setCapacity] = useState(0);
 	const [playerID, setPlayerID] = useState(props.game_id);
-	const [premium, setPremium] = useState("LOADING");
-	const [dxp, setDxp] = useState("LOADING");
-	const [boost, setBoost] = useState("LOADING");
-	const [bonus, setBonus] = useState("LOADING");
-	const [linked, setLinked] = useState("LOADING");
-	const [voice, setVoice] = useState("LOADING");
+	const [premium, setPremium] = useState('LOADING');
+	const [dxp, setDxp] = useState('LOADING');
+	const [boost, setBoost] = useState('LOADING');
+	const [bonus, setBonus] = useState('LOADING');
+	const [linked, setLinked] = useState('LOADING');
+	const [voice, setVoice] = useState('LOADING');
 
 	const loadingSkill = skillName => (
 		<Progress multi style={Style.skillBarContainer} className="my-1">
@@ -49,50 +47,49 @@ const HomeScreen = props => {
 				value={0}
 				min={0}
 				max={100}
-				style={{ backgroundColor: "#0063ca" }}
-			>
+				style={{ backgroundColor: '#0063ca' }}>
 				<span className="text-white font-weight-bold" style={Style.skillText}>
-					{skillName} | Level <LoadingIcon inline sizeClass={"glimpsicon-16"} />{" "}
-					/ <LoadingIcon inline sizeClass={"glimpsicon-16"} />{" "}
+					{skillName} | Level <LoadingIcon inline sizeClass={'glimpsicon-16'} />{' '}
+					/ <LoadingIcon inline sizeClass={'glimpsicon-16'} />{' '}
 					<i>
-						(<LoadingIcon inline sizeClass={"glimpsicon-16"} /> EXP)
+						(<LoadingIcon inline sizeClass={'glimpsicon-16'} /> EXP)
 					</i>
 				</span>
 			</Progress>
 		</Progress>
 	);
-	const [business, setBusiness] = useState(loadingSkill("Business"));
-	const [gambling, setGambling] = useState(loadingSkill("Gambling"));
-	const [ems, setEms] = useState(loadingSkill("EMS"));
-	const [fire, setFire] = useState(loadingSkill("Fire"));
-	const [farming, setFarming] = useState(loadingSkill("Farming"));
-	const [fishing, setFishing] = useState(loadingSkill("Fishing"));
-	const [mining, setMining] = useState(loadingSkill("Mining"));
-	const [hunting, setHunting] = useState(loadingSkill("Hunting"));
-	const [strength, setStrength] = useState(loadingSkill("Strength"));
-	const [cargo, setCargo] = useState(loadingSkill("Cargo Pilot"));
-	const [heli, setHeli] = useState(loadingSkill("Helicopter Pilot"));
-	const [airline, setAirline] = useState(loadingSkill("Airline Pilot"));
-	const [player, setPlayer] = useState(loadingSkill("Player"));
-	const [racing, setRacing] = useState(loadingSkill("Racing"));
-	const [bus, setBus] = useState(loadingSkill("Bus Driver"));
-	const [conductor, setConductor] = useState(loadingSkill("Conductor"));
-	const [garbage, setGarbage] = useState(loadingSkill("Garbage Collections"));
-	const [mechanic, setMechanic] = useState(loadingSkill("Mechanic"));
-	const [postOp, setPostOp] = useState(loadingSkill("PostOP"));
-	const [trucking, setTrucking] = useState(loadingSkill("Trucking"));
+	const [business, setBusiness] = useState(loadingSkill('Business'));
+	const [gambling, setGambling] = useState(loadingSkill('Gambling'));
+	const [ems, setEms] = useState(loadingSkill('EMS'));
+	const [fire, setFire] = useState(loadingSkill('Fire'));
+	const [farming, setFarming] = useState(loadingSkill('Farming'));
+	const [fishing, setFishing] = useState(loadingSkill('Fishing'));
+	const [mining, setMining] = useState(loadingSkill('Mining'));
+	const [hunting, setHunting] = useState(loadingSkill('Hunting'));
+	const [strength, setStrength] = useState(loadingSkill('Strength'));
+	const [cargo, setCargo] = useState(loadingSkill('Cargo Pilot'));
+	const [heli, setHeli] = useState(loadingSkill('Helicopter Pilot'));
+	const [airline, setAirline] = useState(loadingSkill('Airline Pilot'));
+	const [player, setPlayer] = useState(loadingSkill('Player'));
+	const [racing, setRacing] = useState(loadingSkill('Racing'));
+	const [bus, setBus] = useState(loadingSkill('Bus Driver'));
+	const [conductor, setConductor] = useState(loadingSkill('Conductor'));
+	const [garbage, setGarbage] = useState(loadingSkill('Garbage Collections'));
+	const [mechanic, setMechanic] = useState(loadingSkill('Mechanic'));
+	const [postOp, setPostOp] = useState(loadingSkill('PostOP'));
+	const [trucking, setTrucking] = useState(loadingSkill('Trucking'));
 	const [completionist, setCompletionist] = useState(
-		loadingSkill("Completionist")
+		loadingSkill('Completionist')
 	);
 
 	const [inventory, setInventory] = useState(<LoadingIcon />);
 
 	function getVisible() {
 		if (window.innerWidth <= 1199.98) {
-			document.getElementById("left-nav").style.top = "0px";
+			document.getElementById('left-nav').style.top = '0px';
 			return;
 		}
-		var $el = $("#navbar"),
+		var $el = $('#navbar'),
 			scrollTop = $(this).scrollTop(),
 			scrollBot = scrollTop + $(this).height(),
 			elTop = $el.offset().top,
@@ -101,28 +98,28 @@ const HomeScreen = props => {
 			visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
 
 		if (visibleBottom - visibleTop < 0) {
-			document.getElementById("left-nav").style.top = "0px";
+			document.getElementById('left-nav').style.top = '0px';
 		} else {
-			document.getElementById("left-nav").style.top =
-				visibleBottom - visibleTop + "px";
+			document.getElementById('left-nav').style.top =
+				visibleBottom - visibleTop + 'px';
 		}
 	}
 
 	function timeConverter(UNIX_timestamp) {
 		var a = new Date(UNIX_timestamp * 1000);
 		var months = [
-			"Jan",
-			"Feb",
-			"Mar",
-			"Apr",
-			"May",
-			"Jun",
-			"Jul",
-			"Aug",
-			"Sep",
-			"Oct",
-			"Nov",
-			"Dec"
+			'Jan',
+			'Feb',
+			'Mar',
+			'Apr',
+			'May',
+			'Jun',
+			'Jul',
+			'Aug',
+			'Sep',
+			'Oct',
+			'Nov',
+			'Dec',
 		];
 		var year = a.getFullYear();
 		var month = months[a.getMonth()];
@@ -130,9 +127,9 @@ const HomeScreen = props => {
 		var hour = a.getHours();
 		var min = a.getMinutes();
 		var sec = a.getSeconds();
-		if (sec.length == 1) sec = "0" + sec;
+		if (sec.toString().length === 1) sec = '0' + sec;
 		var time =
-			date + " " + month + " " + year + " " + hour + ":" + min + ":" + sec;
+			date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
 		return time;
 	}
 
@@ -154,77 +151,77 @@ const HomeScreen = props => {
 
 	function getJob(data) {
 		if (data.trucker_commercial && data.trucker) {
-			return "Trucker Commercial";
+			return 'Trucker Commercial';
 		} else if (data.trucker_military && data.trucker) {
-			return "Trucker Military";
+			return 'Trucker Military';
 		} else if (data.trucker_refridgerated && data.trucker) {
-			return "Trucker Refridgerated";
+			return 'Trucker Refridgerated';
 		} else if (data.beachcleanup) {
-			return "Beach Clean Up";
+			return 'Beach Clean Up';
 		} else if (data.trucker_liberty && data.trucker) {
-			return "Trucker Liberty";
+			return 'Trucker Liberty';
 		} else if (data.busdriver) {
-			return "Bus Driver";
+			return 'Bus Driver';
 		} else if (data.helicopterpilot) {
-			return "Helicopter Pilot";
+			return 'Helicopter Pilot';
 		} else if (data.cargopilot) {
-			return "Cargo Pilot";
+			return 'Cargo Pilot';
 		} else if (data.pilot) {
-			return "Airline Pilot";
+			return 'Airline Pilot';
 		} else if (data.leasurepilot) {
-			return "Leisure Pilot";
+			return 'Leisure Pilot';
 		} else if (data.hunter) {
-			return "Wildlife Hunter";
+			return 'Wildlife Hunter';
 		} else if (data.mechanic) {
-			return "Mechanic";
+			return 'Mechanic';
 		} else if (data.conductor) {
-			return "Train Conductor";
+			return 'Train Conductor';
 		} else if (data.emergency) {
-			return "EMS / Paramedic";
+			return 'EMS / Paramedic';
 		} else if (data.miner) {
-			return "Miner";
+			return 'Miner';
 		} else if (data.garbage) {
-			return "Garbage Collector";
+			return 'Garbage Collector';
 		} else if (data.farmer) {
-			return "Farmer";
+			return 'Farmer';
 		} else if (data.fisher) {
-			return "Fisherman";
+			return 'Fisherman';
 		} else if (data.delivery_ups) {
-			return "UPS Delivery";
+			return 'UPS Delivery';
 		} else if (data.postop) {
-			return "PostOP Emplyee";
+			return 'PostOP Emplyee';
 		} else if (data.racer) {
-			return "Street Racer";
+			return 'Street Racer';
 		} else if (data.dockhandler) {
-			return "Dock Handler";
+			return 'Dock Handler';
 		} else if (data.delivery_transformer) {
-			return "Transformer Repair";
+			return 'Transformer Repair';
 		} else if (data.delivery_server) {
-			return "Server Repair";
+			return 'Server Repair';
 		} else if (data.firefighter) {
-			return "Firefighter";
+			return 'Firefighter';
 		} else if (data.citizen) {
-			return "Unemployed";
+			return 'Unemployed';
 		} else if (data.rts_professional) {
-			return "R.T.S. Professional";
+			return 'R.T.S. Professional';
 		} else if (data.rts_aviator) {
-			return "R.T.S. Aviator";
+			return 'R.T.S. Aviator';
 		} else if (data.rts_job) {
-			return "R.T.S. Employee";
+			return 'R.T.S. Employee';
 		} else if (data.pigs_job) {
-			return "Pigs Employee";
+			return 'Pigs Employee';
 		} else if (data.frllc_paramedic) {
-			return "F.R.LLC Paramedic";
+			return 'F.R.LLC Paramedic';
 		} else if (data.collinsco_cabbie_job) {
-			return "CollinsCo Cabbies";
+			return 'CollinsCo Cabbies';
 		} else if (data.collinsco_train_job) {
-			return "CollinsCo Trainy Boi";
+			return 'CollinsCo Trainy Boi';
 		} else if (data.collinsco_metro_job) {
-			return "CollinsCo Metro";
+			return 'CollinsCo Metro';
 		} else if (data.bat_trucker) {
-			return "BAT Trucker";
+			return 'BAT Trucker';
 		} else {
-			return "None";
+			return 'None';
 		}
 	}
 
@@ -265,56 +262,56 @@ const HomeScreen = props => {
 							garbage: 10,
 							postop: 10,
 							mechanic: 10,
-							trucking: 10
+							trucking: 10,
 						},
 						ems: {
 							fire: 10,
-							ems: 10
+							ems: 10,
 						},
 						casino: {
-							casino: 10
+							casino: 10,
 						},
 						hunting: {
-							skill: 10
+							skill: 10,
 						},
 						train: {
 							bus: 10,
-							train: 10
+							train: 10,
 						},
 						piloting: {
 							cargo: 10,
 							cargos: 10,
 							heli: 10,
-							piloting: 10
+							piloting: 10,
 						},
 						physical: {
-							strength: 10
+							strength: 10,
 						},
 						farming: {
 							fishing: 10,
 							farming: 10,
-							mining: 10
+							mining: 10,
 						},
 						police: {
-							police: 10
+							police: 10,
 						},
 						business: {
 							business: 10,
-							faction: 10
+							faction: 10,
 						},
 						player: {
 							racing: 10,
-							player: 10
-						}
+							player: 10,
+						},
 					};
 				if (!response.data.gaptitudes_v)
 					response.data.gaptitudes_v = response.data.gaptitudes;
 
 				const companys = {
-					corp11: "PIGS",
-					corp2: "CoCo",
-					corp6: "IA",
-					corp9: "RTS"
+					corp11: 'PIGS',
+					corp2: 'CoCo',
+					corp6: 'IA',
+					corp9: 'RTS',
 				};
 				const groups = JSON.stringify(response.data.groups);
 				let company = false;
@@ -334,7 +331,7 @@ const HomeScreen = props => {
 					) {
 						setCompany(hasCooldown(response.data.licenses.corp_cooldown));
 					} else {
-						setCompany("None");
+						setCompany('None');
 					}
 				}
 
@@ -365,8 +362,6 @@ const HomeScreen = props => {
 				setJob(getJob(response.data.groups));
 
 				setHealth(parseFloat(response.data.health - 100).toFixed(2));
-				setHunger(parseFloat(response.data.hunger).toFixed(2));
-				setThirst(parseFloat(response.data.thirst).toFixed(2));
 
 				let storageUsed = 0;
 				let capacity =
@@ -399,84 +394,84 @@ const HomeScreen = props => {
 					addSkill(
 						response.data.gaptitudes_v.business.business,
 						100,
-						"Business"
+						'Business'
 					)
 				);
 				setGambling(
-					addSkill(response.data.gaptitudes_v.casino.casino, 100, "Gambling")
+					addSkill(response.data.gaptitudes_v.casino.casino, 100, 'Gambling')
 				);
-				setEms(addSkill(response.data.gaptitudes_v.ems.ems, 100, "EMS"));
-				setFire(addSkill(response.data.gaptitudes_v.ems.fire, 100, "Fire"));
+				setEms(addSkill(response.data.gaptitudes_v.ems.ems, 100, 'EMS'));
+				setFire(addSkill(response.data.gaptitudes_v.ems.fire, 100, 'Fire'));
 				setFarming(
-					addSkill(response.data.gaptitudes_v.farming.farming, 100, "Farming")
+					addSkill(response.data.gaptitudes_v.farming.farming, 100, 'Farming')
 				);
 				setFishing(
-					addSkill(response.data.gaptitudes_v.farming.fishing, 100, "Fishing")
+					addSkill(response.data.gaptitudes_v.farming.fishing, 100, 'Fishing')
 				);
 				setMining(
-					addSkill(response.data.gaptitudes_v.farming.mining, 100, "Mining")
+					addSkill(response.data.gaptitudes_v.farming.mining, 100, 'Mining')
 				);
 				setHunting(
-					addSkill(response.data.gaptitudes_v.hunting.skill, 100, "Hunting")
+					addSkill(response.data.gaptitudes_v.hunting.skill, 100, 'Hunting')
 				);
 				setStrength(
-					addSkill(response.data.gaptitudes_v.physical.strength, 30, "Strength")
+					addSkill(response.data.gaptitudes_v.physical.strength, 30, 'Strength')
 				);
 				setCargo(
 					addSkill(
 						response.data.gaptitudes_v.piloting.cargos,
 						100,
-						"Cargo Pilot"
+						'Cargo Pilot'
 					)
 				);
 				setHeli(
 					addSkill(
 						response.data.gaptitudes_v.piloting.heli,
 						100,
-						"Helicopter Pilot"
+						'Helicopter Pilot'
 					)
 				);
 				setAirline(
 					addSkill(
 						response.data.gaptitudes_v.piloting.piloting,
 						100,
-						"Airline Pilot"
+						'Airline Pilot'
 					)
 				);
 				setPlayer(
-					addSkill(response.data.gaptitudes_v.player.player, 100, "Player")
+					addSkill(response.data.gaptitudes_v.player.player, 100, 'Player')
 				);
 				setRacing(
-					addSkill(response.data.gaptitudes_v.player.racing, 100, "Racing")
+					addSkill(response.data.gaptitudes_v.player.racing, 100, 'Racing')
 				);
 				setBus(
-					addSkill(response.data.gaptitudes_v.train.bus, 100, "Bus Driver")
+					addSkill(response.data.gaptitudes_v.train.bus, 100, 'Bus Driver')
 				);
 				setConductor(
-					addSkill(response.data.gaptitudes_v.train.train, 100, "Conductor")
+					addSkill(response.data.gaptitudes_v.train.train, 100, 'Conductor')
 				);
 				setGarbage(
 					addSkill(
 						response.data.gaptitudes_v.trucking.garbage,
 						100,
-						"Garbage Collections"
+						'Garbage Collections'
 					)
 				);
 				setMechanic(
 					addSkill(
 						response.data.gaptitudes_v.trucking.mechanic,
 						100,
-						"Mechanic"
+						'Mechanic'
 					)
 				);
 				setPostOp(
-					addSkill(response.data.gaptitudes_v.trucking.postop, 100, "PostOP")
+					addSkill(response.data.gaptitudes_v.trucking.postop, 100, 'PostOP')
 				);
 				setTrucking(
 					addSkill(
 						response.data.gaptitudes_v.trucking.trucking,
 						100,
-						"Trucking"
+						'Trucking'
 					)
 				);
 				const totalLevels =
@@ -500,7 +495,7 @@ const HomeScreen = props => {
 					calculateLevel(response.data.gaptitudes.trucking.postop || 10) +
 					calculateLevel(response.data.gaptitudes.player.racing || 10) +
 					calculateLevel(response.data.gaptitudes.trucking.trucking || 10);
-				setCompletionist(addSkill(totalLevels, 1930, "Completionist"));
+				setCompletionist(addSkill(totalLevels, 1930, 'Completionist'));
 
 				Api.getBackpack(gameId)
 					.then(res => {
@@ -551,8 +546,9 @@ const HomeScreen = props => {
 								return (
 									<tr key={i}>
 										<td
-											dangerouslySetInnerHTML={{ __html: item.name || key }}
-										></td>
+											dangerouslySetInnerHTML={{
+												__html: item.name || key,
+											}}></td>
 										<td>
 											<FormattedNumber num={item.amount} />
 										</td>
@@ -563,57 +559,57 @@ const HomeScreen = props => {
 										</td>
 									</tr>
 								);
-							}
+							},
 						};
 
 						setInventory(
 							<FilterableTables
-								filters={["Inventory", "Backpack", "Both"]}
+								filters={['Inventory', 'Backpack', 'Both']}
 								tables={[
 									{
-										filter: "Inventory",
+										filter: 'Inventory',
 										headers: headers.inventory,
 										data: Object.keys(response.data.inventory),
 										formatter: formatters.inventory,
-										config: config.inventory
+										config: config.inventory,
 									},
 									{
-										filter: "Backpack",
+										filter: 'Backpack',
 										headers: headers.backpack,
 										data: Object.keys(res.data),
 										formatter: formatters.backpack,
-										config: config.backpack
+										config: config.backpack,
 									},
 									{
-										filter: "Both",
+										filter: 'Both',
 										headers: headers.both,
 										data: Object.keys(both),
 										formatter: formatters.both,
-										config: config.both
-									}
+										config: config.both,
+									},
 								]}
 							/>
 						);
 					})
 					.catch(err => {
 						console.error(err);
-						if (err.error === "Tycoon Servers Offline") {
+						if (err.error === 'Tycoon Servers Offline') {
 							alert(
-								"Unable to get your backpack because the Tycoon servers are offline. Please try again later."
+								'Unable to get your backpack because the Tycoon servers are offline. Please try again later.'
 							);
 						} else {
-							alert("There was an error getting your backpack");
+							alert('There was an error getting your backpack');
 						}
 					});
 			})
 			.catch(err => {
 				console.error(err);
-				if (err.error === "Tycoon Servers Offline") {
+				if (err.error === 'Tycoon Servers Offline') {
 					alert(
-						"Unable to get your data because the Tycoon servers are offline. Please try again later."
+						'Unable to get your data because the Tycoon servers are offline. Please try again later.'
 					);
 				} else {
-					alert("There was an error getting their tycoon data");
+					alert('There was an error getting their tycoon data');
 				}
 			});
 	}
@@ -626,12 +622,12 @@ const HomeScreen = props => {
 				})
 				.catch(err => {
 					console.error(err);
-					if (err.error === "Tycoon Servers Offline") {
+					if (err.error === 'Tycoon Servers Offline') {
 						alert(
-							"Unable to get their in game ID because the Tycoon servers are offline. Please try again later."
+							'Unable to get their in game ID because the Tycoon servers are offline. Please try again later.'
 						);
 					} else {
-						alert("Unable to get their in game ID");
+						alert('Unable to get their in game ID');
 					}
 				});
 		} else {
@@ -639,7 +635,7 @@ const HomeScreen = props => {
 		}
 
 		getVisible();
-		$(window).on("scroll resize", getVisible);
+		$(window).on('scroll resize', getVisible);
 		document.onresize = function () {
 			getVisible();
 		};
@@ -648,12 +644,13 @@ const HomeScreen = props => {
 	function addSkill(xp, maxLevel, skillName) {
 		if (!xp) xp = 10;
 		xp = Math.round(xp);
-		if (skillName != "Completionist") {
-			var currentLevel = calculateLevel(xp);
-			var lvlPercent = levelPercentage(xp);
-		} else {
-			var currentLevel = xp;
-			var lvlPercent = (currentLevel / maxLevel) * 100;
+
+		let currentLevel = xp,
+			lvlPercent = (currentLevel / maxLevel) * 100;
+
+		if (skillName !== 'Completionist') {
+			currentLevel = calculateLevel(xp);
+			lvlPercent = levelPercentage(xp);
 		}
 
 		return (
@@ -664,12 +661,11 @@ const HomeScreen = props => {
 					min={0}
 					max={100}
 					style={{
-						backgroundColor: currentLevel >= maxLevel ? "#b39700" : "#0063ca"
-					}}
-				>
+						backgroundColor: currentLevel >= maxLevel ? '#b39700' : '#0063ca',
+					}}>
 					<span className="text-white font-weight-bold" style={Style.skillText}>
-						{skillName} | Level <FormattedNumber num={currentLevel} /> /{" "}
-						<FormattedNumber num={maxLevel} />{" "}
+						{skillName} | Level <FormattedNumber num={currentLevel} /> /{' '}
+						<FormattedNumber num={maxLevel} />{' '}
 						<i>
 							(<FormattedNumber num={xp} /> EXP)
 						</i>
@@ -689,8 +685,7 @@ const HomeScreen = props => {
 						fixed="left"
 						className="overflow-auto"
 						style={Style.navbar}
-						id="left-nav"
-					>
+						id="left-nav">
 						<NavbarToggler onClick={toggleNavbar} />
 						<Collapse navbar isOpen={!collapsed}>
 							<Nav navbar>
@@ -762,132 +757,126 @@ const HomeScreen = props => {
 								</NavItem>
 								<NavItem>
 									<p>
-										Premium:{" "}
+										Premium:{' '}
 										<span
 											className={
-												premium === "LOADING"
+												premium === 'LOADING'
 													? null
 													: premium
-													? "text-success"
-													: "text-danger"
-											}
-										>
-											{premium === "LOADING" ? (
+													? 'text-success'
+													: 'text-danger'
+											}>
+											{premium === 'LOADING' ? (
 												<LoadingIcon inline />
 											) : premium ? (
-												"Yes"
+												'Yes'
 											) : (
-												"No"
+												'No'
 											)}
 										</span>
 									</p>
 								</NavItem>
 								<NavItem>
 									<p>
-										Double XP:{" "}
+										Double XP:{' '}
 										<span
 											className={
-												dxp === "LOADING"
+												dxp === 'LOADING'
 													? null
 													: dxp
-													? "text-success"
-													: "text-danger"
-											}
-										>
-											{dxp === "LOADING" ? (
+													? 'text-success'
+													: 'text-danger'
+											}>
+											{dxp === 'LOADING' ? (
 												<LoadingIcon inline />
 											) : dxp ? (
-												"Yes"
+												'Yes'
 											) : (
-												"No"
+												'No'
 											)}
 										</span>
 									</p>
 								</NavItem>
 								<NavItem>
 									<p>
-										15% Boost:{" "}
+										15% Boost:{' '}
 										<span
 											className={
-												boost === "LOADING"
+												boost === 'LOADING'
 													? null
 													: boost
-													? "text-success"
-													: "text-danger"
-											}
-										>
-											{boost === "LOADING" ? (
+													? 'text-success'
+													: 'text-danger'
+											}>
+											{boost === 'LOADING' ? (
 												<LoadingIcon inline />
 											) : boost ? (
-												"Yes"
+												'Yes'
 											) : (
-												"No"
+												'No'
 											)}
 										</span>
 									</p>
 								</NavItem>
 								<NavItem>
 									<p>
-										Faction Bonus:{" "}
+										Faction Bonus:{' '}
 										<span
 											className={
-												bonus === "LOADING"
+												bonus === 'LOADING'
 													? null
 													: bonus
-													? "text-success"
-													: "text-danger"
-											}
-										>
-											{bonus === "LOADING" ? (
+													? 'text-success'
+													: 'text-danger'
+											}>
+											{bonus === 'LOADING' ? (
 												<LoadingIcon inline />
 											) : bonus ? (
-												"Yes"
+												'Yes'
 											) : (
-												"No"
+												'No'
 											)}
 										</span>
 									</p>
 								</NavItem>
 								<NavItem>
 									<p>
-										Discord Linked:{" "}
+										Discord Linked:{' '}
 										<span
 											className={
-												linked === "LOADING"
+												linked === 'LOADING'
 													? null
 													: linked
-													? "text-success"
-													: "text-danger"
-											}
-										>
-											{linked === "LOADING" ? (
+													? 'text-success'
+													: 'text-danger'
+											}>
+											{linked === 'LOADING' ? (
 												<LoadingIcon inline />
 											) : linked ? (
-												"Yes"
+												'Yes'
 											) : (
-												"No"
+												'No'
 											)}
 										</span>
 									</p>
 								</NavItem>
 								<NavItem>
 									<p>
-										Discord Voice:{" "}
+										Discord Voice:{' '}
 										<span
 											className={
-												voice === "LOADING"
+												voice === 'LOADING'
 													? null
 													: voice
-													? "text-success"
-													: "text-danger"
-											}
-										>
-											{voice === "LOADING" ? (
+													? 'text-success'
+													: 'text-danger'
+											}>
+											{voice === 'LOADING' ? (
 												<LoadingIcon inline />
 											) : voice ? (
-												"Yes"
+												'Yes'
 											) : (
-												"No"
+												'No'
 											)}
 										</span>
 									</p>
@@ -959,63 +948,63 @@ const Style = {
     }
     `,
 	container: {
-		marginLeft: "0px",
-		paddingLeft: "0px"
+		marginLeft: '0px',
+		paddingLeft: '0px',
 	},
 	leftColumn: {
-		paddingLeft: "0px"
+		paddingLeft: '0px',
 	},
 	rightColumn: {
-		paddingLeft: "35px"
+		paddingLeft: '35px',
 	},
 	navbar: {
-		backgroundColor: "#2e2e2e",
-		maxHeight: "100vh"
+		backgroundColor: '#2e2e2e',
+		maxHeight: '100vh',
 	},
 	statHeader: {
-		marginBottom: "2px"
+		marginBottom: '2px',
 	},
 	healthBarContainer: {
-		backgroundColor: "#265325",
-		marginBottom: "1rem"
+		backgroundColor: '#265325',
+		marginBottom: '1rem',
 	},
 	healthBar: {
-		backgroundColor: "#4d904d"
+		backgroundColor: '#4d904d',
 	},
 	hungerBarContainer: {
-		backgroundColor: "#64370a",
-		marginBottom: "1rem"
+		backgroundColor: '#64370a',
+		marginBottom: '1rem',
 	},
 	hungerBar: {
-		backgroundColor: "#a15d1a"
+		backgroundColor: '#a15d1a',
 	},
 	thirstBarContainer: {
-		backgroundColor: "#302c91",
-		marginBottom: "1rem"
+		backgroundColor: '#302c91',
+		marginBottom: '1rem',
 	},
 	thirstBar: {
-		backgroundColor: "#4848e1"
+		backgroundColor: '#4848e1',
 	},
 	capacityBarContainer: {
-		backgroundColor: "#9c600c",
-		marginBottom: "1rem"
+		backgroundColor: '#9c600c',
+		marginBottom: '1rem',
 	},
 	capacityBar: {
-		backgroundColor: "#fca503"
+		backgroundColor: '#fca503',
 	},
 	skillBarContainer: {
-		height: "1.5rem",
-		backgroundColor: "#00264d"
+		height: '1.5rem',
+		backgroundColor: '#00264d',
 	},
 	skillText: {
-		fontSize: "1.2rem",
-		fontWeight: 900
-	}
+		fontSize: '1.2rem',
+		fontWeight: 900,
+	},
 };
 
 function useStyles(body) {
 	useEffect(() => {
-		const style = document.createElement("style");
+		const style = document.createElement('style');
 		style.innerHTML = body;
 
 		document.body.appendChild(style);
@@ -1028,36 +1017,36 @@ function useStyles(body) {
 
 const config = {
 	inventory: {
-		id: "inventory-item-table",
+		id: 'inventory-item-table',
 		jquery: {
 			language: {
-				emptyTable: "There are no items in inventory."
+				emptyTable: 'There are no items in inventory.',
 			},
-			order: [[1, "desc"]]
-		}
+			order: [[1, 'desc']],
+		},
 	},
 	backpack: {
-		id: "backpack-item-table",
+		id: 'backpack-item-table',
 		jquery: {
 			language: {
-				emptyTable: "There are no items in backpack."
+				emptyTable: 'There are no items in backpack.',
 			},
-			order: [[1, "desc"]]
-		}
+			order: [[1, 'desc']],
+		},
 	},
 	both: {
-		id: "both-item-table",
+		id: 'both-item-table',
 		jquery: {
 			language: {
-				emptyTable: "There are no items in inventory."
+				emptyTable: 'There are no items in inventory.',
 			},
-			order: [[1, "desc"]]
-		}
-	}
+			order: [[1, 'desc']],
+		},
+	},
 };
 
 const headers = {
-	inventory: ["Item Name", "Item Quantity", "Item Total Weight (in kg)"],
-	backpack: ["Item Name", "Item Quantity", "Item Total Weight (in kg)"],
-	both: ["Item Name", "Item Quantity", "Item Total Weight (in kg)"]
+	inventory: ['Item Name', 'Item Quantity', 'Item Total Weight (in kg)'],
+	backpack: ['Item Name', 'Item Quantity', 'Item Total Weight (in kg)'],
+	both: ['Item Name', 'Item Quantity', 'Item Total Weight (in kg)'],
 };

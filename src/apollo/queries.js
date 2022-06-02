@@ -1,4 +1,4 @@
-import gql from "graphql-tag";
+import gql from 'graphql-tag';
 
 export const GET_AUTH_USER = gql(`
   query GetAuthUser {
@@ -24,7 +24,7 @@ export const GET_AUTH_USER_STATUS = gql(`
             status
         }
     }
-`)
+`);
 
 export const GET_ALL_MEMBERS = gql(`
     query GetAllMembers {
@@ -42,7 +42,7 @@ export const GET_ALL_MEMBERS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_MEMBER_RANKINGS = gql(`
     query GetMemberRankings {
@@ -59,7 +59,7 @@ export const GET_MEMBER_RANKINGS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_ALL_MEMBER_DETAILS = gql(`
     query GetAllMemberDetails {
@@ -85,7 +85,7 @@ export const GET_ALL_MEMBER_DETAILS = gql(`
             manager
         }
     }
-`)
+`);
 
 export const GET_ALL_MEMBERS_SIMPLE = gql(`
     query GetAllMembers {
@@ -95,7 +95,7 @@ export const GET_ALL_MEMBERS_SIMPLE = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_AUTH_USER_PROGRESS = gql(`
     query GetAuthUserProgress {
@@ -123,7 +123,7 @@ export const GET_AUTH_USER_PROGRESS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_AUTH_USER_PIGS_VOUCHERS = gql(`
     query GetAuthUserPigsVouchers {
@@ -131,7 +131,7 @@ export const GET_AUTH_USER_PIGS_VOUCHERS = gql(`
             vouchers
         }
     }
-`)
+`);
 
 export const GET_AUTH_USER_TURNINS = gql(`
     query GetAuthUserTurnins {
@@ -148,7 +148,7 @@ export const GET_AUTH_USER_TURNINS = gql(`
             createdAt
         }
     }
-`)
+`);
 
 export const GET_AUTH_USER_PAYOUTS = gql(`
     query GetAuthUserPayouts {
@@ -163,7 +163,7 @@ export const GET_AUTH_USER_PAYOUTS = gql(`
             createdAt
         }
     }
-`)
+`);
 
 export const GET_MEMBER_PAYOUTS = gql(`
     query GetMemberPayouts($member_id: Int!) {
@@ -181,7 +181,7 @@ export const GET_MEMBER_PAYOUTS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_AUTH_USER_CASHOUT = gql(`
     query GetAuthUserCashout {
@@ -193,7 +193,7 @@ export const GET_AUTH_USER_CASHOUT = gql(`
             total_money
         }
     }
-`)
+`);
 
 export const GET_WEB_USERS = gql(`
     query GetWebUsers {
@@ -204,37 +204,37 @@ export const GET_WEB_USERS = gql(`
             permission
         }
     }
-`)
+`);
 
 export const SET_USER_PERM = gql(`
     mutation SetUserPerm($id: Int!, $perm: Int!) {
         setUserPerm: set_user_perm(id: $id, perm: $perm)
     }
-`)
+`);
 
 export const SET_USER_ID = gql(`
     mutation SetUserId($id: Int!, $in_game_id: Int!) {
         setUserId: set_user_in_game_id(id: $id, in_game_id: $in_game_id)
     }
-`)
+`);
 
 export const SET_APPLICANT_CONTACTED = gql(`
     mutation SetApplicantContacted($id: Int!) {
         setApplicantContacted: set_applicant_contacted(id: $id)
     }
-`)
+`);
 
 export const SET_APPLICANT_REJECTED = gql(`
     mutation SetApplicantRejected($id: Int!, $reason: String!) {
         setApplicantRejected: set_applicant_rejected(id: $id, reason: $reason)
     }
-`)
+`);
 
 export const SET_REF_PAID = gql(`
     mutation SetRefPaid($id: Int!) {
         setRefPaid: set_ref_paid(id: $id)
     }
-`)
+`);
 
 export const GET_ACTIVE_APPLICANTS = gql(`
     query GetActiveApplicants {
@@ -249,13 +249,13 @@ export const GET_ACTIVE_APPLICANTS = gql(`
             createdAt
         }
     }
-`)
+`);
 
 export const UPDATE_APPLICANT_STATUS_INFO = gql(`
     mutation UpdateApplicantStatusInfo($id: Int!, $status_info: String!) {
         updateApplicantStatusInfo: update_applicant_status_info(id: $id, status_info: $status_info)
     }
-`)
+`);
 
 export const GET_ACTIVE_MANAGERS = gql(`
     query GetActiveManagers {
@@ -268,7 +268,7 @@ export const GET_ACTIVE_MANAGERS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_ALL_MANAGERS = gql(`
     query GetAllManagers {
@@ -287,7 +287,7 @@ export const GET_ALL_MANAGERS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_MANAGER_PAYOUTS = gql(`
     query GetManagerPayouts($manager_id: Int!) {
@@ -302,7 +302,7 @@ export const GET_MANAGER_PAYOUTS = gql(`
             }
         }
     }
-`)
+`);
 
 export const GET_COMPLETED_REFERRALS = gql(`
     query GetCompletedReferrals {
@@ -325,7 +325,7 @@ export const GET_COMPLETED_REFERRALS = gql(`
             moneyOwned
         }
     }
-`)
+`);
 
 export const GET_REFERRAL_DETAILS = gql(`
     query GetReferralDetails($referred_id: Int!, $paid: String!) {
@@ -336,7 +336,7 @@ export const GET_REFERRAL_DETAILS = gql(`
             total_vouchers
         }
     }
-`)
+`);
 
 export const GET_ACTIVE_REFERRALS = gql(`
     query GetAciveReferrals {
@@ -350,7 +350,7 @@ export const GET_ACTIVE_REFERRALS = gql(`
             re_discord_id
         }
     }
-`)
+`);
 
 export const GET_AUTH_USER_ACTIVE_REFERRALS = gql(`
     query GetAuthUserActiveReferrals {
@@ -360,7 +360,7 @@ export const GET_AUTH_USER_ACTIVE_REFERRALS = gql(`
             total_vouchers,
         }
     }
-`)
+`);
 
 export const SET_REFERRER_ID = gql(`
     mutation SetReferrerID($app_id: Int!, $new_id: Int!) {
@@ -369,7 +369,7 @@ export const SET_REFERRER_ID = gql(`
             referred_id
         }
     }
-`)
+`);
 
 export const SET_MEMBER_IDENTIFIERS = gql(`
     mutation SetMemberIdentifiers($uid: Int!, $new_name: String!, $new_id: Int!, $new_discord: String!) {
@@ -380,7 +380,7 @@ export const SET_MEMBER_IDENTIFIERS = gql(`
             discord_id
         }
     }
-`)
+`);
 
 export const SET_MEMBER_MANAGER = gql(`
     mutation SetMemberManager($uid: Int!, $manager: Boolean!) {
@@ -389,7 +389,7 @@ export const SET_MEMBER_MANAGER = gql(`
             manager
         }
     }
-`)
+`);
 
 export const SET_MEMBER_COMPANY = gql(`
     mutation SetMemberCompany($uid: Int!, $company: String!) {
@@ -398,7 +398,7 @@ export const SET_MEMBER_COMPANY = gql(`
             company
         }
     }
-`)
+`);
 
 export const SET_MEMBER_DEADLINE = gql(`
     mutation SetMemberDeadline($uid: Int!, $deadline: String!) {
@@ -407,7 +407,7 @@ export const SET_MEMBER_DEADLINE = gql(`
             deadline
         }
     }
-`)
+`);
 
 export const SET_MEMBER_WELCOME = gql(`
     mutation SetMemberWelcome($uid: Int!, $welcome: Boolean!) {
@@ -416,7 +416,7 @@ export const SET_MEMBER_WELCOME = gql(`
             welcome
         }
     }
-`)
+`);
 
 export const FIRE_MEMBER = gql(`
     mutation FireMember($uid: Int!, $reason: String!, $welcome: Boolean!) {
@@ -428,7 +428,7 @@ export const FIRE_MEMBER = gql(`
             deadline
         }
     }
-`)
+`);
 
 export const GET_CURRENT_EMPLOYEES = gql(`
     query GetCurrentEmployees {
@@ -439,7 +439,7 @@ export const GET_CURRENT_EMPLOYEES = gql(`
             discord_id
         }
     }
-`)
+`);
 
 export const GET_TOP_TURNINS = gql(`
     query GetTopTurnins($num_players: Int!, $from: String!, $to: String!, $company: String!) {
@@ -451,5 +451,4 @@ export const GET_TOP_TURNINS = gql(`
             money
         }
     }
-`)
-
+`);
