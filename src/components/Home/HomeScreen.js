@@ -1,72 +1,70 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 
-import PlayerMap from "./PlayerMap"
+import PlayerMap from './PlayerMap';
 
 const HomeScreen = () => {
-    const [loaded, setLoaded] = useState(false)
+	const [loaded, setLoaded] = useState(false);
 
-    useStyles(Styles.raw)
-    useLink("https://unpkg.com/leaflet@1.6.0/dist/leaflet.css")
+	useStyles(Styles.raw);
+	useLink('https://unpkg.com/leaflet@1.6.0/dist/leaflet.css');
 
-    useEffect(() => {
-        document.title = `RC - Home`
+	useEffect(() => {
+		document.title = `RC - Home`;
 
-        document.body.style = Styles.body
+		document.body.style = Styles.body;
 
-        var localJs = false
-        var tries = 0
+		var localJs = false;
+		var tries = 0;
 
-        const leafScript = useScript("https://unpkg.com/leaflet@1.6.0/dist/leaflet.js")
-        leafScript.onload = () => {
-            loadScript("https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js").then(() => {
-                if (localJs) {
-                    setLoaded(true);
-                } else {
-                    const int = setInterval(() => {
-                        if (localJs) {
-                            setLoaded(true);
-                        }
+		const leafScript = useScript(
+			'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js'
+		);
+		leafScript.onload = () => {
+			loadScript(
+				'https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js'
+			).then(() => {
+				if (localJs) {
+					setLoaded(true);
+				} else {
+					const int = setInterval(() => {
+						if (localJs) {
+							setLoaded(true);
+						}
 
-                        // 1 minute
-                        if (tries > 120) {
-                            clearInterval(int)
-                        }
+						// 1 minute
+						if (tries > 120) {
+							clearInterval(int);
+						}
 
-                        tries++
-                    }, 500);
-                }
-            })
+						tries++;
+					}, 500);
+				}
+			});
+		};
+		document.body.appendChild(leafScript);
 
-        }
-        document.body.appendChild(leafScript)
+		Promise.all([
+			loadScript('/home/js/map.js'),
+			loadScript('/home/js/icons.js'),
+			loadScript('/home/js/hud.js'),
+			loadScript('/home/js/markers.js'),
+			loadScript('/home/js/serverscan.js'),
+			loadScript('/home/js/canvas.js'),
+		]).then(() => {
+			localJs = true;
+		});
+	}, []);
 
-        Promise.all([
-                (loadScript('/home/js/map.js')),
-                (loadScript("/home/js/icons.js")),
-                (loadScript("/home/js/hud.js")),
-                (loadScript("/home/js/markers.js")),
-                (loadScript("/home/js/serverscan.js")),
-                (loadScript("/home/js/canvas.js"))
-            ])
-            .then(() => {
-                localJs = true
-            })
+	return <PlayerMap loaded={loaded} />;
+};
 
-
-    }, [])
-
-    return (
-        <PlayerMap loaded={loaded}/>
-    )
-}
-
-export default HomeScreen
+export default HomeScreen;
 
 const Styles = {
-    body: {
-        overflow: 'hidden'
-    },
-    raw: `
+	body: {
+		overflow: 'hidden',
+	},
+	raw: `
     .dropdown-menu {
         width: 100%;
     }
@@ -100,52 +98,52 @@ const Styles = {
         background: #ffbaba;
         color: black;
     }
-    `
-}
+    `,
+};
 
 function useScript(url) {
-    const script = document.createElement("script")
+	const script = document.createElement('script');
 
-    script.src = url;
+	script.src = url;
 
-    return script;
+	return script;
 }
 
 function loadScript(url) {
-    return new Promise((resolve, reject) => {
-        const script = document.createElement("script")
-        script.src = url;
+	return new Promise((resolve, reject) => {
+		const script = document.createElement('script');
+		script.src = url;
 
-        script.onload = resolve
-        script.onerror = reject
+		script.onload = resolve;
+		script.onerror = reject;
 
-        document.body.appendChild(script)
-    })
+		document.body.appendChild(script);
+	});
 }
 
 function useLink(url) {
-    useEffect(() => {
-        const link = document.createElement("link")
-        link.rel = "stylesheet"
-        link.href = url
+	useEffect(() => {
+		const link = document.createElement('link');
+		link.rel = 'stylesheet';
+		link.href = url;
 
-        document.body.appendChild(link)
+		document.body.appendChild(link);
 
-        return () => {
-            document.body.removeChild(link)
-        }
-    }, [url])
+		return () => {
+			document.body.removeChild(link);
+		};
+	}, [url]);
 }
 
 function useStyles(body) {
-    useEffect(() => {
-        const style = document.createElement("style")
-        style.innerHTML = body
+	useEffect(() => {
+		const style = document.createElement('style');
+		style.innerHTML = body;
 
-        document.body.appendChild(style)
+		document.body.appendChild(style);
 
-        return () => {
-            document.body.removeChild(style)
-        }
-    }, [body])
+		return () => {
+			document.body.removeChild(style);
+		};
+	}, [body]);
 }
