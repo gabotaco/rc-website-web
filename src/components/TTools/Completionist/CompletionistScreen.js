@@ -1,7 +1,7 @@
 import * as Api from '../../../library/Api/api';
 
-import { Button, Form, Input } from 'reactstrap';
-import React, { useEffect, useState } from 'react';
+import { Button, Form, Input } from "reactstrap";
+import React, { useEffect, useState } from "react";
 
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import VehicleCard from './Vehicle';
@@ -55,14 +55,16 @@ const CompletionistScreen = props => {
 		});
 	}
 
-	// Every 30 seconds refresh the data
-	setInterval(() => {
-		getData();
-		console.log('Refreshing data');
-	}, 120000);
-
 	useEffect(() => {
 		getData();
+
+		const interval = setInterval(async () => {
+			await getData();
+		}, 60 * 1000);
+
+		return () => {
+			clearInterval(interval);
+		};
 	}, []);
 
 	return (
