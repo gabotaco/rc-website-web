@@ -1,3 +1,5 @@
+const customEmojiFolder = "/home/images/companyemoji/";
+
 const jobsEmojiList = {
     "conductor": "🚂",
     "busdriver": "🚌",
