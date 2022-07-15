@@ -1,4 +1,3 @@
-const emojiFolder = "/home/images/openmoji/";
 const mapFolder = "/home/images/maps/";
 
 var serversList = [

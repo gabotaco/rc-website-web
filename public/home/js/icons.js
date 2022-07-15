@@ -1,3 +1,4 @@
+const emojiFolder = "/home/images/openmoji/";
 const customEmojiFolder = "/home/images/companyemoji/";
 
 const jobsEmojiList = {
