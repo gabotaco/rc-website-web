@@ -34,14 +34,12 @@
 ## Requirements
 
 * Node >~16.4.0 - [link](https://nodejs.org)
-* MySQL Server >~10.13
 * Discord Application - [link](https://discord.com/developers/applications)
 
 ## Usage
 
 <ol>
   <li>Clone repo</li>
-  <li>Import <code>schema_import.sql</code></li>
   <li>Edit <code>src\config\app_configs.js</code>
     <ol>
       <li> Create a Discord <a href="https://discord.com/developers/applications" target="_blank">Application</a> and copy the <code>APPLICATION ID</code></li>
