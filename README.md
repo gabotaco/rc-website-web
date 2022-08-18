@@ -1,70 +1,60 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <br>
+  <a href="https://www.rockwelltransport.com/home.html"><img src="https://github.com/rhit-corridg/rc-website-web/blob/2849224690eb4de8ffcadfa9871c3edc5a3df249/src/assets/img/logo.png" alt="Rockwell Corporation" width="200"></a>
+  <br>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">A company with in <a href="http://tycoon.community/" target="_blank">Transport Tyoon</a>.</h4>
+<h5 align="center">Split into two divisions</h5>
 
-## Available Scripts
+<p align="center">
+  <a href="https://discord.gg/9WRV87P" target="_blank">
+    <img alt="RTS Discord" src="https://img.shields.io/static/v1?label=Discord&message=RTS&color=ff8600">
+  </a>
+  <a href="https://discord.gg/FXNyJfQ" target="_blank">
+    <img alt="PIGS Discord" src="https://img.shields.io/static/v1?label=Discord&message=PIGS&color=ff3266">
+  </a>
+</p>
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+* Your [Profile](http://profile.rockwelltransport.com)
+  - Progress to the next rank in each company
+  - Your past turnins
+* Live [Map](http://map.rockwelltransport.com)
+  - PIGS - Pink
+  - RTS - Orange
+  - Management - Green
+* Payout [Calculator](http://payout.rockwelltransport.com)
+* Completionist
+* Skills
+* Storages
+* Businesses
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Requirements
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Node >~16.4.0 - [link](https://nodejs.org)
+* Discord Application - [link](https://discord.com/developers/applications)
 
-### `npm test`
+## Usage
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<ol>
+  <li>Clone repo</li>
+  <li>Edit <code>src\config\app_configs.js</code>
+    <ol>
+      <li> Create a Discord <a href="https://discord.com/developers/applications" target="_blank">Application</a> and copy the <code>APPLICATION ID</code></li>
+      <li> Add a OAuth2 -> Redirect <code>http://localhost:4000/api/callback</code></li>
+      <img src="https://user-images.githubusercontent.com/44209534/183471279-57ef390f-9ec8-4792-837d-701c809b2131.png"/>
+      <li> Set <code>client_id</code> to <code>APPLICATION ID</code></li>
+      <li> Set <code>server_url</code> to <code>http://localhost:4000</code></li>
+    </ol>
+   </li>
+  <li>Run the app
+<pre># Install Dependencies 
+npm install
+</pre>
+    <pre>
+# Start
+npm start</pre>
+  </li>
+</ol>
