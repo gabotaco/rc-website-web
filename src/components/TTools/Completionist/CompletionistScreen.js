@@ -16,30 +16,34 @@ const CompletionistScreen = props => {
 	useStyles(Style.raw);
 
 	async function getData() {
-		let inv = (await Api.getTycoonData()).data.inventory;
-		let backpack = (await Api.getBackpack()).data;
-		let data = {};
+		const apiData = await Api.getTycoonData()
 		let ownedVehicles = [];
+		
+		if (data.data){
+			let inv = apiData.data.inventory;
+			let backpack = (await Api.getBackpack()).data;
+			let data = {};
 
-		Object.keys(inv).forEach(key => {
-			data[key] = inv[key];
-		});
+			Object.keys(inv).forEach(key => {
+				data[key] = inv[key];
+			});
 
-		Object.keys(backpack).forEach(key => {
-			if (data[key]) data[key].amount += backpack[key].amount;
-			else data[key] = backpack[key];
-		});
+			Object.keys(backpack).forEach(key => {
+				if (data[key]) data[key].amount += backpack[key].amount;
+				else data[key] = backpack[key];
+			});
 
-		const rtsCardsNames = Object.keys(data).filter(key => {
-			return key.includes('rts_card|');
-		});
+			const rtsCardsNames = Object.keys(data).filter(key => {
+				return key.includes('rts_card|');
+			});
 
-		rtsCardsNames.forEach(key => {
-			let keyName = key.split('|')[1];
-			if (!ownedVehicles[keyName]) ownedVehicles[keyName] = data[key];
-			else ownedVehicles[keyName].amount += data[key].amount;
-		});
-
+			rtsCardsNames.forEach(key => {
+				let keyName = key.split('|')[1];
+				if (!ownedVehicles[keyName]) ownedVehicles[keyName] = data[key];
+				else ownedVehicles[keyName].amount += data[key].amount;
+			});
+		}
+		
 		setOwnedVehiclesData(ownedVehicles);
 
 		Api.getCurrentVehicles().then(response => {
