@@ -36,17 +36,17 @@ const ServerUptime = () => {
 						</thead>
 						<tbody>
 							<ServerRow
-								server={'server.tycoon.community:30120'}
-								name={'Server #2'}
+								server={'main'}
+								name={'NY-1'}
 								members={members}
 							/>
 							<ServerRow
-								server={'server.tycoon.community:30121'}
-								name={'Server #5 (Beta)'}
+								server={'beta'}
+								name={'NY-2 (Beta)'}
 								members={members}
 							/>
 							<ServerRow
-								server={'tycoon-w8j4eb.users.cfx.re'}
+								server={'event'}
 								name={'Event Server'}
 								members={members}
 							/>
