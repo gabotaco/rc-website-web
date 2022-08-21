@@ -1,16 +1,9 @@
 const mapFolder = "/home/images/maps/";
 
 var serversList = [
-    ["tycoon-w8r4q4.users.cfx.re","OS", "OS"],
-    ["tycoon-2epova.users.cfx.re","Server #2", "S2"],
-    ["tycoon-2epovd.users.cfx.re","Server #3", "S3"],
-    ["tycoon-wdrypd.users.cfx.re","Server #4", "S4"],
-    ["tycoon-njyvop.users.cfx.re","Server #5 (Beta)", "S5"],
-    ["tycoon-2r4588.users.cfx.re","Server #6", "S6"],
-    ["tycoon-npl5oy.users.cfx.re","Server #7", "S7"],
-    ["tycoon-2vzlde.users.cfx.re","Server #8", "S8"],
-    ["tycoon-wmapod.users.cfx.re","Server #9", "S9"],
-    ["tycoon-wxjpge.users.cfx.re","Server #A", "SA"]
+    ["main","NY-1", "S1"],
+    ["beta","NY-2 (Beta)", "S2"],
+    ["event","Event Server", "S3"]
 ]
 
 const isMobileDevice = (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
