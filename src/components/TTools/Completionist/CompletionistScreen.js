@@ -19,7 +19,7 @@ const CompletionistScreen = props => {
 		const apiData = await Api.getTycoonData()
 		let ownedVehicles = [];
 		
-		if (data.data){
+		if (apiData.data){
 			let inv = apiData.data.inventory;
 			let backpack = (await Api.getBackpack()).data;
 			let data = {};
