@@ -43,15 +43,17 @@ const HomeScreen = () => {
 		};
 		document.body.appendChild(leafScript);
 
-		Promise.all([
-			loadScript('/home/js/map.js'),
-			loadScript('/home/js/icons.js'),
-			loadScript('/home/js/hud.js'),
-			loadScript('/home/js/markers.js'),
-			loadScript('/home/js/serverscan.js'),
-			loadScript('/home/js/canvas.js'),
-		]).then(() => {
-			localJs = true;
+		// Make sure icons.js is loaded before markers.js, due to the way variables are declared
+		loadScript('/home/js/icons.js').then(() => {
+			Promise.all([
+				loadScript('/home/js/map.js'),
+				loadScript('/home/js/hud.js'),
+				loadScript('/home/js/markers.js'),
+				loadScript('/home/js/serverscan.js'),
+				loadScript('/home/js/canvas.js'),
+			]).then(() => {
+				localJs = true;
+			});
 		});
 	}, []);
 
