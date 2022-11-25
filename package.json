@@ -2,6 +2,7 @@
 	"name": "rc-website",
 	"version": "0.1.0",
 	"private": true,
+	"homepage": "https://www.rockwelltransport.com/home",
 	"dependencies": {
 		"@apollo/client": "~3.4.0",
 		"@testing-library/jest-dom": "^5.14.1",
@@ -32,7 +33,6 @@
 		"serve": "^13.0.2"
 	},
 	"devDependencies": {
-		"eslint": "^5.12.0",
 		"eslint-config-prettier": "^8.5.0",
 		"eslint-config-strongloop": "^2.1.0",
 		"eslint-plugin-prettier": "^4.0.0",
@@ -40,7 +40,7 @@
 		"react-scripts": "2.1.8"
 	},
 	"scripts": {
-		"start": "react-scripts start",
+		"start": "PORT=8008 react-scripts start",
 		"build": "react-scripts build",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject",
