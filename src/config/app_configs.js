@@ -1,7 +1,7 @@
 const AppConfigs = {
-	client_id: '705261074961662042',
-	server_url: 'http://localhost:4000',
-	app_name: 'RC',
+	client_id: process.env.REACT_APP_CLIENT_ID,
+	server_url: process.env.REACT_APP_API_URL,
+	app_name: process.env.REACT_APP_APP_NAME,
 };
 
 export default AppConfigs;
