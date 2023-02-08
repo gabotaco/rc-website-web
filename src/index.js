@@ -1,17 +1,23 @@
 import React, { Suspense } from 'react';
-import ReactDOM from 'react-dom';
+import { Redirect, Route, Router, Switch } from 'react-router';
+
 import ApolloClient from 'apollo-boost';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import { createBrowserHistory } from 'history';
-import { Router, Switch, Route, Redirect } from 'react-router';
-import { ApolloProvider } from 'react-apollo';
 import { ApolloProvider as ApolloClientProvider } from '@apollo/client';
 import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
-import AuthLayout from './layouts/Auth/AuthLayout';
-import AppLayout from './layouts/App/AppLayout';
+import { ApolloProvider } from 'react-apollo';
 import AppConfigs from './config/app_configs';
+import AppLayout from './layouts/App/AppLayout';
+import AuthLayout from './layouts/Auth/AuthLayout';
+import { InMemoryCache } from 'apollo-cache-inmemory';
+import ReactDOM from 'react-dom';
+import { config } from 'dotenv';
+import { createBrowserHistory } from 'history';
+
 // import "bootswatch/dist/darkly/bootstrap.min.css";
 // import "bootstrap/dist/css/bootstrap.css";
+
+config();
+
 const hist = createBrowserHistory();
 const cache = new InMemoryCache({ addTypename: true });
 
