@@ -1,5 +1,5 @@
-import React from 'react';
 import LoginButton from './LoginButton';
+import React from 'react';
 
 class LoginScreen extends React.Component {
 	componentDidMount() {
@@ -15,6 +15,10 @@ class LoginScreen extends React.Component {
 					<img
 						src="https://www.rockwelltransport.com/assets/images/logo-rc-376x226.png"
 						alt="RC Logo"
+						style={{
+							height: '226px',
+							width: '376px',
+						}}
 					/>
 					<p className="text-light">
 						<strong>Welcome to RC's website!</strong>
