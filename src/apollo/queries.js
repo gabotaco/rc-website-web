@@ -5,6 +5,7 @@ export const GET_AUTH_USER = gql(`
         authorizedUser {
             avatar,
             id,
+            rank,
             username,
             discriminator,
             ttpermission,
@@ -176,7 +177,7 @@ export const GET_MEMBER_PAYOUTS = gql(`
             manager {
                 member {
                     in_game_name,
-                    in_game_id    
+                    in_game_id
                 }
             }
         }
