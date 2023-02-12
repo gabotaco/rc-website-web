@@ -1,17 +1,12 @@
+import CustomPaginatedTable from '../../_common/CustomPaginatedTable';
+import { GET_PAGINATED_MEMBER_RANKINGS } from '../../../apollo/paginatedQueries';
 import React from 'react';
-import CustomTable from '../../_common/CustomTable';
 
 const CompanyCurrentMembersTable = props => {
-	let rank = 0;
-
-	for (let i = 0; i < props.members.length; i++) {
-		if (props.members[i].last_turnin) rank = i + 1;
-	}
-
 	const formatter = (member, key) => {
 		return (
 			<tr key={key} className={member.last_turnin ? 'table-info' : null}>
-				<th scope="row">{key + 1}</th>
+				<th scope="row">{key}</th>
 				<td>
 					{member.in_game_id} {member.in_game_name}
 				</td>
@@ -31,16 +26,14 @@ const CompanyCurrentMembersTable = props => {
 		);
 	};
 
-	function onCreated(table) {
-		table.page(Math.floor(rank / 10)).draw('page');
-	}
+	const userPage = Math.ceil(props.user.rank / 10);
 
 	return (
-		<CustomTable
-			onCreated={onCreated}
+		<CustomPaginatedTable
 			config={config}
 			headers={headers}
-			data={props.members}
+			query={GET_PAGINATED_MEMBER_RANKINGS}
+			page={userPage}
 			format={formatter}
 		/>
 	);
@@ -50,9 +43,6 @@ export default CompanyCurrentMembersTable;
 
 const config = {
 	id: 'member-list-table',
-	jquery: {
-		order: [[0, 'asc']],
-	},
 };
 
 const headers = [

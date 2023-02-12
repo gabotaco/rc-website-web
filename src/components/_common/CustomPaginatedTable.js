@@ -8,7 +8,7 @@ import LoadingIcon from '../_presentational/LoadingIcon';
 import { useLazyQuery } from '@apollo/client';
 
 const CustomPaginatedTable = props => {
-	const [currentPage, setCurrentPage] = useState(1);
+	const [currentPage, setCurrentPage] = useState(0);
 	const [pageCount, setPageCount] = useState(1);
 	const [totalRows, setTotalRows] = useState(0);
 	const [totalRowsFiltered, setTotalRowsFiltered] = useState(0);
@@ -18,6 +18,7 @@ const CustomPaginatedTable = props => {
 	const [tableData, setTableData] = useState([]);
 	const [textFilter, setTextFilter] = useState('');
 	const [textFilterTimeout, setTextFilterTimeout] = useState(null);
+	const [queryFilters, setQueryFilters] = useState('');
 
 	const [getData, { loading, error }] = useLazyQuery(props.query, {
 		fetchPolicy: 'network-only',
@@ -33,13 +34,13 @@ const CustomPaginatedTable = props => {
 			setTotalRows(getTotal);
 			setTotalRowsFiltered(getUsers.count);
 
-			const lastPage = Math.ceil(getUsers.count / rowCount) - 1;
+			const lastPage = Math.ceil(getUsers.count / rowCount);
 			setPageCount(lastPage);
+			console.log(currentPage, lastPage);
 			if (currentPage > lastPage) {
+				console.log('here');
 				setCurrentPage(lastPage);
 			}
-
-			console.table({ currentPage, lastPage });
 		},
 		onError: error => {
 			console.log(error);
@@ -48,11 +49,23 @@ const CustomPaginatedTable = props => {
 
 	useEffect(() => {
 		setHeaders(props.headers);
+		setQueryFilters(props.filters);
 
-		if (props.page !== currentPage) {
-			updateCurrentPage(props.page);
-		}
-	}, [props]);
+		if (props.page) updateCurrentPage(props.page);
+		else updateCurrentPage(1);
+	}, []);
+
+	useEffect(() => {
+		setQueryFilters(props.filters);
+		getData({
+			variables: {
+				limit: rowCount,
+				offset: (currentPage - 1) * rowCount,
+				textFilter: textFilter,
+				filter: props.filters,
+			},
+		});
+	}, [props.filters]);
 
 	useEffect(() => {
 		setPageButtons(PaginationButtons());
@@ -72,23 +85,26 @@ const CustomPaginatedTable = props => {
 				limit: intLimit,
 				offset: (offset - 1) * intLimit,
 				textFilter: textFilter,
+				filter: queryFilters,
 			},
 		});
 	}
 
 	function updateCurrentPage(page) {
+		if (currentPage === page) return;
 		setCurrentPage(page);
 		getData({
 			variables: {
 				limit: rowCount,
 				offset: (page - 1) * rowCount,
 				textFilter: textFilter,
+				filter: queryFilters,
 			},
 		});
 	}
 
 	function updateTextFilter(text) {
-		// If the user is typing, wait 500ms before sending the query
+		// If the user is typing, wait 375ms before sending the query
 		if (textFilterTimeout) clearTimeout(textFilterTimeout);
 		setTextFilterTimeout(
 			setTimeout(() => {
@@ -98,13 +114,15 @@ const CustomPaginatedTable = props => {
 						limit: rowCount,
 						offset: (currentPage - 1) * rowCount,
 						textFilter: text,
+						filter: queryFilters,
 					},
 				});
-			}, 500)
+			}, 100)
 		);
 	}
 
 	function PaginationButtons() {
+		// If there are less than 5 pages, display all of them
 		if (pageCount <= 5) {
 			let buttons = [];
 			for (let i = 2; i < pageCount + 1; i++) {
@@ -120,6 +138,7 @@ const CustomPaginatedTable = props => {
 		}
 
 		if (currentPage > 3 && currentPage < pageCount - 2) {
+			// If the current page is in the middle, display the current page and the two pages before and after it
 			return (
 				<>
 					<PaginationItem disabled key="ellipsis1">
@@ -136,6 +155,7 @@ const CustomPaginatedTable = props => {
 				</>
 			);
 		} else if (currentPage <= 3) {
+			// If the current page is 1, 2, 3 display them and then ellipsis
 			return (
 				<>
 					<PaginationItem
@@ -160,6 +180,7 @@ const CustomPaginatedTable = props => {
 				</>
 			);
 		} else if (currentPage >= pageCount - 2 && pageCount > 5) {
+			// If the current page is the third last, second last or last page, display them and then ellipsis
 			return (
 				<>
 					<PaginationItem disabled key="ellipsis1">
