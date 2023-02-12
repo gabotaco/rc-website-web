@@ -10,13 +10,10 @@ import AppLayout from './layouts/App/AppLayout';
 import AuthLayout from './layouts/Auth/AuthLayout';
 import { InMemoryCache } from 'apollo-cache-inmemory';
 import ReactDOM from 'react-dom';
-import { config } from 'dotenv';
 import { createBrowserHistory } from 'history';
 
 // import "bootswatch/dist/darkly/bootstrap.min.css";
 // import "bootstrap/dist/css/bootstrap.css";
-
-config();
 
 const hist = createBrowserHistory();
 const cache = new InMemoryCache({ addTypename: true });

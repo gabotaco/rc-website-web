@@ -18,7 +18,6 @@ const CustomPaginatedTable = props => {
 	const [tableData, setTableData] = useState([]);
 	const [textFilter, setTextFilter] = useState('');
 	const [textFilterTimeout, setTextFilterTimeout] = useState(null);
-	const [queryFilters, setQueryFilters] = useState(null);
 
 	const [getData, { loading, error }] = useLazyQuery(props.query, {
 		fetchPolicy: 'network-only',
@@ -36,8 +35,8 @@ const CustomPaginatedTable = props => {
 
 			const lastPage = Math.ceil(getUsers.count / rowCount);
 			setPageCount(lastPage);
-
 			if (currentPage > lastPage) {
+				console.log('here');
 				setCurrentPage(lastPage);
 			}
 		},
@@ -48,25 +47,11 @@ const CustomPaginatedTable = props => {
 
 	useEffect(() => {
 		setHeaders(props.headers);
-		setQueryFilters(props.filters);
 
-		if (props.page) updateCurrentPage(props.page);
-		else setCurrentPage(1);
-	}, []);
-
-	useEffect(() => {
-		if (props.filters) {
-			setQueryFilters(props.filters);
-			getData({
-				variables: {
-					limit: rowCount,
-					offset: (currentPage - 1) * rowCount,
-					textFilter: textFilter,
-					filter: props.filters,
-				},
-			});
+		if (props.page !== currentPage) {
+			updateCurrentPage(props.page);
 		}
-	}, [props.filters]);
+	}, [props]);
 
 	useEffect(() => {
 		setPageButtons(PaginationButtons());
@@ -92,8 +77,6 @@ const CustomPaginatedTable = props => {
 	}
 
 	function updateCurrentPage(page) {
-		if (currentPage === page) return;
-
 		setCurrentPage(page);
 		getData({
 			variables: {
@@ -106,7 +89,7 @@ const CustomPaginatedTable = props => {
 	}
 
 	function updateTextFilter(text) {
-		// If the user is typing, wait 100ms before sending the query
+		// If the user is typing, wait 500ms before sending the query
 		if (textFilterTimeout) clearTimeout(textFilterTimeout);
 		setTextFilterTimeout(
 			setTimeout(() => {
