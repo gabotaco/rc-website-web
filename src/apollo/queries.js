@@ -5,7 +5,6 @@ export const GET_AUTH_USER = gql(`
         authorizedUser {
             avatar,
             id,
-            rank,
             username,
             discriminator,
             ttpermission,
@@ -24,6 +23,12 @@ export const GET_AUTH_USER_STATUS = gql(`
         getAuthUserStatus {
             status
         }
+    }
+`);
+
+export const GET_AUTH_USER_RANK = gql(`
+    query GetAuthUserRank {
+        authorizedUserRank
     }
 `);
 

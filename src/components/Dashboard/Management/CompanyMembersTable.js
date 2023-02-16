@@ -24,7 +24,7 @@ const CompanyMembersTable = props => {
 
 		return (
 			<tr key={key} className={D3 >= 0 ? 'table-secondary' : null}>
-				<th scope="row">{key}</th>
+				<th scope="row">{member.rank}</th>
 				<td
 					data-search={`${member.in_game_id} ${member.in_game_name} ${member.discord_id}`}>
 					({member.in_game_id}) {member.in_game_name}

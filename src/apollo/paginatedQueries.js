@@ -4,6 +4,7 @@ export const GET_PAGINATED_MEMBER_RANKINGS = gql(`
     query GetPaginatedMemberRankings($limit: Int!, $offset: Int!, $textFilter: String) {
         getPaginatedMemberRankings(limit: $limit, offset: $offset, textFilter: $textFilter) {
             rows {
+                id,
                 in_game_id,
                 rank,
                 in_game_name,

@@ -46,10 +46,10 @@ const AdminPanel = props => {
 		}
 	}
 
-	const Formatters = {
-		table: user => {
-			return <WebUserRow user={user} authorizedUser={props.authorizedUser} />;
-		},
+	const formatter = (user, key) => {
+		return (
+			<WebUserRow key={key} user={user} authorizedUser={props.authorizedUser} />
+		);
 	};
 
 	useEffect(() => {
@@ -93,10 +93,11 @@ const AdminPanel = props => {
 					<h1 className="text-center">Linked Website Users</h1>
 
 					<CustomPaginatedTable
-						config={config.table}
-						headers={Headers.table}
+						config={config}
+						headers={Headers}
 						query={GET_PAGINATED_WEB_USERS}
-						format={Formatters.table}
+						format={formatter}
+						page={1}
 					/>
 				</Col>
 			</Row>
@@ -124,14 +125,10 @@ const Style = {
 };
 
 const config = {
-	table: {
-		id: 'admin-table',
-		jquery: {
-			order: [[2, 'desc']],
-		},
+	id: 'admin-table',
+	jquery: {
+		order: [[2, 'desc']],
 	},
 };
 
-const Headers = {
-	table: ['Discord ID', 'In Game ID', 'Perms'],
-};
+const Headers = ['Discord ID', 'In Game ID', 'Perms'];

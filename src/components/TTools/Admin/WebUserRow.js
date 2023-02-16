@@ -1,18 +1,20 @@
-import React, { useState } from 'react';
 import * as queries from '../../../apollo/queries';
-import { useMutation } from 'react-apollo-hooks';
+
 import {
-	Input,
-	Modal,
 	Button,
-	ModalHeader,
-	ModalBody,
 	Form,
-	FormGroup,
-	Label,
 	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
+	Modal,
+	ModalBody,
 	ModalFooter,
+	ModalHeader,
 } from 'reactstrap';
+import React, { useState } from 'react';
+
+import { useMutation } from 'react-apollo-hooks';
 
 const WebUserRow = props => {
 	const SET_USER_PERM = useMutation(queries.SET_USER_PERM);

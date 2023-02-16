@@ -1,24 +1,26 @@
-import React, { useState, useEffect } from 'react';
+import * as Api from '../../../../library/Api/api';
+
 import {
-	Form,
-	Row,
-	Col,
-	FormGroup,
-	Label,
-	Input,
-	FormFeedback,
 	Button,
-	Modal,
-	ModalHeader,
-	ModalBody,
-	ModalFooter,
-	Progress,
+	Col,
 	Dropdown,
 	DropdownToggle,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
+	Modal,
+	ModalBody,
+	ModalFooter,
+	ModalHeader,
+	Progress,
+	Row,
 } from 'reactstrap';
-import * as Api from '../../../../library/Api/api';
-import LoadingIcon from '../../../_presentational/LoadingIcon';
+import React, { useEffect, useState } from 'react';
+
 import FormattedNumber from '../../../_common/FormattedNumber';
+import LoadingIcon from '../../../_presentational/LoadingIcon';
 
 const UserPayoutContainer = props => {
 	const [modal, setModal] = useState(false);
@@ -89,6 +91,8 @@ const UserPayoutContainer = props => {
 			voucherNum = pigsVouchers;
 		} else if (company === 'rts') {
 			voucherNum = getTotalRtsVouchers();
+		} else {
+			return;
 		}
 
 		Api.getPayoutDetails(voucherNum, company)
