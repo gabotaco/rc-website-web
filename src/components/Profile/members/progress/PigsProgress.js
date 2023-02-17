@@ -1,6 +1,7 @@
-import React from 'react';
-import { Table, Progress } from 'reactstrap';
+import { Progress, Table } from 'reactstrap';
+
 import FormattedNumber from '../../../_common/FormattedNumber';
+import React from 'react';
 import Tooltip from '../../../_common/Tooltip';
 
 const PigsProgress = props => {
@@ -72,7 +73,7 @@ const PigsProgress = props => {
 	const Styles = {
 		ProgressBar: {
 			width: `${CompanyProgress}%`,
-			backgroundColor: '#E91E63',
+			backgroundColor: '#ff7f9f',
 		},
 	};
 	return (
@@ -130,7 +131,7 @@ const PigsProgress = props => {
 					value={CurrentVouchers}
 					min={0}
 					max={RankVouchers}
-					Style={Styles.ProgressBar}
+					style={Styles.ProgressBar}
 				/>
 			</Progress>
 			<Tooltip placement="top" target={'pigs-progress-bar'}>

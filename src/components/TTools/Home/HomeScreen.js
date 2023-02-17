@@ -373,7 +373,7 @@ const HomeScreen = props => {
 
 				Object.keys(response.data.inventory).forEach(key => {
 					const item = response.data.inventory[key];
-					storageUsed += Math.floor(item.weight * item.amount * 100) / 100;
+					storageUsed += Math.floor(item.weight * item.amount * 100);
 				});
 
 				setCapacity(storageUsed / capacity || 0);

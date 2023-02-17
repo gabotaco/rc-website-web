@@ -1,6 +1,7 @@
-import React from 'react';
-import { Table, Progress } from 'reactstrap';
+import { Progress, Table } from 'reactstrap';
+
 import FormattedNumber from '../../../_common/FormattedNumber';
+import React from 'react';
 import Tooltip from '../../../_common/Tooltip';
 
 const RtsProgress = props => {
@@ -55,6 +56,7 @@ const RtsProgress = props => {
 	const Styles = {
 		ProgressBar: {
 			width: `${CompanyProgress}%`,
+			backgroundColor: '#ff8600',
 		},
 	};
 
@@ -105,7 +107,7 @@ const RtsProgress = props => {
 					value={CurrentVouchers}
 					min={0}
 					max={RankVouchers}
-					Style={Styles.ProgressBar}
+					style={Styles.ProgressBar}
 				/>
 			</Progress>
 			<Tooltip placement="top" target={'rts-progress-bar'}>
