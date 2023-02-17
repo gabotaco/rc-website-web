@@ -1,8 +1,10 @@
+import * as Api from '../../../library/Api/api';
+
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import React, { useEffect, useState } from 'react';
+
 import FormattedNumber from '../../_common/FormattedNumber';
 import LoadingIcon from '../../_presentational/LoadingIcon';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import * as Api from '../../../library/Api/api';
 import ServerPlayersTable from './ServerPlayersTable';
 
 const ServerRow = props => {
@@ -118,7 +120,7 @@ const ServerRow = props => {
 					</ModalFooter>
 				</Modal>
 				<td>
-					<a href={`fivem://connect/${props.server}`}>{props.name}</a>
+					<a href={`fivem://connect/${props.id}?pure_1`}>{props.name}</a>
 				</td>
 				<td>
 					{serverData.members.length === 0 ? (
