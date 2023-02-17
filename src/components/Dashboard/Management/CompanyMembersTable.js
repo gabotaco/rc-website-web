@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
-import CustomTable from '../../_common/CustomTable';
-import FormattedNumber from '../../_common/FormattedNumber';
-import EditInGameButton from './CompanyMemberButtons/EditInGameButton';
-import CompanySelector from './CompanyMemberButtons/CompanySelector';
+
 import CompanyMembersFilter from './CompanyMembersFilter';
-import EditDeadlineButton from './CompanyMemberButtons/EditDeadlineButton';
+import CompanySelector from './CompanyMemberButtons/CompanySelector';
+import CustomPaginatedTable from '../../_common/CustomPaginatedTable';
 import DetailsButton from './CompanyMemberButtons/DetailsButton';
+import EditDeadlineButton from './CompanyMemberButtons/EditDeadlineButton';
+import EditInGameButton from './CompanyMemberButtons/EditInGameButton';
+import FormattedNumber from '../../_common/FormattedNumber';
+import { GET_PAGINATED_ALL_MEMBER_DETAILS } from '../../../apollo/paginatedQueries';
 
 const CompanyMembersTable = props => {
-	const [table, setTable] = useState(null);
+	const [filters, setFilters] = useState('rts|pigs|fired');
 
 	const formatter = (member, key) => {
 		const turninString = new Date(member.last_turnin).toDateString().split(' ');
@@ -22,7 +24,7 @@ const CompanyMembersTable = props => {
 
 		return (
 			<tr key={key} className={D3 >= 0 ? 'table-secondary' : null}>
-				<th scope="row">{key + 1}</th>
+				<th scope="row">{member.rank}</th>
 				<td
 					data-search={`${member.in_game_id} ${member.in_game_name} ${member.discord_id}`}>
 					({member.in_game_id}) {member.in_game_name}
@@ -60,14 +62,8 @@ const CompanyMembersTable = props => {
 		);
 	};
 
-	function onCreated(table) {
-		setTable(table);
-	}
-
 	function onFilterChange(filter) {
-		if (table) {
-			table.column(4).search(filter, true).draw('full-hold');
-		}
+		setFilters(filter);
 	}
 
 	return (
@@ -76,12 +72,12 @@ const CompanyMembersTable = props => {
 				onFilterChange={onFilterChange}
 				perms={props.perms}
 			/>
-			<CustomTable
-				onCreated={onCreated}
+			<CustomPaginatedTable
 				config={config}
 				headers={Headers}
-				data={props.members}
+				query={GET_PAGINATED_ALL_MEMBER_DETAILS}
 				format={formatter}
+				filters={filters}
 			/>
 		</React.Fragment>
 	);

@@ -1,14 +1,16 @@
+import * as queries from '../../../apollo/queries';
+
 import React, { useEffect } from 'react';
+
+import ApplyNow from '../../_common/ApplyNow';
+import CompanyCurrentMembersTable from './CompanyCurrentMembersTable';
+import CompanyMembersTable from './CompanyMembersTable';
+import { Container } from 'reactstrap';
+import LoadingIcon from '../../_presentational/LoadingIcon';
+import ManagerCashoutContainer from './ManagerCashoutContainer';
 import PermRender from '../../_common/PermRender';
 import { Query } from 'react-apollo';
-import * as queries from '../../../apollo/queries';
-import LoadingIcon from '../../_presentational/LoadingIcon';
-import { Container } from 'reactstrap';
-import ApplyNow from '../../_common/ApplyNow';
 import TopTurninForm from './TopTurninForm';
-import ManagerCashoutContainer from './ManagerCashoutContainer';
-import CompanyCurrentMembersContainer from './CompanyCurrentMembersContainer';
-import CompanyMembersContainer from './CompanyMembersContainer';
 
 const CompanyManagementScreen = () => {
 	useEffect(() => {
@@ -29,11 +31,14 @@ const CompanyManagementScreen = () => {
 					<Container>
 						<PermRender perms={[3, 2]} authorizedUser={authorizedUser}>
 							<h1>Company Members</h1>
-							<CompanyMembersContainer perms={authorizedUser.permission} />
+							<CompanyMembersTable
+								user={authorizedUser}
+								perms={authorizedUser.permission}
+							/>
 						</PermRender>
 						<PermRender perms={[1]} authorizedUser={authorizedUser}>
 							<h1>Company Members</h1>
-							<CompanyCurrentMembersContainer />
+							<CompanyCurrentMembersTable user={authorizedUser} />
 						</PermRender>
 						<PermRender perms={[3]} authorizedUser={authorizedUser}>
 							<h1>Managers Cashouts</h1>

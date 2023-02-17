@@ -1,17 +1,15 @@
+import CustomPaginatedTable from '../../_common/CustomPaginatedTable';
+import { GET_AUTH_USER_RANK } from '../../../apollo/queries';
+import { GET_PAGINATED_MEMBER_RANKINGS } from '../../../apollo/paginatedQueries';
+import LoadingIcon from '../../_presentational/LoadingIcon';
+import { Query } from 'react-apollo';
 import React from 'react';
-import CustomTable from '../../_common/CustomTable';
 
 const CompanyCurrentMembersTable = props => {
-	let rank = 0;
-
-	for (let i = 0; i < props.members.length; i++) {
-		if (props.members[i].last_turnin) rank = i + 1;
-	}
-
 	const formatter = (member, key) => {
 		return (
 			<tr key={key} className={member.last_turnin ? 'table-info' : null}>
-				<th scope="row">{key + 1}</th>
+				<th scope="row">{member.rank}</th>
 				<td>
 					{member.in_game_id} {member.in_game_name}
 				</td>
@@ -31,18 +29,29 @@ const CompanyCurrentMembersTable = props => {
 		);
 	};
 
-	function onCreated(table) {
-		table.page(Math.floor(rank / 10)).draw('page');
-	}
-
 	return (
-		<CustomTable
-			onCreated={onCreated}
-			config={config}
-			headers={headers}
-			data={props.members}
-			format={formatter}
-		/>
+		<Query query={GET_AUTH_USER_RANK}>
+			{({ loading, error, data }) => {
+				if (loading) return <LoadingIcon />;
+				if (error) {
+					console.error(error);
+					return 'There was an error loading active managers';
+				}
+
+				const userRank = data.authorizedUserRank;
+				const userPage = Math.ceil(userRank / 10);
+
+				return (
+					<CustomPaginatedTable
+						config={config}
+						headers={headers}
+						query={GET_PAGINATED_MEMBER_RANKINGS}
+						page={userPage}
+						format={formatter}
+					/>
+				);
+			}}
+		</Query>
 	);
 };
 
@@ -50,9 +59,6 @@ export default CompanyCurrentMembersTable;
 
 const config = {
 	id: 'member-list-table',
-	jquery: {
-		order: [[0, 'asc']],
-	},
 };
 
 const headers = [

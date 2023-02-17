@@ -1,21 +1,23 @@
-import React, { useState, useEffect } from 'react';
+import * as Api from '../../../library/Api/api';
+
 import {
-	Container,
-	Row,
 	Col,
-	Navbar,
-	NavbarToggler,
 	Collapse,
+	Container,
 	Nav,
 	NavItem,
+	Navbar,
+	NavbarToggler,
+	Row,
 } from 'reactstrap';
-import * as Api from '../../../library/Api/api';
-import LoadingIcon from '../../_presentational/LoadingIcon';
+import React, { useEffect, useState } from 'react';
+
+import CustomPaginatedTable from '../../_common/CustomPaginatedTable';
 import FormattedNumber from '../../_common/FormattedNumber';
-import { Query } from 'react-apollo';
-import * as queries from '../../../apollo/queries';
-import CustomTable from '../../_common/CustomTable';
+import { GET_PAGINATED_WEB_USERS } from '../../../apollo/paginatedQueries';
+import LoadingIcon from '../../_presentational/LoadingIcon';
 import WebUserRow from './WebUserRow';
+
 const $ = require('jquery');
 
 const AdminPanel = props => {
@@ -43,6 +45,12 @@ const AdminPanel = props => {
 				visibleBottom - visibleTop + 'px';
 		}
 	}
+
+	const formatter = (user, key) => {
+		return (
+			<WebUserRow key={key} user={user} authorizedUser={props.authorizedUser} />
+		);
+	};
 
 	useEffect(() => {
 		Api.getCharges()
@@ -84,35 +92,13 @@ const AdminPanel = props => {
 				<Col xl="10" style={Style.rightColumn}>
 					<h1 className="text-center">Linked Website Users</h1>
 
-					<Query query={queries.GET_WEB_USERS}>
-						{({ loading, error, data }) => {
-							if (loading) return <LoadingIcon />;
-							if (error) {
-								console.error(error);
-								return 'There was an error getting web users';
-							}
-							const { getWebUsers } = data;
-
-							const Formatters = {
-								table: user => {
-									return (
-										<WebUserRow
-											user={user}
-											authorizedUser={props.authorizedUser}
-										/>
-									);
-								},
-							};
-							return (
-								<CustomTable
-									config={config.table}
-									headers={Headers.table}
-									data={getWebUsers}
-									format={Formatters.table}
-								/>
-							);
-						}}
-					</Query>
+					<CustomPaginatedTable
+						config={config}
+						headers={Headers}
+						query={GET_PAGINATED_WEB_USERS}
+						format={formatter}
+						page={1}
+					/>
 				</Col>
 			</Row>
 		</Container>
@@ -139,14 +125,10 @@ const Style = {
 };
 
 const config = {
-	table: {
-		id: 'admin-table',
-		jquery: {
-			order: [[2, 'desc']],
-		},
+	id: 'admin-table',
+	jquery: {
+		order: [[2, 'desc']],
 	},
 };
 
-const Headers = {
-	table: ['Discord ID', 'In Game ID', 'Perms'],
-};
+const Headers = ['Discord ID', 'In Game ID', 'Perms'];
