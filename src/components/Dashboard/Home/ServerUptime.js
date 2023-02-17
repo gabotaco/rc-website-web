@@ -37,16 +37,19 @@ const ServerUptime = () => {
 						<tbody>
 							<ServerRow
 								server={'main'}
+								id={'2epova'}
 								name={'NY-1'}
 								members={members}
 							/>
 							<ServerRow
 								server={'beta'}
+								id={'njyvop'}
 								name={'NY-2 (Beta)'}
 								members={members}
 							/>
 							<ServerRow
 								server={'event'}
+								id={'w8j4eb'}
 								name={'Event Server'}
 								members={members}
 							/>
