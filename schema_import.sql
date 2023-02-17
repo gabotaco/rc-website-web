@@ -164,7 +164,7 @@ DROP TABLE IF EXISTS `website`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `website` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `discord_id` varchar(18) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `discord_id` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `in_game_id` int NOT NULL,
   `public_key` VARCHAR(30) NULL,
   `permission` int NOT NULL DEFAULT '0',
