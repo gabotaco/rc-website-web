@@ -26,6 +26,12 @@ export const GET_AUTH_USER_STATUS = gql(`
     }
 `);
 
+export const GET_AUTH_USER_RANK = gql(`
+    query GetAuthUserRank {
+        authorizedUserRank
+    }
+`);
+
 export const GET_ALL_MEMBERS = gql(`
     query GetAllMembers {
         getAllMembers {
@@ -176,7 +182,7 @@ export const GET_MEMBER_PAYOUTS = gql(`
             manager {
                 member {
                     in_game_name,
-                    in_game_id    
+                    in_game_id
                 }
             }
         }
