@@ -58,12 +58,13 @@ const TopTurninForm = props => {
 	return (
 		<React.Fragment>
 			<Form className="mb-2">
-				<Row form>
+				<Row>
 					<Col md={'3'}>
 						<FormGroup>
 							<Label>Company</Label>
 							<Input
 								type="select"
+								className='form-control'
 								required
 								value={company}
 								onChange={ev => setCompany(ev.target.value)}>

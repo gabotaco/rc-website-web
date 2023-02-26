@@ -1,45 +1,40 @@
 import React from 'react';
-import { Query } from 'react-apollo';
 import * as queries from '../../../../apollo/queries';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import CompanyTables from '../../../_common/CompanyTables';
 import FormattedNumber from '../../../_common/FormattedNumber';
+import { useQuery } from '@apollo/client';
 
 const ManagerPayoutTable = props => {
+	const { loading, error, data } = useQuery(queries.GET_MANAGER_PAYOUTS, {
+		variables: {
+			manager_id: props.manager_id
+		}
+	})
+	if (loading) return <LoadingIcon />;
+	if (error) {
+		console.error(error);
+		return 'There was an error getting manager payouts';
+	}
+
+	const payouts = data.getManagerPayouts;
+
+	const rtsPayouts = payouts.filter(payout => payout.company === 'rts');
+	const pigsPayouts = payouts.filter(payout => payout.company === 'pigs');
+
+	const tableData = {
+		rts: rtsPayouts,
+		pigs: pigsPayouts,
+		both: payouts,
+	};
+
 	return (
-		<Query
-			query={queries.GET_MANAGER_PAYOUTS}
-			variables={{
-				manager_id: props.manager_id,
-			}}>
-			{({ loading, error, data }) => {
-				if (loading) return <LoadingIcon />;
-				if (error) {
-					console.error(error);
-					return 'There was an error getting manager payouts';
-				}
-
-				const payouts = data.getManagerPayouts;
-
-				const rtsPayouts = payouts.filter(payout => payout.company === 'rts');
-				const pigsPayouts = payouts.filter(payout => payout.company === 'pigs');
-
-				const tableData = {
-					rts: rtsPayouts,
-					pigs: pigsPayouts,
-					both: payouts,
-				};
-
-				return (
-					<CompanyTables
-						config={config}
-						headers={Headers}
-						data={tableData}
-						formatters={Formatters}
-					/>
-				);
-			}}
-		</Query>
+		<CompanyTables
+			config={config}
+			headers={Headers}
+			data={tableData}
+			formatters={Formatters}
+		/>
 	);
 };
 

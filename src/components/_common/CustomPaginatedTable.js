@@ -60,7 +60,7 @@ const CustomPaginatedTable = props => {
 	function updateLimit(limit) {
 		const intLimit = parseInt(limit);
 
-		//Calculate the offset based on old limit and new limit, so the table doesn't jump around
+		// Calculate the offset based on old limit and new limit, so the table doesn't jump around
 		const offset = Math.floor((currentPage * rowCount) / intLimit);
 
 		setRowCount(intLimit);
@@ -281,7 +281,6 @@ const CustomPaginatedTable = props => {
 							<Pagination>
 								<PaginationItem disabled={currentPage === 1} key="previous">
 									<PaginationLink
-										previous
 										onClick={() => updateCurrentPage(currentPage - 1)}>
 										Previous
 									</PaginationLink>
@@ -310,7 +309,6 @@ const CustomPaginatedTable = props => {
 
 								<PaginationItem disabled={currentPage >= pageCount} key="next">
 									<PaginationLink
-										next
 										onClick={() => updateCurrentPage(currentPage + 1)}>
 										Next
 									</PaginationLink>

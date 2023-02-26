@@ -14,17 +14,15 @@ import {
 	FormGroup,
 	FormText,
 	Input,
-	Jumbotron,
 	Label,
 	Modal,
 	ModalBody,
-	ModalFooter,
-	ModalHeader,
 } from 'reactstrap';
 import React, { useEffect, useState } from 'react';
 
 import LoadingIcon from '../_presentational/LoadingIcon';
-import { Query } from 'react-apollo';
+import { useQuery } from '@apollo/client';
+import AuthUserStatus from './AuthUserStatus';
 
 const ApplyScreen = () => {
 	const [modal, setModal] = useState(false);
@@ -32,7 +30,6 @@ const ApplyScreen = () => {
 	const [isHired, setisHired] = useState(false);
 	const [isValidMember, setIsValidMember] = useState(true);
 	const [activeIndex, setActiveIndex] = useState(0);
-	const [authorizedUser, setAuthorizedUser] = useState(null);
 	const [rehire, setRehire] = useState(false);
 	const [rehireCompany, setRehireCompany] = useState('rts');
 	const [invalidDiscord, setInvalidDiscord] = useState(false);
@@ -54,6 +51,11 @@ const ApplyScreen = () => {
 	const [country, setCountry] = useState('');
 	const [why, setWhy] = useState('');
 	const [anything, setAnything] = useState('');
+
+	const {loading, error, data } = useQuery(queries.GET_AUTH_USER);
+	if (data) {
+		var authorizedUser = data.authorizedUser;
+	}
 
 	const toggle = () => setModal(!modal);
 	const toggle2 = () => setModal2(!modal2);
@@ -352,6 +354,12 @@ const ApplyScreen = () => {
 		}
 	}, [newHire]);
 
+	if (loading) return <LoadingIcon />;
+	if (error) {
+		console.error(error);
+		return 'There was an error authenticating your request';
+	}
+
 	const applicationSteps = [
 		{
 			header: 'You do not meet the minimum requirements.',
@@ -431,6 +439,7 @@ const ApplyScreen = () => {
 							valid={!!playPerWeek}
 							invalid={!playPerWeek}
 							type="select"
+							className='form-control'
 							required
 							value={playPerWeek}
 							onChange={ev => setPlayPerWeek(ev.target.value)}>
@@ -677,7 +686,7 @@ const ApplyScreen = () => {
 					setLoading(false);
 					let validMember = true;
 					function timeConverter(UNIX_timestamp) {
-						var a = new Date(UNIX_timestamp * 1000);
+						const a = new Date(UNIX_timestamp * 1000);
 						return a.toISOString().slice(0, 19).replace('T', ' ');
 					}
 
@@ -800,151 +809,91 @@ const ApplyScreen = () => {
 		}
 	}
 
+	if (activeIndex >= items.length && items.length > 0) {
+		setActiveIndex(items.length - 1);
+	}
+
+	const slides = items.map((item, i) => {
+		return (
+			<CarouselItem key={i}>
+				<svg
+					className="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
+					height="80vh"
+					xmlns="http://www.w3.org/2000/svg"
+					preserveAspectRatio="xMidYMid slice"
+					focusable="false"
+					role="img"
+					aria-label="Placeholder: First slide"></svg>
+				<CarouselCaption captionText={item.message} />
+			</CarouselItem>
+		);
+	});
+
 	return (
-		<Query query={queries.GET_AUTH_USER}>
-			{({ loading, error, data }) => {
-				if (loading) return <LoadingIcon />;
-				if (error) {
-					console.error(error);
-					return 'There was an error authenticating your request';
-				}
-
-				const { authorizedUser } = data;
-				setAuthorizedUser(authorizedUser); // This throws the warning of cannot update a component
-
-				if (activeIndex >= items.length && items.length > 0) {
-					setActiveIndex(items.length - 1);
-				}
-
-				const slides = items.map((item, i) => {
-					return (
-						<CarouselItem key={i}>
-							<svg
-								className="bd-placeholder-img bd-placeholder-img-lg d-block w-100"
-								height="80vh"
-								xmlns="http://www.w3.org/2000/svg"
-								preserveAspectRatio="xMidYMid slice"
-								focusable="false"
-								role="img"
-								aria-label="Placeholder: First slide"></svg>
-							<CarouselCaption captionText={item.message} />
-						</CarouselItem>
-					);
-				});
-
-				return (
-					<Container>
-						<Jumbotron>
-							<h1 className="display-4">RTS + PIGS Application</h1>
-							<p className="lead">
-								Due to the unique structure of the Rockwell Corporation, there
-								is no penalty for switching between PIGS and RTS and no required
-								cooldown.
-							</p>
-							<hr className="my-4" />
-							<p>
-								All progress is saved when you switch from one to the other.
-							</p>
-							<Button
-								color={
-									isHired || rehire || pendingApplication
-										? 'success'
-										: appStatus === 'Rejected'
-										? 'danger'
-										: 'primary'
-								}
-								size="lg"
-								disabled={isHired || pendingApplication}
-								onClick={() => (!rehire && !isHired ? toggle2() : toggle())}>
-								{isHired ? 'Hired!' : rehire ? 'Rejoin' : appStatus}
-							</Button>
-						</Jumbotron>
-						{rehire && (
-							<Modal isOpen={modal} toggle={toggle} fade size="xl">
-								<ModalBody>
-									<Carousel
-										interval={false}
-										pause={false}
-										id="rehire-carousel"
-										next={handleClickNext}
-										previous={handleClickBack}
-										activeIndex={activeIndex}>
-										{slides}
-										<CarouselControl
-											direction="prev"
-											directionText="Previous"
-											onClickHandler={handleClickBack}
-										/>
-										<CarouselControl
-											direction="next"
-											directionText="Next"
-											onClickHandler={handleClickNext}
-										/>
-									</Carousel>
-								</ModalBody>
-							</Modal>
-						)}
-						{!rehire && !isHired && (
-							<Query query={queries.GET_AUTH_USER_STATUS}>
-								{({ loading, error, data }) => {
-									if (loading) return <LoadingIcon />;
-									if (error) {
-										console.error(error);
-										return 'There was an error authenticating your request';
-									}
-
-									if (data.getAuthUserStatus) {
-										var { status } = data.getAuthUserStatus;
-									}
-
-									if (status && status !== 'Rejected') {
-										setPendingApplication(true);
-										setAppStatus(status);
-										return <React.Fragment></React.Fragment>;
-									} else if (status === 'Rejected') {
-										setAppStatus(status);
-									}
-
-									setNewHire(true);
-
-									return (
-										<Modal
-											fade
-											isOpen={modal2}
-											toggle={toggle2}
-											backdrop={'static'}
-											size="lg"
-											keyboard={false}>
-											<ModalHeader toggle={toggle2}>
-												{applicationSteps[applicationStep].header}
-											</ModalHeader>
-											<ModalBody>
-												{applicationSteps[applicationStep].body}
-											</ModalBody>
-											<ModalFooter>
-												<Button color="secondary" onClick={toggle2}>
-													Cancel
-												</Button>
-												<Button
-													color="primary"
-													onClick={handleConfirm}
-													disabled={gameIdLoading}>
-													{gameIdLoading ? (
-														<LoadingIcon inline />
-													) : (
-														applicationSteps[applicationStep].next || 'Next'
-													)}
-												</Button>
-											</ModalFooter>
-										</Modal>
-									);
-								}}
-							</Query>
-						)}
-					</Container>
-				);
-			}}
-		</Query>
+		<Container>
+			<div className='p-5 mb-4 bg-dark rounded-3'>
+				<Container fluid>
+					<h1 className="display-4 fw-bold">RTS + PIGS Application</h1>
+					<p className="lead">
+					Due to the unique structure of the Rockwell Corporation, there
+					is no penalty for switching between PIGS and RTS and no required
+					cooldown.
+					</p>
+					<hr className="my-4" />
+					<p>
+						All progress is saved when you switch from one to the other.
+					</p>
+					<Button
+						color={
+							isHired || rehire || pendingApplication
+								? 'success'
+								: appStatus === 'Rejected'
+								? 'danger'
+								: 'primary'
+						}
+						size="lg"
+						disabled={isHired || pendingApplication}
+						onClick={() => (!rehire && !isHired ? toggle2() : toggle())}>
+						{isHired ? 'Hired!' : rehire ? 'Rejoin' : appStatus}
+					</Button>
+				</Container>
+			</div>
+			{rehire && (
+				<Modal isOpen={modal} toggle={toggle} fade size="xl">
+					<ModalBody>
+						<Carousel
+							interval={false}
+							pause={false}
+							id="rehire-carousel"
+							next={handleClickNext}
+							previous={handleClickBack}
+							activeIndex={activeIndex}>
+							{slides}
+							<CarouselControl
+								direction="prev"
+								directionText="Previous"
+								onClickHandler={handleClickBack}
+							/>
+							<CarouselControl
+								direction="next"
+								directionText="Next"
+								onClickHandler={handleClickNext}
+							/>
+						</Carousel>
+					</ModalBody>
+				</Modal>
+			)}
+			{!rehire && !isHired && <AuthUserStatus setPendingApplication={setPendingApplication} 
+													setAppStatus={setAppStatus} 
+													setNewHire={setNewHire} 
+													modal2={modal2} 
+													toggle2={toggle2} 
+													applicationSteps={applicationSteps} 
+													applicationStep={applicationStep} 
+													handleConfirm={handleConfirm} 
+													gameIdLoading={gameIdLoading}
+														/>}
+		</Container>
 	);
 };
 

@@ -8,7 +8,7 @@ const CopyTextButton = props => {
 	);
 
 	function fallbackCopyTextToClipboard(text) {
-		var textArea = document.createElement('input');
+		const textArea = document.createElement('input');
 		document.body.appendChild(textArea);
 
 		textArea.value = text;

@@ -14,27 +14,42 @@ import {
 } from 'reactstrap';
 import React, { useState } from 'react';
 
-import { useMutation } from 'react-apollo-hooks';
+import { useMutation } from '@apollo/client';
 
 const WebUserRow = props => {
-	const SET_USER_PERM = useMutation(queries.SET_USER_PERM);
-	const SET_USER_ID = useMutation(queries.SET_USER_ID);
 	const [userPerm, setUserPerm] = useState(props.user.permission);
+	const [oldUserPerm, setOldUserPerm] = useState(userPerm);
 	const [userId, setUserId] = useState(props.user.in_game_id);
 	const [modal, setModal] = useState(false);
 	const [newUserId, setNewUserId] = useState();
+	const [oldUserId, setOldUserId] = useState(userId)
 	const toggle = () => setModal(!modal);
 
+	const [SET_USER_PERM, {}] = useMutation(queries.SET_USER_PERM, {
+		variables: {
+			id: parseInt(props.user.id),
+			perm: userPerm
+		},
+		onError: (err) => {
+			console.error(err);
+			setUserPerm(oldUserPerm);
+		}
+	});
+	const [SET_USER_ID, {}] = useMutation(queries.SET_USER_ID, {
+		variables: {
+			id: parseInt(props.user.id),
+			in_game_id: newUserId
+		},
+		onError: err => {
+			console.error(err);
+			setUserId(oldUserId);
+		}
+	});
+
 	function handleSelectChange(ev) {
-		const oldPerm = userPerm;
-		const perm = parseInt(ev.target.value);
-		setUserPerm(perm);
-		SET_USER_PERM({
-			variables: {
-				id: parseInt(props.user.id),
-				perm: perm,
-			},
-		}).catch(() => setUserPerm(oldPerm));
+		setOldUserPerm(userPerm);
+		setUserPerm(parseInt(ev.target.value));
+		SET_USER_PERM();
 	}
 
 	function validInGameID() {
@@ -43,15 +58,10 @@ const WebUserRow = props => {
 
 	function handleInGameChange() {
 		if (!validInGameID()) return;
-		const oldId = userId;
+		setOldUserId(userId);
 		setUserId(newUserId);
 		toggle();
-		SET_USER_ID({
-			variables: {
-				id: parseInt(props.user.id),
-				in_game_id: newUserId,
-			},
-		}).catch(() => setUserId(oldId));
+		SET_USER_ID();
 	}
 
 	return (
@@ -95,6 +105,7 @@ const WebUserRow = props => {
 				<Input
 					value={userPerm}
 					type="select"
+					className='form-control'
 					disabled={
 						props.user.discord_id === props.authorizedUser.discord_id ||
 						userPerm >= props.authorizedUser.ttpermission

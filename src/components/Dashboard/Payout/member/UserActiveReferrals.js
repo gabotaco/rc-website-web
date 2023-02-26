@@ -1,41 +1,36 @@
 import React from 'react';
-import { Query } from 'react-apollo';
 import * as queries from '../../../../apollo/queries';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import CustomTable from '../../../_common/CustomTable';
+import { useQuery } from '@apollo/client';
 
 const UserActiveReferrals = props => {
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_ACTIVE_REFERRALS);
+	if (loading) return <LoadingIcon />;
+	if (error) {
+		console.error(error);
+		return 'There was an error getting your referrals';
+	}
+
+	const applicants = data.getAuthUserActiveReferrals;
+
+	const formatter = (applicant, key) => {
+		return (
+			<tr key={key}>
+				<td>{applicant.employee_name}</td>
+				<td>{applicant.employee_id}</td>
+				<td>{applicant.total_vouchers}</td>
+			</tr>
+		);
+	};
+
 	return (
-		<Query query={queries.GET_AUTH_USER_ACTIVE_REFERRALS}>
-			{({ loading, error, data }) => {
-				if (loading) return <LoadingIcon />;
-				if (error) {
-					console.error(error);
-					return 'There was an error getting your referrals';
-				}
-
-				const applicants = data.getAuthUserActiveReferrals;
-
-				const formatter = (applicant, key) => {
-					return (
-						<tr key={key}>
-							<td>{applicant.employee_name}</td>
-							<td>{applicant.employee_id}</td>
-							<td>{applicant.total_vouchers}</td>
-						</tr>
-					);
-				};
-
-				return (
-					<CustomTable
-						config={config}
-						headers={headers}
-						data={applicants}
-						format={formatter}
-					/>
-				);
-			}}
-		</Query>
+		<CustomTable
+			config={config}
+			headers={headers}
+			data={applicants}
+			format={formatter}
+		/>
 	);
 };
 

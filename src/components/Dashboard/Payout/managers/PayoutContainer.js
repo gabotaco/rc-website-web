@@ -99,7 +99,7 @@ const PayoutContainer = props => {
 
 	function formatNumber(num) {
 		if (!num) return '0';
-		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); //fancy regex
+		return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ','); // Put a comma between every group of 3 numbers
 	}
 
 	return (
@@ -107,7 +107,7 @@ const PayoutContainer = props => {
 			<Alert color="success" fade isOpen={bootAlert} toggle={toggleAlert}>
 				<strong>Payout Success!</strong> You can now do another payout.
 			</Alert>
-			<Row form>
+			<Row>
 				<Col>
 					<FormGroup>
 						<Label>Company</Label>
@@ -115,6 +115,7 @@ const PayoutContainer = props => {
 							valid={!!company}
 							invalid={!company}
 							type="select"
+							className='form-control'
 							required
 							value={company}
 							onChange={ev => setCompany(ev.target.value)}>

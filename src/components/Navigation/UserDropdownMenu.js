@@ -5,7 +5,7 @@ import {
 	DropdownMenu,
 	DropdownItem,
 } from 'reactstrap';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import PermRender from '../_common/PermRender';
 
 const UserDropdownMenu = ({ history, authorizedUser, routeName }) => {
@@ -34,7 +34,7 @@ const UserDropdownMenu = ({ history, authorizedUser, routeName }) => {
 				/>
 				{authorizedUser.username}
 			</DropdownToggle>
-			<DropdownMenu right>
+			<DropdownMenu end>
 				<PermRender ttperms={[3]} authorizedUser={authorizedUser}>
 					<DropdownItem
 						href="/home/ttools/admin"

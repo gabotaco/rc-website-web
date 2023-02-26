@@ -17,8 +17,7 @@ import FormattedNumber from '../../_common/FormattedNumber';
 import { GET_PAGINATED_WEB_USERS } from '../../../apollo/paginatedQueries';
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import WebUserRow from './WebUserRow';
-
-const $ = require('jquery');
+import $ from 'jquery';
 
 const AdminPanel = props => {
 	const [collapsed, setCollapsed] = useState(false);
@@ -30,13 +29,13 @@ const AdminPanel = props => {
 			document.getElementById('left-nav').style.top = '0px';
 			return;
 		}
-		var $el = $('#navbar'),
-			scrollTop = $(this).scrollTop(),
-			scrollBot = scrollTop + $(this).height(),
-			elTop = $el.offset().top,
-			elBottom = elTop + $el.outerHeight(),
-			visibleTop = elTop < scrollTop ? scrollTop : elTop,
-			visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+		const $el = $('#navbar');
+		const scrollTop = $(this).scrollTop();
+		const scrollBot = scrollTop + $(this).height();
+		const elTop = $el.offset().top;
+		const elBottom = elTop + $el.outerHeight();
+		const visibleTop = elTop < scrollTop ? scrollTop : elTop;
+		const visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
 
 		if (visibleBottom - visibleTop < 0) {
 			document.getElementById('left-nav').style.top = '0px';

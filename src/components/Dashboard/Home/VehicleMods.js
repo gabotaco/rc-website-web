@@ -14,7 +14,7 @@ const VehicleMods = () => {
 		return Math.floor(Math.random() * Max - Min) + Min;
 	}
 	function fallbackCopyTextToClipboard(text) {
-		var textArea = document.createElement('input');
+		const textArea = document.createElement('input');
 		document.body.appendChild(textArea);
 
 		textArea.value = text;
@@ -131,6 +131,7 @@ const VehicleMods = () => {
 				setIsLoading(false);
 			})
 			.catch(err => {
+				console.error(err)
 				setIsLoading(false);
 			});
 	}
@@ -138,7 +139,7 @@ const VehicleMods = () => {
 	return (
 		<div>
 			<Form noValidate autoComplete="off">
-				<Row form>
+				<Row>
 					<Col>
 						<FormGroup>
 							<Label for="random-mod-buttom">Random</Label>

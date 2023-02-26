@@ -19,8 +19,8 @@ const CompanyMembersTable = props => {
 		const dateString = new Date(member.deadline).toDateString().split(' ');
 		dateString.shift();
 
-		const D2 = new Date(); //curent date
-		const D3 = D2 - new Date(member.deadline); //difference between deadline and today
+		const D2 = new Date(); // curent date
+		const D3 = D2 - new Date(member.deadline); // difference between deadline and today
 
 		return (
 			<tr key={key} className={D3 >= 0 ? 'table-secondary' : null}>

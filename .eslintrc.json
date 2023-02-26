@@ -1,16 +1,15 @@
 {
-	"extends": ["strongloop", "prettier"],
+	"extends": ["strongloop", "prettier", "react-app"],
 	"parserOptions": {
 		"sourceType": "module"
 	},
 	"plugins": ["prettier"],
 	"env": {
-		"browser": true
+		"browser": true,
+		"es6": true
 	},
 	"rules": {
-		"indent": ["error", "tab"],
-		"arrow-parens": ["error", "as-needed"],
-		"object-curly-spacing": ["error", "always"],
-		"no-var": "error"
+		"no-var": "warn",
+		"radix": "off"
 	}
 }

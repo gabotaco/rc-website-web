@@ -1,8 +1,8 @@
 // @flow
 import React, { useEffect } from 'react';
 import { Table } from 'reactstrap';
-const $ = require('jquery');
-const DataTable = require('datatables.net-bs4');
+import $ from 'jquery';
+import DataTable from 'datatables.net-bs4';
 
 DataTable.defaults.dom =
 	"<'row'<'col-12 col-md-6'l><'col-12 col-md-6'f>><'row'<'col-12'tr>><'row'<'col-12 col-md-5'i><'col-12 col-md-7'p>>";

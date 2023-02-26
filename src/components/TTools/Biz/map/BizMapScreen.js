@@ -13,12 +13,13 @@ const BizMapScreen = () => {
 
 		document.body.style = Styles.body;
 
-		var localJs = false;
-		var tries = 0;
+		let localJs = false;
+		let tries = 0;
 
-		const leafScript = useScript(
-			'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js'
-		);
+		const leafScript = document.createElement('script');
+
+		leafScript.src = 'https://unpkg.com/leaflet@1.6.0/dist/leaflet.js';
+
 		leafScript.onload = () => {
 			loadScript(
 				'https://cdn.jsdelivr.net/gh/Sumbera/gLayers.Leaflet@master/L.CanvasLayer.js'
@@ -93,14 +94,6 @@ const Styles = {
     }
     `,
 };
-
-function useScript(url) {
-	const script = document.createElement('script');
-
-	script.src = url;
-
-	return script;
-}
 
 function loadScript(url) {
 	return new Promise((resolve, reject) => {

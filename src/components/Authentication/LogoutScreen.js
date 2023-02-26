@@ -1,17 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import * as Api from '../../library/Api/api';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
-class LogoutScreen extends React.Component {
-	componentDidMount() {
+const LogoutScreen = (props) => {
+	useEffect(() => {
 		Api.logoutUser().then(() => {
-			this.props.history.push('/auth/login');
+			props.history.push('/auth/login');
 		});
-	}
+	}, [])
 
-	render() {
-		return <div />;
-	}
+	return <div />;
 }
 
 export default withRouter(LogoutScreen);

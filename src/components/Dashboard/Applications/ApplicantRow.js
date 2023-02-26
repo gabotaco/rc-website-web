@@ -14,7 +14,7 @@ import {
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import DoneIcon from '../../_presentational/DoneIcon';
 import * as Api from '../../../library/Api/api';
-import { useMutation } from 'react-apollo-hooks';
+import { useMutation } from '@apollo/client';
 import * as queries from '../../../apollo/queries';
 
 const ApplicantRow = ({ applicant }) => {
@@ -30,11 +30,58 @@ const ApplicantRow = ({ applicant }) => {
 	const [hireStatus, setHireStatus] = useState('WAITING');
 	const [newStatusStatus, setNewStatusStatus] = useState('WAITING');
 	const toggle = () => setModal(!modal);
-	const SET_APPLICANT_CONTACTED = useMutation(queries.SET_APPLICANT_CONTACTED);
-	const SET_APPLICANT_REJECTED = useMutation(queries.SET_APPLICANT_REJECTED);
-	const UPDATE_APPLICANT_STATUS_INFO = useMutation(
-		queries.UPDATE_APPLICANT_STATUS_INFO
-	);
+
+	const [SET_APPLICANT_CONTACTED, {}] = useMutation(queries.SET_APPLICANT_CONTACTED, {
+		onCompleted: (data) => {
+			setContactStatus('DONE');
+			setApp({
+				...app,
+				status: 'Contacted',
+				status_info: data.setApplicantContacted,
+			});
+		},
+		onError: (err) => {
+			console.error(err);
+			setContactStatus('WAITING');
+			alert('Error setting applicant to contacted.');
+		},
+		variables: {
+			id: app.id
+		}
+	});
+	const [SET_APPLICANT_REJECTED, {}] = useMutation(queries.SET_APPLICANT_REJECTED, {
+		onCompleted: (data) => {
+			setRejectStatus('DONE');
+			setApp({ ...app, status: 'Rejected', status_info: rejectReason });
+		},
+		onError: (err) => {
+			console.error(err);
+			setRejectStatus('WAITING');
+			alert('Error setting applicant to reject.');
+		},
+		variables: {
+			id: app.id,
+			reason: rejectReason
+		}
+	});
+	const [UPDATE_APPLICANT_STATUS_INFO, {}] = useMutation(queries.UPDATE_APPLICANT_STATUS_INFO, {
+		onCompleted: (data) => {
+			setNewStatusStatus('DONE');
+			setApp({
+				...app,
+				status_info: data.updateApplicantStatusInfo,
+			});
+		},
+		onError: (err) => {
+			console.error(err);
+			setNewStatusStatus('WAITING');
+			alert('There was an error updating the applicants status');
+		},
+		variables: {
+			id: app.id,
+			status_info: newStatus,
+		}
+	});
 
 	function handleDetailsClick() {
 		setLoading(true);
@@ -53,24 +100,7 @@ const ApplicantRow = ({ applicant }) => {
 
 	function handleContactClick() {
 		setContactStatus('LOADING');
-		SET_APPLICANT_CONTACTED({
-			variables: {
-				id: app.id,
-			},
-		})
-			.then(response => {
-				setContactStatus('DONE');
-				setApp({
-					...app,
-					status: 'Contacted',
-					status_info: response.data.setApplicantContacted,
-				});
-			})
-			.catch(err => {
-				console.error(err);
-				setContactStatus('WAITING');
-				alert('Error setting applicant to contacted.');
-			});
+		SET_APPLICANT_CONTACTED();
 	}
 
 	function handleRejectClick() {
@@ -78,44 +108,13 @@ const ApplicantRow = ({ applicant }) => {
 			return setRejectReason('');
 		}
 		setRejectStatus('LOADING');
-		SET_APPLICANT_REJECTED({
-			variables: {
-				id: app.id,
-				reason: rejectReason,
-			},
-		})
-			.then(() => {
-				setRejectStatus('DONE');
-				setApp({ ...app, status: 'Rejected', status_info: rejectReason });
-			})
-			.catch(err => {
-				console.error(err);
-				setRejectStatus('WAITING');
-				alert('Error setting applicant to reject.');
-			});
+		SET_APPLICANT_REJECTED();
 	}
 
 	function handleNewStatusClick() {
 		if (!newStatus || app.status !== 'Contacted') return;
 		setNewStatusStatus('LOADING');
-		UPDATE_APPLICANT_STATUS_INFO({
-			variables: {
-				id: app.id,
-				status_info: newStatus,
-			},
-		})
-			.then(response => {
-				setNewStatusStatus('DONE');
-				setApp({
-					...app,
-					status_info: response.data.updateApplicantStatusInfo,
-				});
-			})
-			.catch(err => {
-				console.error(err);
-				setNewStatusStatus('WAITING');
-				alert('There was an error updating the applicants status');
-			});
+		UPDATE_APPLICANT_STATUS_INFO();
 	}
 
 	function handleHireClick() {

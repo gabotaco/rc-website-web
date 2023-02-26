@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Button } from 'reactstrap';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import * as Api from '../../library/Api/api';
 import LoadingIcon from '../_presentational/LoadingIcon';
 

@@ -6,7 +6,7 @@ import {
 } from 'reactstrap';
 
 import React from 'react';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 
 const TToolsDropdownMenu = ({ history, routeName }) => {
 	function redirect(event, page) {
@@ -20,7 +20,7 @@ const TToolsDropdownMenu = ({ history, routeName }) => {
 			<DropdownToggle caret nav>
 				TTools
 			</DropdownToggle>
-			<DropdownMenu right>
+			<DropdownMenu end>
 				<DropdownItem
 					href="/home/ttools"
 					onClick={e => redirect(e, '/home/ttools')}

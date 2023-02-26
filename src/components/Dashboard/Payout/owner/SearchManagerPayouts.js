@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Label } from 'reactstrap';
 import SearchableDropdown from '../../../_common/SearchableDropdown';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 import ManagerPayoutTable from './ManagerPayoutTable';
 
@@ -40,9 +40,8 @@ const SearchManagerPayouts = props => {
 				data={
 					loading
 						? 'LOADING'
-						: error
-						? 'ERROR LOADING'
-						: data.getActiveManagers.map(makeData)
+						: error ? 'ERROR LOADING'
+							: data.getActiveManagers.map(makeData)
 				}
 				onSelected={managerSelected}
 				isLoading={isLoading || loading}

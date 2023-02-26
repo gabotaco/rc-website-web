@@ -23,8 +23,8 @@ const SearchUserDetails = () => {
 	const toggle = () => setModal(!modal);
 
 	function timeConverter(UNIX_timestamp) {
-		var a = new Date(UNIX_timestamp * 1000);
-		var months = [
+		const a = new Date(UNIX_timestamp * 1000);
+		const months = [
 			'Jan',
 			'Feb',
 			'Mar',
@@ -38,16 +38,14 @@ const SearchUserDetails = () => {
 			'Nov',
 			'Dec',
 		];
-		var year = a.getFullYear();
-		var month = months[a.getMonth()];
-		var date = a.getDate();
-		var hour = a.getHours();
-		var min = a.getMinutes();
-		var sec = a.getSeconds();
+		const year = a.getFullYear();
+		const month = months[a.getMonth()];
+		const date = a.getDate();
+		const hour = a.getHours();
+		const min = a.getMinutes();
+		let sec = a.getSeconds();
 		if (sec.length === 1) sec = '0' + sec;
-		var time =
-			date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
-		return time;
+		return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
 	}
 
 	function hasCooldown(val) {

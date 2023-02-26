@@ -18,8 +18,7 @@ import React, { useEffect, useState } from 'react';
 import FilterableTables from '../../_common/FilterableTables';
 import FormattedNumber from '../../_common/FormattedNumber';
 import LoadingIcon from '../../_presentational/LoadingIcon';
-
-const $ = require('jquery');
+import $ from 'jquery';
 
 const HomeScreen = props => {
 	const [collapsed, setCollapsed] = useState(false);
@@ -89,13 +88,13 @@ const HomeScreen = props => {
 			document.getElementById('left-nav').style.top = '0px';
 			return;
 		}
-		var $el = $('#navbar'),
-			scrollTop = $(this).scrollTop(),
-			scrollBot = scrollTop + $(this).height(),
-			elTop = $el.offset().top,
-			elBottom = elTop + $el.outerHeight(),
-			visibleTop = elTop < scrollTop ? scrollTop : elTop,
-			visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+		const $el = $('#navbar');
+		const scrollTop = $(this).scrollTop();
+		const scrollBot = scrollTop + $(this).height();
+		const elTop = $el.offset().top;
+		const elBottom = elTop + $el.outerHeight();
+		const visibleTop = elTop < scrollTop ? scrollTop : elTop;
+		const visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
 
 		if (visibleBottom - visibleTop < 0) {
 			document.getElementById('left-nav').style.top = '0px';
@@ -106,8 +105,8 @@ const HomeScreen = props => {
 	}
 
 	function timeConverter(UNIX_timestamp) {
-		var a = new Date(UNIX_timestamp * 1000);
-		var months = [
+		const a = new Date(UNIX_timestamp * 1000);
+		const months = [
 			'Jan',
 			'Feb',
 			'Mar',
@@ -121,16 +120,14 @@ const HomeScreen = props => {
 			'Nov',
 			'Dec',
 		];
-		var year = a.getFullYear();
-		var month = months[a.getMonth()];
-		var date = a.getDate();
-		var hour = a.getHours();
-		var min = a.getMinutes();
-		var sec = a.getSeconds();
+		const year = a.getFullYear();
+		const month = months[a.getMonth()];
+		const date = a.getDate();
+		const hour = a.getHours();
+		const min = a.getMinutes();
+		let sec = a.getSeconds();
 		if (sec.toString().length === 1) sec = '0' + sec;
-		var time =
-			date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
-		return time;
+		return date + ' ' + month + ' ' + year + ' ' + hour + ':' + min + ':' + sec;
 	}
 
 	function hasCooldown(val) {
@@ -234,7 +231,7 @@ const HomeScreen = props => {
 		}
 	}
 	function levelPercentage(g_Exp) {
-		for (var i = 0; i < data.length; i++) {
+		for (let i = 0; i < data.length; i++) {
 			if (parseInt(data[i]) > g_Exp) {
 				return ((g_Exp - data[i - 1]) / (data[i] - data[i - 1])) * 100;
 			}
@@ -645,8 +642,8 @@ const HomeScreen = props => {
 		if (!xp) xp = 10;
 		xp = Math.round(xp);
 
-		let currentLevel = xp,
-			lvlPercent = (currentLevel / maxLevel) * 100;
+		let currentLevel = xp;
+		let lvlPercent = (currentLevel / maxLevel) * 100;
 
 		if (skillName !== 'Completionist') {
 			currentLevel = calculateLevel(xp);
@@ -762,9 +759,8 @@ const HomeScreen = props => {
 											className={
 												premium === 'LOADING'
 													? null
-													: premium
-													? 'text-success'
-													: 'text-danger'
+													: premium ? 'text-success'
+														: 'text-danger'
 											}>
 											{premium === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -783,9 +779,8 @@ const HomeScreen = props => {
 											className={
 												dxp === 'LOADING'
 													? null
-													: dxp
-													? 'text-success'
-													: 'text-danger'
+													: dxp ? 'text-success'
+														: 'text-danger'
 											}>
 											{dxp === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -804,9 +799,8 @@ const HomeScreen = props => {
 											className={
 												boost === 'LOADING'
 													? null
-													: boost
-													? 'text-success'
-													: 'text-danger'
+													: boost ? 'text-success'
+														: 'text-danger'
 											}>
 											{boost === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -825,9 +819,8 @@ const HomeScreen = props => {
 											className={
 												bonus === 'LOADING'
 													? null
-													: bonus
-													? 'text-success'
-													: 'text-danger'
+													: bonus ? 'text-success'
+														: 'text-danger'
 											}>
 											{bonus === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -846,9 +839,8 @@ const HomeScreen = props => {
 											className={
 												linked === 'LOADING'
 													? null
-													: linked
-													? 'text-success'
-													: 'text-danger'
+													: linked ? 'text-success'
+														: 'text-danger'
 											}>
 											{linked === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -868,8 +860,8 @@ const HomeScreen = props => {
 												voice === 'LOADING'
 													? null
 													: voice
-													? 'text-success'
-													: 'text-danger'
+														? 'text-success'
+														: 'text-danger'
 											}>
 											{voice === 'LOADING' ? (
 												<LoadingIcon inline />

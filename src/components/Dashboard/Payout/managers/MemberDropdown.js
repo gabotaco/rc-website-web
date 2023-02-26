@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 import SearchableDropdown from '../../../_common/SearchableDropdown';
 import { FormFeedback, Input } from 'reactstrap';

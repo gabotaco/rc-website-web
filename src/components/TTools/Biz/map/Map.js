@@ -3,7 +3,6 @@ import React, { useEffect } from 'react';
 const Map = props => {
 	useEffect(() => {
 		if (props.loaded) {
-			// eslint-disable-next-line
 			window.eval(`initMap(${JSON.stringify(props.businesses)})`);
 		}
 	}, [props.loaded]);

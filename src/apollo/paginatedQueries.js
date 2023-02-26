@@ -1,4 +1,4 @@
-import gql from 'graphql-tag';
+import {gql} from '@apollo/client';
 
 export const GET_PAGINATED_MEMBER_RANKINGS = gql(`
     query GetPaginatedMemberRankings($limit: Int!, $offset: Int!, $textFilter: String) {

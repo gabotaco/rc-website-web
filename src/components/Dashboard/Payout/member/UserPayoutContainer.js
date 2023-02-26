@@ -110,7 +110,7 @@ const UserPayoutContainer = props => {
 
 	return (
 		<Form noValidate autoComplete="off">
-			<Row form>
+			<Row>
 				<Col>
 					<FormGroup>
 						<Label>Company</Label>
@@ -118,6 +118,7 @@ const UserPayoutContainer = props => {
 							valid={!!company}
 							invalid={!company}
 							type="select"
+							className='form-control'
 							required
 							value={company}
 							onChange={ev => setCompany(ev.target.value)}>

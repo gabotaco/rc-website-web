@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
-import { useMutation } from 'react-apollo-hooks';
 import * as queries from '../../../../apollo/queries';
-import { useLazyQuery } from '@apollo/client';
+import { useLazyQuery, useMutation } from '@apollo/client';
 import CustomTable from '../../../_common/CustomTable';
 import FormattedNumber from '../../../_common/FormattedNumber';
 
@@ -14,27 +13,21 @@ const DetailsButton = props => {
 	if (error) console.error(error);
 	const { member } = props;
 	const [modal, setModal] = useState(false);
-	const [loading, setLoading] = useState(false);
-	const SET_WELCOME = useMutation(queries.SET_MEMBER_WELCOME);
+	const [SET_WELCOME, {loading}] = useMutation(queries.SET_MEMBER_WELCOME, {
+		variables: {
+			uid: member.id,
+			welcome: !member.welcome,
+		},
+		onError: (err) => {
+			console.error(err);
+			alert('There was an error changing their welcome status');
+		}
+	});
 
 	const toggle = () => setModal(!modal);
 
 	function toggleRehire() {
-		setLoading(true);
-		SET_WELCOME({
-			variables: {
-				uid: member.id,
-				welcome: !member.welcome,
-			},
-		})
-			.then(() => {
-				setLoading(false);
-			})
-			.catch(err => {
-				console.error(err);
-				setLoading(false);
-				alert('There was an error changing their welcome status');
-			});
+		SET_WELCOME();
 	}
 
 	function openDetails() {

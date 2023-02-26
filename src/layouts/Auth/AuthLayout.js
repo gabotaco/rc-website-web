@@ -1,15 +1,15 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 // import Footer from "components/Footer/Footer.jsx";
 
 import routes from '../../routes.js';
 
-class Pages extends React.Component {
-	getRoutes = routes => {
+const Pages = () => {
+	const getRoutes = routes => {
 		return routes.map((prop, key) => {
 			if (prop.collapse) {
-				return this.getRoutes(prop.views);
+				return getRoutes(prop.views);
 			}
 			if (prop.layout === '/auth') {
 				return (
@@ -24,17 +24,18 @@ class Pages extends React.Component {
 			}
 		});
 	};
-	render() {
-		return (
-			<>
-				<div className="wrapper wrapper-full-page" ref="fullPages">
-					<div className="">
-						<Switch>{this.getRoutes(routes)}</Switch>
-					</div>
+
+	const ref = useRef();
+
+	return (
+		<>
+			<div className="wrapper wrapper-full-page" ref={ref}>
+				<div className="">
+					<Switch>{getRoutes(routes)}</Switch>
 				</div>
-			</>
-		);
-	}
+			</div>
+		</>
+	);
 }
 
 export default Pages;

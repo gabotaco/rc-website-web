@@ -5,7 +5,7 @@ import {
 	DropdownToggle,
 	UncontrolledDropdown,
 } from 'reactstrap';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import PermRender from '../_common/PermRender';
 
 const DashboardDropdownMenu = ({ history, authorizedUser, routeName }) => {
@@ -25,7 +25,7 @@ const DashboardDropdownMenu = ({ history, authorizedUser, routeName }) => {
 			<DropdownToggle caret nav>
 				Dashboard
 			</DropdownToggle>
-			<DropdownMenu right>
+			<DropdownMenu end>
 				<DropdownItem
 					href="/home/dashboard"
 					onClick={e => redirect(e, '/home/dashboard')}

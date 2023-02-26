@@ -13,17 +13,24 @@ import {
 	Row,
 } from 'reactstrap';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
-import { useMutation } from 'react-apollo-hooks';
+import { useMutation } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 
 const EditDeadlineButton = props => {
 	const { member } = props;
-	const [loading, setLoading] = useState(false);
 	const [modal, setModal] = useState(false);
 	const [deadline, setDeadline] = useState(
 		new Date(member.deadline).toISOString().split('T')[0]
 	);
-	const SET_DEADLINE = useMutation(queries.SET_MEMBER_DEADLINE);
+	const [SET_DEADLINE, {loading}] = useMutation(queries.SET_MEMBER_DEADLINE, {
+		onCompleted: (data) => {
+			toggle();
+		},
+		onError: (err) => {
+			console.error(err);
+			alert('There was an error changing their deadline');
+		}
+	});
 
 	const toggle = () => setModal(!modal);
 
@@ -31,22 +38,12 @@ const EditDeadlineButton = props => {
 		if (!new Date(deadline)) return;
 		const newDeadline = new Date(deadline);
 		newDeadline.setDate(newDeadline.getDate() + 1);
-		setLoading(true);
 		SET_DEADLINE({
 			variables: {
 				uid: member.id,
 				deadline: newDeadline.toISOString().split('T')[0],
 			},
-		})
-			.then(() => {
-				setLoading(false);
-				toggle();
-			})
-			.catch(err => {
-				console.error(err);
-				setLoading(false);
-				alert('There was an error changing their deadline');
-			});
+		});
 	}
 
 	function set7Days() {

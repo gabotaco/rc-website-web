@@ -1,39 +1,34 @@
 import React from 'react';
 import CompanyTables from '../../_common/CompanyTables';
-import { Query } from 'react-apollo';
 import * as queries from '../../../apollo/queries';
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import FormattedNumber from '../../_common/FormattedNumber';
 import PersonalVouchers from './cashout/PersonalVouchers';
+import { useQuery } from '@apollo/client';
 
 const MangagerCashout = () => {
+	const {loading, error, data} = useQuery(queries.GET_AUTH_USER_CASHOUT);
+	if (loading) return <LoadingIcon />;
+	if (error) {
+		console.error(error);
+		return 'There was an error getting your cashout';
+	}
+
+	const cashout = data.getAuthUserCashout;
+
+	const tableData = {
+		rts: [cashout],
+		pigs: [cashout],
+		both: [cashout],
+	};
+
 	return (
-		<Query query={queries.GET_AUTH_USER_CASHOUT}>
-			{({ loading, error, data }) => {
-				if (loading) return <LoadingIcon />;
-				if (error) {
-					console.error(error);
-					return 'There was an error getting your cashout';
-				}
-
-				const cashout = data.getAuthUserCashout;
-
-				const tableData = {
-					rts: [cashout],
-					pigs: [cashout],
-					both: [cashout],
-				};
-
-				return (
-					<CompanyTables
-						config={config}
-						headers={Headers}
-						data={tableData}
-						formatters={Formatters}
-					/>
-				);
-			}}
-		</Query>
+		<CompanyTables
+			config={config}
+			headers={Headers}
+			data={tableData}
+			formatters={Formatters}
+		/>
 	);
 };
 

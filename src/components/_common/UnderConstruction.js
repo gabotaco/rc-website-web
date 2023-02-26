@@ -5,23 +5,21 @@ import { Card, Col, Container, Row } from 'reactstrap';
 
 import { NavLink } from 'react-router-dom';
 
-class UnderConstruction extends React.Component {
-	render() {
-		return (
-			<NavLink to="/home/profile">
-				<Container className="my-6">
-					<Row>
-						<Col lg={6} md={9} sm={12}>
-							<Card style={Styles.card}>
-								<h4>This page is currently under construction</h4>
-								<p>Come back soon!</p>
-							</Card>
-						</Col>
-					</Row>
-				</Container>
-			</NavLink>
-		);
-	}
+const UnderConstruction = () => {
+	return (
+		<NavLink to="/home/profile">
+			<Container className="my-6">
+				<Row>
+					<Col lg={6} md={9} sm={12}>
+						<Card style={Styles.card}>
+							<h4>This page is currently under construction</h4>
+							<p>Come back soon!</p>
+						</Card>
+					</Col>
+				</Row>
+			</Container>
+		</NavLink>
+	);
 }
 
 export default UnderConstruction;

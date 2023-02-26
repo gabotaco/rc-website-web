@@ -7,7 +7,6 @@ import {
 	Form,
 	Input,
 	InputGroup,
-	InputGroupAddon,
 	InputGroupText,
 	Nav,
 	NavItem,
@@ -20,8 +19,7 @@ import React, { useEffect, useState } from 'react';
 import CustomTable from '../../_common/CustomTable';
 import FormattedNumber from '../../_common/FormattedNumber';
 import LoadingIcon from '../../_presentational/LoadingIcon';
-
-const $ = require('jquery');
+import $ from 'jquery';
 const businesses = require('./businesses.json');
 
 const BizHomeScreen = props => {
@@ -46,13 +44,13 @@ const BizHomeScreen = props => {
 				getVisible();
 			}, 1);
 		}
-		var $el = $('#navbar'),
-			scrollTop = $(this).scrollTop(),
-			scrollBot = scrollTop + $(this).height(),
-			elTop = $el.offset().top,
-			elBottom = elTop + $el.outerHeight(),
-			visibleTop = elTop < scrollTop ? scrollTop : elTop,
-			visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
+		const $el = $('#navbar');
+		const scrollTop = $(this).scrollTop();
+		const scrollBot = scrollTop + $(this).height();
+		const elTop = $el.offset().top;
+		const elBottom = elTop + $el.outerHeight();
+		const visibleTop = elTop < scrollTop ? scrollTop : elTop;
+		const visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
 
 		if (visibleBottom - visibleTop < 0) {
 			document.getElementById('left-nav').style.top = '0px';
@@ -102,7 +100,7 @@ const BizHomeScreen = props => {
 					const totalBonus =
 						businessTier > 0
 							? Math.floor(
-									business.bonus + business.bonus * (businessTier - 1) * 0.25
+								business.bonus + business.bonus * (businessTier - 1) * 0.25
 							  )
 							: 0;
 
@@ -118,7 +116,7 @@ const BizHomeScreen = props => {
 					const totalBonus =
 						businessTier > 0
 							? Math.floor(
-									business.bonus + business.bonus * (businessTier - 1) * 0.25
+								business.bonus + business.bonus * (businessTier - 1) * 0.25
 							  )
 							: 0;
 
@@ -228,9 +226,7 @@ const BizHomeScreen = props => {
 											value={factionTax || ''}
 											onChange={ev => setFactionTax(parseInt(ev.target.value))}
 										/>
-										<InputGroupAddon addonType="append">
-											<InputGroupText>%</InputGroupText>
-										</InputGroupAddon>
+										<InputGroupText>%</InputGroupText>
 									</InputGroup>
 								</NavItem>
 								<NavItem>

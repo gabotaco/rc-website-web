@@ -12,35 +12,31 @@ import {
 	FormFeedback,
 } from 'reactstrap';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
-import { useMutation } from 'react-apollo-hooks';
+import { useMutation } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 
 const ChangeInGameIDButton = props => {
 	const [modal, setModal] = useState(false);
-	const [loading, setLoading] = useState(false);
 	const toggle = () => setModal(!modal);
 	const [gameID, setGameID] = useState(props.game_id);
-	const CHANGE_ID = useMutation(queries.SET_REFERRER_ID);
+	const [CHANGE_ID, {loading}] = useMutation(queries.SET_REFERRER_ID, {
+		variables: {
+			app_id: props.app_id,
+			new_id: gameID,
+		},
+		onCompleted: (data) => {
+			toggle();
+			props.refetch();
+		},
+		onError: (err) => {
+			console.error(err);
+			alert('There was an error changing their ID');
+		}
+	});
 
 	function handleClick() {
 		if (!gameID || gameID < 1) return;
-		setLoading(true);
-		CHANGE_ID({
-			variables: {
-				app_id: props.app_id,
-				new_id: gameID,
-			},
-		})
-			.then(() => {
-				setLoading(false);
-				toggle();
-				props.refetch();
-			})
-			.catch(err => {
-				console.error(err);
-				setLoading(false);
-				alert('There was an error changing their ID');
-			});
+		CHANGE_ID();
 	}
 
 	return (

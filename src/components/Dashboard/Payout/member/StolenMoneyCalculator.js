@@ -6,12 +6,11 @@ import {
 	Label,
 	InputGroup,
 	Input,
-	InputGroupAddon,
 	InputGroupText,
 } from 'reactstrap';
 import * as Api from '../../../../library/Api/api';
 import FormattedNumber from '../../../_common/FormattedNumber';
-import { useQuery } from 'react-apollo-hooks';
+import { useQuery } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 
 const StolenMoneyCalculator = props => {
@@ -42,39 +41,37 @@ const StolenMoneyCalculator = props => {
 	}, []);
 
 	function voucherWorth(playerTotalVouchers, voucherAmount) {
-		//get how much to pay the person
-		/* eslint-disable */
+		// get how much to pay the person
 		if (playerTotalVouchers < 6000) {
-			//Hustler
+			// Hustler
 			var RankVouchers = 6000;
 			var rankWorth = 3500;
 		} else if (playerTotalVouchers < 18000) {
-			//Pickpocket
+			// Pickpocket
 			var RankVouchers = 18000;
 			var rankWorth = 4000;
 		} else if (playerTotalVouchers < 38000) {
-			//Thief
+			// Thief
 			var RankVouchers = 38000;
 			var rankWorth = 5000;
 		} else if (playerTotalVouchers < 68000) {
-			//Lawless
+			// Lawless
 			var RankVouchers = 68000;
 			var rankWorth = 6000;
 		} else if (playerTotalVouchers < 150000) {
-			//Mastermind
+			// Mastermind
 			var RankVouchers = 150000;
 			var rankWorth = 7000;
 		} else if (playerTotalVouchers < 1500000) {
-			//Overlord
+			// Overlord
 			var RankVouchers = 1500000;
 			var rankWorth = 8500;
 		} else {
 			var RankVouchers = Infinity;
 			var rankWorth = 9000;
 		}
-		/* eslint-enable */
 		if (playerTotalVouchers + voucherAmount >= RankVouchers) {
-			//rank up
+			// Rank up
 			const NextRankVouchers = voucherWorth(
 				playerTotalVouchers + RankVouchers - playerTotalVouchers,
 				voucherAmount - (RankVouchers - playerTotalVouchers)
@@ -83,14 +80,14 @@ const StolenMoneyCalculator = props => {
 				(RankVouchers - playerTotalVouchers) * rankWorth;
 			return NextRankVouchers + CurrentRankVouchers;
 		} else {
-			//don't rank up
+			// Don't rank up
 			return voucherAmount * rankWorth;
 		}
 	}
 
 	return (
 		<Form>
-			<Row form>
+			<Row>
 				<Col>
 					<Label>Vouchers</Label>
 					<InputGroup>
@@ -104,13 +101,11 @@ const StolenMoneyCalculator = props => {
 								)
 							}
 						/>
-						<InputGroupAddon addonType="append">
-							<InputGroupText>
-								<FormattedNumber
-									num={Math.ceil((3 * parseInt(stolenMoney)) / 400)}
-								/>
-							</InputGroupText>
-						</InputGroupAddon>
+						<InputGroupText>
+							<FormattedNumber
+								num={Math.ceil((3 * parseInt(stolenMoney)) / 400)}
+							/>
+						</InputGroupText>
 					</InputGroup>
 				</Col>
 				<Col>
@@ -129,11 +124,9 @@ const StolenMoneyCalculator = props => {
 							value={stolenMoney || ''}
 							onChange={ev => setStolenMoney(parseInt(ev.target.value))}
 						/>
-						<InputGroupAddon addonType="append">
-							<InputGroupText>
-								<FormattedNumber num={stolenMoney} />
-							</InputGroupText>
-						</InputGroupAddon>
+						<InputGroupText>
+							<FormattedNumber num={stolenMoney} />
+						</InputGroupText>
 					</InputGroup>
 				</Col>
 				<Col>
@@ -145,7 +138,7 @@ const StolenMoneyCalculator = props => {
 								placeholder="Money"
 								value={
 									voucherWorth(
-										data.getAuthUserPigsVouchers
+										data
 											? data.getAuthUserPigsVouchers.vouchers
 											: 0,
 										Math.ceil((3 * parseInt(stolenMoney)) / 400)
@@ -153,19 +146,17 @@ const StolenMoneyCalculator = props => {
 								}
 								readOnly
 							/>
-							<InputGroupAddon addonType="append">
-								<InputGroupText>
-									$
-									<FormattedNumber
-										num={voucherWorth(
-											data.getAuthUserPigsVouchers
-												? data.getAuthUserPigsVouchers.vouchers
-												: 0,
-											Math.ceil((3 * parseInt(stolenMoney)) / 400)
-										)}
-									/>
-								</InputGroupText>
-							</InputGroupAddon>
+							<InputGroupText>
+								$
+								<FormattedNumber
+									num={voucherWorth(
+										data
+											? data.getAuthUserPigsVouchers.vouchers
+											: 0,
+										Math.ceil((3 * parseInt(stolenMoney)) / 400)
+									)}
+								/>
+							</InputGroupText>
 						</InputGroup>
 					</fieldset>
 				</Col>

@@ -12,88 +12,80 @@ import {
 	Input,
 	FormFeedback,
 } from 'reactstrap';
-import { useMutation } from 'react-apollo-hooks';
+import { useMutation } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 
 const CompanySelector = props => {
 	const { member, perms } = props;
-	const SET_MANAGER = useMutation(queries.SET_MEMBER_MANAGER);
-	const CHANGE_COMPANY = useMutation(queries.SET_MEMBER_COMPANY);
-	const FIRE_MEMBER = useMutation(queries.FIRE_MEMBER);
 
 	const [modal, setModal] = useState(false);
 	const [fireReason, setFireReason] = useState(member.fire_reason);
 	const [welcome, setWelcome] = useState(member.welcome);
-	const [loading, setLoading] = useState(false);
+
+	const [SET_MANAGER, {}] = useMutation(queries.SET_MEMBER_MANAGER, {
+		variables: {
+			uid: member.id,
+			manager: !member.manager,
+		},
+		onError: err => {
+			console.error(err);
+			alert('There was an error making them a manager');
+		}
+	});
+	const [CHANGE_COMPANY, {}] = useMutation(queries.SET_MEMBER_COMPANY, {
+		onError: err => {
+			console.error(err);
+			alert('There was an error changing their company');
+		}
+	});
+	const [FIRE_MEMBER, {loading}] = useMutation(queries.FIRE_MEMBER, {
+		variables: {
+			uid: member.id,
+			reason: encodeURIComponent(fireReason),
+			welcome: welcome,
+		},
+		onCompleted: data => {
+			toggle();
+		},
+		onError: err => {
+			console.error(err);
+			alert('There was an error firing this memeber');
+		}
+	});
 
 	const toggle = () => setModal(!modal);
 
 	function managerOnClick() {
-		SET_MANAGER({
-			variables: {
-				uid: member.id,
-				manager: !member.manager,
-			},
-		}).catch(err => {
-			console.error(err);
-			alert('There was an error making them a manager');
-		});
+		SET_MANAGER();
 	}
 
 	function rtsOnClick() {
 		if (member.company === 'rts') return;
 
+		alert(`RTS Rank: ${member.rts_rank}`);
 		CHANGE_COMPANY({
 			variables: {
 				uid: member.id,
 				company: 'rts',
 			},
-		})
-			.then(() => {
-				alert(`RTS Rank: ${member.rts_rank}`);
-			})
-			.catch(err => {
-				console.error(err);
-				alert('There was an error making them RTS');
-			});
+		});
 	}
 
 	function pigsOnClick() {
 		if (member.company === 'pigs') return;
 
+		alert(`PIGS Rank: ${member.pigs_rank}`);
 		CHANGE_COMPANY({
 			variables: {
 				uid: member.id,
 				company: 'pigs',
 			},
-		})
-			.then(() => {
-				alert(`PIGS Rank: ${member.pigs_rank}`);
-			})
-			.catch(err => {
-				console.error(err);
-				alert('There was an error making them PIGS');
-			});
+		});
 	}
 
 	function fireOnClick() {
-		setLoading(true);
-		FIRE_MEMBER({
-			variables: {
-				uid: member.id,
-				reason: encodeURIComponent(fireReason),
-				welcome: welcome,
-			},
-		})
-			.then(() => {
-				setLoading(false);
-				toggle();
-			})
-			.catch(err => {
-				console.error(err);
-				alert('There was an error firing this memeber');
-			});
+		FIRE_MEMBER();
 	}
 
 	return (

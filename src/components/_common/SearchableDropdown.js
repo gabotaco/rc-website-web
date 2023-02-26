@@ -10,6 +10,17 @@ import {
 import LoadingIcon from '../_presentational/LoadingIcon';
 
 const SearchableDropdown = props => {
+	const [dropdownOpen, setDropdownOpen] = useState(false);
+	const toggle = () => setDropdownOpen(prevState => !prevState);
+	const [buttons, setButtons] = useState();
+
+	useEffect(() => {
+		setButtons(filterFunction(''));
+	}, [])
+	useEffect(() => {
+		setButtons(filterFunction(''));
+	}, [props])
+
 	if (props.isLoading) {
 		return (
 			<Dropdown isOpen={false} toggle={() => {}}>
@@ -22,14 +33,6 @@ const SearchableDropdown = props => {
 			</Dropdown>
 		);
 	}
-
-	const [dropdownOpen, setDropdownOpen] = useState(false);
-	const toggle = () => setDropdownOpen(prevState => !prevState);
-	const [buttons, setButtons] = useState();
-
-	useEffect(() => {
-		setButtons(filterFunction(''));
-	}, []);
 
 	function filterFunction(value) {
 		if (!Array.isArray(props.data)) {

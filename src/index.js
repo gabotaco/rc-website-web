@@ -1,10 +1,7 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Router, Switch } from 'react-router';
-
-import ApolloClient from 'apollo-boost';
-import { ApolloProvider as ApolloClientProvider } from '@apollo/client';
-import { ApolloProvider as ApolloHooksProvider } from 'react-apollo-hooks';
-import { ApolloProvider } from 'react-apollo';
+import { ApolloClient, InMemoryCache } from '@apollo/client';
+import { ApolloProvider } from '@apollo/client';
 import AppConfigs from './config/app_configs';
 import AppLayout from './layouts/App/AppLayout';
 import AuthLayout from './layouts/Auth/AuthLayout';
@@ -41,15 +38,11 @@ const RcApp = () => {
 	);
 };
 
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(
 	<ApolloProvider client={client}>
-		<ApolloClientProvider client={client}>
-			<ApolloHooksProvider client={client}>
-				<Suspense fallback={<div>Loading...</div>}>
-					<RcApp />
-				</Suspense>
-			</ApolloHooksProvider>
-		</ApolloClientProvider>
-	</ApolloProvider>,
-	document.getElementById('root')
+		<Suspense fallback={<div>Loading...</div>}>
+			<RcApp />
+		</Suspense>
+	</ApolloProvider>
 );

@@ -12,39 +12,35 @@ import {
 	FormFeedback,
 } from 'reactstrap';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
-import { useMutation } from 'react-apollo-hooks';
+import { useMutation } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 
 const EditInGameButton = props => {
-	const [loading, setLoading] = useState(false);
 	const [modal, setModal] = useState(false);
 	const [name, setName] = useState(props.member.in_game_name);
 	const [id, setId] = useState(props.member.in_game_id);
 	const [discord, setDiscord] = useState(props.member.discord_id);
-	const CHANGE_IDENTIFIERS = useMutation(queries.SET_MEMBER_IDENTIFIERS);
+	const [CHANGE_IDENTIFIERS, {loading}] = useMutation(queries.SET_MEMBER_IDENTIFIERS, {
+		variables: {
+			uid: props.member.id,
+			new_name: encodeURIComponent(name),
+			new_id: id,
+			new_discord: discord,
+		},
+		onCompleted: (data) => {
+			toggle();
+		},
+		onError: (err) => {
+			console.error(err);
+			alert('There was an error changing their ID');
+		}
+	});
 
 	const toggle = () => setModal(!modal);
 
 	function change() {
 		if (!name || !id || !discord) return;
-		setLoading(true);
-		CHANGE_IDENTIFIERS({
-			variables: {
-				uid: props.member.id,
-				new_name: encodeURIComponent(name),
-				new_id: id,
-				new_discord: discord,
-			},
-		})
-			.then(() => {
-				setLoading(false);
-				toggle();
-			})
-			.catch(err => {
-				console.error(err);
-				setLoading(false);
-				alert('There was an error changing their ID');
-			});
+		CHANGE_IDENTIFIERS();
 	}
 
 	return (
