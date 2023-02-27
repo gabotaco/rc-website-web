@@ -1,12 +1,10 @@
 import React, { Suspense } from 'react';
 import { Redirect, Route, Router, Switch } from 'react-router';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
-import { ApolloProvider } from '@apollo/client';
+import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
 import AppConfigs from './config/app_configs';
 import AppLayout from './layouts/App/AppLayout';
 import AuthLayout from './layouts/Auth/AuthLayout';
-import { InMemoryCache } from 'apollo-cache-inmemory';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import { createBrowserHistory } from 'history';
 
 // import "bootswatch/dist/darkly/bootstrap.min.css";
