@@ -7,18 +7,36 @@ import CompletionistScreen from './components/TTools/Completionist/Completionist
 import DashboardScreen from './components/Dashboard/Home/DashboardScreen';
 import ErrorPage from './components/_common/ErrorPage';
 import HomeScreen from './components/Home/HomeScreen';
+import IndexScreen from './components/Index/IndexScreen';
 import LoginScreen from './components/Authentication/LoginScreen';
 import LogoutScreen from './components/Authentication/LogoutScreen';
+import PIGSScreen from './components/Index/PIGSScreen';
 import PayoutScreen from './components/Dashboard/Payout/PayoutScreen';
 import ProfileScreen from './components/Profile/ProfileScreen';
 import StorageMapScreen from './components/TTools/Storages/map/StorageMapScreen';
 import StoragesScreen from './components/TTools/Storages/StoragesScreen';
+import RTSScreen from './components/Index/RTSScreen';
 import TToolsAdminScreen from './components/TTools/Admin/TToolsAdminScreen';
 import TToolsScreen from './components/TTools/Home/TToolsScreen';
 import TruckingScreen from './components/TTools/Trucking/TruckingScreen';
 import UnderConstruction from './components/_common/UnderConstruction';
 
 const routes = [
+	{
+		path: '/',
+		name: 'Index',
+		component: IndexScreen,
+	},
+	{
+		path: '/rts',
+		name: 'RTS',
+		component: RTSScreen,
+	},
+	{
+		path: '/pigs',
+		name: 'PIGS',
+		component: PIGSScreen,
+	},
 	{
 		path: '/login',
 		name: 'Login',
@@ -32,7 +50,7 @@ const routes = [
 		layout: '/auth',
 	},
 	{
-		path: '/',
+		path: '/home',
 		name: 'Home',
 		component: HomeScreen,
 		layout: '/home',

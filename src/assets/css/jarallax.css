@@ -1,0 +1,16 @@
+#jarallax-container-0 .jarallax-img {
+	height: inherit !important;
+	margin-top: 0px !important;
+	position: static !important;
+}
+
+#jarallax-container-1 {
+	width: 100vw !important;
+}
+
+#jarallax-container-1 .jarallax-img {
+	position: relative !important;
+	object-fit: none !important;
+	margin-top: 0 !important;
+	height: auto !important;
+}
