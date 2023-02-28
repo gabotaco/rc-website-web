@@ -685,7 +685,7 @@ const HomeScreen = props => {
 						id="left-nav">
 						<NavbarToggler onClick={toggleNavbar} />
 						<Collapse navbar isOpen={!collapsed}>
-							<Nav navbar>
+							<Nav navbar vertical>
 								<NavItem>
 									<Form inline className="my-2 my-lg-0">
 										<Input

@@ -190,10 +190,10 @@ const BizHomeScreen = props => {
 						className="overflow-auto"
 						style={Style.navbar}
 						id="left-nav">
-						<h3>Business Info</h3>
 						<NavbarToggler onClick={toggleNavbar} />
 						<Collapse navbar isOpen={!collapsed}>
-							<Nav navbar>
+							<Nav navbar vertical>
+								<h3>Business Info</h3>
 								<NavItem>
 									<p>
 										Business Level:{' '}
