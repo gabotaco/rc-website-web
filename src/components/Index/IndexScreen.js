@@ -8,7 +8,12 @@ import NavigationBar from './NavigationBar';
 import React from 'react';
 import SmoothScroll from '../_presentational/SmoothScroll';
 
-const IndexScreen = () => {
+const IndexScreen = ({ history }) => {
+	const RTSPage = () => history.push('/rts');
+	const PIGSPage = () => history.push('/pigs');
+	const RTSDiscord = () => window.open('https://discord.gg/9WRV87P');
+	const PIGSDiscord = () => window.open('https://discord.gg/FXNyJfQ');
+
 	return (
 		<div>
 			<NavigationBar />
@@ -151,6 +156,7 @@ const IndexScreen = () => {
 									witnesses.
 								</h3>
 								<button
+									onClick={PIGSPage}
 									style={{
 										...Styles.companyButton,
 										gridRow: '1',
@@ -170,6 +176,7 @@ const IndexScreen = () => {
 									</span>
 								</button>
 								<button
+									onClick={PIGSDiscord}
 									style={{
 										...Styles.companyButton,
 										gridRow: '2',
@@ -242,6 +249,7 @@ const IndexScreen = () => {
 									aircraft, and deliver randomized heavy vehicles.
 								</h3>
 								<button
+									onClick={RTSPage}
 									style={{
 										...Styles.companyButton,
 										gridRow: '1',
@@ -260,7 +268,9 @@ const IndexScreen = () => {
 										See More
 									</span>
 								</button>
+
 								<button
+									onClick={RTSDiscord}
 									style={{
 										...Styles.companyButton,
 										gridRow: '2',
