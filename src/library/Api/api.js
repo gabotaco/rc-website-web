@@ -192,3 +192,10 @@ export const setPublicApiKey = key => {
 		},
 	});
 };
+
+export const getStorages = () => {
+	return makeApiRequest({
+		method: 'GET',
+		url: '/tycoon/storages',
+	});
+};
