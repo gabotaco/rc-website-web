@@ -100,7 +100,6 @@ const Storages = props => {
 		const storages = [];
 
 		for (const storage of props.data) {
-			console.log(storage);
 			storages.push({
 				id: storage.name,
 				name: StorageName(storage.name),
