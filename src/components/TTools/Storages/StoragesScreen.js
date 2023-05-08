@@ -34,8 +34,6 @@ const StoragesScreen = props => {
 			return null;
 		});
 
-		console.log(apiStorageData);
-
 		if (!apiStorageData || !apiBizData) return setDataError(true);
 
 		if (!apiStorageData | !apiStorageData.storages) return setDataError(true);
