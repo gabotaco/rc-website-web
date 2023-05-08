@@ -1,7 +1,25 @@
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import React, { useEffect, useState } from 'react';
+import { StorageName, StorageSize, resolveItemName } from './StoragesScreen';
 
 import CustomTable from '../../_common/CustomTable';
+import { formatNumber } from './StoragesScreen';
+
+const config = {
+	id: 'items-storage',
+};
+const modalConfig = {
+	id: 'storage-locations',
+};
+
+const headers = [
+	'Item Name',
+	'Item Quantity',
+	'Item total weight (kg)',
+	'Storages',
+];
+
+const modalHeaders = ['Storage', 'Amount', 'Weight', 'Storage Used'];
 
 const Items = props => {
 	const [showItem, setShowItem] = useState({
@@ -12,16 +30,15 @@ const Items = props => {
 	});
 	const [modal, setModal] = useState(false);
 	const [storageData, setStorageData] = useState(null);
-	const storages = require('./storages.json');
 
 	const toggle = () => setModal(!modal);
 
 	const formatter = (item, key) => {
 		return (
 			<tr key={key}>
-				<td dangerouslySetInnerHTML={{ __html: item.name }} />
-				<td>{item.amount}</td>
-				<td>{(item.weight * item.amount).toFixed(2).replace(/\.?0+$/, '')}</td>
+				<td dangerouslySetInnerHTML={{ __html: item.displayName }} />
+				<td>{formatNumber(item.amount)}</td>
+				<td>{formatNumber(item.weight * item.amount)}</td>
 				<td>
 					<Button
 						color="info"
@@ -36,36 +53,12 @@ const Items = props => {
 		);
 	};
 
-	function StorageName(storage) {
-		if (storage.startsWith('faq_')) {
-			return storage.replace('faq_', 'Facton');
-		}
-
-		return storages[storage].name;
-	}
-
-	function StorageSize(storage) {
-		if (storage.name.startsWith('faq_')) {
-			return 500000;
-		}
-
-		if (storage.name.startsWith('biz_train')) {
-			return 16000 + Math.floor((16000 * storage.lvl) / 9 / 10) * 10;
-		}
-
-		if (storage.name.startsWith('biz_')) {
-			return storages[storage.name].size * storage.lvl;
-		}
-
-		return storages[storage.name].size;
-	}
-
 	function modelFormatter(storage) {
 		return (
 			<tr key={storage.name}>
 				<td>{StorageName(storage.name)}</td>
-				<td>{storage.amount}</td>
-				<td>{storage.weight * storage.amount}</td>
+				<td>{formatNumber(storage.amount)}</td>
+				<td>{formatNumber(storage.weight * storage.amount)}</td>
 				<td>
 					{(
 						((storage.weight * storage.amount) / StorageSize(storage)) *
@@ -77,27 +70,14 @@ const Items = props => {
 		);
 	}
 
-	function resolveItemName(item) {
-		if (item.dName) return item.dName;
-		if (item.name.startsWith('vehicle_shipment'))
-			return item.name.split('|')[2];
-		if (item.name.startsWith('rts_card'))
-			return 'RTS Card: ' + item.name.split('|')[2];
-		if (item.name.startsWith('gut_knife')) return item.name.split('|')[0];
-
-		return item.name;
-	}
-
 	useEffect(() => {
 		if (!props.data) return;
 
 		const items = [];
 		props.data.forEach(storage => {
 			storage.inventory.forEach(item => {
-				// if the item is already in the list, add the weight, amount and storage
-				const existingItem = items.find(i => i.name === item.name);
+				const existingItem = items.find(i => i.id === item.name);
 				if (existingItem) {
-					existingItem.weight += item.weight;
 					existingItem.amount += item.amount;
 					existingItem.storages.push({
 						name: storage.name,
@@ -106,9 +86,9 @@ const Items = props => {
 						lvl: storage.lvl,
 					});
 				} else {
-					// else add it to the list
 					items.push({
-						name: resolveItemName(item),
+						id: item.name,
+						displayName: resolveItemName(item),
 						weight: item.weight,
 						amount: item.amount,
 						storages: [
@@ -142,13 +122,13 @@ const Items = props => {
 						</ModalHeader>
 						<ModalBody>
 							<CustomTable
-								headers={['Storage', 'Amount', 'Weight', 'Storage Used']}
+								headers={modalHeaders}
 								data={showItem.storages}
 								keyField="storage"
 								pagination={true}
 								paginationPerPage={5}
 								format={modelFormatter}
-								config={{ id: 'storage-locations' }}
+								config={modalConfig}
 							/>
 						</ModalBody>
 						<ModalFooter>
@@ -177,14 +157,3 @@ const Items = props => {
 };
 
 export default Items;
-
-const config = {
-	id: 'items-storage',
-};
-
-const headers = [
-	'Item Name',
-	'Item Quantity',
-	'Item total weight (kg)',
-	'Storages',
-];
