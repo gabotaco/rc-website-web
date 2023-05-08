@@ -12,6 +12,7 @@ const StoragesScreen = props => {
 	document.title = `RC - Storages`;
 
 	const [storageData, setStorageData] = useState(null);
+	const [dataError, setDataError] = useState(false);
 	const [publicKeyVal, setPublicKeyVal] = useState('');
 	const [hasPremium, setHasPremium] = useState(false);
 	const [hasPostopPerk, setHasPostopPerk] = useState(false);
@@ -24,11 +25,19 @@ const StoragesScreen = props => {
 	}
 
 	async function getData() {
-		const apiStorageData = await Api.getStorages();
-		const apiBizData = await Api.getTycoonBiz();
+		const apiStorageData = await Api.getStorages().catch(err => {
+			setDataError(true);
+			return null;
+		});
+		const apiBizData = await Api.getTycoonBiz().catch(err => {
+			setDataError(true);
+			return null;
+		});
 
-		if (!apiStorageData.storages) return;
-		if (!apiBizData.businesses) return;
+		if (!apiStorageData || !apiBizData) return setDataError(true);
+
+		if (!apiStorageData | !apiStorageData.storages) return setDataError(true);
+		if (!apiBizData | !apiBizData.businesses) return setDataError(true);
 
 		const tiers = Object.keys(apiBizData.businesses).reduce((sum, key) => {
 			if (!key.startsWith('biz_train')) return sum;
@@ -46,6 +55,7 @@ const StoragesScreen = props => {
 				storage.lvl = tiers;
 				return true;
 			}
+			return false;
 		});
 
 		if (
@@ -79,12 +89,11 @@ const StoragesScreen = props => {
 
 	return (
 		<div className="content">
-			{!storageData && <LoadingIcon />}
-			{storageData && storageData.length > 0 ? (
-				<div>
-					<div className="d-flex justify-content-center">
-						<h3>Data Updated every 10 minutes</h3>
-					</div>
+			<div>
+				<div className="d-flex justify-content-center">
+					<h3>Data Updated every 10 minutes</h3>
+				</div>
+				{!dataError && (
 					<div className="d-flex justify-content-center">
 						<Button
 							color="primary"
@@ -114,30 +123,36 @@ const StoragesScreen = props => {
 							Vehicles
 						</Button>
 					</div>
+				)}
 
-					<div style={{ display: storageType === 'storages' ? '' : 'none' }}>
-						<Storages
-							data={storageData}
-							premium={hasPremium}
-							postop={hasPostopPerk}
-							strength={strengthLevel}
-						/>
-					</div>
+				{!storageData && !dataError && <LoadingIcon />}
+				{storageData && (
+					<>
+						<div style={{ display: storageType === 'storages' ? '' : 'none' }}>
+							<Storages
+								data={storageData}
+								premium={hasPremium}
+								postop={hasPostopPerk}
+								strength={strengthLevel}
+							/>
+						</div>
 
-					<div style={{ display: storageType === 'items' ? '' : 'none' }}>
-						<Items
-							data={storageData}
-							premium={hasPremium}
-							postop={hasPostopPerk}
-							strength={strengthLevel}
-						/>
-					</div>
+						<div style={{ display: storageType === 'items' ? '' : 'none' }}>
+							<Items
+								data={storageData}
+								premium={hasPremium}
+								postop={hasPostopPerk}
+								strength={strengthLevel}
+							/>
+						</div>
 
-					<div style={{ display: storageType === 'vehicles' ? '' : 'none' }}>
-						<UnderConstruction />
-					</div>
-				</div>
-			) : (
+						<div style={{ display: storageType === 'vehicles' ? '' : 'none' }}>
+							<UnderConstruction />
+						</div>
+					</>
+				)}
+			</div>
+			{dataError && (
 				<div>
 					<h2>Error retrieving your statistics</h2>
 					<p>You may have locked you api.</p>
