@@ -1,9 +1,28 @@
 import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import React, { useEffect, useState } from 'react';
+import { StorageName, StorageSize, resolveItemName } from './StoragesScreen';
 
 import CustomTable from '../../_common/CustomTable';
+import { formatNumber } from './StoragesScreen';
 
-let storages = require('./storages.json');
+const config = {
+	id: 'storages-storage',
+};
+
+const modalConfig = { id: 'storage-items' };
+
+const headers = [
+	'Storage name',
+	'Storage Quantity',
+	'Storage Used (in kg)',
+	'Capacity Unused (in kg)',
+	'Storage Capacity (in kg)',
+	'Storage Usage',
+	'Inventory',
+	'Location',
+];
+
+const modalHeaders = ['Item', 'Amount', 'Weight (kg)', 'Percentage'];
 
 const Storages = props => {
 	const [showStorage, setShowStorage] = useState();
@@ -16,10 +35,10 @@ const Storages = props => {
 		return (
 			<tr key={key}>
 				<td>{storage.name}</td>
-				<td>{storage.totalAmount}</td>
-				<td>{storage.totalWeight.toFixed(2)}</td>
-				<td>{storage.size - storage.totalWeight}</td>
-				<td>{storage.size.toFixed(2)}</td>
+				<td>{formatNumber(storage.totalAmount)}</td>
+				<td>{formatNumber(storage.totalWeight)}</td>
+				<td>{formatNumber(storage.size - storage.totalWeight)}</td>
+				<td>{formatNumber(storage.size)}</td>
 				<td>{((storage.totalWeight / storage.size) * 100).toFixed(2)}%</td>
 
 				<td>
@@ -60,40 +79,6 @@ const Storages = props => {
 		);
 	}
 
-	function StorageName(storage) {
-		if (storage.startsWith('faq_')) {
-			return storage.replace('faq_', 'Facton ');
-		}
-
-		return storages[storage].name;
-	}
-
-	function StorageSize(storage) {
-		if (storage.name.startsWith('faq_')) {
-			return 500000;
-		}
-
-		if (storage.name.startsWith('biz_train')) {
-			return 16000 + Math.floor((16000 * storage.lvl) / 9 / 10) * 10;
-		}
-
-		if (storage.name.startsWith('biz_')) {
-			return storages[storage.name].size * storage.lvl;
-		}
-
-		return storages[storage.name].size;
-	}
-
-	function resolveItemName(item) {
-		if (item.dName) return item.dName;
-		if (item.name.startsWith('vehicle_shipment'))
-			return item.name.split('|')[2];
-		if (item.name.startsWith('rts_card')) return item.name.split('|')[2];
-		if (item.name.startsWith('gut_knife')) return item.name.split('|')[0];
-
-		return item.name;
-	}
-
 	useEffect(() => {
 		if (!props.data) return;
 
@@ -124,7 +109,6 @@ const Storages = props => {
 		if (props.strength) {
 			const strengthLvl = props.strength > 30 ? 30 : props.strength;
 
-			//Find inventory
 			const inventory = storages.find(storage => storage.name === 'Inventory');
 
 			inventory.size = inventory.size + 10 * strengthLvl;
@@ -151,7 +135,7 @@ const Storages = props => {
 								keyField="item"
 								pagination={true}
 								format={modalFormatter}
-								config={{ id: 'storage-items' }}
+								config={modalConfig}
 							/>
 						</ModalBody>
 						<ModalFooter>
@@ -180,20 +164,3 @@ const Storages = props => {
 };
 
 export default Storages;
-
-const config = {
-	id: 'storages-storage',
-};
-
-const headers = [
-	'Storage name',
-	'Storage Quantity',
-	'Storage Used (in kg)',
-	'Capacity Unused (in kg)',
-	'Storage Capacity (in kg)',
-	'Storage Usage',
-	'Inventory',
-	'Location',
-];
-
-const modalHeaders = ['Item', 'Amount', 'Weight (kg)', 'Percentage'];
