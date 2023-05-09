@@ -1,5 +1,5 @@
+//@flow
 import { Button, UncontrolledTooltip } from 'reactstrap';
-// @flow
 import React, { useState } from 'react';
 
 const CopyTextButton = props => {
