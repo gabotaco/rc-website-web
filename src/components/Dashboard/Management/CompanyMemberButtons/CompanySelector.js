@@ -31,15 +31,15 @@ const CompanySelector = props => {
 		onError: err => {
 			console.error(err);
 			alert('There was an error making them a manager');
-		}
+		},
 	});
 	const [CHANGE_COMPANY, {}] = useMutation(queries.SET_MEMBER_COMPANY, {
 		onError: err => {
 			console.error(err);
 			alert('There was an error changing their company');
-		}
+		},
 	});
-	const [FIRE_MEMBER, {loading}] = useMutation(queries.FIRE_MEMBER, {
+	const [FIRE_MEMBER, { loading }] = useMutation(queries.FIRE_MEMBER, {
 		variables: {
 			uid: member.id,
 			reason: encodeURIComponent(fireReason),
@@ -51,7 +51,7 @@ const CompanySelector = props => {
 		onError: err => {
 			console.error(err);
 			alert('There was an error firing this memeber');
-		}
+		},
 	});
 
 	const toggle = () => setModal(!modal);

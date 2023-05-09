@@ -9,12 +9,12 @@ const ReferralDetails = props => {
 
 	const toggle = () => setModal(!modal);
 
-	const {loading, error, data} = useQuery(queries.GET_REFERRAL_DETAILS, {
+	const { loading, error, data } = useQuery(queries.GET_REFERRAL_DETAILS, {
 		variables: {
 			referred_id: props.referred_id,
-			paid: props.paid
-		}
-	})
+			paid: props.paid,
+		},
+	});
 	if (loading) return null;
 	props.setLoading(loading);
 	if (error) {

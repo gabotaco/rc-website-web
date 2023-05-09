@@ -131,7 +131,7 @@ const VehicleMods = () => {
 				setIsLoading(false);
 			})
 			.catch(err => {
-				console.error(err)
+				console.error(err);
 				setIsLoading(false);
 			});
 	}

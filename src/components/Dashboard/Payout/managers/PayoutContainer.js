@@ -115,7 +115,7 @@ const PayoutContainer = props => {
 							valid={!!company}
 							invalid={!company}
 							type="select"
-							className='form-control'
+							className="form-control"
 							required
 							value={company}
 							onChange={ev => setCompany(ev.target.value)}>

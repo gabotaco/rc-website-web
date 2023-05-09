@@ -52,7 +52,7 @@ const ApplyScreen = () => {
 	const [why, setWhy] = useState('');
 	const [anything, setAnything] = useState('');
 
-	const {loading, error, data } = useQuery(queries.GET_AUTH_USER);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER);
 	if (data) {
 		var authorizedUser = data.authorizedUser;
 	}
@@ -439,7 +439,7 @@ const ApplyScreen = () => {
 							valid={!!playPerWeek}
 							invalid={!playPerWeek}
 							type="select"
-							className='form-control'
+							className="form-control"
 							required
 							value={playPerWeek}
 							onChange={ev => setPlayPerWeek(ev.target.value)}>
@@ -831,18 +831,15 @@ const ApplyScreen = () => {
 
 	return (
 		<Container>
-			<div className='p-5 mb-4 bg-dark rounded-3'>
+			<div className="p-5 mb-4 bg-dark rounded-3">
 				<Container fluid>
 					<h1 className="display-4 fw-bold">RTS + PIGS Application</h1>
 					<p className="lead">
-					Due to the unique structure of the Rockwell Corporation, there
-					is no penalty for switching between PIGS and RTS and no required
-					cooldown.
+						Due to the unique structure of the Rockwell Corporation, there is no
+						penalty for switching between PIGS and RTS and no required cooldown.
 					</p>
 					<hr className="my-4" />
-					<p>
-						All progress is saved when you switch from one to the other.
-					</p>
+					<p>All progress is saved when you switch from one to the other.</p>
 					<Button
 						color={
 							isHired || rehire || pendingApplication
@@ -883,16 +880,19 @@ const ApplyScreen = () => {
 					</ModalBody>
 				</Modal>
 			)}
-			{!rehire && !isHired && <AuthUserStatus setPendingApplication={setPendingApplication} 
-													setAppStatus={setAppStatus} 
-													setNewHire={setNewHire} 
-													modal2={modal2} 
-													toggle2={toggle2} 
-													applicationSteps={applicationSteps} 
-													applicationStep={applicationStep} 
-													handleConfirm={handleConfirm} 
-													gameIdLoading={gameIdLoading}
-														/>}
+			{!rehire && !isHired && (
+				<AuthUserStatus
+					setPendingApplication={setPendingApplication}
+					setAppStatus={setAppStatus}
+					setNewHire={setNewHire}
+					modal2={modal2}
+					toggle2={toggle2}
+					applicationSteps={applicationSteps}
+					applicationStep={applicationStep}
+					handleConfirm={handleConfirm}
+					gameIdLoading={gameIdLoading}
+				/>
+			)}
 		</Container>
 	);
 };

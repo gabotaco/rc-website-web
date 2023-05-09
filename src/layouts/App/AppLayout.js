@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import routes from '../../routes.js';
@@ -8,7 +8,7 @@ import * as queries from '../../apollo/queries';
 import Footer from '../../components/Navigation/Footer';
 import { useQuery } from '@apollo/client';
 
-const AppLayout = (props) => {
+const AppLayout = props => {
 	const getRoutes = routes => {
 		return routes.map((prop, key) => {
 			if (prop.layout === '/home') {
@@ -38,18 +38,15 @@ const AppLayout = (props) => {
 		return 'RC';
 	};
 
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER);
 	function makeAppNavbar() {
 		if (loading) return <LoadingIcon />;
 		if (error || !data) {
-			sessionStorage.setItem(
-				'redirect',
-				props.location.pathname
-			);
+			sessionStorage.setItem('redirect', props.location.pathname);
 			props.history.push('/auth/login');
 			return <p>You are being redirected</p>;
 		}
-	
+
 		return (
 			<AppNavbar
 				{...props}
@@ -73,6 +70,6 @@ const AppLayout = (props) => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default AppLayout;

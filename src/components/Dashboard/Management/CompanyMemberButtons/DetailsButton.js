@@ -13,15 +13,15 @@ const DetailsButton = props => {
 	if (error) console.error(error);
 	const { member } = props;
 	const [modal, setModal] = useState(false);
-	const [SET_WELCOME, {loading}] = useMutation(queries.SET_MEMBER_WELCOME, {
+	const [SET_WELCOME, { loading }] = useMutation(queries.SET_MEMBER_WELCOME, {
 		variables: {
 			uid: member.id,
 			welcome: !member.welcome,
 		},
-		onError: (err) => {
+		onError: err => {
 			console.error(err);
 			alert('There was an error changing their welcome status');
-		}
+		},
 	});
 
 	const toggle = () => setModal(!modal);

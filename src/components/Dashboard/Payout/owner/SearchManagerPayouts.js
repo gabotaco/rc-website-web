@@ -40,8 +40,9 @@ const SearchManagerPayouts = props => {
 				data={
 					loading
 						? 'LOADING'
-						: error ? 'ERROR LOADING'
-							: data.getActiveManagers.map(makeData)
+						: error
+						? 'ERROR LOADING'
+						: data.getActiveManagers.map(makeData)
 				}
 				onSelected={managerSelected}
 				isLoading={isLoading || loading}

@@ -1,7 +1,7 @@
 import * as Api from '../../../library/Api/api';
 
-import { Button, Form, Input } from "reactstrap";
-import React, { useEffect, useState } from "react";
+import { Button, Form, Input } from 'reactstrap';
+import React, { useEffect, useState } from 'react';
 
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import VehicleCard from './Vehicle';
@@ -16,10 +16,10 @@ const CompletionistScreen = props => {
 	useStyles(Style.raw);
 
 	async function getData() {
-		const apiData = await Api.getTycoonData()
+		const apiData = await Api.getTycoonData();
 		let ownedVehicles = [];
-		
-		if (apiData.data){
+
+		if (apiData.data) {
 			let inv = apiData.data.inventory;
 			let backpack = (await Api.getBackpack()).data;
 			let data = {};
@@ -43,7 +43,7 @@ const CompletionistScreen = props => {
 				else ownedVehicles[keyName].amount += data[key].amount;
 			});
 		}
-		
+
 		setOwnedVehiclesData(ownedVehicles);
 
 		Api.getCurrentVehicles().then(response => {

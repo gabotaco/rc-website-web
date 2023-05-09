@@ -100,7 +100,7 @@ const BizHomeScreen = props => {
 					const totalBonus =
 						businessTier > 0
 							? Math.floor(
-								business.bonus + business.bonus * (businessTier - 1) * 0.25
+									business.bonus + business.bonus * (businessTier - 1) * 0.25
 							  )
 							: 0;
 
@@ -116,7 +116,7 @@ const BizHomeScreen = props => {
 					const totalBonus =
 						businessTier > 0
 							? Math.floor(
-								business.bonus + business.bonus * (businessTier - 1) * 0.25
+									business.bonus + business.bonus * (businessTier - 1) * 0.25
 							  )
 							: 0;
 

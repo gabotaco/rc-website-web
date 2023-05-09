@@ -22,14 +22,14 @@ const EditDeadlineButton = props => {
 	const [deadline, setDeadline] = useState(
 		new Date(member.deadline).toISOString().split('T')[0]
 	);
-	const [SET_DEADLINE, {loading}] = useMutation(queries.SET_MEMBER_DEADLINE, {
-		onCompleted: (data) => {
+	const [SET_DEADLINE, { loading }] = useMutation(queries.SET_MEMBER_DEADLINE, {
+		onCompleted: data => {
 			toggle();
 		},
-		onError: (err) => {
+		onError: err => {
 			console.error(err);
 			alert('There was an error changing their deadline');
-		}
+		},
 	});
 
 	const toggle = () => setModal(!modal);

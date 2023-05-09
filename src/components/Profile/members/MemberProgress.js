@@ -7,7 +7,7 @@ import LoadingIcon from '../../_presentational/LoadingIcon';
 import { useQuery } from '@apollo/client';
 
 const MemberProgress = () => {
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER_PROGRESS);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_PROGRESS);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

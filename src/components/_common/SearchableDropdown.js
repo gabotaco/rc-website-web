@@ -16,10 +16,10 @@ const SearchableDropdown = props => {
 
 	useEffect(() => {
 		setButtons(filterFunction(''));
-	}, [])
+	}, []);
 	useEffect(() => {
 		setButtons(filterFunction(''));
-	}, [props])
+	}, [props]);
 
 	if (props.isLoading) {
 		return (

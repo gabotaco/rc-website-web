@@ -20,9 +20,9 @@ const ProfileScreen = () => {
 			sessionStorage.removeItem('redirect');
 			this.props.history.push(redirect);
 		}
-	}, [])
+	}, []);
 
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);
@@ -43,8 +43,7 @@ const ProfileScreen = () => {
 				<h1>Your cashout</h1>
 				<ManagerCashout />
 				<small>
-					Auto-populated values will only refresh once per every 2
-					minutes
+					Auto-populated values will only refresh once per every 2 minutes
 				</small>
 			</PermRender>
 			<PermRender perms={[0]} authorizedUser={authorizedUser}>
@@ -52,6 +51,6 @@ const ProfileScreen = () => {
 			</PermRender>
 		</Container>
 	);
-}
+};
 
 export default withRouter(ProfileScreen);

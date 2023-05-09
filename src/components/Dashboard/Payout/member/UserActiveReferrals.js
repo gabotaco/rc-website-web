@@ -5,7 +5,9 @@ import CustomTable from '../../../_common/CustomTable';
 import { useQuery } from '@apollo/client';
 
 const UserActiveReferrals = props => {
-	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_ACTIVE_REFERRALS);
+	const { loading, error, data } = useQuery(
+		queries.GET_AUTH_USER_ACTIVE_REFERRALS
+	);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

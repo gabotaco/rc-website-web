@@ -64,7 +64,7 @@ const TopTurninForm = props => {
 							<Label>Company</Label>
 							<Input
 								type="select"
-								className='form-control'
+								className="form-control"
 								required
 								value={company}
 								onChange={ev => setCompany(ev.target.value)}>

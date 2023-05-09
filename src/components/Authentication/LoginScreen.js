@@ -4,7 +4,7 @@ import React, { useEffect } from 'react';
 const LoginScreen = () => {
 	useEffect(() => {
 		document.body.classList.toggle('login-page');
-	})
+	});
 
 	return (
 		<div className="login-page">
@@ -25,6 +25,6 @@ const LoginScreen = () => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default LoginScreen;

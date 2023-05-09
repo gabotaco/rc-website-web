@@ -759,8 +759,9 @@ const HomeScreen = props => {
 											className={
 												premium === 'LOADING'
 													? null
-													: premium ? 'text-success'
-														: 'text-danger'
+													: premium
+													? 'text-success'
+													: 'text-danger'
 											}>
 											{premium === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -779,8 +780,9 @@ const HomeScreen = props => {
 											className={
 												dxp === 'LOADING'
 													? null
-													: dxp ? 'text-success'
-														: 'text-danger'
+													: dxp
+													? 'text-success'
+													: 'text-danger'
 											}>
 											{dxp === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -799,8 +801,9 @@ const HomeScreen = props => {
 											className={
 												boost === 'LOADING'
 													? null
-													: boost ? 'text-success'
-														: 'text-danger'
+													: boost
+													? 'text-success'
+													: 'text-danger'
 											}>
 											{boost === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -819,8 +822,9 @@ const HomeScreen = props => {
 											className={
 												bonus === 'LOADING'
 													? null
-													: bonus ? 'text-success'
-														: 'text-danger'
+													: bonus
+													? 'text-success'
+													: 'text-danger'
 											}>
 											{bonus === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -839,8 +843,9 @@ const HomeScreen = props => {
 											className={
 												linked === 'LOADING'
 													? null
-													: linked ? 'text-success'
-														: 'text-danger'
+													: linked
+													? 'text-success'
+													: 'text-danger'
 											}>
 											{linked === 'LOADING' ? (
 												<LoadingIcon inline />
@@ -860,8 +865,8 @@ const HomeScreen = props => {
 												voice === 'LOADING'
 													? null
 													: voice
-														? 'text-success'
-														: 'text-danger'
+													? 'text-success'
+													: 'text-danger'
 											}>
 											{voice === 'LOADING' ? (
 												<LoadingIcon inline />

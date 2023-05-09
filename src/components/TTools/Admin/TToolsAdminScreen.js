@@ -11,7 +11,7 @@ const TToolsAdminScreen = () => {
 		document.title = `RC - TTools Admin`;
 	}, []);
 
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER);
 
 	if (loading) return <LoadingIcon />;
 	if (error) {

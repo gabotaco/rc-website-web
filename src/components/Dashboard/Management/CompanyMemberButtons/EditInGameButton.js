@@ -20,21 +20,24 @@ const EditInGameButton = props => {
 	const [name, setName] = useState(props.member.in_game_name);
 	const [id, setId] = useState(props.member.in_game_id);
 	const [discord, setDiscord] = useState(props.member.discord_id);
-	const [CHANGE_IDENTIFIERS, {loading}] = useMutation(queries.SET_MEMBER_IDENTIFIERS, {
-		variables: {
-			uid: props.member.id,
-			new_name: encodeURIComponent(name),
-			new_id: id,
-			new_discord: discord,
-		},
-		onCompleted: (data) => {
-			toggle();
-		},
-		onError: (err) => {
-			console.error(err);
-			alert('There was an error changing their ID');
+	const [CHANGE_IDENTIFIERS, { loading }] = useMutation(
+		queries.SET_MEMBER_IDENTIFIERS,
+		{
+			variables: {
+				uid: props.member.id,
+				new_name: encodeURIComponent(name),
+				new_id: id,
+				new_discord: discord,
+			},
+			onCompleted: data => {
+				toggle();
+			},
+			onError: err => {
+				console.error(err);
+				alert('There was an error changing their ID');
+			},
 		}
-	});
+	);
 
 	const toggle = () => setModal(!modal);
 

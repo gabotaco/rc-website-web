@@ -19,19 +19,19 @@ const ChangeInGameIDButton = props => {
 	const [modal, setModal] = useState(false);
 	const toggle = () => setModal(!modal);
 	const [gameID, setGameID] = useState(props.game_id);
-	const [CHANGE_ID, {loading}] = useMutation(queries.SET_REFERRER_ID, {
+	const [CHANGE_ID, { loading }] = useMutation(queries.SET_REFERRER_ID, {
 		variables: {
 			app_id: props.app_id,
 			new_id: gameID,
 		},
-		onCompleted: (data) => {
+		onCompleted: data => {
 			toggle();
 			props.refetch();
 		},
-		onError: (err) => {
+		onError: err => {
 			console.error(err);
 			alert('There was an error changing their ID');
-		}
+		},
 	});
 
 	function handleClick() {

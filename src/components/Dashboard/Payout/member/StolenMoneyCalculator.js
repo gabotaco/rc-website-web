@@ -138,9 +138,7 @@ const StolenMoneyCalculator = props => {
 								placeholder="Money"
 								value={
 									voucherWorth(
-										data
-											? data.getAuthUserPigsVouchers.vouchers
-											: 0,
+										data ? data.getAuthUserPigsVouchers.vouchers : 0,
 										Math.ceil((3 * parseInt(stolenMoney)) / 400)
 									) || ''
 								}
@@ -150,9 +148,7 @@ const StolenMoneyCalculator = props => {
 								$
 								<FormattedNumber
 									num={voucherWorth(
-										data
-											? data.getAuthUserPigsVouchers.vouchers
-											: 0,
+										data ? data.getAuthUserPigsVouchers.vouchers : 0,
 										Math.ceil((3 * parseInt(stolenMoney)) / 400)
 									)}
 								/>
