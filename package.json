@@ -15,7 +15,6 @@
 		"datatables.net-bs4": "^3.2.2",
 		"datatables.net-datetime": "^1.1.0",
 		"dotenv": "^16.0.3",
-		"eslint-plugin-flowtype": "^8.0.3",
 		"graphql": "^14.1.1",
 		"history": "^4.9.0",
 		"jquery": "^3.4.1",
@@ -33,7 +32,7 @@
 		"reactstrap": "^8.10.0"
 	},
 	"devDependencies": {
-		"eslint": "^8.40.0",
+		"@babel/eslint-parser": "^7.21.8",
 		"eslint-plugin-prettier": "4.2.1",
 		"eslint-plugin-react": "^7.32.2",
 		"prettier": "2.8.8",
