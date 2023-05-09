@@ -1,6 +1,6 @@
 {
 	"extends": ["eslint:recommended", "plugin:react/recommended"],
-	"parser": "babel-eslint",
+	"parser": "react-scripts/node_modules/babel-eslint",
 	"settings": {
 		"react": {
 			"version": "detect"
