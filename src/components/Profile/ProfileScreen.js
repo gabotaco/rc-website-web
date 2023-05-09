@@ -1,5 +1,7 @@
 import * as queries from '../../apollo/queries';
 
+import React, { useEffect } from 'react';
+
 import ApplyNow from '../_common/ApplyNow';
 import { Container } from 'reactstrap';
 import LoadingIcon from '../_presentational/LoadingIcon';
@@ -8,17 +10,16 @@ import ManagerPayouts from './managers/ManagerPayouts';
 import MemberProgress from './members/MemberProgress';
 import MemberTurnins from './members/MemberTurnins';
 import PermRender from '../_common/PermRender';
-import React, { useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
 import { useQuery } from '@apollo/client';
+import { withRouter } from 'react-router-dom';
 
-const ProfileScreen = () => {
+const ProfileScreen = props => {
 	useEffect(() => {
 		document.title = `RC - Profile`;
 		if (sessionStorage.getItem('redirect')) {
 			const redirect = sessionStorage.getItem('redirect');
 			sessionStorage.removeItem('redirect');
-			this.props.history.push(redirect);
+			props.history.push(redirect);
 		}
 	}, []);
 
