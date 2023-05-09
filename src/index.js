@@ -1,6 +1,7 @@
+import { ApolloClient, ApolloProvider, InMemoryCache } from '@apollo/client';
 import React, { Suspense } from 'react';
 import { Redirect, Route, Router, Switch } from 'react-router';
-import { ApolloClient, InMemoryCache, ApolloProvider } from '@apollo/client';
+
 import AppConfigs from './config/app_configs';
 import AppLayout from './layouts/App/AppLayout';
 import AuthLayout from './layouts/Auth/AuthLayout';
@@ -26,7 +27,7 @@ const RcApp = () => {
 				<Route
 					path="/"
 					exact
-					render={props => (window.location.href = 'home.html')}
+					render={() => (window.location.href = 'home.html')}
 				/>
 				<Redirect from="/auth" exact to="/auth/login" />
 				<Route path="/auth" render={props => <AuthLayout {...props} />} />

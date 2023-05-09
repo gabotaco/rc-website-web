@@ -1,19 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import {
-	Form,
-	Row,
-	Col,
-	Label,
-	InputGroup,
-	Input,
-	InputGroupText,
-} from 'reactstrap';
 import * as Api from '../../../../library/Api/api';
-import FormattedNumber from '../../../_common/FormattedNumber';
-import { useQuery } from '@apollo/client';
 import * as queries from '../../../../apollo/queries';
 
-const StolenMoneyCalculator = props => {
+import {
+	Col,
+	Form,
+	Input,
+	InputGroup,
+	InputGroupText,
+	Label,
+	Row,
+} from 'reactstrap';
+import React, { useEffect, useState } from 'react';
+
+import FormattedNumber from '../../../_common/FormattedNumber';
+import { useQuery } from '@apollo/client';
+
+const StolenMoneyCalculator = () => {
 	const [stolenMoney, setStolenMoney] = useState(undefined);
 	const [inventoryStolenMoney, setInventoryStolenMoney] = useState(null);
 
@@ -41,35 +43,35 @@ const StolenMoneyCalculator = props => {
 	}, []);
 
 	function voucherWorth(playerTotalVouchers, voucherAmount) {
+		var RankVouchers = Infinity;
+		var rankWorth = 9000;
 		// get how much to pay the person
 		if (playerTotalVouchers < 6000) {
 			// Hustler
-			var RankVouchers = 6000;
-			var rankWorth = 3500;
+			RankVouchers = 6000;
+			rankWorth = 3500;
 		} else if (playerTotalVouchers < 18000) {
 			// Pickpocket
-			var RankVouchers = 18000;
-			var rankWorth = 4000;
+			RankVouchers = 18000;
+			rankWorth = 4000;
 		} else if (playerTotalVouchers < 38000) {
 			// Thief
-			var RankVouchers = 38000;
-			var rankWorth = 5000;
+			RankVouchers = 38000;
+			rankWorth = 5000;
 		} else if (playerTotalVouchers < 68000) {
 			// Lawless
-			var RankVouchers = 68000;
-			var rankWorth = 6000;
+			RankVouchers = 68000;
+			rankWorth = 6000;
 		} else if (playerTotalVouchers < 150000) {
 			// Mastermind
-			var RankVouchers = 150000;
-			var rankWorth = 7000;
+			RankVouchers = 150000;
+			rankWorth = 7000;
 		} else if (playerTotalVouchers < 1500000) {
 			// Overlord
-			var RankVouchers = 1500000;
-			var rankWorth = 8500;
-		} else {
-			var RankVouchers = Infinity;
-			var rankWorth = 9000;
+			RankVouchers = 1500000;
+			rankWorth = 8500;
 		}
+
 		if (playerTotalVouchers + voucherAmount >= RankVouchers) {
 			// Rank up
 			const NextRankVouchers = voucherWorth(

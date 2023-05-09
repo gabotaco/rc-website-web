@@ -5,7 +5,7 @@ import LoadingIcon from '../../_presentational/LoadingIcon';
 import React from 'react';
 import { useQuery } from '@apollo/client';
 
-const CompanyCurrentMembersTable = props => {
+const CompanyCurrentMembersTable = () => {
 	const formatter = (member, key) => {
 		return (
 			<tr key={key} className={member.last_turnin ? 'table-info' : null}>

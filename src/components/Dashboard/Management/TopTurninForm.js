@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import * as queries from '../../../apollo/queries';
+
 import {
-	Form,
-	Row,
-	FormGroup,
-	Col,
-	Label,
-	Input,
-	FormFeedback,
 	Button,
+	Col,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
+	Row,
 } from 'reactstrap';
+import React, { useState } from 'react';
+
 import CustomTable from '../../_common/CustomTable';
+import FormattedNumber from '../../_common/FormattedNumber';
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import { useLazyQuery } from '@apollo/client';
-import * as queries from '../../../apollo/queries';
-import FormattedNumber from '../../_common/FormattedNumber';
 
-const TopTurninForm = props => {
+const TopTurninForm = () => {
 	const [getTopTurnins, { loading, error, data }] = useLazyQuery(
 		queries.GET_TOP_TURNINS
 	);

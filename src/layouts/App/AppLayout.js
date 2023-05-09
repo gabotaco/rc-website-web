@@ -1,11 +1,12 @@
+import * as queries from '../../apollo/queries';
+
 import React, { useRef } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
-import routes from '../../routes.js';
 import AppNavbar from '../../components/Navigation/AppNavbar';
-import LoadingIcon from '../../components/_presentational/LoadingIcon';
-import * as queries from '../../apollo/queries';
 import Footer from '../../components/Navigation/Footer';
+import LoadingIcon from '../../components/_presentational/LoadingIcon';
+import routes from '../../routes.js';
 import { useQuery } from '@apollo/client';
 
 const AppLayout = props => {
@@ -30,6 +31,7 @@ const AppLayout = props => {
 		const pathname = props.location.pathname.endsWith('/')
 			? props.location.pathname.slice(0, -1)
 			: props.location.pathname;
+		// eslint-disable-next-line no-unused-vars
 		for (const route of routes) {
 			if (route.layout + route.path === pathname) {
 				return route.name;

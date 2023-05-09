@@ -14,7 +14,7 @@ const ServerPlayersTable = props => {
 			<tbody>
 				{props.members.map(player => {
 					return (
-						<tr>
+						<tr key={player[0]}>
 							<td>{player[0]}</td>
 							<td>{player[2]}</td>
 							<td>{player[5]}</td>

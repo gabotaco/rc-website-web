@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import LoadingIcon from '../../_presentational/LoadingIcon';
 import VehicleCard from './Vehicle';
 
-const CompletionistScreen = props => {
+const CompletionistScreen = () => {
 	document.title = `RC - Completionist`;
 
 	const [currentVehiclesData, setCurrentVehiclesData] = useState(null);
@@ -51,7 +51,7 @@ const CompletionistScreen = props => {
 		});
 	}
 
-	function handleSetPublicKey(e) {
+	function handleSetPublicKey() {
 		if (!publicKeyVal) return;
 
 		Api.setPublicApiKey(publicKeyVal).then(() => {

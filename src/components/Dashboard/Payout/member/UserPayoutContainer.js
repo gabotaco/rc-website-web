@@ -22,7 +22,7 @@ import React, { useEffect, useState } from 'react';
 import FormattedNumber from '../../../_common/FormattedNumber';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 
-const UserPayoutContainer = props => {
+const UserPayoutContainer = () => {
 	const [modal, setModal] = useState(false);
 	const [company, setCompany] = useState('');
 	const [pigsVouchers, setPigsVouchers] = useState(undefined);

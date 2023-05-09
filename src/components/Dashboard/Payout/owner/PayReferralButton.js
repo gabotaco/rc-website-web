@@ -1,14 +1,16 @@
+import * as queries from '../../../../apollo/queries';
+
+import { Button, Modal, ModalBody, ModalFooter, ModalHeader } from 'reactstrap';
 import React, { useState } from 'react';
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import { useMutation } from '@apollo/client';
-import * as queries from '../../../../apollo/queries';
 
 const PayReferralButton = props => {
 	const [modal, setModal] = useState(false);
 	const [done, setDone] = useState(false);
 	const [PAY_REF, { loading }] = useMutation(queries.SET_REF_PAID, {
-		onCompleted: data => {
+		onCompleted: () => {
 			setDone(true);
 			toggle();
 		},

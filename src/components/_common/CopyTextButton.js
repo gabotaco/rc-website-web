@@ -1,6 +1,6 @@
+import { Button, UncontrolledTooltip } from 'reactstrap';
 // @flow
 import React, { useState } from 'react';
-import { Button, UncontrolledTooltip } from 'reactstrap';
 
 const CopyTextButton = props => {
 	const [tooltipText, setTooltipText] = useState(
@@ -18,7 +18,9 @@ const CopyTextButton = props => {
 
 		try {
 			document.execCommand('copy');
-		} catch (err) {}
+		} catch (err) {
+			console.error('Unable to copy', err);
+		}
 
 		document.body.removeChild(textArea);
 	}

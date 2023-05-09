@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import * as queries from '../../../../apollo/queries';
+
 import {
 	Button,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
 	Modal,
-	ModalHeader,
 	ModalBody,
 	ModalFooter,
-	Form,
-	FormGroup,
-	Label,
-	Input,
-	FormFeedback,
+	ModalHeader,
 	Row,
 } from 'reactstrap';
+import React, { useState } from 'react';
+
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import { useMutation } from '@apollo/client';
-import * as queries from '../../../../apollo/queries';
 
 const EditDeadlineButton = props => {
 	const { member } = props;
@@ -23,7 +25,7 @@ const EditDeadlineButton = props => {
 		new Date(member.deadline).toISOString().split('T')[0]
 	);
 	const [SET_DEADLINE, { loading }] = useMutation(queries.SET_MEMBER_DEADLINE, {
-		onCompleted: data => {
+		onCompleted: () => {
 			toggle();
 		},
 		onError: err => {
@@ -35,6 +37,7 @@ const EditDeadlineButton = props => {
 	const toggle = () => setModal(!modal);
 
 	function change() {
+		// eslint-disable-next-line no-constant-condition
 		if (!new Date(deadline)) return;
 		const newDeadline = new Date(deadline);
 		newDeadline.setDate(newDeadline.getDate() + 1);

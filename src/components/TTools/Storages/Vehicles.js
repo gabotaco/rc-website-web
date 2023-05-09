@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Vehicles = props => {
+const Vehicles = () => {
 	return <></>;
 };
 

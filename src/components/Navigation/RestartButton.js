@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
-import { Button } from 'reactstrap';
-import { withRouter } from 'react-router-dom';
 import * as Api from '../../library/Api/api';
-import LoadingIcon from '../_presentational/LoadingIcon';
 
-const RestartButton = ({ history, authorizedUser }) => {
+import React, { useState } from 'react';
+
+import { Button } from 'reactstrap';
+import LoadingIcon from '../_presentational/LoadingIcon';
+import { withRouter } from 'react-router-dom';
+
+const RestartButton = () => {
 	const [content, setContent] = useState('Restart Alfred');
 	const [loading, setLoading] = useState(false);
 

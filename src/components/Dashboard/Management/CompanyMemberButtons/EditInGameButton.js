@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import * as queries from '../../../../apollo/queries';
+
 import {
 	Button,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
 	Modal,
-	ModalHeader,
 	ModalBody,
 	ModalFooter,
-	Form,
-	FormGroup,
-	Label,
-	Input,
-	FormFeedback,
+	ModalHeader,
 } from 'reactstrap';
+import React, { useState } from 'react';
+
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import { useMutation } from '@apollo/client';
-import * as queries from '../../../../apollo/queries';
 
 const EditInGameButton = props => {
 	const [modal, setModal] = useState(false);
@@ -29,7 +31,7 @@ const EditInGameButton = props => {
 				new_id: id,
 				new_discord: discord,
 			},
-			onCompleted: data => {
+			onCompleted: () => {
 				toggle();
 			},
 			onError: err => {

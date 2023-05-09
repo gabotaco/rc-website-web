@@ -1,13 +1,14 @@
-import React from 'react';
 import * as queries from '../../../../apollo/queries';
-import LoadingIcon from '../../../_presentational/LoadingIcon';
+
 import FilterableTables from '../../../_common/FilterableTables';
 import FormattedNumber from '../../../../components/_common/FormattedNumber';
 import GetDetailsButton from './GetDetailsButton';
+import LoadingIcon from '../../../_presentational/LoadingIcon';
 import PayReferralButton from './PayReferralButton';
+import React from 'react';
 import { useQuery } from '@apollo/client';
 
-const CompletedReferrals = props => {
+const CompletedReferrals = () => {
 	const { loading, error, data } = useQuery(queries.GET_COMPLETED_REFERRALS);
 	if (loading) return <LoadingIcon />;
 	if (error) {

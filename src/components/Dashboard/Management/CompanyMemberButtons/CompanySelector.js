@@ -1,20 +1,22 @@
-import React, { useState } from 'react';
+import * as queries from '../../../../apollo/queries';
+
 import {
 	Button,
 	ButtonGroup,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
 	Modal,
-	ModalHeader,
 	ModalBody,
 	ModalFooter,
-	Form,
-	FormGroup,
-	Label,
-	Input,
-	FormFeedback,
+	ModalHeader,
 } from 'reactstrap';
-import { useMutation } from '@apollo/client';
-import * as queries from '../../../../apollo/queries';
+import React, { useState } from 'react';
+
 import LoadingIcon from '../../../_presentational/LoadingIcon';
+import { useMutation } from '@apollo/client';
 
 const CompanySelector = props => {
 	const { member, perms } = props;
@@ -23,7 +25,7 @@ const CompanySelector = props => {
 	const [fireReason, setFireReason] = useState(member.fire_reason);
 	const [welcome, setWelcome] = useState(member.welcome);
 
-	const [SET_MANAGER, {}] = useMutation(queries.SET_MEMBER_MANAGER, {
+	const [SET_MANAGER] = useMutation(queries.SET_MEMBER_MANAGER, {
 		variables: {
 			uid: member.id,
 			manager: !member.manager,
@@ -33,7 +35,7 @@ const CompanySelector = props => {
 			alert('There was an error making them a manager');
 		},
 	});
-	const [CHANGE_COMPANY, {}] = useMutation(queries.SET_MEMBER_COMPANY, {
+	const [CHANGE_COMPANY] = useMutation(queries.SET_MEMBER_COMPANY, {
 		onError: err => {
 			console.error(err);
 			alert('There was an error changing their company');
@@ -45,7 +47,7 @@ const CompanySelector = props => {
 			reason: encodeURIComponent(fireReason),
 			welcome: welcome,
 		},
-		onCompleted: data => {
+		onCompleted: () => {
 			toggle();
 		},
 		onError: err => {

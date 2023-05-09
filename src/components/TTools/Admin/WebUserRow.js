@@ -25,7 +25,7 @@ const WebUserRow = props => {
 	const [oldUserId, setOldUserId] = useState(userId);
 	const toggle = () => setModal(!modal);
 
-	const [SET_USER_PERM, {}] = useMutation(queries.SET_USER_PERM, {
+	const [SET_USER_PERM] = useMutation(queries.SET_USER_PERM, {
 		variables: {
 			id: parseInt(props.user.id),
 			perm: userPerm,
@@ -35,7 +35,7 @@ const WebUserRow = props => {
 			setUserPerm(oldUserPerm);
 		},
 	});
-	const [SET_USER_ID, {}] = useMutation(queries.SET_USER_ID, {
+	const [SET_USER_ID] = useMutation(queries.SET_USER_ID, {
 		variables: {
 			id: parseInt(props.user.id),
 			in_game_id: newUserId,

@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import * as Api from '../../../library/Api/api';
+import * as queries from '../../../apollo/queries';
+
 import {
 	Button,
-	Modal,
-	ModalHeader,
-	ModalBody,
-	ModalFooter,
 	Form,
-	FormGroup,
 	FormFeedback,
+	FormGroup,
 	Input,
 	Label,
+	Modal,
+	ModalBody,
+	ModalFooter,
+	ModalHeader,
 } from 'reactstrap';
-import LoadingIcon from '../../_presentational/LoadingIcon';
+import React, { useState } from 'react';
+
 import DoneIcon from '../../_presentational/DoneIcon';
-import * as Api from '../../../library/Api/api';
+import LoadingIcon from '../../_presentational/LoadingIcon';
 import { useMutation } from '@apollo/client';
-import * as queries from '../../../apollo/queries';
 
 const ApplicantRow = ({ applicant }) => {
 	const [loading, setLoading] = useState(false);
@@ -31,7 +33,7 @@ const ApplicantRow = ({ applicant }) => {
 	const [newStatusStatus, setNewStatusStatus] = useState('WAITING');
 	const toggle = () => setModal(!modal);
 
-	const [SET_APPLICANT_CONTACTED, {}] = useMutation(
+	const [SET_APPLICANT_CONTACTED] = useMutation(
 		queries.SET_APPLICANT_CONTACTED,
 		{
 			onCompleted: data => {
@@ -52,25 +54,22 @@ const ApplicantRow = ({ applicant }) => {
 			},
 		}
 	);
-	const [SET_APPLICANT_REJECTED, {}] = useMutation(
-		queries.SET_APPLICANT_REJECTED,
-		{
-			onCompleted: data => {
-				setRejectStatus('DONE');
-				setApp({ ...app, status: 'Rejected', status_info: rejectReason });
-			},
-			onError: err => {
-				console.error(err);
-				setRejectStatus('WAITING');
-				alert('Error setting applicant to reject.');
-			},
-			variables: {
-				id: app.id,
-				reason: rejectReason,
-			},
-		}
-	);
-	const [UPDATE_APPLICANT_STATUS_INFO, {}] = useMutation(
+	const [SET_APPLICANT_REJECTED] = useMutation(queries.SET_APPLICANT_REJECTED, {
+		onCompleted: () => {
+			setRejectStatus('DONE');
+			setApp({ ...app, status: 'Rejected', status_info: rejectReason });
+		},
+		onError: err => {
+			console.error(err);
+			setRejectStatus('WAITING');
+			alert('Error setting applicant to reject.');
+		},
+		variables: {
+			id: app.id,
+			reason: rejectReason,
+		},
+	});
+	const [UPDATE_APPLICANT_STATUS_INFO] = useMutation(
 		queries.UPDATE_APPLICANT_STATUS_INFO,
 		{
 			onCompleted: data => {

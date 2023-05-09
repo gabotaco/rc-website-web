@@ -1,10 +1,11 @@
-import React from 'react';
-import LoadingIcon from '../../_presentational/LoadingIcon';
 import * as queries from '../../../apollo/queries';
+
+import LoadingIcon from '../../_presentational/LoadingIcon';
 import ManagerCashoutTable from './ManagerCashoutTable';
+import React from 'react';
 import { useQuery } from '@apollo/client';
 
-const ManagerCashoutContainer = props => {
+const ManagerCashoutContainer = () => {
 	const { loading, error, data, refetch } = useQuery(queries.GET_ALL_MANAGERS);
 
 	if (loading) return <LoadingIcon />;

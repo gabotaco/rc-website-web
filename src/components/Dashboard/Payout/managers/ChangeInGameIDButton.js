@@ -1,19 +1,21 @@
-import React, { useState } from 'react';
+import * as queries from '../../../../apollo/queries';
+
 import {
 	Button,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
 	Modal,
 	ModalBody,
-	ModalHeader,
 	ModalFooter,
-	Form,
-	FormGroup,
-	Label,
-	Input,
-	FormFeedback,
+	ModalHeader,
 } from 'reactstrap';
+import React, { useState } from 'react';
+
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 import { useMutation } from '@apollo/client';
-import * as queries from '../../../../apollo/queries';
 
 const ChangeInGameIDButton = props => {
 	const [modal, setModal] = useState(false);
@@ -24,7 +26,7 @@ const ChangeInGameIDButton = props => {
 			app_id: props.app_id,
 			new_id: gameID,
 		},
-		onCompleted: data => {
+		onCompleted: () => {
 			toggle();
 			props.refetch();
 		},
