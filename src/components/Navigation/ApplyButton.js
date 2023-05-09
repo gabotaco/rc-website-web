@@ -6,7 +6,7 @@ import LoadingIcon from '../_presentational/LoadingIcon';
 import { useQuery } from '@apollo/client';
 
 const ApplyButton = ({ history, authorizedUser }) => {
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER_STATUS);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_STATUS);
 
 	if (loading) return <LoadingIcon />;
 	if (error) {

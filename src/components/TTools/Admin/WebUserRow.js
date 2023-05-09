@@ -22,28 +22,28 @@ const WebUserRow = props => {
 	const [userId, setUserId] = useState(props.user.in_game_id);
 	const [modal, setModal] = useState(false);
 	const [newUserId, setNewUserId] = useState();
-	const [oldUserId, setOldUserId] = useState(userId)
+	const [oldUserId, setOldUserId] = useState(userId);
 	const toggle = () => setModal(!modal);
 
-	const [SET_USER_PERM, {}] = useMutation(queries.SET_USER_PERM, {
+	const [SET_USER_PERM] = useMutation(queries.SET_USER_PERM, {
 		variables: {
 			id: parseInt(props.user.id),
-			perm: userPerm
+			perm: userPerm,
 		},
-		onError: (err) => {
+		onError: err => {
 			console.error(err);
 			setUserPerm(oldUserPerm);
-		}
+		},
 	});
-	const [SET_USER_ID, {}] = useMutation(queries.SET_USER_ID, {
+	const [SET_USER_ID] = useMutation(queries.SET_USER_ID, {
 		variables: {
 			id: parseInt(props.user.id),
-			in_game_id: newUserId
+			in_game_id: newUserId,
 		},
 		onError: err => {
 			console.error(err);
 			setUserId(oldUserId);
-		}
+		},
 	});
 
 	function handleSelectChange(ev) {
@@ -105,7 +105,7 @@ const WebUserRow = props => {
 				<Input
 					value={userPerm}
 					type="select"
-					className='form-control'
+					className="form-control"
 					disabled={
 						props.user.discord_id === props.authorizedUser.discord_id ||
 						userPerm >= props.authorizedUser.ttpermission

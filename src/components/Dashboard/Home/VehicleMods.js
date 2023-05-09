@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react';
-import SearchableDropdown from '../../_common/SearchableDropdown';
-import { Form, Row, Col, FormGroup, Label, Button, Tooltip } from 'reactstrap';
 import * as Api from '../../../library/Api/api';
+
+import { Button, Col, Form, FormGroup, Label, Row, Tooltip } from 'reactstrap';
+import React, { useEffect, useState } from 'react';
+
+import SearchableDropdown from '../../_common/SearchableDropdown';
 import VehicleDataTable from './VehicleDataTable';
 
 const VehicleMods = () => {
@@ -24,7 +26,9 @@ const VehicleMods = () => {
 
 		try {
 			document.execCommand('copy');
-		} catch (err) {}
+		} catch (err) {
+			console.error('Unable to copy', err);
+		}
 
 		document.body.removeChild(textArea);
 	}
@@ -97,7 +101,7 @@ const VehicleMods = () => {
 	useEffect(() => {
 		document
 			.getElementById('random-mod-button')
-			.addEventListener('mouseout', e => {
+			.addEventListener('mouseout', () => {
 				setTooltipOpen(false);
 			});
 
@@ -131,7 +135,7 @@ const VehicleMods = () => {
 				setIsLoading(false);
 			})
 			.catch(err => {
-				console.error(err)
+				console.error(err);
 				setIsLoading(false);
 			});
 	}

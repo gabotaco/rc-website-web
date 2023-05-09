@@ -8,9 +8,9 @@ import { useQuery } from '@apollo/client';
 const ManagerPayoutTable = props => {
 	const { loading, error, data } = useQuery(queries.GET_MANAGER_PAYOUTS, {
 		variables: {
-			manager_id: props.manager_id
-		}
-	})
+			manager_id: props.manager_id,
+		},
+	});
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

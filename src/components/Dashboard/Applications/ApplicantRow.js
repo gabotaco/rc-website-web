@@ -1,21 +1,23 @@
-import React, { useState } from 'react';
+import * as Api from '../../../library/Api/api';
+import * as queries from '../../../apollo/queries';
+
 import {
 	Button,
-	Modal,
-	ModalHeader,
-	ModalBody,
-	ModalFooter,
 	Form,
-	FormGroup,
 	FormFeedback,
+	FormGroup,
 	Input,
 	Label,
+	Modal,
+	ModalBody,
+	ModalFooter,
+	ModalHeader,
 } from 'reactstrap';
-import LoadingIcon from '../../_presentational/LoadingIcon';
+import React, { useState } from 'react';
+
 import DoneIcon from '../../_presentational/DoneIcon';
-import * as Api from '../../../library/Api/api';
+import LoadingIcon from '../../_presentational/LoadingIcon';
 import { useMutation } from '@apollo/client';
-import * as queries from '../../../apollo/queries';
 
 const ApplicantRow = ({ applicant }) => {
 	const [loading, setLoading] = useState(false);
@@ -31,57 +33,63 @@ const ApplicantRow = ({ applicant }) => {
 	const [newStatusStatus, setNewStatusStatus] = useState('WAITING');
 	const toggle = () => setModal(!modal);
 
-	const [SET_APPLICANT_CONTACTED, {}] = useMutation(queries.SET_APPLICANT_CONTACTED, {
-		onCompleted: (data) => {
-			setContactStatus('DONE');
-			setApp({
-				...app,
-				status: 'Contacted',
-				status_info: data.setApplicantContacted,
-			});
-		},
-		onError: (err) => {
-			console.error(err);
-			setContactStatus('WAITING');
-			alert('Error setting applicant to contacted.');
-		},
-		variables: {
-			id: app.id
+	const [SET_APPLICANT_CONTACTED] = useMutation(
+		queries.SET_APPLICANT_CONTACTED,
+		{
+			onCompleted: data => {
+				setContactStatus('DONE');
+				setApp({
+					...app,
+					status: 'Contacted',
+					status_info: data.setApplicantContacted,
+				});
+			},
+			onError: err => {
+				console.error(err);
+				setContactStatus('WAITING');
+				alert('Error setting applicant to contacted.');
+			},
+			variables: {
+				id: app.id,
+			},
 		}
-	});
-	const [SET_APPLICANT_REJECTED, {}] = useMutation(queries.SET_APPLICANT_REJECTED, {
-		onCompleted: (data) => {
+	);
+	const [SET_APPLICANT_REJECTED] = useMutation(queries.SET_APPLICANT_REJECTED, {
+		onCompleted: () => {
 			setRejectStatus('DONE');
 			setApp({ ...app, status: 'Rejected', status_info: rejectReason });
 		},
-		onError: (err) => {
+		onError: err => {
 			console.error(err);
 			setRejectStatus('WAITING');
 			alert('Error setting applicant to reject.');
 		},
 		variables: {
 			id: app.id,
-			reason: rejectReason
-		}
-	});
-	const [UPDATE_APPLICANT_STATUS_INFO, {}] = useMutation(queries.UPDATE_APPLICANT_STATUS_INFO, {
-		onCompleted: (data) => {
-			setNewStatusStatus('DONE');
-			setApp({
-				...app,
-				status_info: data.updateApplicantStatusInfo,
-			});
+			reason: rejectReason,
 		},
-		onError: (err) => {
-			console.error(err);
-			setNewStatusStatus('WAITING');
-			alert('There was an error updating the applicants status');
-		},
-		variables: {
-			id: app.id,
-			status_info: newStatus,
-		}
 	});
+	const [UPDATE_APPLICANT_STATUS_INFO] = useMutation(
+		queries.UPDATE_APPLICANT_STATUS_INFO,
+		{
+			onCompleted: data => {
+				setNewStatusStatus('DONE');
+				setApp({
+					...app,
+					status_info: data.updateApplicantStatusInfo,
+				});
+			},
+			onError: err => {
+				console.error(err);
+				setNewStatusStatus('WAITING');
+				alert('There was an error updating the applicants status');
+			},
+			variables: {
+				id: app.id,
+				status_info: newStatus,
+			},
+		}
+	);
 
 	function handleDetailsClick() {
 		setLoading(true);

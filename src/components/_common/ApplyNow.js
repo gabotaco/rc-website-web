@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Form, Row, Col, FormGroup, Label, Input, Button } from 'reactstrap';
 import AppConfigs from '../../config/app_configs';
 
-const ApplyNow = (props) => {
+const ApplyNow = props => {
 	let applyText = (
 		<h1>
 			You aren't a member! Apply <a href="/home/apply/">here</a>
@@ -70,7 +70,7 @@ const ApplyNow = (props) => {
 			</div>
 		</div>
 	);
-}
+};
 
 export default ApplyNow;
 

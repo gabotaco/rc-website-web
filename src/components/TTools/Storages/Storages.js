@@ -99,6 +99,7 @@ const Storages = props => {
 
 		const storages = [];
 
+		// eslint-disable-next-line
 		for (const storage of props.data) {
 			storages.push({
 				id: storage.name,

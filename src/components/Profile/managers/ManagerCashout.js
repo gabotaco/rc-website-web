@@ -7,7 +7,7 @@ import PersonalVouchers from './cashout/PersonalVouchers';
 import { useQuery } from '@apollo/client';
 
 const MangagerCashout = () => {
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER_CASHOUT);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_CASHOUT);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

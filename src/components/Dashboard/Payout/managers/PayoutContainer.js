@@ -1,27 +1,29 @@
-import React, { useState } from 'react';
+import * as Api from '../../../../library/Api/api';
+
 import {
-	Form,
-	Row,
-	Col,
-	FormGroup,
-	Label,
-	Input,
-	FormFeedback,
+	Alert,
 	Button,
+	Col,
+	Form,
+	FormFeedback,
+	FormGroup,
+	Input,
+	Label,
 	Modal,
-	ModalHeader,
 	ModalBody,
 	ModalFooter,
+	ModalHeader,
 	Progress,
-	Alert,
+	Row,
 } from 'reactstrap';
-import MemberDropdown from './MemberDropdown';
-import * as Api from '../../../../library/Api/api';
-import LoadingIcon from '../../../_presentational/LoadingIcon';
-import FormattedNumber from '../../../_common/FormattedNumber';
-import CopyTextButton from '../../../_common/CopyTextButton';
+import React, { useState } from 'react';
 
-const PayoutContainer = props => {
+import CopyTextButton from '../../../_common/CopyTextButton';
+import FormattedNumber from '../../../_common/FormattedNumber';
+import LoadingIcon from '../../../_presentational/LoadingIcon';
+import MemberDropdown from './MemberDropdown';
+
+const PayoutContainer = () => {
 	const [modal, setModal] = useState(false);
 	const [member, setMember] = useState(null);
 	const [company, setCompany] = useState('');
@@ -115,7 +117,7 @@ const PayoutContainer = props => {
 							valid={!!company}
 							invalid={!company}
 							type="select"
-							className='form-control'
+							className="form-control"
 							required
 							value={company}
 							onChange={ev => setCompany(ev.target.value)}>

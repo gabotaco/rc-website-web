@@ -6,7 +6,7 @@ import FormattedNumber from '../../_common/FormattedNumber';
 import { useQuery } from '@apollo/client';
 
 const MemberTurnins = () => {
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER_TURNINS);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_TURNINS);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

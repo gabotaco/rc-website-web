@@ -6,7 +6,7 @@ import FormattedNumber from '../../_common/FormattedNumber';
 import { useQuery } from '@apollo/client';
 
 const ManagerPayouts = () => {
-	const {loading, error, data} = useQuery(queries.GET_AUTH_USER_PAYOUTS);
+	const { loading, error, data } = useQuery(queries.GET_AUTH_USER_PAYOUTS);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

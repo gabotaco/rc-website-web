@@ -6,7 +6,9 @@ import ChangeInGameIDButton from './ChangeInGameIDButton';
 import { useQuery } from '@apollo/client';
 
 const CompanyActiveReferrals = props => {
-	const { loading, error, data, refetch } = useQuery(queries.GET_ACTIVE_REFERRALS);
+	const { loading, error, data, refetch } = useQuery(
+		queries.GET_ACTIVE_REFERRALS
+	);
 	if (loading) return <LoadingIcon />;
 	if (error) {
 		console.error(error);

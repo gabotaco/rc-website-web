@@ -20,7 +20,7 @@ const UnderConstruction = () => {
 			</Container>
 		</NavLink>
 	);
-}
+};
 
 export default UnderConstruction;
 

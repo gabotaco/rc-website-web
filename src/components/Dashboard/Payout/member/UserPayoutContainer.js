@@ -22,7 +22,7 @@ import React, { useEffect, useState } from 'react';
 import FormattedNumber from '../../../_common/FormattedNumber';
 import LoadingIcon from '../../../_presentational/LoadingIcon';
 
-const UserPayoutContainer = props => {
+const UserPayoutContainer = () => {
 	const [modal, setModal] = useState(false);
 	const [company, setCompany] = useState('');
 	const [pigsVouchers, setPigsVouchers] = useState(undefined);
@@ -118,7 +118,7 @@ const UserPayoutContainer = props => {
 							valid={!!company}
 							invalid={!company}
 							type="select"
-							className='form-control'
+							className="form-control"
 							required
 							value={company}
 							onChange={ev => setCompany(ev.target.value)}>

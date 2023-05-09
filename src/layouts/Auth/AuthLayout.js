@@ -1,4 +1,4 @@
-import React, {useRef} from 'react';
+import React, { useRef } from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 // import Footer from "components/Footer/Footer.jsx";
@@ -36,6 +36,6 @@ const Pages = () => {
 			</div>
 		</>
 	);
-}
+};
 
 export default Pages;

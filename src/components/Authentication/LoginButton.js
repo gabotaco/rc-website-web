@@ -2,7 +2,7 @@ import * as React from 'react';
 
 import AppConfigs from '../../config/app_configs';
 
-const LoginButton = props => {
+const LoginButton = () => {
 	return (
 		<a
 			className="btn btn-primary btn-lg"

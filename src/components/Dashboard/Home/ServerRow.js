@@ -57,7 +57,7 @@ const ServerRow = props => {
 				});
 			})
 			.catch(err => {
-				console.error(err)
+				console.error(err);
 				setServerData('OFFLINE');
 			});
 	}

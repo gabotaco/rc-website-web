@@ -8,7 +8,7 @@ import LoadingIcon from '../../_presentational/LoadingIcon';
 import Storages from './Storages';
 import UnderConstruction from '../../_common/UnderConstruction';
 
-const StoragesScreen = props => {
+const StoragesScreen = () => {
 	document.title = `RC - Storages`;
 
 	const [storageData, setStorageData] = useState(null);
@@ -27,10 +27,12 @@ const StoragesScreen = props => {
 	async function getData() {
 		const apiStorageData = await Api.getStorages().catch(err => {
 			setDataError(true);
+			console.error(err);
 			return null;
 		});
 		const apiBizData = await Api.getTycoonBiz().catch(err => {
 			setDataError(true);
+			console.error(err);
 			return null;
 		});
 
@@ -75,7 +77,7 @@ const StoragesScreen = props => {
 		setStorageData(apiStorageData.storages);
 	}
 
-	function handleSetPublicKey(e) {
+	function handleSetPublicKey() {
 		if (!publicKeyVal) return;
 
 		Api.setPublicApiKey(publicKeyVal).then(() => {

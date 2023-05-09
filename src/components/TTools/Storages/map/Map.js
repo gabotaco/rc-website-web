@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 const Map = props => {
 	useEffect(() => {
 		if (props.loaded) {
-			// eslint-disable-next-line
+			// eslint-disable-next-line no-eval
 			window.eval(`initMap(${JSON.stringify(props.storages)})`);
 		}
 	}, [props.loaded]);

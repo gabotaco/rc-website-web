@@ -20,7 +20,7 @@ const PermRender = props => {
 	}
 
 	if (props.authorizedUser) {
-		return handle(props.authorizedUser)
+		return handle(props.authorizedUser);
 	} else {
 		if (loading) return <LoadingIcon />;
 		if (error) {
