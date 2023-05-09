@@ -68,7 +68,7 @@ const StoragesScreen = () => {
 			setHasPremium(true);
 		}
 
-		if (apiStorageData.licenses.perk_trucking_postop) {
+		if (apiStorageData.groups.perk_trucking_postop) {
 			setHasPostopPerk(true);
 		}
 
@@ -217,3 +217,48 @@ const StoragesScreen = () => {
 };
 
 export default StoragesScreen;
+
+export function formatNumber(number) {
+	return (
+		number
+			.toFixed(2)
+			.replace(/\.?0+$/, '')
+			.replace(/\B(?=(\d{3})+(?!\d))/g, ',') || 0
+	);
+}
+
+export function resolveItemName(item) {
+	if (item.dName) return item.dName;
+	if (item.name.startsWith('vehicle_shipment')) return item.name.split('|')[2];
+	if (item.name.startsWith('rts_card'))
+		return 'RTS Card: ' + item.name.split('|')[2];
+	if (item.name.startsWith('gut_knife')) return item.name.split('|')[0];
+
+	return item.name;
+}
+
+const storages = require('./storages.json');
+
+export function StorageSize(storage) {
+	if (storage.name.startsWith('faq_')) {
+		return 500000;
+	}
+
+	if (storage.name.startsWith('biz_train')) {
+		return 16000 + Math.floor((16000 * storage.lvl) / 9 / 10) * 10;
+	}
+
+	if (storage.name.startsWith('biz_')) {
+		return storages[storage.name].size * storage.lvl;
+	}
+
+	return storages[storage.name].size;
+}
+
+export function StorageName(storage) {
+	if (storage.startsWith('faq_')) {
+		return storage.replace('faq_', 'Facton');
+	}
+
+	return storages[storage].name;
+}
