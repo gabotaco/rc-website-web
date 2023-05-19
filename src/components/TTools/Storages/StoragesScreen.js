@@ -257,7 +257,7 @@ export function StorageSize(storage) {
 
 export function StorageName(storage) {
 	if (storage.startsWith('faq_')) {
-		return storage.replace('faq_', 'Facton');
+		return storage.replace('faq_', 'Faction');
 	}
 
 	return storages[storage].name;

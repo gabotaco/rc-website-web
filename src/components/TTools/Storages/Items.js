@@ -116,7 +116,7 @@ const Items = props => {
 						<ModalHeader toggle={toggle}>
 							<div
 								dangerouslySetInnerHTML={{
-									__html: showItem.name + ' (Storage Locations)',
+									__html: showItem.displayName + ' (Storage Locations)',
 								}}
 							/>
 						</ModalHeader>
