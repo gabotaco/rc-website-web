@@ -1,2009 +1,1465 @@
 {
-	"aircargo_cia": {
-		"make": [
-			"Los Santos International Airport|Chumash x4",
-			"Los Santos International Airport|Chumash x2",
-			"Los Santos International Airport|Chumash x1",
-			"Sandy Shores International Airport|Chumash x4",
-			"Sandy Shores International Airport|Chumash x2",
-			"Sandy Shores International Airport|Chumash x1"
-		],
-		"name": "Air Cargo: CIA",
-		"use": [
-			"Chumash Island Airport|Deliver Cargo x4",
-			"Chumash Island Airport|Deliver Cargo x2",
-			"Chumash Island Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_lsia": {
-		"make": [
-			"Pacific Ocean Airport|Los Santos x4",
-			"Pacific Ocean Airport|Los Santos x2",
-			"Pacific Ocean Airport|Los Santos x1",
-			"Sandy Shores International Airport|Los Santos x4",
-			"Sandy Shores International Airport|Los Santos x2",
-			"Sandy Shores International Airport|Los Santos x1"
-		],
-		"name": "Air Cargo: LSIA",
-		"use": [
-			"Los Santos International Airport|Deliver Cargo x4",
-			"Los Santos International Airport|Deliver Cargo x2",
-			"Los Santos International Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_mga": {
-		"make": [
-			"Pacific Ocean Airport|Mt. Gordo x4",
-			"Pacific Ocean Airport|Mt. Gordo x2",
-			"Pacific Ocean Airport|Mt. Gordo x1",
-			"Sandy Shores International Airport|Mt. Gordo x4",
-			"Sandy Shores International Airport|Mt. Gordo x2",
-			"Sandy Shores International Airport|Mt. Gordo x1"
-		],
-		"name": "Air Cargo: MGA",
-		"use": [
-			"Mount Gordo Airport|Deliver Cargo x4",
-			"Mount Gordo Airport|Deliver Cargo x2",
-			"Mount Gordo Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_pba": {
-		"make": [
-			"Mount Gordo Airport|Paleto Bay x4",
-			"Mount Gordo Airport|Paleto Bay x2",
-			"Mount Gordo Airport|Paleto Bay x1",
-			"San Chianski Airport|Paleto Bay x4",
-			"San Chianski Airport|Paleto Bay x2",
-			"San Chianski Airport|Paleto Bay x1"
-		],
-		"name": "Air Cargo: PBA",
-		"use": [
-			"Paleto Bay Airport|Deliver Cargo x4",
-			"Paleto Bay Airport|Deliver Cargo x2",
-			"Paleto Bay Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_poa": {
-		"make": [
-			"Chumash Island Airport|Pacific Ocean x4",
-			"Chumash Island Airport|Pacific Ocean x2",
-			"Chumash Island Airport|Pacific Ocean x1",
-			"PostOP Airport|Pacific Ocean x4",
-			"PostOP Airport|Pacific Ocean x2",
-			"PostOP Airport|Pacific Ocean x1",
-			"San Chianski Airport|Pacific Ocean x4",
-			"San Chianski Airport|Pacific Ocean x2",
-			"San Chianski Airport|Pacific Ocean x1"
-		],
-		"name": "Air Cargo: POA",
-		"use": [
-			"Pacific Ocean Airport|Deliver Cargo x4",
-			"Pacific Ocean Airport|Deliver Cargo x2",
-			"Pacific Ocean Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_pop": {
-		"make": [
-			"Chumash Island Airport|PostOP x4",
-			"Chumash Island Airport|PostOP x2",
-			"Chumash Island Airport|PostOP x1"
-		],
-		"name": "Air Cargo: POP",
-		"use": [
-			"PostOP Airport|Deliver Cargo x4",
-			"PostOP Airport|Deliver Cargo x2",
-			"PostOP Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_sca": {
-		"make": [
-			"Chumash Island Airport|San Chianksi x4",
-			"Chumash Island Airport|San Chianksi x2",
-			"Chumash Island Airport|San Chianksi x1",
-			"Los Santos International Airport|San Chianksi x4",
-			"Los Santos International Airport|San Chianksi x2",
-			"Los Santos International Airport|San Chianksi x1",
-			"Mount Gordo Airport|San Chianksi x4",
-			"Mount Gordo Airport|San Chianksi x2",
-			"Mount Gordo Airport|San Chianksi x1",
-			"PostOP Airport|San Chianksi x4",
-			"PostOP Airport|San Chianksi x2",
-			"PostOP Airport|San Chianksi x1"
-		],
-		"name": "Air Cargo: SCA",
-		"use": [
-			"San Chianski Airport|Deliver Cargo x4",
-			"San Chianski Airport|Deliver Cargo x2",
-			"San Chianski Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_ssia": {
-		"make": [
-			"Paleto Bay Airport|Sandy Shores x4",
-			"Paleto Bay Airport|Sandy Shores x2",
-			"Paleto Bay Airport|Sandy Shores x1",
-			"PostOP Airport|Sandy Shores x4",
-			"PostOP Airport|Sandy Shores x2",
-			"PostOP Airport|Sandy Shores x1",
-			"San Chianski Airport|Sandy Shores x4",
-			"San Chianski Airport|Sandy Shores x2",
-			"San Chianski Airport|Sandy Shores x1"
-		],
-		"name": "Air Cargo: SSIA",
-		"use": [
-			"Sandy Shores International Airport|Deliver Cargo x4",
-			"Sandy Shores International Airport|Deliver Cargo x2",
-			"Sandy Shores International Airport|Deliver Cargo"
-		],
-		"weight": 25
-	},
-	"aircargo_zma": {
-		"make": [
-			"Chumash Island Airport|Zancudo x4",
-			"Chumash Island Airport|Zancudo x2",
-			"Chumash Island Airport|Zancudo x1",
-			"Pacific Ocean Airport|Zancudo x4",
-			"Pacific Ocean Airport|Zancudo x2",
-			"Pacific Ocean Airport|Zancudo x1",
-			"Paleto Bay Airport|Zancudo x4",
-			"Paleto Bay Airport|Zancudo x2",
-			"Paleto Bay Airport|Zancudo x1"
-		],
-		"name": "Air Cargo: ZMA",
-		"use": [],
-		"weight": 25
-	},
-	"fridge_airline_meal": {
-		"make": [
-			"Liberty: The Undercover Storage Co.|Tokens to Airline Meal",
-			"Trucking: Fridgit Co.|Create Airline Meal",
-			"Trucking: Fridgit Co.|Create Airline Meal x10"
-		],
-		"name": "Airline Meal",
-		"use": [
-			"Trucking: LSIA Shipments|Deliver Airline Meal",
-			"Trucking: LSIA Shipments|Deliver Airline Meal x10",
-			"Trucking: LSIA Shipments|Deliver Airline Meal x30"
-		],
-		"weight": 3
-	},
-	"alcohol": {
-		"make": [],
-		"name": "Alcohol",
-		"use": ["Police Evidence|Alcohol"],
-		"weight": 5
-	},
-	"mechanicals_battery": {
-		"make": ["Trucking: Vehicle Parts|Car Battery"],
-		"name": "Automotive: Car Battery",
-		"use": [
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL",
-			"Trucking: Vehicle Parts|Traction Battery"
-		],
-		"weight": 0
-	},
-	"mechanicals_chassis": {
-		"make": ["Trucking: Vehicle Parts|Chassis"],
-		"name": "Automotive: Chassis",
-		"use": [
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL",
-			"Trucking: Vehicle Parts|Temporary Repair Shop"
-		],
-		"weight": 80
-	},
-	"mechanicals_rubber": {
-		"make": ["Trucking: Refinery|Refine Rubber"],
-		"name": "Automotive: Rubber",
-		"use": [
-			"Trucking: LS Port Export|Export Rubber",
-			"Trucking: LS Port Export|Export Rubber x10",
-			"Trucking: Vehicle Parts|Wheels"
-		],
-		"weight": 0
-	},
-	"mechanicals_battery_evb": {
-		"make": ["Trucking: Vehicle Parts|Traction Battery"],
-		"name": "Automotive: Traction Battery",
-		"use": ["Trucking: Vehicle Factory|Coil Savanna"],
-		"weight": 0
-	},
-	"mechanicals_vehicle_framework": {
-		"make": ["Trucking: Vehicle Parts|Vehicle Framework"],
-		"name": "Automotive: Vehicle Framework",
-		"use": [
-			"Trucking: LS Port Export|Export Vehicle Framework",
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL"
-		],
-		"weight": 200
-	},
-	"mechanicals_wheels": {
-		"make": ["Trucking: Vehicle Parts|Wheels"],
-		"name": "Automotive: Wheels",
-		"use": [
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL",
-			"Trucking: Vehicle Parts|Temporary Repair Shop"
-		],
-		"weight": 15
-	},
-	"bit_coin": {
-		"make": ["Bit Coin Merchant|Buy Bit Coin"],
-		"name": "Bit Coin",
-		"use": ["Bit Coin Merchant|Sell Bit Coin"],
-		"weight": 0
-	},
-	"empty_box_capsules": {
-		"make": ["Illegal: Plastic Molding|Craft Empty Pill Capsule"],
-		"name": "Box of Empty Pill Capsules",
-		"use": ["Illegal: Liquor Ace|Fill empty pill box"],
-		"weight": 5
-	},
-	"full_box_capsules": {
-		"make": ["Illegal: Liquor Ace|Fill empty pill box"],
-		"name": "Box of Full Pill Capsules",
-		"use": [],
-		"weight": 5
-	},
-	"tavi_cf_framework": {
-		"make": ["Research Facility|CF Framework"],
-		"name": "CF Framework",
-		"use": [],
-		"weight": 0
-	},
-	"tavi_cf_panels": {
-		"make": ["Research Facility|CF Panels"],
-		"name": "CF Panels",
-		"use": [],
-		"weight": 0
-	},
-	"xmas_candycane": {
-		"make": [
-			"Police Evidence|Alcohol",
-			"Police Evidence|Drugs",
-			"Police Evidence|Weapons"
-		],
-		"name": "Candy Cane",
-		"use": [],
-		"weight": 0
-	},
-	"tavi_carbon_fiber": {
-		"make": ["Research Facility|Carbon Fiber"],
-		"name": "Carbon Fiber",
-		"use": ["Research Facility|CF Framework", "Research Facility|CF Panels"],
-		"weight": 0
-	},
-	"cargopilotvoucher": {
-		"make": [
-			"Chumash Island Airport|Deliver Cargo x4",
-			"Chumash Island Airport|Deliver Cargo x2",
-			"Chumash Island Airport|Deliver Cargo",
-			"Los Santos International Airport|Deliver Cargo x4",
-			"Los Santos International Airport|Deliver Cargo x2",
-			"Los Santos International Airport|Deliver Cargo",
-			"Mount Gordo Airport|Deliver Cargo x4",
-			"Mount Gordo Airport|Deliver Cargo x2",
-			"Mount Gordo Airport|Deliver Cargo",
-			"Pacific Ocean Airport|Deliver Cargo x4",
-			"Pacific Ocean Airport|Deliver Cargo x2",
-			"Pacific Ocean Airport|Deliver Cargo",
-			"Paleto Bay Airport|Deliver Cargo x4",
-			"Paleto Bay Airport|Deliver Cargo x2",
-			"Paleto Bay Airport|Deliver Cargo",
-			"PostOP Airport|Deliver Cargo x4",
-			"PostOP Airport|Deliver Cargo x2",
-			"PostOP Airport|Deliver Cargo",
-			"San Chianski Airport|Deliver Cargo x4",
-			"San Chianski Airport|Deliver Cargo x2",
-			"San Chianski Airport|Deliver Cargo",
-			"Sandy Shores International Airport|Deliver Cargo x4",
-			"Sandy Shores International Airport|Deliver Cargo x2",
-			"Sandy Shores International Airport|Deliver Cargo"
-		],
-		"name": "Cargo Pilot Voucher",
-		"use": [],
-		"weight": 0
-	},
-	"casino_voucher": {
-		"make": [],
-		"name": "Casino Vouchers",
-		"use": ["Bit Coin Merchant|Buy Bit Coin"],
-		"weight": 0
-	},
-	"chest_xmas20": {
-		"make": ["Christmas Present Factory|Create Present"],
-		"name": "Christmas present",
-		"use": [],
-		"weight": 0
-	},
-	"police_tickets": {
-		"make": [],
-		"name": "Citation",
-		"use": ["Police Evidence|Citation"],
-		"weight": 0.1
-	},
-	"mining_copper": {
-		"make": [],
-		"name": "Copper Ore",
-		"use": [
-			"Trucking: Mineral Mine|Exchange Copper Ore",
-			"Trucking: Mineral Mine|Exchange Copper Ore x10"
-		],
-		"weight": 0
-	},
-	"mining_token_copper": {
-		"make": [
-			"Trucking: Mineral Mine|Exchange Copper Ore",
-			"Trucking: Mineral Mine|Exchange Copper Ore x10"
-		],
-		"name": "Copper Ore Voucher",
-		"use": [
-			"Trucking: Elysian Island Waste Deposit|<span sort='C'></span>Exchange Copper",
-			"Trucking: Elysian Island Waste Deposit|<span sort='D'></span>Exchange Copper x10",
-			"Trucking: Filtering Plant|Conveyor Filtering"
-		],
-		"weight": 0
-	},
-	"defibkit": {
-		"make": ["Illegal: Defib Kit Charging|Charge Empty Defib Kit"],
-		"name": "Defibkit",
-		"use": [],
-		"weight": 5
-	},
-	"e_defibkit": {
-		"make": ["Illegal: Plastic Molding|Craft Empty Defib Kit"],
-		"name": "Empty Defibkit",
-		"use": ["Illegal: Defib Kit Charging|Charge Empty Defib Kit"],
-		"weight": 5
-	},
-	"fish_meat": {
-		"make": [],
-		"name": "Fish Meat",
-		"use": [
-			"Alamo Sea Fish Importer|Sell 10x Fish Meat",
-			"Alamo Sea Fish Importer|Sell 100x Fish Meat",
-			"Alamo Sea Fish Importer|Sell 10000x Fish Meat",
-			"Alamo Sea Fish Importer|Sell 1000x Fish Meat",
-			"Los Santos Fish Importer|Sell 10x Fish Meat",
-			"Los Santos Fish Importer|Sell 100x Fish Meat",
-			"Los Santos Fish Importer|Sell 10000x Fish Meat",
-			"Los Santos Fish Importer|Sell 1000x Fish Meat",
-			"Paleto Cove Fish Importer|Sell 10x Fish Meat",
-			"Paleto Cove Fish Importer|Sell 100x Fish Meat",
-			"Paleto Cove Fish Importer|Sell 10000x Fish Meat",
-			"Paleto Cove Fish Importer|Sell 1000x Fish Meat",
-			"Trucking: Clucking Bell Farms|Pack Crispy Fish Meat x10",
-			"Trucking: Clucking Bell Farms|Pack Fish Meat",
-			"Trucking: Clucking Bell Farms|Pack Fish Meat x10"
-		],
-		"weight": 0.1
-	},
-	"fridge_dairy": {
-		"make": [
-			"Trucking: Grapeseed Farms|Pick up Dairy",
-			"Trucking: Grapeseed Farms|Pick up Dairy x10"
-		],
-		"name": "Fridge: Dairy Products",
-		"use": [
-			"Trucking: Fridgit Co.|Create Airline Meal",
-			"Trucking: Fridgit Co.|Create Airline Meal x10",
-			"Trucking: Fridgit Co.|Create Dairy Shipment",
-			"Trucking: Fridgit Co.|Create Dairy Shipment x10"
-		],
-		"weight": 15
-	},
-	"fridge_store_delivery": {
-		"make": [
-			"Liberty: The Undercover Storage Co.|Tokens to Fridge Store Delivery",
-			"Trucking: Fridgit Co.|Create Dairy Shipment",
-			"Trucking: Fridgit Co.|Create Dairy Shipment x10",
-			"Trucking: Fridgit Co.|Create Meat Shipment",
-			"Trucking: Fridgit Co.|Create Meat Shipment x10",
-			"Trucking: Fridgit Co.|Create Vegetables Shipment",
-			"Trucking: Fridgit Co.|Create Vegetables Shipment x10"
-		],
-		"name": "Fridge: Food Shipment",
-		"use": [
-			"Trucking: Harmony Shopping Center|Deliver Food Shipment",
-			"Trucking: Harmony Shopping Center|Deliver Food Shipment x10",
-			"Trucking: Harmony Shopping Center|Deliver Food Shipment x30"
-		],
-		"weight": 10
-	},
-	"fridge_meat": {
-		"make": [
-			"Trucking: Clucking Bell Farms|Pack Crispy Fish Meat x10",
-			"Trucking: Clucking Bell Farms|Pack Crispy Meat x10",
-			"Trucking: Clucking Bell Farms|Pack Fish Meat",
-			"Trucking: Clucking Bell Farms|Pack Fish Meat x10",
-			"Trucking: Clucking Bell Farms|Pack Meat",
-			"Trucking: Clucking Bell Farms|Pack Meat x10"
-		],
-		"name": "Fridge: Frozen Raw Meat",
-		"use": [
-			"Trucking: Fridgit Co.|Create Airline Meal",
-			"Trucking: Fridgit Co.|Create Airline Meal x10",
-			"Trucking: Fridgit Co.|Create Meat Shipment",
-			"Trucking: Fridgit Co.|Create Meat Shipment x10"
-		],
-		"weight": 15
-	},
-	"fridge_veggies": {
-		"make": [
-			"Trucking: Great Chaparral Farm|Pick up Vegetables",
-			"Trucking: Great Chaparral Farm|Pick up Vegetables x10"
-		],
-		"name": "Fridge: Vegetables",
-		"use": [
-			"Trucking: Fridgit Co.|Create Airline Meal",
-			"Trucking: Fridgit Co.|Create Airline Meal x10",
-			"Trucking: Fridgit Co.|Create Vegetables Shipment",
-			"Trucking: Fridgit Co.|Create Vegetables Shipment x10"
-		],
-		"weight": 15
-	},
-	"tavi_hardened_steel": {
-		"make": ["Trucking: LS Foundry|Hardened Steel"],
-		"name": "Hardened Steel",
-		"use": ["Research Facility|Pneumatic Car Flipper"],
-		"weight": 0
-	},
-	"hide_boar": {
-		"make": [],
-		"name": "Hunting: Boar",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Boar x1",
-			"Trucking: Raven Slaughterhouse|Boar x10"
-		],
-		"weight": 0
-	},
-	"hide_bear": {
-		"make": [],
-		"name": "Hunting: Brown Bear",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Brown Bear x1",
-			"Trucking: Raven Slaughterhouse|Brown Bear x10"
-		],
-		"weight": 0
-	},
-	"hide_mtlion": {
-		"make": [],
-		"name": "Hunting: Cougar",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Cougar x1",
-			"Trucking: Raven Slaughterhouse|Cougar x10"
-		],
-		"weight": 0
-	},
-	"hide_coyote": {
-		"make": [],
-		"name": "Hunting: Coyote",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Coyote x1",
-			"Trucking: Raven Slaughterhouse|Coyote x10"
-		],
-		"weight": 0
-	},
-	"hide_deer": {
-		"make": [],
-		"name": "Hunting: Deer",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Deer x1",
-			"Trucking: Raven Slaughterhouse|Deer x10"
-		],
-		"weight": 0
-	},
-	"hide_leopard": {
-		"make": [],
-		"name": "Hunting: Leopard",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Leopard x1",
-			"Trucking: Raven Slaughterhouse|Leopard x10"
-		],
-		"weight": 0
-	},
-	"hide_lion": {
-		"make": [],
-		"name": "Hunting: Lion",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Lion x1",
-			"Trucking: Raven Slaughterhouse|Lion x10"
-		],
-		"weight": 0
-	},
-	"hide_rabbit": {
-		"make": [],
-		"name": "Hunting: Rabbit",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Rabbit x1",
-			"Trucking: Raven Slaughterhouse|Rabbit x10"
-		],
-		"weight": 0
-	},
-	"hide_rat": {
-		"make": [],
-		"name": "Hunting: Rat",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Rat x1",
-			"Trucking: Raven Slaughterhouse|Rat x10"
-		],
-		"weight": 0
-	},
-	"hide_wolf": {
-		"make": [],
-		"name": "Hunting: Wolf",
-		"use": [
-			"Trucking: Raven Slaughterhouse|Wolf x1",
-			"Trucking: Raven Slaughterhouse|Wolf x10"
-		],
-		"weight": 0
-	},
-	"ia_request2": {
-		"make": [],
-		"name": "I.A.: Deserter Request",
-		"use": ["Zancudo JAG|Deserters"],
-		"weight": 100
-	},
-	"ia_deserters": {
-		"make": ["Zancudo JAG|Deserters"],
-		"name": "I.A.: Deserters",
-		"use": [],
-		"weight": 70
-	},
-	"imperial_voucher": {
-		"make": [],
-		"name": "I.A.: Imperial Voucher",
-		"use": [
-			"Imperial Dealer|Imperial Voucher x10",
-			"Imperial Dealer|Imperial Voucher x100"
-		],
-		"weight": 0
-	},
-	"ia_jedi": {
-		"make": ["Imperial Aircraft Carrier|Jedi"],
-		"name": "I.A.: Jedi",
-		"use": [],
-		"weight": 70
-	},
-	"ia_request4": {
-		"make": [],
-		"name": "I.A.: Jedi Request",
-		"use": ["Imperial Aircraft Carrier|Jedi"],
-		"weight": 100
-	},
-	"packaged_airline_meal": {
-		"make": [
-			"Amazon Warehouse(Goods Supply)|Pickup Airline Meals x10",
-			"Amazon Warehouse(Goods Supply)|Pickup Airline Meals x100"
-		],
-		"name": "I.A.: Packaged Airline Meal",
-		"use": [],
-		"weight": 15
-	},
-	"drugs": {
-		"make": [],
-		"name": "Illegal Drugs",
-		"use": ["Police Evidence|Drugs"],
-		"weight": 5
-	},
-	"weapons": {
-		"make": [],
-		"name": "Illegal Weapons",
-		"use": ["Police Evidence|Weapons"],
-		"weight": 5
-	},
-	"illegal_meth": {
-		"make": [
-			"Illegal: Liquor Ace|Pick up methamphetamine",
-			"Illegal: Liquor Ace|Pick up methamphetamine x10"
-		],
-		"name": "Illegal: Methamphetamine",
-		"use": ["Illegal: Humane Labs|Craft Pills"],
-		"weight": 0
-	},
-	"illegal_crate": {
-		"make": [
-			"Illegal: Pop's Pills|Pick up pills crate",
-			"Illegal: Pop's Pills|Pick up pills crate x10"
-		],
-		"name": "Illegal: Pill crate",
-		"use": ["Illegal: Humane Labs|Craft Pills"],
-		"weight": 0
-	},
-	"mining_iron": {
-		"make": [],
-		"name": "Iron Ore",
-		"use": [
-			"Trucking: Mineral Mine|Exchange Iron Ore",
-			"Trucking: Mineral Mine|Exchange Iron Ore x10"
-		],
-		"weight": 0
-	},
-	"mining_token_iron": {
-		"make": [
-			"Trucking: Mineral Mine|Exchange Iron Ore",
-			"Trucking: Mineral Mine|Exchange Iron Ore x10"
-		],
-		"name": "Iron Ore Voucher",
-		"use": [
-			"Trucking: Elysian Island Waste Deposit|<span sort='E'></span>Exchange Iron",
-			"Trucking: Elysian Island Waste Deposit|<span sort='F'></span>Exchange Iron x10",
-			"Trucking: Filtering Plant|Conveyor Filtering",
-			"Trucking: LS Foundry|Hardened Steel"
-		],
-		"weight": 0
-	},
-	"jerry_can_empty": {
-		"make": [],
-		"name": "Jerry Can (Empty)",
-		"use": ["Trucking: Bristols Fuel Storage|Sell Empty Jerry Cans"],
-		"weight": 2
-	},
-	"liberty_autopart": {
-		"make": [
-			"Liberty: Auto Yard|Salvage Auto Parts",
-			"Liberty: Auto Yard|Salvage Auto Parts x3"
-		],
-		"name": "Liberty: Auto Parts",
-		"use": [
-			"Liberty: Staunton Military Facility|Process Auto Parts",
-			"Liberty: Staunton Military Facility|Process Auto Parts x3"
-		],
-		"weight": 100
-	},
-	"liberty_broadcast": {
-		"make": [
-			"Liberty: Staunton Business Center|Pick up Broadcast",
-			"Liberty: Staunton Business Center|Pick up Broadcast x3"
-		],
-		"name": "Liberty: Broadcast",
-		"use": [
-			"Liberty: Radio Station|Spread Broadcast",
-			"Liberty: Radio Station|Spread Broadcast x3"
-		],
-		"weight": 100
-	},
-	"liberty_export_goods": {
-		"make": [
-			"Liberty: Cochrane Dam|Process Military Goods",
-			"Liberty: Cochrane Dam|Process Military Goods x3"
-		],
-		"name": "Liberty: Export Goods",
-		"use": [
-			"Liberty: Portland Docks|Export Goods",
-			"Liberty: Portland Docks|Export Goods x3"
-		],
-		"weight": 100
-	},
-	"liberty_voucher_fish": {
-		"make": [
-			"Liberty: Staunton Docks|Export Fish",
-			"Liberty: Staunton Docks|Export Fish x3"
-		],
-		"name": "Liberty: Fish Voucher",
-		"use": [
-			"Liberty: Staunton Mall|Trade for Liberty Goods",
-			"Liberty: Staunton Mall|Trade for Liberty Goods x3"
-		],
-		"weight": 0
-	},
-	"liberty_voucher_goods": {
-		"make": [
-			"Liberty: Portland Docks|Export Goods",
-			"Liberty: Portland Docks|Export Goods x3"
-		],
-		"name": "Liberty: Goods Voucher",
-		"use": [
-			"Liberty: Staunton Mall|Trade for Liberty Goods",
-			"Liberty: Staunton Mall|Trade for Liberty Goods x3"
-		],
-		"weight": 0
-	},
-	"liberty_voucher_islands": {
-		"make": [],
-		"name": "Liberty: Islands Voucher",
-		"use": ["Liberty: Rooftop|Trade for Rainbow Voucher"],
-		"weight": 0
-	},
-	"liberty_fish_export": {
-		"make": [
-			"Liberty: Fish Factory|Package Fish",
-			"Liberty: Fish Factory|Package Fish x2"
-		],
-		"name": "Liberty: Liberty City Export Fish",
-		"use": [
-			"Liberty: Staunton Docks|Export Fish",
-			"Liberty: Staunton Docks|Export Fish x3"
-		],
-		"weight": 100
-	},
-	"liberty_token": {
-		"make": [
-			"Liberty: Portland Docks|Export Goods",
-			"Liberty: Portland Docks|Export Goods x3",
-			"Liberty: Staunton Docks|Export Fish",
-			"Liberty: Staunton Docks|Export Fish x3"
-		],
-		"name": "Liberty: Liberty City Token",
-		"use": [
-			"Liberty: AM Petroleum|Tokens to Kerosene",
-			"Liberty: AM Petroleum|Tokens to Kerosene x10",
-			"Liberty: LCFD|Tokens to Treated Water",
-			"Liberty: LCFD|Tokens to Treated Water x3",
-			"Liberty: The Undercover Storage Co.|Tokens to Airline Meal",
-			"Liberty: The Undercover Storage Co.|Tokens to Fridge Store Delivery"
-		],
-		"weight": 0
-	},
-	"liberty_goods": {
-		"make": [
-			"Liberty: Staunton Mall|Trade for Liberty Goods",
-			"Liberty: Staunton Mall|Trade for Liberty Goods x3"
-		],
-		"name": "Liberty: Liberty Goods",
-		"use": [],
-		"weight": 100
-	},
-	"liberty_military_goods": {
-		"make": [
-			"Liberty: Staunton Military Facility|Process Auto Parts",
-			"Liberty: Staunton Military Facility|Process Auto Parts x3"
-		],
-		"name": "Liberty: Military Goods",
-		"use": [
-			"Liberty: Cochrane Dam|Process Military Goods",
-			"Liberty: Cochrane Dam|Process Military Goods x3",
-			"Trucking: Vehicle Factory|HVY Nightshark"
-		],
-		"weight": 100
-	},
-	"liberty_broadcast_portland": {
-		"make": [
-			"Liberty: Radio Station|Spread Broadcast",
-			"Liberty: Radio Station|Spread Broadcast x3"
-		],
-		"name": "Liberty: Portland Broadcast",
-		"use": [
-			"Liberty: Chinatown|Deliver Portland Broadcast",
-			"Liberty: Chinatown|Deliver Portland Broadcast x10"
-		],
-		"weight": 25
-	},
-	"liberty_fish_portland": {
-		"make": [
-			"Liberty: Turtle Head Fishing Co. Portland|Pick up Portland Fish",
-			"Liberty: Turtle Head Fishing Co. Portland|Pick up Portland Fish x4"
-		],
-		"name": "Liberty: Portland Fish",
-		"use": [
-			"Liberty: Fish Factory|Package Fish",
-			"Liberty: Fish Factory|Package Fish x2"
-		],
-		"weight": 75
-	},
-	"liberty_voucher_portland": {
-		"make": [
-			"Liberty: Chinatown|Deliver Portland Broadcast",
-			"Liberty: Chinatown|Deliver Portland Broadcast x10"
-		],
-		"name": "Liberty: Portland Voucher",
-		"use": ["Liberty: Rooftop|Trade for Rainbow Voucher"],
-		"weight": 0
-	},
-	"liberty_broadcast_shoreside": {
-		"make": [
-			"Liberty: Radio Station|Spread Broadcast",
-			"Liberty: Radio Station|Spread Broadcast x3"
-		],
-		"name": "Liberty: Shoreside Broadcast",
-		"use": [
-			"Liberty: Shoreside Apartments|Deliver Shoreside Broadcast",
-			"Liberty: Shoreside Apartments|Deliver Shoreside Broadcast x10"
-		],
-		"weight": 25
-	},
-	"liberty_fish_shoreside": {
-		"make": [
-			"Liberty: Turtle Head Fishing Co. Shoreside Vale|Pick up Shoreside Fish",
-			"Liberty: Turtle Head Fishing Co. Shoreside Vale|Pick up Shoreside Fish x4"
-		],
-		"name": "Liberty: Shoreside Fish",
-		"use": [
-			"Liberty: Fish Factory|Package Fish",
-			"Liberty: Fish Factory|Package Fish x2"
-		],
-		"weight": 75
-	},
-	"liberty_voucher_shoreside": {
-		"make": [
-			"Liberty: Shoreside Apartments|Deliver Shoreside Broadcast",
-			"Liberty: Shoreside Apartments|Deliver Shoreside Broadcast x10"
-		],
-		"name": "Liberty: Shoreside Voucher",
-		"use": ["Liberty: Rooftop|Trade for Rainbow Voucher"],
-		"weight": 0
-	},
-	"liberty_broadcast_staunton": {
-		"make": [
-			"Liberty: Radio Station|Spread Broadcast",
-			"Liberty: Radio Station|Spread Broadcast x3"
-		],
-		"name": "Liberty: Staunton Broadcast",
-		"use": [
-			"Liberty: Staunton Casino|Deliver Staunton Broadcast",
-			"Liberty: Staunton Casino|Deliver Staunton Broadcast x10"
-		],
-		"weight": 25
-	},
-	"liberty_voucher_staunton": {
-		"make": [
-			"Liberty: Staunton Casino|Deliver Staunton Broadcast",
-			"Liberty: Staunton Casino|Deliver Staunton Broadcast x10"
-		],
-		"name": "Liberty: Staunton Voucher",
-		"use": ["Liberty: Rooftop|Trade for Rainbow Voucher"],
-		"weight": 0
-	},
-	"mail": {
-		"make": ["PostOp HQ|Buy mail x10", "PostOp HQ|Buy mail x5"],
-		"name": "Mail",
-		"use": [],
-		"weight": 1
-	},
-	"meat": {
-		"make": [
-			"Trucking: Raven Slaughterhouse|Boar x1",
-			"Trucking: Raven Slaughterhouse|Boar x10",
-			"Trucking: Raven Slaughterhouse|Brown Bear x1",
-			"Trucking: Raven Slaughterhouse|Brown Bear x10",
-			"Trucking: Raven Slaughterhouse|Cougar x1",
-			"Trucking: Raven Slaughterhouse|Cougar x10",
-			"Trucking: Raven Slaughterhouse|Coyote x1",
-			"Trucking: Raven Slaughterhouse|Coyote x10",
-			"Trucking: Raven Slaughterhouse|Deer x1",
-			"Trucking: Raven Slaughterhouse|Deer x10",
-			"Trucking: Raven Slaughterhouse|Leopard x1",
-			"Trucking: Raven Slaughterhouse|Leopard x10",
-			"Trucking: Raven Slaughterhouse|Lion x1",
-			"Trucking: Raven Slaughterhouse|Lion x10",
-			"Trucking: Raven Slaughterhouse|Rabbit x1",
-			"Trucking: Raven Slaughterhouse|Rabbit x10",
-			"Trucking: Raven Slaughterhouse|Rat x1",
-			"Trucking: Raven Slaughterhouse|Rat x10",
-			"Trucking: Raven Slaughterhouse|Wolf x1",
-			"Trucking: Raven Slaughterhouse|Wolf x10"
-		],
-		"name": "Meat",
-		"use": [
-			"Hunter: Meat Buyer|Meat Buyer",
-			"Hunter: Meat Buyer|Meat Buyer x10",
-			"Hunter: Meat Buyer|Meat Buyer x100",
-			"Trucking: Clucking Bell Farms|Pack Crispy Meat x10",
-			"Trucking: Clucking Bell Farms|Pack Meat",
-			"Trucking: Clucking Bell Farms|Pack Meat x10"
-		],
-		"weight": 0.5
-	},
-	"meat_livestock_good": {
-		"make": [
-			"Hunter: Farmers Office|Bail out Livestock Meat x10",
-			"Hunter: Farmers Office|Bail out Livestock Meat x100"
-		],
-		"name": "Meat: Livestock Meat",
-		"use": [],
-		"weight": 0.5
-	},
-	"meat_livestock_good_premium": {
-		"make": ["Hunter: Farmers Office|Bail out Premium Livestock Meat x10"],
-		"name": "Meat: Premium Livestock Meat",
-		"use": [],
-		"weight": 2
-	},
-	"meat_livestock_premium": {
-		"make": [],
-		"name": "Meat: Premium Stolen Livestock Meat",
-		"use": ["Hunter: Farmers Office|Bail out Premium Livestock Meat x10"],
-		"weight": 2
-	},
-	"meat_livestock": {
-		"make": [],
-		"name": "Meat: Stolen Livestock Meat",
-		"use": [
-			"Hunter: Farmers Office|Bail out Livestock Meat x10",
-			"Hunter: Farmers Office|Bail out Livestock Meat x100"
-		],
-		"weight": 0.5
-	},
-	"military_chemicals": {
-		"make": [
-			"Trucking: Refinery|Refine Raw Gas",
-			"Trucking: Refinery|Refine Raw Gas x2"
-		],
-		"name": "Military: Chemicals",
-		"use": [],
-		"weight": 25
-	},
-	"military_explosives": {
-		"make": ["Trucking: Military Workshop|Create Explosives"],
-		"name": "Military: Explosives",
-		"use": [
-			"Trucking: Deep Quarry|Gravel Pulverizing",
-			"Trucking: Deep Quarry|Recycle Ore Mix",
-			"Trucking: Deep Quarry|Use Explosives",
-			"Trucking: GSD Mine|Use Explosives",
-			"Trucking: Mineral Mine|<span></span>Use Explosives"
-		],
-		"weight": 250
-	},
-	"military_titanium": {
-		"make": [
-			"Trucking: LS Foundry|Refine Titanium x1",
-			"Trucking: LS Foundry|Refine Titanium x10"
-		],
-		"name": "Military: Titanium",
-		"use": [
-			"Trucking: LS Factory|Titanium Jewelry",
-			"Trucking: LS Factory|Titanium Reinforcement",
-			"Trucking: LS Foundry|Hardened Steel",
-			"Trucking: Military Workshop|Deliver Titanium",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Parts|Temporary Repair Shop"
-		],
-		"weight": 20
-	},
-	"military_titanium_ore": {
-		"make": [
-			"Trucking: GSD Mine|Use Explosives",
-			"Trucking: Mineral Mine|<span></span>Use Explosives",
-			"Trucking: Sandstone Collector|Titanium Ore"
-		],
-		"name": "Military: Titanium Ore",
-		"use": [
-			"Trucking: LS Foundry|Refine Titanium x1",
-			"Trucking: LS Foundry|Refine Titanium x10"
-		],
-		"weight": 25
-	},
-	"petrochem_asphalt": {
-		"make": ["Trucking: Refinery|Create Asphalt"],
-		"name": "Petrochem: Asphalt Concrete",
-		"use": [
-			"Trucking: Alta Construction Site|Deliver Asphalt Concrete",
-			"Trucking: Alta Construction Site|Deliver Asphalt Concrete x5"
-		],
-		"weight": 5
-	},
-	"petrochem_oil": {
-		"make": [
-			"Trucking: LS Oil Pumping Station|Extract Crude Oil",
-			"Trucking: LS Oil Pumping Station|Extract Crude Oil x2"
-		],
-		"name": "Petrochem: Crude Oil",
-		"use": [
-			"Trucking: Refinery|Create Asphalt",
-			"Trucking: Refinery|Refine Crude Oil",
-			"Trucking: Refinery|Refine Crude Oil x2",
-			"Trucking: Refinery|Refine Diluted Fuel",
-			"Trucking: Refinery|Refine Rubber"
-		],
-		"weight": 150
-	},
-	"petrochem_diesel": {
-		"make": [
-			"Trucking: Refinery|Refine Crude Oil",
-			"Trucking: Refinery|Refine Crude Oil x2",
-			"Trucking: Refinery|Refine Diluted Fuel",
-			"Trucking: Refinery|Refine Rubber"
-		],
-		"name": "Petrochem: Diesel",
-		"use": [
-			"Trucking: Bristols Fuel Storage|Sell Diesel",
-			"Trucking: Bristols Fuel Storage|Sell Diesel x10"
-		],
-		"weight": 25
-	},
-	"petrochem_kerosene": {
-		"make": [
-			"Liberty: AM Petroleum|Tokens to Kerosene",
-			"Liberty: AM Petroleum|Tokens to Kerosene x10",
-			"Trucking: Refinery|Refine Crude Oil",
-			"Trucking: Refinery|Refine Crude Oil x2",
-			"Trucking: Refinery|Refine Diluted Fuel",
-			"Trucking: Refinery|Refine Rubber"
-		],
-		"name": "Petrochem: Kerosene",
-		"use": [
-			"Trucking: Bristols Fuel Storage|Sell Kerosene",
-			"Trucking: Bristols Fuel Storage|Sell Kerosene x10",
-			"Trucking: Military Workshop|Create Explosives",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic"
-		],
-		"weight": 25
-	},
-	"petrochem_petrol": {
-		"make": [
-			"Trucking: Refinery|Refine Crude Oil",
-			"Trucking: Refinery|Refine Crude Oil x2",
-			"Trucking: Refinery|Refine Diluted Fuel",
-			"Trucking: Refinery|Refine Rubber"
-		],
-		"name": "Petrochem: Petrol",
-		"use": [
-			"Trucking: Bristols Fuel Storage|Sell Petrol",
-			"Trucking: Bristols Fuel Storage|Sell Petrol x10",
-			"Trucking: LS Foundry|Substitute Gold"
-		],
-		"weight": 25
-	},
-	"petrochem_propane": {
-		"make": [
-			"Trucking: Refinery|Refine Raw Gas",
-			"Trucking: Refinery|Refine Raw Gas x2"
-		],
-		"name": "Petrochem: Propane",
-		"use": [
-			"Trucking: Davis Mega Mall|Sell Propane",
-			"Trucking: Davis Mega Mall|Sell Propane x10",
-			"Trucking: LS Foundry|Zinc Alloy"
-		],
-		"weight": 25
-	},
-	"petrochem_gas": {
-		"make": [
-			"Trucking: GSD Gas Pumping Station|Extract Raw Gas",
-			"Trucking: GSD Gas Pumping Station|Extract Raw Gas x2"
-		],
-		"name": "Petrochem: Raw Gas",
-		"use": [
-			"Trucking: Refinery|Refine Raw Gas",
-			"Trucking: Refinery|Refine Raw Gas x2"
-		],
-		"weight": 150
-	},
-	"petrochem_sulfur": {
-		"make": [
-			"Trucking: Water Treatment Plant|Treat Waste Water",
-			"Trucking: Water Treatment Plant|Treat Waste Water x2"
-		],
-		"name": "Petrochem: Sulfur",
-		"use": [
-			"Trucking: LS Foundry|Substitute Gold",
-			"Trucking: LS Foundry|Copper Alloy",
-			"Trucking: Military Workshop|Create Explosives"
-		],
-		"weight": 5
-	},
-	"petrochem_waste": {
-		"make": [
-			"Trucking: Refinery|Refine Raw Gas",
-			"Trucking: Refinery|Refine Raw Gas x2"
-		],
-		"name": "Petrochem: Waste Water",
-		"use": [
-			"Trucking: Water Treatment Plant|Clean Waste Water",
-			"Trucking: Water Treatment Plant|Treat Waste Water",
-			"Trucking: Water Treatment Plant|Treat Waste Water x2"
-		],
-		"weight": 50
-	},
-	"tavi_resin": {
-		"make": [],
-		"name": "Petroleum Pitch (Resin)",
-		"use": ["Research Facility|Carbon Fiber"],
-		"weight": 0
-	},
-	"pills": {
-		"make": ["Illegal: Humane Labs|Craft Pills"],
-		"name": "Pills",
-		"use": [],
-		"weight": 0.1
-	},
-	"tavi_pcf": {
-		"make": ["Kit Factory|Entry", "Research Facility|Pneumatic Car Flipper"],
-		"name": "Pneumatic Car Flipper",
-		"use": ["Kit Factory|Entry"],
-		"weight": 0
-	},
-	"tavi_pan": {
-		"make": ["Trucking: Refinery|Polyacrylonitrile (PAN)"],
-		"name": "Polyacrylonitrile (PAN)",
-		"use": ["Research Facility|Carbon Fiber"],
-		"weight": 0
-	},
-	"fish_meat_premium": {
-		"make": [],
-		"name": "Premium Fish Meat",
-		"use": [
-			"Alamo Sea Fish Importer|Sell 10x Premium Fish Meat",
-			"Alamo Sea Fish Importer|Sell 100x Premium Fish Meat",
-			"Alamo Sea Fish Importer|Sell 1000x Premium Fish Meat",
-			"Los Santos Fish Importer|Sell 10x Premium Fish Meat",
-			"Los Santos Fish Importer|Sell 100x Premium Fish Meat",
-			"Los Santos Fish Importer|Sell 1000x Premium Fish Meat",
-			"Paleto Cove Fish Importer|Sell 10x Premium Fish Meat",
-			"Paleto Cove Fish Importer|Sell 100x Premium Fish Meat",
-			"Paleto Cove Fish Importer|Sell 1000x Premium Fish Meat"
-		],
-		"weight": 0.1
-	},
-	"rts_voucher_air": {
-		"make": [],
-		"name": "R.T.S.: Aviator Voucher",
-		"use": [
-			"R.T.S. Dealer|R.T.S. Aviator Voucher x10",
-			"R.T.S. Dealer|R.T.S. Aviator Voucher x100",
-			"R.T.S. Dealer|R.T.S. Aviator Voucher x1000"
-		],
-		"weight": 0
-	},
-	"rts_voucher_heavy": {
-		"make": [],
-		"name": "R.T.S.: Heavy Voucher",
-		"use": [
-			"R.T.S. Dealer|R.T.S. Heavy Voucher x10",
-			"R.T.S. Dealer|R.T.S. Heavy Voucher x100",
-			"R.T.S. Dealer|R.T.S. Heavy Voucher x1000"
-		],
-		"weight": 0
-	},
-	"rts_voucher": {
-		"make": [],
-		"name": "R.T.S.: Voucher",
-		"use": [
-			"R.T.S. Dealer|R.T.S. Voucher x10",
-			"R.T.S. Dealer|R.T.S. Voucher x100",
-			"R.T.S. Dealer|R.T.S. Voucher x1000"
-		],
-		"weight": 0
-	},
-	"rainbow_voucher": {
-		"make": ["Liberty: Rooftop|Trade for Rainbow Voucher"],
-		"name": "Rainbow Voucher",
-		"use": [],
-		"weight": 0
-	},
-	"mining_credit": {
-		"make": [],
-		"name": "Sandstone",
-		"use": [
-			"Trucking: Sandstone Collector|<span>Sell Directly</span>",
-			"Trucking: Sandstone Collector|Flint",
-			"Trucking: Sandstone Collector|Raw Emeralds",
-			"Trucking: Sandstone Collector|Raw Ore Mix",
-			"Trucking: Sandstone Collector|Sand",
-			"Trucking: Sandstone Collector|Scrap Aluminum",
-			"Trucking: Sandstone Collector|Scrap Copper",
-			"Trucking: Sandstone Collector|Scrap Lead",
-			"Trucking: Sandstone Collector|Scrap Mercury",
-			"Trucking: Sandstone Collector|Scrap Tin",
-			"Trucking: Sandstone Collector|Titanium Ore"
-		],
-		"weight": 5
-	},
-	"repair_shop": {
-		"make": ["Trucking: Vehicle Parts|Temporary Repair Shop"],
-		"name": "Temporary Repair Shop",
-		"use": [],
-		"weight": 0
-	},
-	"scrap_acid": {
-		"make": [
-			"Trucking: Filtering Plant|Filter Toxic Waste",
-			"Trucking: Filtering Plant|Filter Toxic Waste x3"
-		],
-		"name": "Truck Cargo: Acid",
-		"use": [
-			"Trucking: LS Factory|Create Batteries",
-			"Trucking: LS Factory|Create Batteries x5",
-			"Trucking: LS Port Export|Export Acid x1",
-			"Trucking: LS Port Export|Export Acid x10",
-			"Trucking: Water Treatment Plant|Treat Unfiltered Water",
-			"Trucking: Water Treatment Plant|Treat Unfiltered Water x2"
-		],
-		"weight": 5
-	},
-	"crafted_batteries": {
-		"make": [
-			"Trucking: LS Factory|Create Batteries",
-			"Trucking: LS Factory|Create Batteries x5"
-		],
-		"name": "Truck Cargo: Batteries",
-		"use": [
-			"Trucking: LS Factory|Create Computer",
-			"Trucking: LS Factory|Create Computer x10",
-			"Trucking: LS Port Export|Export Batteries x1",
-			"Trucking: LS Port Export|Export Batteries x10",
-			"Trucking: Vehicle Parts|Car Battery"
-		],
-		"weight": 30
-	},
-	"crafted_cardboard": {
-		"make": ["Trucking: LS Factory|Create Cardboard"],
-		"name": "Truck Cargo: Cardboard",
-		"use": [
-			"Trucking: McKenzie Export|Export Cardboard",
-			"Trucking: McKenzie Export|Export Cardboard x5"
-		],
-		"weight": 0
-	},
-	"crafted_cement": {
-		"make": [
-			"Trucking: Quarry|Create Cement",
-			"Trucking: Quarry|Create Cement x10"
-		],
-		"name": "Truck Cargo: Cement Mix",
-		"use": [
-			"Trucking: Filtering Plant|Mix Concrete",
-			"Trucking: Filtering Plant|Mix Concrete x2"
-		],
-		"weight": 25
-	},
-	"crafted_ceramictiles": {
-		"make": [
-			"Trucking: LS Foundry|Ceramic Tiles",
-			"Trucking: LS Foundry|Ceramic Tiles x10"
-		],
-		"name": "Truck Cargo: Ceramic Tiles",
-		"use": [
-			"House Construction Site|House Construction",
-			"Trucking: LS Port Export|Ceramic Tiles",
-			"Trucking: LS Port Export|Ceramic Tiles x10"
-		],
-		"weight": 10
-	},
-	"crafted_circuit": {
-		"make": [
-			"Trucking: LS Factory|Create Circuit Boards",
-			"Trucking: LS Factory|Create Circuit Boards x10"
-		],
-		"name": "Truck Cargo: Circuit Boards",
-		"use": [
-			"Trucking: LS Factory|Create Computer",
-			"Trucking: LS Factory|Create Computer x10",
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL"
-		],
-		"weight": 20
-	},
-	"crafted_computer": {
-		"make": [
-			"Trucking: LS Factory|Create Computer",
-			"Trucking: LS Factory|Create Computer x10"
-		],
-		"name": "Truck Cargo: Computers",
-		"use": [
-			"House Construction Site|House Construction",
-			"Trucking: LS Port Export|Computer",
-			"Trucking: LS Port Export|Computer x10"
-		],
-		"weight": 35
-	},
-	"crafted_concrete": {
-		"make": [
-			"Trucking: Filtering Plant|Mix Concrete",
-			"Trucking: Filtering Plant|Mix Concrete x2"
-		],
-		"name": "Truck Cargo: Concrete",
-		"use": [
-			"House Construction Site|House Construction",
-			"Trucking: Alta Construction Site|Deliver Concrete",
-			"Trucking: Alta Construction Site|Deliver Concrete x2"
-		],
-		"weight": 160
-	},
-	"crafted_copperwire": {
-		"make": [
-			"Trucking: LS Factory|Create Copper Wire Spool",
-			"Trucking: LS Factory|Create Copper Wire Spool x5"
-		],
-		"name": "Truck Cargo: Copper Wire Spool",
-		"use": [
-			"House Construction Site|House Construction",
-			"Trucking: LS Factory|Create Circuit Boards",
-			"Trucking: LS Factory|Create Circuit Boards x10"
-		],
-		"weight": 20
-	},
-	"tcargosmall": {
-		"make": [],
-		"name": "Truck Cargo: Erasers",
-		"use": [
-			"Trucking Cargo Merchant: Sell Erasers|Sell: Erasers",
-			"Trucking Cargo Merchant: Sell Erasers|Sell: Erasers x10",
-			"Trucking Cargo Merchant: Sell Erasers|Sell: Erasers x100"
-		],
-		"weight": 3
-	},
-	"crafted_fiberglass": {
-		"make": [
-			"Trucking: LS Factory|Create Fiberglass Spool",
-			"Trucking: LS Factory|Create Fiberglass Spool x10"
-		],
-		"name": "Truck Cargo: Fiberglass Spool",
-		"use": [
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL"
-		],
-		"weight": 20
-	},
-	"refined_flint": {
-		"make": [
-			"Trucking: Filtering Plant|Filter Gravel",
-			"Trucking: Filtering Plant|Filter Gravel x6",
-			"Trucking: Sandstone Collector|Flint"
-		],
-		"name": "Truck Cargo: Flint",
-		"use": [
-			"Trucking: LS Foundry|Ceramic Tiles",
-			"Trucking: LS Foundry|Ceramic Tiles x10",
-			"Trucking: McKenzie Export|Export Flint",
-			"Trucking: McKenzie Export|Export Flint x10",
-			"Trucking: McKenzie Export|Export Flint x100"
-		],
-		"weight": 5
-	},
-	"refined_glass": {
-		"make": [
-			"Trucking: LS Foundry|Refine Glass x1",
-			"Trucking: LS Foundry|Refine Glass x10"
-		],
-		"name": "Truck Cargo: Glass",
-		"use": [
-			"Trucking: LS Factory|Create Fiberglass Spool",
-			"Trucking: LS Factory|Create Fiberglass Spool x10",
-			"Trucking: LS Port Export|Export Refined Glass x1",
-			"Trucking: LS Port Export|Export Refined Glass x10",
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL"
-		],
-		"weight": 5
-	},
-	"scrap_gravel": {
-		"make": [
-			"Trucking: Deep Quarry|Use Explosives",
-			"Trucking: Filtering Plant|Conveyor Filtering",
-			"Trucking: Filtering Plant|Filter Quarry Rubble",
-			"Trucking: Filtering Plant|Filter Quarry Rubble x2"
-		],
-		"name": "Truck Cargo: Gravel",
-		"use": [
-			"Trucking: Deep Quarry|Gravel Pulverizing",
-			"Trucking: Filtering Plant|Filter Gravel",
-			"Trucking: Filtering Plant|Filter Gravel x6",
-			"Trucking: Refinery|Create Asphalt"
-		],
-		"weight": 5
-	},
-	"crafted_jewelry": {
-		"make": [
-			"Trucking: LS Factory|Create Jewelry",
-			"Trucking: LS Factory|Titanium Jewelry"
-		],
-		"name": "Truck Cargo: Jewelry",
-		"use": ["Trucking: Jewelry Store|Deliver Jewelry"],
-		"weight": 5
-	},
-	"tcargologs": {
-		"make": [
-			"Trucking: Logging Camp_4|Collect Logs",
-			"Trucking: Logging Camp_4|Collect Logs x10",
-			"Trucking: Logging Camp_4|Collect Logs x5",
-			"Trucking: Logging Camp_1|Collect Logs",
-			"Trucking: Logging Camp_1|Collect Logs x10",
-			"Trucking: Logging Camp_1|Collect Logs x5",
-			"Trucking: Logging Camp_2|Collect Logs",
-			"Trucking: Logging Camp_2|Collect Logs x10",
-			"Trucking: Logging Camp_2|Collect Logs x5",
-			"Trucking: Logging Camp_3|Collect Logs",
-			"Trucking: Logging Camp_3|Collect Logs x10",
-			"Trucking: Logging Camp_3|Collect Logs x5"
-		],
-		"name": "Truck Cargo: Logs",
-		"use": [
-			"Trucking: Sawmill|Grind Sawdust x1",
-			"Trucking: Sawmill|Grind Sawdust x5",
-			"Trucking: Sawmill|Sawdust Filler Exploit",
-			"Trucking: Sawmill|Chipboard Planks",
-			"Trucking: Sawmill|Mill Planks x1",
-			"Trucking: Sawmill|Mill Planks x5"
-		],
-		"weight": 60
-	},
-	"refined_planks": {
-		"make": [
-			"Trucking: Sawmill|Chipboard Planks",
-			"Trucking: Sawmill|Mill Planks x1",
-			"Trucking: Sawmill|Mill Planks x5"
-		],
-		"name": "Truck Cargo: Planks",
-		"use": [
-			"House Construction Site|House Construction",
-			"Illegal: Pop's Pills|Pick up pills crate",
-			"Illegal: Pop's Pills|Pick up pills crate x10",
-			"Trucking: LS Factory|Create Copper Wire Spool",
-			"Trucking: LS Factory|Create Copper Wire Spool x5",
-			"Trucking: LS Factory|Create Fiberglass Spool",
-			"Trucking: LS Factory|Create Fiberglass Spool x10",
-			"Trucking: LS Port Export|Export Planks x1",
-			"Trucking: LS Port Export|Export Planks x10"
-		],
-		"weight": 15
-	},
-	"recycled_rubble": {
-		"make": [
-			"Trucking: Quarry|Pick up Quarry Rubble",
-			"Trucking: Quarry|Pick up Quarry Rubble x2"
-		],
-		"name": "Truck Cargo: Quarry Rubble",
-		"use": [
-			"Trucking: Filtering Plant|Filter Quarry Rubble",
-			"Trucking: Filtering Plant|Filter Quarry Rubble x2"
-		],
-		"weight": 150
-	},
-	"scrap_emerald": {
-		"make": [
-			"Trucking: Filtering Plant|Conveyor Filtering",
-			"Trucking: Filtering Plant|Filter Quarry Rubble",
-			"Trucking: Filtering Plant|Filter Quarry Rubble x2",
-			"Trucking: Mineral Mine|<span></span>Use Explosives",
-			"Trucking: Sandstone Collector|Raw Emeralds"
-		],
-		"name": "Truck Cargo: Raw Emeralds",
-		"use": [
-			"Trucking: Jewelry Store|Deliver Raw Emeralds",
-			"Trucking: Jewelry Store|Deliver Raw Emeralds x10",
-			"Trucking: LS Factory|Create Jewelry"
-		],
-		"weight": 10
-	},
-	"scrap_ore": {
-		"make": [
-			"Trucking: Elysian Island Waste Deposit|<span sort='C'></span>Exchange Copper",
-			"Trucking: Elysian Island Waste Deposit|<span sort='D'></span>Exchange Copper x10",
-			"Trucking: Elysian Island Waste Deposit|<span sort='E'></span>Exchange Iron",
-			"Trucking: Elysian Island Waste Deposit|<span sort='F'></span>Exchange Iron x10",
-			"Trucking: Filtering Plant|Conveyor Filtering",
-			"Trucking: Filtering Plant|Filter Quarry Rubble",
-			"Trucking: Filtering Plant|Filter Quarry Rubble x2",
-			"Trucking: Sandstone Collector|Raw Ore Mix"
-		],
-		"name": "Truck Cargo: Raw Ore Mix",
-		"use": [
-			"Trucking: Deep Quarry|Recycle Ore Mix",
-			"Trucking: LS Foundry|Copper Alloy",
-			"Trucking: LS Foundry|Refine Raw Ore Mix x1",
-			"Trucking: LS Foundry|Refine Raw Ore Mix x10",
-			"Trucking: LS Foundry|Zinc Alloy"
-		],
-		"weight": 15
-	},
-	"crafted_rebar": {
-		"make": [
-			"Trucking: LS Factory|Create Rebar",
-			"Trucking: LS Factory|Create Rebar x2",
-			"Trucking: LS Factory|Titanium Reinforcement"
-		],
-		"name": "Truck Cargo: Rebar",
-		"use": [
-			"House Construction Site|House Construction",
-			"Trucking: Alta Construction Site|Deliver Rebar",
-			"Trucking: Alta Construction Site|Deliver Rebar x5"
-		],
-		"weight": 45
-	},
-	"recycled_electronics": {
-		"make": [],
-		"name": "Truck Cargo: Recycled Electronics",
-		"use": [
-			"Trucking: Sorting Facility|Sort Recycled Electronics",
-			"Trucking: Sorting Facility|Sort Recycled Electronics x2"
-		],
-		"weight": 130
-	},
-	"recycled_trash": {
-		"make": [
-			"Trucking: Recycling Center|Pick up Recycled Trash",
-			"Trucking: Recycling Center|Pick up Recycled Trash x3"
-		],
-		"name": "Truck Cargo: Recycled Trash",
-		"use": [
-			"Trucking: Sorting Facility|Sort Recycled Trash",
-			"Trucking: Sorting Facility|Sort Recycled Trash x3"
-		],
-		"weight": 90
-	},
-	"refined_aluminum": {
-		"make": [
-			"Trucking: LS Foundry|Refine Aluminum x1",
-			"Trucking: LS Foundry|Refine Aluminum x10"
-		],
-		"name": "Truck Cargo: Refined Aluminum",
-		"use": [
-			"Research Facility|Pneumatic Car Flipper",
-			"Trucking: LS Foundry|Refine Solder",
-			"Trucking: LS Foundry|Refine Solder x4",
-			"Trucking: LS Port Export|Export Aluminum x1",
-			"Trucking: LS Port Export|Export Aluminum x10",
-			"Trucking: Vehicle Parts|Wheels"
-		],
-		"weight": 10
-	},
-	"refined_amalgam": {
-		"make": [
-			"Trucking: LS Foundry|Refine Amalgam",
-			"Trucking: LS Foundry|Refine Amalgam x10"
-		],
-		"name": "Truck Cargo: Refined Amalgam",
-		"use": [
-			"Trucking: LS Factory|Create Rebar",
-			"Trucking: LS Factory|Create Rebar x2",
-			"Trucking: Vehicle Factory|10F",
-			"Trucking: Vehicle Factory|Annis ZR-350",
-			"Trucking: Vehicle Factory|Coil Rocket Voltic",
-			"Trucking: Vehicle Factory|Coil Savanna",
-			"Trucking: Vehicle Factory|HVY Nightshark",
-			"Trucking: Vehicle Factory|Hijak Vertice",
-			"Trucking: Vehicle Factory|Karin Futo",
-			"Trucking: Vehicle Factory|Landstalker XL",
-			"Trucking: Vehicle Parts|Chassis",
-			"Trucking: Vehicle Parts|Vehicle Framework"
-		],
-		"weight": 15
-	},
-	"refined_bronze": {
-		"make": [
-			"Trucking: LS Foundry|Refine Bronze Alloy x1",
-			"Trucking: LS Foundry|Refine Bronze Alloy x10"
-		],
-		"name": "Truck Cargo: Refined Bronze Alloy",
-		"use": [
-			"Trucking: LS Factory|Create Rebar",
-			"Trucking: LS Factory|Create Rebar x2",
-			"Trucking: LS Foundry|Substitute Gold",
-			"Trucking: LS Port Export|Export Refined Bronze Alloy x1",
-			"Trucking: LS Port Export|Export Refined Bronze Alloy x10"
-		],
-		"weight": 10
-	},
-	"refined_copper": {
-		"make": [
-			"Trucking: LS Foundry|Refine Copper x1",
-			"Trucking: LS Foundry|Refine Copper x10",
-			"Trucking: LS Foundry|Refine Copper x20",
-			"Trucking: LS Foundry|Copper Alloy",
-			"Trucking: LS Foundry|Refine Raw Ore Mix x1",
-			"Trucking: LS Foundry|Refine Raw Ore Mix x10"
-		],
-		"name": "Truck Cargo: Refined Copper",
-		"use": [
-			"Trucking: LS Factory|Create Copper Wire Spool",
-			"Trucking: LS Factory|Create Copper Wire Spool x5",
-			"Trucking: LS Port Export|Export Copper x1",
-			"Trucking: LS Port Export|Export Copper x10"
-		],
-		"weight": 10
-	},
-	"refined_gold": {
-		"make": ["Trucking: LS Foundry|Refine Gold x10"],
-		"name": "Truck Cargo: Refined Gold",
-		"use": [
-			"Trucking: Jewelry Store|Deliver Refined Gold",
-			"Trucking: LS Factory|Create Jewelry",
-			"Trucking: LS Factory|Titanium Jewelry"
-		],
-		"weight": 20
-	},
-	"refined_solder": {
-		"make": [
-			"Trucking: LS Foundry|Refine Solder",
-			"Trucking: LS Foundry|Refine Solder x4"
-		],
-		"name": "Truck Cargo: Refined Solder",
-		"use": [
-			"Trucking: LS Factory|Create Circuit Boards",
-			"Trucking: LS Factory|Create Circuit Boards x10",
-			"Trucking: LS Factory|Create Batteries",
-			"Trucking: LS Factory|Create Batteries x5"
-		],
-		"weight": 5
-	},
-	"refined_tin": {
-		"make": [
-			"Trucking: LS Foundry|Refine Tin x1",
-			"Trucking: LS Foundry|Refine Tin x10",
-			"Trucking: LS Foundry|Refine Tin x20"
-		],
-		"name": "Truck Cargo: Refined Tin",
-		"use": [
-			"Trucking: LS Foundry|Refine Amalgam",
-			"Trucking: LS Foundry|Refine Amalgam x10",
-			"Trucking: LS Port Export|Export Tin x1",
-			"Trucking: LS Port Export|Export Tin x10"
-		],
-		"weight": 10
-	},
-	"refined_zinc": {
-		"make": [
-			"Trucking: LS Foundry|Refine Raw Ore Mix x1",
-			"Trucking: LS Foundry|Refine Raw Ore Mix x10",
-			"Trucking: LS Foundry|Zinc Alloy"
-		],
-		"name": "Truck Cargo: Refined Zinc",
-		"use": [
-			"Trucking: LS Factory|Create Batteries",
-			"Trucking: LS Factory|Create Batteries x5",
-			"Trucking: LS Port Export|Export Zinc x1",
-			"Trucking: LS Port Export|Export Zinc x10"
-		],
-		"weight": 10
-	},
-	"refined_sand": {
-		"make": [
-			"Trucking: Deep Quarry|Gravel Pulverizing",
-			"Trucking: Deep Quarry|Recycle Ore Mix",
-			"Trucking: Deep Quarry|Use Explosives",
-			"Trucking: Filtering Plant|Filter Gravel",
-			"Trucking: Filtering Plant|Filter Gravel x6",
-			"Trucking: Sandstone Collector|Sand"
-		],
-		"name": "Truck Cargo: Sand",
-		"use": [
-			"Trucking: LS Foundry|Ceramic Tiles",
-			"Trucking: LS Foundry|Ceramic Tiles x10",
-			"Trucking: LS Foundry|Refine Glass x1",
-			"Trucking: LS Foundry|Refine Glass x10",
-			"Trucking: Quarry|Create Cement",
-			"Trucking: Quarry|Create Cement x10",
-			"Trucking: Quarry|Deliver Sand",
-			"Trucking: Sawmill|Sawdust Filler Exploit"
-		],
-		"weight": 5
-	},
-	"tcargodust": {
-		"make": [
-			"Trucking: Sawmill|Grind Sawdust x1",
-			"Trucking: Sawmill|Grind Sawdust x5",
-			"Trucking: Sawmill|Sawdust Filler Exploit",
-			"Trucking: Sawmill|Mill Planks x1",
-			"Trucking: Sawmill|Mill Planks x5"
-		],
-		"name": "Truck Cargo: Sawdust",
-		"use": [
-			"Trucking: Clucking Bell Farms|Pack Crispy Fish Meat x10",
-			"Trucking: Clucking Bell Farms|Pack Crispy Meat x10",
-			"Trucking: LS Factory|Create Cardboard",
-			"Trucking: LS Port Export|<span sort='A'></span>Export Sawdust x1",
-			"Trucking: LS Port Export|<span sort='B'></span>Export Sawdust x10",
-			"Trucking: Quarry|Create Cement",
-			"Trucking: Quarry|Create Cement x10",
-			"Trucking: Sawmill|Chipboard Planks"
-		],
-		"weight": 3
-	},
-	"scrap_aluminum": {
-		"make": [
-			"Trucking: Sandstone Collector|Scrap Aluminum",
-			"Trucking: Sorting Facility|Sort Recycled Trash",
-			"Trucking: Sorting Facility|Sort Recycled Trash x3"
-		],
-		"name": "Truck Cargo: Scrap Aluminum",
-		"use": [
-			"Trucking: LS Foundry|Refine Aluminum x1",
-			"Trucking: LS Foundry|Refine Aluminum x10",
-			"Trucking: LS Foundry|Refine Bronze Alloy x1",
-			"Trucking: LS Foundry|Refine Bronze Alloy x10"
-		],
-		"weight": 5
-	},
-	"scrap_copper": {
-		"make": [
-			"Trucking: Sandstone Collector|Scrap Copper",
-			"Trucking: Sorting Facility|Sort Recycled Electronics",
-			"Trucking: Sorting Facility|Sort Recycled Electronics x2"
-		],
-		"name": "Truck Cargo: Scrap Copper",
-		"use": [
-			"Trucking: LS Foundry|Refine Bronze Alloy x1",
-			"Trucking: LS Foundry|Refine Bronze Alloy x10",
-			"Trucking: LS Foundry|Refine Copper x1",
-			"Trucking: LS Foundry|Refine Copper x10",
-			"Trucking: LS Foundry|Refine Copper x20"
-		],
-		"weight": 5
-	},
-	"scrap_gold": {
-		"make": [
-			"Trucking: GSD Mine|Use Explosives",
-			"Trucking: LS Foundry|Substitute Gold",
-			"Trucking: Sorting Facility|Sort Recycled Electronics",
-			"Trucking: Sorting Facility|Sort Recycled Electronics x2"
-		],
-		"name": "Truck Cargo: Scrap Gold",
-		"use": [
-			"Trucking: LS Factory|Create Computer",
-			"Trucking: LS Factory|Create Computer x10",
-			"Trucking: LS Foundry|Refine Gold x10"
-		],
-		"weight": 10
-	},
-	"scrap_lead": {
-		"make": [
-			"Trucking: Filtering Plant|Filter Toxic Waste",
-			"Trucking: Filtering Plant|Filter Toxic Waste x3",
-			"Trucking: Sandstone Collector|Scrap Lead"
-		],
-		"name": "Truck Cargo: Scrap Lead",
-		"use": [
-			"Trucking: LS Foundry|Refine Solder",
-			"Trucking: LS Foundry|Refine Solder x4"
-		],
-		"weight": 15
-	},
-	"scrap_mercury": {
-		"make": [
-			"Trucking: Filtering Plant|Filter Toxic Waste",
-			"Trucking: Filtering Plant|Filter Toxic Waste x3",
-			"Trucking: Sandstone Collector|Scrap Mercury"
-		],
-		"name": "Truck Cargo: Scrap Mercury",
-		"use": [
-			"Trucking: LS Foundry|Refine Amalgam",
-			"Trucking: LS Foundry|Refine Amalgam x10"
-		],
-		"weight": 15
-	},
-	"scrap_plastic": {
-		"make": [
-			"Trucking: Sorting Facility|Sort Recycled Electronics",
-			"Trucking: Sorting Facility|Sort Recycled Electronics x2",
-			"Trucking: Sorting Facility|Sort Recycled Trash",
-			"Trucking: Sorting Facility|Sort Recycled Trash x3"
-		],
-		"name": "Truck Cargo: Scrap Plastic",
-		"use": [
-			"Illegal: Plastic Molding|Craft Empty Defib Kit",
-			"Illegal: Plastic Molding|Craft Empty Pill Capsule",
-			"Illegal: Pop's Pills|Pick up pills crate",
-			"Illegal: Pop's Pills|Pick up pills crate x10",
-			"Trucking: LS Factory|Create Circuit Boards",
-			"Trucking: LS Factory|Create Circuit Boards x10",
-			"Trucking: LS Factory|Create Fiberglass Spool",
-			"Trucking: LS Factory|Create Fiberglass Spool x10",
-			"Trucking: McKenzie Export|Export Scrap Plastic",
-			"Trucking: McKenzie Export|Export Scrap Plastic x10",
-			"Trucking: McKenzie Export|Export Scrap Plastic x100"
-		],
-		"weight": 5
-	},
-	"scrap_tin": {
-		"make": [
-			"Trucking: Sandstone Collector|Scrap Tin",
-			"Trucking: Sorting Facility|Sort Recycled Trash",
-			"Trucking: Sorting Facility|Sort Recycled Trash x3"
-		],
-		"name": "Truck Cargo: Scrap Tin",
-		"use": [
-			"Trucking: LS Foundry|Refine Bronze Alloy x1",
-			"Trucking: LS Foundry|Refine Bronze Alloy x10",
-			"Trucking: LS Foundry|Refine Tin x1",
-			"Trucking: LS Foundry|Refine Tin x10",
-			"Trucking: LS Foundry|Refine Tin x20"
-		],
-		"weight": 5
-	},
-	"pucargosmall": {
-		"make": [
-			"Trucking Cargo Merchant: Buy Tools|Buy: Tools",
-			"Trucking Cargo Merchant: Buy Tools|Buy: Tools x10",
-			"Trucking Cargo Merchant: Buy Tools|Buy: Tools x100"
-		],
-		"name": "Truck Cargo: Tools",
-		"use": [
-			"Trucking Cargo Merchant: Sell Tools|Sell: Tools",
-			"Trucking Cargo Merchant: Sell Tools|Sell: Tools x10",
-			"Trucking Cargo Merchant: Sell Tools|Sell: Tools x100",
-			"Trucking: Vehicle Parts|Temporary Repair Shop"
-		],
-		"weight": 1
-	},
-	"recycled_waste": {
-		"make": [
-			"Trucking: Elysian Island Waste Deposit|<span sort='A'></span>Toxic Waste",
-			"Trucking: Elysian Island Waste Deposit|<span sort='B'></span>Toxic Waste x3"
-		],
-		"name": "Truck Cargo: Toxic Waste",
-		"use": [
-			"Trucking: Filtering Plant|Filter Toxic Waste",
-			"Trucking: Filtering Plant|Filter Toxic Waste x3"
-		],
-		"weight": 110
-	},
-	"liquid_water": {
-		"make": [
-			"Liberty: LCFD|Tokens to Treated Water",
-			"Liberty: LCFD|Tokens to Treated Water x3",
-			"Trucking: Water Treatment Plant|Clean Waste Water",
-			"Trucking: Water Treatment Plant|Treat Unfiltered Water",
-			"Trucking: Water Treatment Plant|Treat Unfiltered Water x2"
-		],
-		"name": "Truck Cargo: Treated Water (100L)",
-		"use": [
-			"Trucking: Filtering Plant|Mix Concrete",
-			"Trucking: Filtering Plant|Mix Concrete x2",
-			"Trucking: LS Factory|Create Cardboard",
-			"Trucking: Refinery|Refine Diluted Fuel",
-			"Trucking: Vehicle Factory|HVY Nightshark"
-		],
-		"weight": 100
-	},
-	"liquid_water_raw": {
-		"make": [
-			"Trucking: Alamo View|TBD",
-			"Trucking: Alturist Camp|TBD",
-			"Trucking: Auditorium|TBD",
-			"Trucking: Bayview|TBD",
-			"Trucking: Del Perro Plaza|TBD",
-			"Trucking: Dignity Village|TBD",
-			"Trucking: Furniture Store|TBD",
-			"Trucking: LS Marina|TBD",
-			"Trucking: LSIA Warehouse|TBD",
-			"Trucking: Land Act Reservoir|Pick up Unfiltered Water",
-			"Trucking: Land Act Reservoir|Pick up Unfiltered Water x3",
-			"Trucking: PB Construction Site|TBD",
-			"Trucking: PB Factory|TBD",
-			"Trucking: Scrapyard|TBD",
-			"Trucking: Textile City|TBD",
-			"Trucking: Tongva Valley|TBD",
-			"Trucking: Vespucci Beach|TBD",
-			"Trucking: Wiwang|TBD",
-			"Trucking: Workshop|TBD"
-		],
-		"name": "Truck Cargo: Unfiltered Water (100L)",
-		"use": [
-			"Trucking: Alamo View|TBD",
-			"Trucking: Alturist Camp|TBD",
-			"Trucking: Auditorium|TBD",
-			"Trucking: Bayview|TBD",
-			"Trucking: Del Perro Plaza|TBD",
-			"Trucking: Dignity Village|TBD",
-			"Trucking: Furniture Store|TBD",
-			"Trucking: LS Marina|TBD",
-			"Trucking: LSIA Warehouse|TBD",
-			"Trucking: PB Construction Site|TBD",
-			"Trucking: PB Factory|TBD",
-			"Trucking: Scrapyard|TBD",
-			"Trucking: Textile City|TBD",
-			"Trucking: Tongva Valley|TBD",
-			"Trucking: Vespucci Beach|TBD",
-			"Trucking: Water Treatment Plant|Treat Unfiltered Water",
-			"Trucking: Water Treatment Plant|Treat Unfiltered Water x2",
-			"Trucking: Wiwang|TBD",
-			"Trucking: Workshop|TBD"
-		],
-		"weight": 100
-	},
-	"upgrade_kit_voltic2": {
-		"make": ["Trucking: Vehicle Factory|Coil Rocket Voltic"],
-		"name": "Upgrade Kit (Voltic)",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|tenf|10F|car": {
-		"make": ["Trucking: Vehicle Factory|10F"],
-		"name": "Vehicle Shipment: 10F",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|zr350|Annis ZR-350|car": {
-		"make": ["Trucking: Vehicle Factory|Annis ZR-350"],
-		"name": "Vehicle Shipment: Annis ZR-350",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|savanna|Coil Savanna|car": {
-		"make": ["Trucking: Vehicle Factory|Coil Savanna"],
-		"name": "Vehicle Shipment: Coil Savanna",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|nightshark|HVY Nightshark|car": {
-		"make": ["Trucking: Vehicle Factory|HVY Nightshark"],
-		"name": "Vehicle Shipment: HVY Nightshark",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|vertice|Hijak Vertice|car": {
-		"make": ["Trucking: Vehicle Factory|Hijak Vertice"],
-		"name": "Vehicle Shipment: Hijak Vertice",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|futo|Karin Futo|car": {
-		"make": ["Trucking: Vehicle Factory|Karin Futo"],
-		"name": "Vehicle Shipment: Karin Futo",
-		"use": [],
-		"weight": 0
-	},
-	"vehicle_shipment|landstalker2|Landstalker XL|car": {
-		"make": ["Trucking: Vehicle Factory|Landstalker XL"],
-		"name": "Vehicle Shipment: Landstalker XL",
-		"use": [],
-		"weight": 0
-	},
-	"xmas20_bow": {
-		"make": [],
-		"name": "Xmas Bow",
-		"use": ["Christmas Present Factory|Create Present"],
-		"weight": 0
-	},
-	"xmas20_box": {
-		"make": [],
-		"name": "Xmas Content Box",
-		"use": ["Christmas Present Factory|Create Present"],
-		"weight": 0
-	},
-	"xmas20_tape": {
-		"make": [],
-		"name": "Xmas Tape Roll",
-		"use": ["Christmas Present Factory|Create Present"],
-		"weight": 0
-	},
-	"xmas20_wp": {
-		"make": [],
-		"name": "Xmas Wrapping Paper",
-		"use": ["Christmas Present Factory|Create Present"],
-		"weight": 0
-	}
+    "fridge_airline_meal": {
+        "make": [
+            "Liberty: The Undercover Storage Co.|Tokens to Airline Meal",
+            "Trucking: Fridgit Co.|Create Airline Meal",
+            "Trucking: Fridgit Co.|Create Airline Meal x10"
+        ],
+        "name": "Airline Meal",
+        "use": [
+            "Trucking: LSIA Shipments|Deliver Airline Meal",
+            "Trucking: LSIA Shipments|Deliver Airline Meal x10",
+            "Trucking: LSIA Shipments|Deliver Airline Meal x30"
+        ],
+        "weight": 3
+    },
+    "mechanicals_battery": {
+        "make": [
+            "Trucking: Vehicle Parts|Car Battery"
+        ],
+        "name": "Automotive: Car Battery",
+        "use": [
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL",
+            "Trucking: Vehicle Parts|Traction Battery"
+        ],
+        "weight": 0
+    },
+    "mechanicals_chassis": {
+        "make": [
+            "Trucking: Vehicle Parts|Chassis"
+        ],
+        "name": "Automotive: Chassis",
+        "use": [
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL",
+            "Trucking: Vehicle Parts|Temporary Repair Shop"
+        ],
+        "weight": 80
+    },
+    "mechanicals_rubber": {
+        "make": [
+            "Trucking: Refinery|Refine Rubber"
+        ],
+        "name": "Automotive: Rubber",
+        "use": [
+            "Trucking: LS Port Export|Export Rubber",
+            "Trucking: LS Port Export|Export Rubber x10",
+            "Trucking: Vehicle Parts|Wheels"
+        ],
+        "weight": 0
+    },
+    "mechanicals_battery_evb": {
+        "make": [
+            "Trucking: Vehicle Parts|Traction Battery"
+        ],
+        "name": "Automotive: Traction Battery",
+        "use": [
+            "Trucking: Vehicle Factory|Coil Savanna"
+        ],
+        "weight": 0
+    },
+    "mechanicals_vehicle_framework": {
+        "make": [
+            "Trucking: Vehicle Parts|Vehicle Framework"
+        ],
+        "name": "Automotive: Vehicle Framework",
+        "use": [
+            "Trucking: LS Port Export|Export Vehicle Framework",
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL"
+        ],
+        "weight": 200
+    },
+    "mechanicals_wheels": {
+        "make": [
+            "Trucking: Vehicle Parts|Wheels"
+        ],
+        "name": "Automotive: Wheels",
+        "use": [
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL",
+            "Trucking: Vehicle Parts|Temporary Repair Shop"
+        ],
+        "weight": 15
+    },
+    "empty_box_capsules": {
+        "make": [
+            "Illegal: Plastic Molding|Craft Empty Pill Capsule"
+        ],
+        "name": "Box of Empty Pill Capsules",
+        "use": [
+            "Illegal: Liquor Ace|Fill empty pill box"
+        ],
+        "weight": 5
+    },
+    "full_box_capsules": {
+        "make": [
+            "Illegal: Liquor Ace|Fill empty pill box"
+        ],
+        "name": "Box of Full Pill Capsules",
+        "use": [],
+        "weight": 5
+    },
+    "mining_token_copper": {
+        "make": [],
+        "name": "Copper Ore Voucher",
+        "use": [
+            "Trucking: Elysian Island Waste Deposit|<span sort='C'></span>Exchange Copper",
+            "Trucking: Elysian Island Waste Deposit|<span sort='D'></span>Exchange Copper x10",
+            "Trucking: Filtering Plant|Conveyor Filtering"
+        ],
+        "weight": 0
+    },
+    "defibkit": {
+        "make": [
+            "Illegal: Defib Kit Charging|Charge Empty Defib Kit"
+        ],
+        "name": "Defibkit",
+        "use": [],
+        "weight": 5
+    },
+    "e_defibkit": {
+        "make": [
+            "Illegal: Plastic Molding|Craft Empty Defib Kit"
+        ],
+        "name": "Empty Defibkit",
+        "use": [
+            "Illegal: Defib Kit Charging|Charge Empty Defib Kit"
+        ],
+        "weight": 5
+    },
+    "fish_meat": {
+        "make": [],
+        "name": "Fish Meat",
+        "use": [
+            "Paleto Cove Fish Importer|Sell 10x Fish Meat",
+            "Paleto Cove Fish Importer|Sell 100x Fish Meat",
+            "Paleto Cove Fish Importer|Sell 10000x Fish Meat",
+            "Paleto Cove Fish Importer|Sell 1000x Fish Meat",
+            "Trucking: Clucking Bell Farms|Pack Crispy Fish Meat x10",
+            "Trucking: Clucking Bell Farms|Pack Fish Meat",
+            "Trucking: Clucking Bell Farms|Pack Fish Meat x10"
+        ],
+        "weight": 0.1
+    },
+    "fridge_dairy": {
+        "make": [
+            "Trucking: Grapeseed Farms|Pick up Dairy",
+            "Trucking: Grapeseed Farms|Pick up Dairy x10"
+        ],
+        "name": "Fridge: Dairy Products",
+        "use": [
+            "Trucking: Fridgit Co.|Create Airline Meal",
+            "Trucking: Fridgit Co.|Create Airline Meal x10",
+            "Trucking: Fridgit Co.|Create Dairy Shipment",
+            "Trucking: Fridgit Co.|Create Dairy Shipment x10"
+        ],
+        "weight": 15
+    },
+    "fridge_store_delivery": {
+        "make": [
+            "Liberty: The Undercover Storage Co.|Tokens to Fridge Store Delivery",
+            "Trucking: Fridgit Co.|Create Dairy Shipment",
+            "Trucking: Fridgit Co.|Create Dairy Shipment x10",
+            "Trucking: Fridgit Co.|Create Meat Shipment",
+            "Trucking: Fridgit Co.|Create Meat Shipment x10",
+            "Trucking: Fridgit Co.|Create Vegetables Shipment",
+            "Trucking: Fridgit Co.|Create Vegetables Shipment x10"
+        ],
+        "name": "Fridge: Food Shipment",
+        "use": [
+            "Trucking: Harmony Shopping Center|Deliver Food Shipment",
+            "Trucking: Harmony Shopping Center|Deliver Food Shipment x10",
+            "Trucking: Harmony Shopping Center|Deliver Food Shipment x30"
+        ],
+        "weight": 10
+    },
+    "fridge_meat": {
+        "make": [
+            "Trucking: Clucking Bell Farms|Pack Crispy Fish Meat x10",
+            "Trucking: Clucking Bell Farms|Pack Crispy Meat x10",
+            "Trucking: Clucking Bell Farms|Pack Fish Meat",
+            "Trucking: Clucking Bell Farms|Pack Fish Meat x10",
+            "Trucking: Clucking Bell Farms|Pack Meat",
+            "Trucking: Clucking Bell Farms|Pack Meat x10"
+        ],
+        "name": "Fridge: Frozen Raw Meat",
+        "use": [
+            "Trucking: Fridgit Co.|Create Airline Meal",
+            "Trucking: Fridgit Co.|Create Airline Meal x10",
+            "Trucking: Fridgit Co.|Create Meat Shipment",
+            "Trucking: Fridgit Co.|Create Meat Shipment x10"
+        ],
+        "weight": 15
+    },
+    "fridge_veggies": {
+        "make": [
+            "Trucking: Great Chaparral Farm|Pick up Vegetables",
+            "Trucking: Great Chaparral Farm|Pick up Vegetables x10"
+        ],
+        "name": "Fridge: Vegetables",
+        "use": [
+            "Trucking: Fridgit Co.|Create Airline Meal",
+            "Trucking: Fridgit Co.|Create Airline Meal x10",
+            "Trucking: Fridgit Co.|Create Vegetables Shipment",
+            "Trucking: Fridgit Co.|Create Vegetables Shipment x10"
+        ],
+        "weight": 15
+    },
+    "tavi_hardened_steel": {
+        "make": [
+            "Trucking: LS Foundry|Hardened Steel"
+        ],
+        "name": "Hardened Steel",
+        "use": [],
+        "weight": 0
+    },
+    "illegal_meth": {
+        "make": [
+            "Illegal: Liquor Ace|Pick up methamphetamine",
+            "Illegal: Liquor Ace|Pick up methamphetamine x10"
+        ],
+        "name": "Illegal: Methamphetamine",
+        "use": [
+            "Illegal: Humane Labs|Craft Pills"
+        ],
+        "weight": 0
+    },
+    "illegal_crate": {
+        "make": [
+            "Illegal: Pop's Pills|Pick up pills crate",
+            "Illegal: Pop's Pills|Pick up pills crate x10"
+        ],
+        "name": "Illegal: Pill crate",
+        "use": [
+            "Illegal: Humane Labs|Craft Pills"
+        ],
+        "weight": 0
+    },
+    "mining_token_iron": {
+        "make": [],
+        "name": "Iron Ore Voucher",
+        "use": [
+            "Trucking: Elysian Island Waste Deposit|<span sort='E'></span>Exchange Iron",
+            "Trucking: Elysian Island Waste Deposit|<span sort='F'></span>Exchange Iron x10",
+            "Trucking: Filtering Plant|Conveyor Filtering",
+            "Trucking: LS Foundry|Hardened Steel"
+        ],
+        "weight": 0
+    },
+    "jerry_can_empty": {
+        "make": [],
+        "name": "Jerry Can (Empty)",
+        "use": [
+            "Trucking: Bristols Fuel Storage|Sell Empty Jerry Cans"
+        ],
+        "weight": 2
+    },
+    "liberty_autopart": {
+        "make": [
+            "Liberty: Auto Yard|Salvage Auto Parts",
+            "Liberty: Auto Yard|Salvage Auto Parts x3"
+        ],
+        "name": "Liberty: Auto Parts",
+        "use": [
+            "Liberty: Staunton Military Facility|Process Auto Parts",
+            "Liberty: Staunton Military Facility|Process Auto Parts x3"
+        ],
+        "weight": 100
+    },
+    "liberty_broadcast": {
+        "make": [
+            "Liberty: Staunton Business Center|Pick up Broadcast",
+            "Liberty: Staunton Business Center|Pick up Broadcast x3"
+        ],
+        "name": "Liberty: Broadcast",
+        "use": [
+            "Liberty: Radio Station|Spread Broadcast",
+            "Liberty: Radio Station|Spread Broadcast x3"
+        ],
+        "weight": 100
+    },
+    "liberty_export_goods": {
+        "make": [
+            "Liberty: Cochrane Dam|Process Military Goods",
+            "Liberty: Cochrane Dam|Process Military Goods x3"
+        ],
+        "name": "Liberty: Export Goods",
+        "use": [
+            "Liberty: Portland Docks|Export Goods",
+            "Liberty: Portland Docks|Export Goods x3"
+        ],
+        "weight": 100
+    },
+    "liberty_voucher_fish": {
+        "make": [
+            "Liberty: Staunton Docks|Export Fish",
+            "Liberty: Staunton Docks|Export Fish x3"
+        ],
+        "name": "Liberty: Fish Voucher",
+        "use": [
+            "Liberty: Staunton Mall|Trade for Liberty Goods",
+            "Liberty: Staunton Mall|Trade for Liberty Goods x3"
+        ],
+        "weight": 0
+    },
+    "liberty_voucher_goods": {
+        "make": [
+            "Liberty: Portland Docks|Export Goods",
+            "Liberty: Portland Docks|Export Goods x3"
+        ],
+        "name": "Liberty: Goods Voucher",
+        "use": [
+            "Liberty: Staunton Mall|Trade for Liberty Goods",
+            "Liberty: Staunton Mall|Trade for Liberty Goods x3"
+        ],
+        "weight": 0
+    },
+    "liberty_fish_export": {
+        "make": [
+            "Liberty: Fish Factory|Package Fish",
+            "Liberty: Fish Factory|Package Fish x2"
+        ],
+        "name": "Liberty: Liberty City Export Fish",
+        "use": [
+            "Liberty: Staunton Docks|Export Fish",
+            "Liberty: Staunton Docks|Export Fish x3"
+        ],
+        "weight": 100
+    },
+    "liberty_token": {
+        "make": [
+            "Liberty: Portland Docks|Export Goods",
+            "Liberty: Portland Docks|Export Goods x3",
+            "Liberty: Staunton Docks|Export Fish",
+            "Liberty: Staunton Docks|Export Fish x3"
+        ],
+        "name": "Liberty: Liberty City Token",
+        "use": [
+            "Liberty: AM Petroleum|Tokens to Kerosene",
+            "Liberty: AM Petroleum|Tokens to Kerosene x10",
+            "Liberty: LCFD|Tokens to Treated Water",
+            "Liberty: LCFD|Tokens to Treated Water x3",
+            "Liberty: The Undercover Storage Co.|Tokens to Airline Meal",
+            "Liberty: The Undercover Storage Co.|Tokens to Fridge Store Delivery"
+        ],
+        "weight": 0
+    },
+    "liberty_goods": {
+        "make": [
+            "Liberty: Staunton Mall|Trade for Liberty Goods",
+            "Liberty: Staunton Mall|Trade for Liberty Goods x3"
+        ],
+        "name": "Liberty: Liberty Goods",
+        "use": [],
+        "weight": 100
+    },
+    "liberty_military_goods": {
+        "make": [
+            "Liberty: Staunton Military Facility|Process Auto Parts",
+            "Liberty: Staunton Military Facility|Process Auto Parts x3"
+        ],
+        "name": "Liberty: Military Goods",
+        "use": [
+            "Liberty: Cochrane Dam|Process Military Goods",
+            "Liberty: Cochrane Dam|Process Military Goods x3",
+            "Trucking: Vehicle Factory|HVY Nightshark"
+        ],
+        "weight": 100
+    },
+    "liberty_broadcast_portland": {
+        "make": [
+            "Liberty: Radio Station|Spread Broadcast",
+            "Liberty: Radio Station|Spread Broadcast x3"
+        ],
+        "name": "Liberty: Portland Broadcast",
+        "use": [
+            "Liberty: Chinatown|Deliver Portland Broadcast",
+            "Liberty: Chinatown|Deliver Portland Broadcast x10"
+        ],
+        "weight": 25
+    },
+    "liberty_fish_portland": {
+        "make": [
+            "Liberty: Turtle Head Fishing Co. Portland|Pick up Portland Fish",
+            "Liberty: Turtle Head Fishing Co. Portland|Pick up Portland Fish x4"
+        ],
+        "name": "Liberty: Portland Fish",
+        "use": [
+            "Liberty: Fish Factory|Package Fish",
+            "Liberty: Fish Factory|Package Fish x2"
+        ],
+        "weight": 75
+    },
+    "liberty_voucher_portland": {
+        "make": [
+            "Liberty: Chinatown|Deliver Portland Broadcast",
+            "Liberty: Chinatown|Deliver Portland Broadcast x10"
+        ],
+        "name": "Liberty: Portland Voucher",
+        "use": [],
+        "weight": 0
+    },
+    "liberty_broadcast_shoreside": {
+        "make": [
+            "Liberty: Radio Station|Spread Broadcast",
+            "Liberty: Radio Station|Spread Broadcast x3"
+        ],
+        "name": "Liberty: Shoreside Broadcast",
+        "use": [
+            "Liberty: Shoreside Apartments|Deliver Shoreside Broadcast",
+            "Liberty: Shoreside Apartments|Deliver Shoreside Broadcast x10"
+        ],
+        "weight": 25
+    },
+    "liberty_fish_shoreside": {
+        "make": [
+            "Liberty: Turtle Head Fishing Co. Shoreside Vale|Pick up Shoreside Fish",
+            "Liberty: Turtle Head Fishing Co. Shoreside Vale|Pick up Shoreside Fish x4"
+        ],
+        "name": "Liberty: Shoreside Fish",
+        "use": [
+            "Liberty: Fish Factory|Package Fish",
+            "Liberty: Fish Factory|Package Fish x2"
+        ],
+        "weight": 75
+    },
+    "liberty_voucher_shoreside": {
+        "make": [
+            "Liberty: Shoreside Apartments|Deliver Shoreside Broadcast",
+            "Liberty: Shoreside Apartments|Deliver Shoreside Broadcast x10"
+        ],
+        "name": "Liberty: Shoreside Voucher",
+        "use": [],
+        "weight": 0
+    },
+    "liberty_broadcast_staunton": {
+        "make": [
+            "Liberty: Radio Station|Spread Broadcast",
+            "Liberty: Radio Station|Spread Broadcast x3"
+        ],
+        "name": "Liberty: Staunton Broadcast",
+        "use": [
+            "Liberty: Staunton Casino|Deliver Staunton Broadcast",
+            "Liberty: Staunton Casino|Deliver Staunton Broadcast x10"
+        ],
+        "weight": 25
+    },
+    "liberty_voucher_staunton": {
+        "make": [
+            "Liberty: Staunton Casino|Deliver Staunton Broadcast",
+            "Liberty: Staunton Casino|Deliver Staunton Broadcast x10"
+        ],
+        "name": "Liberty: Staunton Voucher",
+        "use": [],
+        "weight": 0
+    },
+    "meat": {
+        "make": [],
+        "name": "Meat",
+        "use": [
+            "Hunter: Meat Buyer|Meat Buyer",
+            "Hunter: Meat Buyer|Meat Buyer x10",
+            "Hunter: Meat Buyer|Meat Buyer x100",
+            "Trucking: Clucking Bell Farms|Pack Crispy Meat x10",
+            "Trucking: Clucking Bell Farms|Pack Meat",
+            "Trucking: Clucking Bell Farms|Pack Meat x10"
+        ],
+        "weight": 0.5
+    },
+    "military_chemicals": {
+        "make": [
+            "Trucking: Refinery|Refine Raw Gas",
+            "Trucking: Refinery|Refine Raw Gas x2"
+        ],
+        "name": "Military: Chemicals",
+        "use": [],
+        "weight": 25
+    },
+    "military_explosives": {
+        "make": [
+            "Trucking: Military Workshop|Create Explosives"
+        ],
+        "name": "Military: Explosives",
+        "use": [
+            "Trucking: Deep Quarry|Gravel Pulverizing",
+            "Trucking: Deep Quarry|Recycle Ore Mix",
+            "Trucking: Deep Quarry|Use Explosives",
+            "Trucking: GSD Mine|Use Explosives",
+            "Trucking: Mineral Mine|Use Explosives"
+        ],
+        "weight": 250
+    },
+    "military_titanium": {
+        "make": [
+            "Trucking: LS Foundry|Refine Titanium x1",
+            "Trucking: LS Foundry|Refine Titanium x10"
+        ],
+        "name": "Military: Titanium",
+        "use": [
+            "Trucking: LS Factory|Titanium Jewelry",
+            "Trucking: LS Factory|Titanium Reinforcement",
+            "Trucking: LS Foundry|Hardened Steel",
+            "Trucking: Military Workshop|Deliver Titanium",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Parts|Temporary Repair Shop"
+        ],
+        "weight": 20
+    },
+    "military_titanium_ore": {
+        "make": [
+            "Trucking: GSD Mine|Use Explosives",
+            "Trucking: Mineral Mine|<span></span>Use Explosives",
+            "Trucking: Sandstone Collector|Titanium Ore"
+        ],
+        "name": "Military: Titanium Ore",
+        "use": [
+            "Trucking: LS Foundry|Refine Titanium x1",
+            "Trucking: LS Foundry|Refine Titanium x10"
+        ],
+        "weight": 25
+    },
+    "petrochem_asphalt": {
+        "make": [
+            "Trucking: Refinery|Create Asphalt"
+        ],
+        "name": "Petrochem: Asphalt Concrete",
+        "use": [
+            "Trucking: Alta Construction Site|Deliver Asphalt Concrete",
+            "Trucking: Alta Construction Site|Deliver Asphalt Concrete x5"
+        ],
+        "weight": 5
+    },
+    "petrochem_oil": {
+        "make": [
+            "Trucking: LS Oil Pumping Station|Extract Crude Oil",
+            "Trucking: LS Oil Pumping Station|Extract Crude Oil x2"
+        ],
+        "name": "Petrochem: Crude Oil",
+        "use": [
+            "Trucking: Refinery|Create Asphalt",
+            "Trucking: Refinery|Refine Crude Oil",
+            "Trucking: Refinery|Refine Crude Oil x2",
+            "Trucking: Refinery|Refine Diluted Fuel",
+            "Trucking: Refinery|Refine Rubber"
+        ],
+        "weight": 150
+    },
+    "petrochem_diesel": {
+        "make": [
+            "Trucking: Refinery|Refine Crude Oil",
+            "Trucking: Refinery|Refine Crude Oil x2",
+            "Trucking: Refinery|Refine Diluted Fuel",
+            "Trucking: Refinery|Refine Rubber"
+        ],
+        "name": "Petrochem: Diesel",
+        "use": [
+            "Trucking: Bristols Fuel Storage|Sell Diesel",
+            "Trucking: Bristols Fuel Storage|Sell Diesel x10"
+        ],
+        "weight": 25
+    },
+    "petrochem_kerosene": {
+        "make": [
+            "Liberty: AM Petroleum|Tokens to Kerosene",
+            "Liberty: AM Petroleum|Tokens to Kerosene x10",
+            "Trucking: Refinery|Refine Crude Oil",
+            "Trucking: Refinery|Refine Crude Oil x2",
+            "Trucking: Refinery|Refine Diluted Fuel",
+            "Trucking: Refinery|Refine Rubber"
+        ],
+        "name": "Petrochem: Kerosene",
+        "use": [
+            "Trucking: Bristols Fuel Storage|Sell Kerosene",
+            "Trucking: Bristols Fuel Storage|Sell Kerosene x10",
+            "Trucking: Military Workshop|Create Explosives",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic"
+        ],
+        "weight": 25
+    },
+    "petrochem_petrol": {
+        "make": [
+            "Trucking: Refinery|Refine Crude Oil",
+            "Trucking: Refinery|Refine Crude Oil x2",
+            "Trucking: Refinery|Refine Diluted Fuel",
+            "Trucking: Refinery|Refine Rubber"
+        ],
+        "name": "Petrochem: Petrol",
+        "use": [
+            "Trucking: Bristols Fuel Storage|Sell Petrol",
+            "Trucking: Bristols Fuel Storage|Sell Petrol x10",
+            "Trucking: LS Foundry|Substitute Gold"
+        ],
+        "weight": 25
+    },
+    "petrochem_propane": {
+        "make": [
+            "Trucking: Refinery|Refine Raw Gas",
+            "Trucking: Refinery|Refine Raw Gas x2"
+        ],
+        "name": "Petrochem: Propane",
+        "use": [
+            "Trucking: Davis Mega Mall|Sell Propane",
+            "Trucking: Davis Mega Mall|Sell Propane x10",
+            "Trucking: LS Foundry|Zinc Alloy"
+        ],
+        "weight": 25
+    },
+    "petrochem_gas": {
+        "make": [
+            "Trucking: GSD Gas Pumping Station|Extract Raw Gas",
+            "Trucking: GSD Gas Pumping Station|Extract Raw Gas x2"
+        ],
+        "name": "Petrochem: Raw Gas",
+        "use": [
+            "Trucking: Refinery|Refine Raw Gas",
+            "Trucking: Refinery|Refine Raw Gas x2"
+        ],
+        "weight": 150
+    },
+    "petrochem_sulfur": {
+        "make": [
+            "Trucking: Water Treatment Plant|Treat Waste Water",
+            "Trucking: Water Treatment Plant|Treat Waste Water x2"
+        ],
+        "name": "Petrochem: Sulfur",
+        "use": [
+            "Trucking: LS Foundry|Substitute Gold",
+            "Trucking: LS Foundry|Copper Alloy",
+            "Trucking: Military Workshop|Create Explosives"
+        ],
+        "weight": 5
+    },
+    "petrochem_waste": {
+        "make": [
+            "Trucking: Refinery|Refine Raw Gas",
+            "Trucking: Refinery|Refine Raw Gas x2"
+        ],
+        "name": "Petrochem: Waste Water",
+        "use": [
+            "Trucking: Water Treatment Plant|Clean Waste Water",
+            "Trucking: Water Treatment Plant|Treat Waste Water",
+            "Trucking: Water Treatment Plant|Treat Waste Water x2"
+        ],
+        "weight": 50
+    },
+    "pills": {
+        "make": [
+            "Illegal: Humane Labs|Craft Pills"
+        ],
+        "name": "Pills",
+        "use": [],
+        "weight": 0.1
+    },
+    "fish_meat_premium": {
+        "make": [],
+        "name": "Premium Fish Meat",
+        "use": [
+            "Paleto Cove Fish Importer|Sell 10x Premium Fish Meat",
+            "Paleto Cove Fish Importer|Sell 100x Premium Fish Meat",
+            "Paleto Cove Fish Importer|Sell 1000x Premium Fish Meat"
+        ],
+        "weight": 0.1
+    },
+    "mining_credit": {
+        "make": [],
+        "name": "Sandstone",
+        "use": [
+            "Trucking: Sandstone Collector|<span>Sell Directly</span>",
+            "Trucking: Sandstone Collector|Flint",
+            "Trucking: Sandstone Collector|Raw Emeralds",
+            "Trucking: Sandstone Collector|Raw Ore Mix",
+            "Trucking: Sandstone Collector|Sand",
+            "Trucking: Sandstone Collector|Scrap Aluminum",
+            "Trucking: Sandstone Collector|Scrap Copper",
+            "Trucking: Sandstone Collector|Scrap Lead",
+            "Trucking: Sandstone Collector|Scrap Mercury",
+            "Trucking: Sandstone Collector|Scrap Tin",
+            "Trucking: Sandstone Collector|Titanium Ore"
+        ],
+        "weight": 5
+    },
+    "repair_shop": {
+        "make": [
+            "Trucking: Vehicle Parts|Temporary Repair Shop"
+        ],
+        "name": "Temporary Repair Shop",
+        "use": [],
+        "weight": 0
+    },
+    "scrap_acid": {
+        "make": [
+            "Trucking: Filtering Plant|Filter Toxic Waste",
+            "Trucking: Filtering Plant|Filter Toxic Waste x3"
+        ],
+        "name": "Truck Cargo: Acid",
+        "use": [
+            "Trucking: LS Factory|Create Batteries",
+            "Trucking: LS Factory|Create Batteries x5",
+            "Trucking: LS Port Export|Export Acid x1",
+            "Trucking: LS Port Export|Export Acid x10",
+            "Trucking: Water Treatment Plant|Treat Unfiltered Water",
+            "Trucking: Water Treatment Plant|Treat Unfiltered Water x2"
+        ],
+        "weight": 5
+    },
+    "crafted_batteries": {
+        "make": [
+            "Trucking: LS Factory|Create Batteries",
+            "Trucking: LS Factory|Create Batteries x5"
+        ],
+        "name": "Truck Cargo: Batteries",
+        "use": [
+            "Trucking: LS Factory|Create Computer",
+            "Trucking: LS Factory|Create Computer x10",
+            "Trucking: LS Port Export|Export Batteries x1",
+            "Trucking: LS Port Export|Export Batteries x10",
+            "Trucking: Vehicle Parts|Car Battery"
+        ],
+        "weight": 30
+    },
+    "crafted_cardboard": {
+        "make": [
+            "Trucking: LS Factory|Create Cardboard"
+        ],
+        "name": "Truck Cargo: Cardboard",
+        "use": [
+            "Trucking: McKenzie Export|Export Cardboard",
+            "Trucking: McKenzie Export|Export Cardboard x5"
+        ],
+        "weight": 0
+    },
+    "crafted_cement": {
+        "make": [
+            "Trucking: Quarry|Create Cement",
+            "Trucking: Quarry|Create Cement x10"
+        ],
+        "name": "Truck Cargo: Cement Mix",
+        "use": [
+            "Trucking: Filtering Plant|Mix Concrete",
+            "Trucking: Filtering Plant|Mix Concrete x2"
+        ],
+        "weight": 25
+    },
+    "crafted_ceramictiles": {
+        "make": [
+            "Trucking: LS Foundry|Ceramic Tiles",
+            "Trucking: LS Foundry|Ceramic Tiles x10"
+        ],
+        "name": "Truck Cargo: Ceramic Tiles",
+        "use": [
+            "House Construction Site|House Construction",
+            "Trucking: LS Port Export|Ceramic Tiles",
+            "Trucking: LS Port Export|Ceramic Tiles x10"
+        ],
+        "weight": 10
+    },
+    "crafted_circuit": {
+        "make": [
+            "Trucking: LS Factory|Create Circuit Boards",
+            "Trucking: LS Factory|Create Circuit Boards x10"
+        ],
+        "name": "Truck Cargo: Circuit Boards",
+        "use": [
+            "Trucking: LS Factory|Create Computer",
+            "Trucking: LS Factory|Create Computer x10",
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL"
+        ],
+        "weight": 20
+    },
+    "crafted_computer": {
+        "make": [
+            "Trucking: LS Factory|Create Computer",
+            "Trucking: LS Factory|Create Computer x10"
+        ],
+        "name": "Truck Cargo: Computers",
+        "use": [
+            "House Construction Site|House Construction",
+            "Trucking: LS Port Export|Computer",
+            "Trucking: LS Port Export|Computer x10"
+        ],
+        "weight": 35
+    },
+    "crafted_concrete": {
+        "make": [
+            "Trucking: Filtering Plant|Mix Concrete",
+            "Trucking: Filtering Plant|Mix Concrete x2"
+        ],
+        "name": "Truck Cargo: Concrete",
+        "use": [
+            "House Construction Site|House Construction",
+            "Trucking: Alta Construction Site|Deliver Concrete",
+            "Trucking: Alta Construction Site|Deliver Concrete x2"
+        ],
+        "weight": 160
+    },
+    "crafted_copperwire": {
+        "make": [
+            "Trucking: LS Factory|Create Copper Wire Spool",
+            "Trucking: LS Factory|Create Copper Wire Spool x5"
+        ],
+        "name": "Truck Cargo: Copper Wire Spool",
+        "use": [
+            "House Construction Site|House Construction",
+            "Trucking: LS Factory|Create Circuit Boards",
+            "Trucking: LS Factory|Create Circuit Boards x10"
+        ],
+        "weight": 20
+    },
+    "tcargosmall": {
+        "make": [],
+        "name": "Truck Cargo: Erasers",
+        "use": [
+            "Trucking Cargo Merchant: Sell Erasers|Sell: Erasers",
+            "Trucking Cargo Merchant: Sell Erasers|Sell: Erasers x10",
+            "Trucking Cargo Merchant: Sell Erasers|Sell: Erasers x100"
+        ],
+        "weight": 3
+    },
+    "crafted_fiberglass": {
+        "make": [
+            "Trucking: LS Factory|Create Fiberglass Spool",
+            "Trucking: LS Factory|Create Fiberglass Spool x10"
+        ],
+        "name": "Truck Cargo: Fiberglass Spool",
+        "use": [
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL"
+        ],
+        "weight": 20
+    },
+    "refined_flint": {
+        "make": [
+            "Trucking: Filtering Plant|Filter Gravel",
+            "Trucking: Filtering Plant|Filter Gravel x6",
+            "Trucking: Sandstone Collector|Flint"
+        ],
+        "name": "Truck Cargo: Flint",
+        "use": [
+            "Trucking: LS Foundry|Ceramic Tiles",
+            "Trucking: LS Foundry|Ceramic Tiles x10",
+            "Trucking: McKenzie Export|Export Flint",
+            "Trucking: McKenzie Export|Export Flint x10",
+            "Trucking: McKenzie Export|Export Flint x100"
+        ],
+        "weight": 5
+    },
+    "refined_glass": {
+        "make": [
+            "Trucking: LS Foundry|Refine Glass x1",
+            "Trucking: LS Foundry|Refine Glass x10"
+        ],
+        "name": "Truck Cargo: Glass",
+        "use": [
+            "Trucking: LS Factory|Create Fiberglass Spool",
+            "Trucking: LS Factory|Create Fiberglass Spool x10",
+            "Trucking: LS Port Export|Export Refined Glass x1",
+            "Trucking: LS Port Export|Export Refined Glass x10",
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL"
+        ],
+        "weight": 5
+    },
+    "scrap_gravel": {
+        "make": [
+            "Trucking: Deep Quarry|Use Explosives",
+            "Trucking: Filtering Plant|Conveyor Filtering",
+            "Trucking: Filtering Plant|Filter Quarry Rubble",
+            "Trucking: Filtering Plant|Filter Quarry Rubble x2"
+        ],
+        "name": "Truck Cargo: Gravel",
+        "use": [
+            "Trucking: Deep Quarry|Gravel Pulverizing",
+            "Trucking: Filtering Plant|Filter Gravel",
+            "Trucking: Filtering Plant|Filter Gravel x6",
+            "Trucking: Refinery|Create Asphalt"
+        ],
+        "weight": 5
+    },
+    "crafted_jewelry": {
+        "make": [
+            "Trucking: LS Factory|Create Jewelry",
+            "Trucking: LS Factory|Titanium Jewelry"
+        ],
+        "name": "Truck Cargo: Jewelry",
+        "use": [
+            "Trucking: Jewelry Store|Deliver Jewelry"
+        ],
+        "weight": 5
+    },
+    "tcargologs": {
+        "make": [
+            "Trucking: Logging Camp_4|Collect Logs",
+            "Trucking: Logging Camp_4|Collect Logs x10",
+            "Trucking: Logging Camp_4|Collect Logs x5",
+            "Trucking: Logging Camp_1|Collect Logs",
+            "Trucking: Logging Camp_1|Collect Logs x10",
+            "Trucking: Logging Camp_1|Collect Logs x5",
+            "Trucking: Logging Camp_2|Collect Logs",
+            "Trucking: Logging Camp_2|Collect Logs x10",
+            "Trucking: Logging Camp_2|Collect Logs x5",
+            "Trucking: Logging Camp_3|Collect Logs",
+            "Trucking: Logging Camp_3|Collect Logs x10",
+            "Trucking: Logging Camp_3|Collect Logs x5"
+        ],
+        "name": "Truck Cargo: Logs",
+        "use": [
+            "Trucking: Sawmill|Grind Sawdust x1",
+            "Trucking: Sawmill|Grind Sawdust x5",
+            "Trucking: Sawmill|Sawdust Filler Exploit",
+            "Trucking: Sawmill|Chipboard Planks",
+            "Trucking: Sawmill|Mill Planks x1",
+            "Trucking: Sawmill|Mill Planks x5"
+        ],
+        "weight": 60
+    },
+    "refined_planks": {
+        "make": [
+            "Trucking: Sawmill|Chipboard Planks",
+            "Trucking: Sawmill|Mill Planks x1",
+            "Trucking: Sawmill|Mill Planks x5"
+        ],
+        "name": "Truck Cargo: Planks",
+        "use": [
+            "House Construction Site|House Construction",
+            "Illegal: Pop's Pills|Pick up pills crate",
+            "Illegal: Pop's Pills|Pick up pills crate x10",
+            "Trucking: LS Factory|Create Copper Wire Spool",
+            "Trucking: LS Factory|Create Copper Wire Spool x5",
+            "Trucking: LS Factory|Create Fiberglass Spool",
+            "Trucking: LS Factory|Create Fiberglass Spool x10",
+            "Trucking: LS Port Export|Export Planks x1",
+            "Trucking: LS Port Export|Export Planks x10"
+        ],
+        "weight": 15
+    },
+    "recycled_rubble": {
+        "make": [
+            "Trucking: Quarry|Pick up Quarry Rubble",
+            "Trucking: Quarry|Pick up Quarry Rubble x2"
+        ],
+        "name": "Truck Cargo: Quarry Rubble",
+        "use": [
+            "Trucking: Filtering Plant|Filter Quarry Rubble",
+            "Trucking: Filtering Plant|Filter Quarry Rubble x2"
+        ],
+        "weight": 150
+    },
+    "scrap_emerald": {
+        "make": [
+            "Trucking: Filtering Plant|Conveyor Filtering",
+            "Trucking: Filtering Plant|Filter Quarry Rubble",
+            "Trucking: Filtering Plant|Filter Quarry Rubble x2",
+            "Trucking: Mineral Mine|<span></span>Use Explosives",
+            "Trucking: Sandstone Collector|Raw Emeralds"
+        ],
+        "name": "Truck Cargo: Raw Emeralds",
+        "use": [
+            "Trucking: Jewelry Store|Deliver Raw Emeralds",
+            "Trucking: Jewelry Store|Deliver Raw Emeralds x10",
+            "Trucking: LS Factory|Create Jewelry"
+        ],
+        "weight": 10
+    },
+    "scrap_ore": {
+        "make": [
+            "Trucking: Elysian Island Waste Deposit|<span sort='C'></span>Exchange Copper",
+            "Trucking: Elysian Island Waste Deposit|<span sort='D'></span>Exchange Copper x10",
+            "Trucking: Elysian Island Waste Deposit|<span sort='E'></span>Exchange Iron",
+            "Trucking: Elysian Island Waste Deposit|<span sort='F'></span>Exchange Iron x10",
+            "Trucking: Filtering Plant|Conveyor Filtering",
+            "Trucking: Filtering Plant|Filter Quarry Rubble",
+            "Trucking: Filtering Plant|Filter Quarry Rubble x2",
+            "Trucking: Sandstone Collector|Raw Ore Mix"
+        ],
+        "name": "Truck Cargo: Raw Ore Mix",
+        "use": [
+            "Trucking: Deep Quarry|Recycle Ore Mix",
+            "Trucking: LS Foundry|Copper Alloy",
+            "Trucking: LS Foundry|Refine Raw Ore Mix x1",
+            "Trucking: LS Foundry|Refine Raw Ore Mix x10",
+            "Trucking: LS Foundry|Zinc Alloy"
+        ],
+        "weight": 15
+    },
+    "crafted_rebar": {
+        "make": [
+            "Trucking: LS Factory|Create Rebar",
+            "Trucking: LS Factory|Create Rebar x2",
+            "Trucking: LS Factory|Titanium Reinforcement"
+        ],
+        "name": "Truck Cargo: Rebar",
+        "use": [
+            "House Construction Site|House Construction",
+            "Trucking: Alta Construction Site|Deliver Rebar",
+            "Trucking: Alta Construction Site|Deliver Rebar x5"
+        ],
+        "weight": 45
+    },
+    "recycled_electronics": {
+        "make": [],
+        "name": "Truck Cargo: Recycled Electronics",
+        "use": [
+            "Trucking: Sorting Facility|Sort Recycled Electronics",
+            "Trucking: Sorting Facility|Sort Recycled Electronics x2"
+        ],
+        "weight": 130
+    },
+    "recycled_trash": {
+        "make": [
+            "Trucking: Recycling Center|Pick up Recycled Trash",
+            "Trucking: Recycling Center|Pick up Recycled Trash x3"
+        ],
+        "name": "Truck Cargo: Recycled Trash",
+        "use": [
+            "Trucking: Sorting Facility|Sort Recycled Trash",
+            "Trucking: Sorting Facility|Sort Recycled Trash x3"
+        ],
+        "weight": 90
+    },
+    "refined_aluminum": {
+        "make": [
+            "Trucking: LS Foundry|Refine Aluminum x1",
+            "Trucking: LS Foundry|Refine Aluminum x10"
+        ],
+        "name": "Truck Cargo: Refined Aluminum",
+        "use": [
+            "Trucking: LS Foundry|Refine Solder",
+            "Trucking: LS Foundry|Refine Solder x4",
+            "Trucking: LS Port Export|Export Aluminum x1",
+            "Trucking: LS Port Export|Export Aluminum x10",
+            "Trucking: Vehicle Parts|Wheels"
+        ],
+        "weight": 10
+    },
+    "refined_amalgam": {
+        "make": [
+            "Trucking: LS Foundry|Refine Amalgam",
+            "Trucking: LS Foundry|Refine Amalgam x10"
+        ],
+        "name": "Truck Cargo: Refined Amalgam",
+        "use": [
+            "Trucking: LS Factory|Create Rebar",
+            "Trucking: LS Factory|Create Rebar x2",
+            "Trucking: Vehicle Factory|10F",
+            "Trucking: Vehicle Factory|Annis ZR-350",
+            "Trucking: Vehicle Factory|Coil Rocket Voltic",
+            "Trucking: Vehicle Factory|Coil Savanna",
+            "Trucking: Vehicle Factory|HVY Nightshark",
+            "Trucking: Vehicle Factory|Hijak Vertice",
+            "Trucking: Vehicle Factory|Karin Futo",
+            "Trucking: Vehicle Factory|Landstalker XL",
+            "Trucking: Vehicle Parts|Chassis",
+            "Trucking: Vehicle Parts|Vehicle Framework"
+        ],
+        "weight": 15
+    },
+    "refined_bronze": {
+        "make": [
+            "Trucking: LS Foundry|Refine Bronze Alloy x1",
+            "Trucking: LS Foundry|Refine Bronze Alloy x10"
+        ],
+        "name": "Truck Cargo: Refined Bronze Alloy",
+        "use": [
+            "Trucking: LS Factory|Create Rebar",
+            "Trucking: LS Factory|Create Rebar x2",
+            "Trucking: LS Foundry|Substitute Gold",
+            "Trucking: LS Port Export|Export Refined Bronze Alloy x1",
+            "Trucking: LS Port Export|Export Refined Bronze Alloy x10"
+        ],
+        "weight": 10
+    },
+    "refined_copper": {
+        "make": [
+            "Trucking: LS Foundry|Refine Copper x1",
+            "Trucking: LS Foundry|Refine Copper x10",
+            "Trucking: LS Foundry|Refine Copper x20",
+            "Trucking: LS Foundry|Copper Alloy",
+            "Trucking: LS Foundry|Refine Raw Ore Mix x1",
+            "Trucking: LS Foundry|Refine Raw Ore Mix x10"
+        ],
+        "name": "Truck Cargo: Refined Copper",
+        "use": [
+            "Trucking: LS Factory|Create Copper Wire Spool",
+            "Trucking: LS Factory|Create Copper Wire Spool x5",
+            "Trucking: LS Port Export|Export Copper x1",
+            "Trucking: LS Port Export|Export Copper x10"
+        ],
+        "weight": 10
+    },
+    "refined_gold": {
+        "make": [
+            "Trucking: LS Foundry|Refine Gold x10"
+        ],
+        "name": "Truck Cargo: Refined Gold",
+        "use": [
+            "Trucking: Jewelry Store|Deliver Refined Gold",
+            "Trucking: LS Factory|Create Jewelry",
+            "Trucking: LS Factory|Titanium Jewelry"
+        ],
+        "weight": 20
+    },
+    "refined_solder": {
+        "make": [
+            "Trucking: LS Foundry|Refine Solder",
+            "Trucking: LS Foundry|Refine Solder x4"
+        ],
+        "name": "Truck Cargo: Refined Solder",
+        "use": [
+            "Trucking: LS Factory|Create Circuit Boards",
+            "Trucking: LS Factory|Create Circuit Boards x10",
+            "Trucking: LS Factory|Create Batteries",
+            "Trucking: LS Factory|Create Batteries x5"
+        ],
+        "weight": 5
+    },
+    "refined_tin": {
+        "make": [
+            "Trucking: LS Foundry|Refine Tin x1",
+            "Trucking: LS Foundry|Refine Tin x10",
+            "Trucking: LS Foundry|Refine Tin x20"
+        ],
+        "name": "Truck Cargo: Refined Tin",
+        "use": [
+            "Trucking: LS Foundry|Refine Amalgam",
+            "Trucking: LS Foundry|Refine Amalgam x10",
+            "Trucking: LS Port Export|Export Tin x1",
+            "Trucking: LS Port Export|Export Tin x10"
+        ],
+        "weight": 10
+    },
+    "refined_zinc": {
+        "make": [
+            "Trucking: LS Foundry|Refine Raw Ore Mix x1",
+            "Trucking: LS Foundry|Refine Raw Ore Mix x10",
+            "Trucking: LS Foundry|Zinc Alloy"
+        ],
+        "name": "Truck Cargo: Refined Zinc",
+        "use": [
+            "Trucking: LS Factory|Create Batteries",
+            "Trucking: LS Factory|Create Batteries x5",
+            "Trucking: LS Port Export|Export Zinc x1",
+            "Trucking: LS Port Export|Export Zinc x10"
+        ],
+        "weight": 10
+    },
+    "refined_sand": {
+        "make": [
+            "Trucking: Deep Quarry|Gravel Pulverizing",
+            "Trucking: Deep Quarry|Recycle Ore Mix",
+            "Trucking: Deep Quarry|Use Explosives",
+            "Trucking: Filtering Plant|Filter Gravel",
+            "Trucking: Filtering Plant|Filter Gravel x6",
+            "Trucking: Sandstone Collector|Sand"
+        ],
+        "name": "Truck Cargo: Sand",
+        "use": [
+            "Trucking: LS Foundry|Ceramic Tiles",
+            "Trucking: LS Foundry|Ceramic Tiles x10",
+            "Trucking: LS Foundry|Refine Glass x1",
+            "Trucking: LS Foundry|Refine Glass x10",
+            "Trucking: Quarry|Create Cement",
+            "Trucking: Quarry|Create Cement x10",
+            "Trucking: Quarry|Deliver Sand",
+            "Trucking: Sawmill|Sawdust Filler Exploit"
+        ],
+        "weight": 5
+    },
+    "tcargodust": {
+        "make": [
+            "Trucking: Sawmill|Grind Sawdust x1",
+            "Trucking: Sawmill|Grind Sawdust x5",
+            "Trucking: Sawmill|Sawdust Filler Exploit",
+            "Trucking: Sawmill|Mill Planks x1",
+            "Trucking: Sawmill|Mill Planks x5"
+        ],
+        "name": "Truck Cargo: Sawdust",
+        "use": [
+            "Trucking: Clucking Bell Farms|Pack Crispy Fish Meat x10",
+            "Trucking: Clucking Bell Farms|Pack Crispy Meat x10",
+            "Trucking: LS Factory|Create Cardboard",
+            "Trucking: LS Port Export|<span sort='A'></span>Export Sawdust x1",
+            "Trucking: LS Port Export|<span sort='B'></span>Export Sawdust x10",
+            "Trucking: Quarry|Create Cement",
+            "Trucking: Quarry|Create Cement x10",
+            "Trucking: Sawmill|Chipboard Planks"
+        ],
+        "weight": 3
+    },
+    "scrap_aluminum": {
+        "make": [
+            "Trucking: Sandstone Collector|Scrap Aluminum",
+            "Trucking: Sorting Facility|Sort Recycled Trash",
+            "Trucking: Sorting Facility|Sort Recycled Trash x3"
+        ],
+        "name": "Truck Cargo: Scrap Aluminum",
+        "use": [
+            "Trucking: LS Foundry|Refine Aluminum x1",
+            "Trucking: LS Foundry|Refine Aluminum x10",
+            "Trucking: LS Foundry|Refine Bronze Alloy x1",
+            "Trucking: LS Foundry|Refine Bronze Alloy x10"
+        ],
+        "weight": 5
+    },
+    "scrap_copper": {
+        "make": [
+            "Trucking: Sandstone Collector|Scrap Copper",
+            "Trucking: Sorting Facility|Sort Recycled Electronics",
+            "Trucking: Sorting Facility|Sort Recycled Electronics x2"
+        ],
+        "name": "Truck Cargo: Scrap Copper",
+        "use": [
+            "Trucking: LS Foundry|Refine Bronze Alloy x1",
+            "Trucking: LS Foundry|Refine Bronze Alloy x10",
+            "Trucking: LS Foundry|Refine Copper x1",
+            "Trucking: LS Foundry|Refine Copper x10",
+            "Trucking: LS Foundry|Refine Copper x20"
+        ],
+        "weight": 5
+    },
+    "scrap_gold": {
+        "make": [
+            "Trucking: GSD Mine|Use Explosives",
+            "Trucking: LS Foundry|Substitute Gold",
+            "Trucking: Sorting Facility|Sort Recycled Electronics",
+            "Trucking: Sorting Facility|Sort Recycled Electronics x2"
+        ],
+        "name": "Truck Cargo: Scrap Gold",
+        "use": [
+            "Trucking: LS Factory|Create Computer",
+            "Trucking: LS Factory|Create Computer x10",
+            "Trucking: LS Foundry|Refine Gold x10"
+        ],
+        "weight": 10
+    },
+    "scrap_lead": {
+        "make": [
+            "Trucking: Filtering Plant|Filter Toxic Waste",
+            "Trucking: Filtering Plant|Filter Toxic Waste x3",
+            "Trucking: Sandstone Collector|Scrap Lead"
+        ],
+        "name": "Truck Cargo: Scrap Lead",
+        "use": [
+            "Trucking: LS Foundry|Refine Solder",
+            "Trucking: LS Foundry|Refine Solder x4"
+        ],
+        "weight": 15
+    },
+    "scrap_mercury": {
+        "make": [
+            "Trucking: Filtering Plant|Filter Toxic Waste",
+            "Trucking: Filtering Plant|Filter Toxic Waste x3",
+            "Trucking: Sandstone Collector|Scrap Mercury"
+        ],
+        "name": "Truck Cargo: Scrap Mercury",
+        "use": [
+            "Trucking: LS Foundry|Refine Amalgam",
+            "Trucking: LS Foundry|Refine Amalgam x10"
+        ],
+        "weight": 15
+    },
+    "scrap_plastic": {
+        "make": [
+            "Trucking: Sorting Facility|Sort Recycled Electronics",
+            "Trucking: Sorting Facility|Sort Recycled Electronics x2",
+            "Trucking: Sorting Facility|Sort Recycled Trash",
+            "Trucking: Sorting Facility|Sort Recycled Trash x3"
+        ],
+        "name": "Truck Cargo: Scrap Plastic",
+        "use": [
+            "Illegal: Plastic Molding|Craft Empty Defib Kit",
+            "Illegal: Plastic Molding|Craft Empty Pill Capsule",
+            "Illegal: Pop's Pills|Pick up pills crate",
+            "Illegal: Pop's Pills|Pick up pills crate x10",
+            "Trucking: LS Factory|Create Circuit Boards",
+            "Trucking: LS Factory|Create Circuit Boards x10",
+            "Trucking: LS Factory|Create Fiberglass Spool",
+            "Trucking: LS Factory|Create Fiberglass Spool x10",
+            "Trucking: McKenzie Export|Export Scrap Plastic",
+            "Trucking: McKenzie Export|Export Scrap Plastic x10",
+            "Trucking: McKenzie Export|Export Scrap Plastic x100"
+        ],
+        "weight": 5
+    },
+    "scrap_tin": {
+        "make": [
+            "Trucking: Sandstone Collector|Scrap Tin",
+            "Trucking: Sorting Facility|Sort Recycled Trash",
+            "Trucking: Sorting Facility|Sort Recycled Trash x3"
+        ],
+        "name": "Truck Cargo: Scrap Tin",
+        "use": [
+            "Trucking: LS Foundry|Refine Bronze Alloy x1",
+            "Trucking: LS Foundry|Refine Bronze Alloy x10",
+            "Trucking: LS Foundry|Refine Tin x1",
+            "Trucking: LS Foundry|Refine Tin x10",
+            "Trucking: LS Foundry|Refine Tin x20"
+        ],
+        "weight": 5
+    },
+    "pucargosmall": {
+        "make": [
+            "Trucking Cargo Merchant: Buy Tools|Buy: Tools",
+            "Trucking Cargo Merchant: Buy Tools|Buy: Tools x10",
+            "Trucking Cargo Merchant: Buy Tools|Buy: Tools x100"
+        ],
+        "name": "Truck Cargo: Tools",
+        "use": [
+            "Trucking Cargo Merchant: Sell Tools|Sell: Tools",
+            "Trucking Cargo Merchant: Sell Tools|Sell: Tools x10",
+            "Trucking Cargo Merchant: Sell Tools|Sell: Tools x100",
+            "Trucking: Vehicle Parts|Temporary Repair Shop"
+        ],
+        "weight": 1
+    },
+    "recycled_waste": {
+        "make": [
+            "Trucking: Elysian Island Waste Deposit|<span sort='A'></span>Toxic Waste",
+            "Trucking: Elysian Island Waste Deposit|<span sort='B'></span>Toxic Waste x3"
+        ],
+        "name": "Truck Cargo: Toxic Waste",
+        "use": [
+            "Trucking: Filtering Plant|Filter Toxic Waste",
+            "Trucking: Filtering Plant|Filter Toxic Waste x3"
+        ],
+        "weight": 110
+    },
+    "liquid_water": {
+        "make": [
+            "Liberty: LCFD|Tokens to Treated Water",
+            "Liberty: LCFD|Tokens to Treated Water x3",
+            "Trucking: Water Treatment Plant|Clean Waste Water",
+            "Trucking: Water Treatment Plant|Treat Unfiltered Water",
+            "Trucking: Water Treatment Plant|Treat Unfiltered Water x2"
+        ],
+        "name": "Truck Cargo: Treated Water (100L)",
+        "use": [
+            "Trucking: Filtering Plant|Mix Concrete",
+            "Trucking: Filtering Plant|Mix Concrete x2",
+            "Trucking: LS Factory|Create Cardboard",
+            "Trucking: Refinery|Refine Diluted Fuel",
+            "Trucking: Vehicle Factory|HVY Nightshark"
+        ],
+        "weight": 100
+    },
+    "liquid_water_raw": {
+        "make": [
+            "Trucking: Land Act Reservoir|Pick up Unfiltered Water",
+            "Trucking: Land Act Reservoir|Pick up Unfiltered Water x3"
+        ],
+        "name": "Truck Cargo: Unfiltered Water (100L)",
+        "use": [
+            "Trucking: Water Treatment Plant|Treat Unfiltered Water",
+            "Trucking: Water Treatment Plant|Treat Unfiltered Water x2"
+        ],
+        "weight": 100
+    },
+    "upgrade_kit_voltic2": {
+        "make": [
+            "Trucking: Vehicle Factory|Coil Rocket Voltic"
+        ],
+        "name": "Upgrade Kit (Voltic)",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|tenf|10F|car": {
+        "make": [
+            "Trucking: Vehicle Factory|10F"
+        ],
+        "name": "Vehicle Shipment: 10F",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|zr350|Annis ZR-350|car": {
+        "make": [
+            "Trucking: Vehicle Factory|Annis ZR-350"
+        ],
+        "name": "Vehicle Shipment: Annis ZR-350",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|savanna|Coil Savanna|car": {
+        "make": [
+            "Trucking: Vehicle Factory|Coil Savanna"
+        ],
+        "name": "Vehicle Shipment: Coil Savanna",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|nightshark|HVY Nightshark|car": {
+        "make": [
+            "Trucking: Vehicle Factory|HVY Nightshark"
+        ],
+        "name": "Vehicle Shipment: HVY Nightshark",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|vertice|Hijak Vertice|car": {
+        "make": [
+            "Trucking: Vehicle Factory|Hijak Vertice"
+        ],
+        "name": "Vehicle Shipment: Hijak Vertice",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|futo|Karin Futo|car": {
+        "make": [
+            "Trucking: Vehicle Factory|Karin Futo"
+        ],
+        "name": "Vehicle Shipment: Karin Futo",
+        "use": [],
+        "weight": 0
+    },
+    "vehicle_shipment|landstalker2|Landstalker XL|car": {
+        "make": [
+            "Trucking: Vehicle Factory|Landstalker XL"
+        ],
+        "name": "Vehicle Shipment: Landstalker XL",
+        "use": [],
+        "weight": 0
+    }
 }
