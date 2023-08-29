@@ -15,6 +15,7 @@ import StorageMapScreen from './components/TTools/Storages/map/StorageMapScreen'
 import StoragesScreen from './components/TTools/Storages/StoragesScreen';
 import TToolsAdminScreen from './components/TTools/Admin/TToolsAdminScreen';
 import TToolsScreen from './components/TTools/Home/TToolsScreen';
+import TruckingScreen from './components/TTools/Trucking/TruckingScreen';
 import UnderConstruction from './components/_common/UnderConstruction';
 
 const routes = [
@@ -105,7 +106,7 @@ const routes = [
 	{
 		path: '/ttools/trucking/',
 		name: 'Trucking',
-		component: UnderConstruction,
+		component: TruckingScreen,
 		layout: '/home',
 	},
 	{
