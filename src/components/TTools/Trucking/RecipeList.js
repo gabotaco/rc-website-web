@@ -41,7 +41,7 @@ const RecipeList = props => {
 					{itemInfo[product].name}: {products[product]}
 					{recipeItem === product ? (
 						<span className="text-success"> (Crafting Product)</span>
-					) : (
+					) : itemInfo[product].make.length > 0 ? (
 						<button
 							className="btn btn-sm btn-primary ml-2"
 							onClick={() => {
@@ -49,7 +49,7 @@ const RecipeList = props => {
 							}}>
 							Select As Crafting Product
 						</button>
-					)}
+					) : null}
 				</p>
 			);
 		}
@@ -69,13 +69,15 @@ const RecipeList = props => {
 			ingredientItems.push(
 				<p key={ingredient}>
 					{itemInfo[ingredient].name}: {ingredients[ingredient]}
-					<button
-						className="btn btn-sm btn-primary ml-2"
-						onClick={() => {
-							props.setFinalProduct(ingredient);
-						}}>
-						Select As Crafting Product
-					</button>
+					{itemInfo[ingredient].make.length > 0 ? (
+						<button
+							className="btn btn-sm btn-primary ml-2"
+							onClick={() => {
+								props.setFinalProduct(ingredient);
+							}}>
+							Select As Crafting Product
+						</button>
+					) : null}
 				</p>
 			);
 		}
