@@ -38,8 +38,8 @@ const StoragesScreen = () => {
 
 		if (!apiStorageData || !apiBizData) return setDataError(true);
 
-		if (!apiStorageData | !apiStorageData.storages) return setDataError(true);
-		if (!apiBizData | !apiBizData.businesses) return setDataError(true);
+		if (!apiStorageData.storages) return setDataError(true);
+		if (!apiBizData.businesses) return setDataError(true);
 
 		const tiers = Object.keys(apiBizData.businesses).reduce((sum, key) => {
 			if (!key.startsWith('biz_train')) return sum;

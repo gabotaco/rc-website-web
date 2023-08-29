@@ -169,10 +169,10 @@ export const payManager = (manager, company) => {
 	});
 };
 
-export const getCurrentVehicles = () => {
+export const getCurrentRTSVehicles = () => {
 	return makeApiRequest({
 		method: 'GET',
-		url: '/tycoon/currentvehicles',
+		url: '/tycoon/rts/currentvehicles',
 	});
 };
 
@@ -197,5 +197,19 @@ export const getStorages = () => {
 	return makeApiRequest({
 		method: 'GET',
 		url: '/tycoon/storages',
+	});
+};
+
+export const getTrunks = game_id => {
+	return makeApiRequest({
+		method: 'GET',
+		url: `/tycoon/trunks?${game_id ? `id=${game_id}` : ''}`,
+	});
+};
+
+export const getCurrentVehicles = () => {
+	return makeApiRequest({
+		method: 'GET',
+		url: '/tycoon/currentvehicles',
 	});
 };
