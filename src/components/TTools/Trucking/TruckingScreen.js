@@ -111,6 +111,10 @@ const TruckingScreen = () => {
 		getData();
 	}, []);
 
+	useEffect(() => {
+		console.log('finalProduct', finalProduct);
+	}, [finalProduct]);
+
 	return (
 		<div className="container w-auto p-3">
 			{!storageData || !itemData ? (
@@ -133,6 +137,7 @@ const TruckingScreen = () => {
 								}}
 								value={finalProduct}>
 								{Object.keys(itemInfo).map((item, index) => {
+									if (itemInfo[item].make.length === 0) return null;
 									return (
 										<option key={index} value={item}>
 											{itemInfo[item].name}
