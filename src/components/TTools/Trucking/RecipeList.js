@@ -34,14 +34,13 @@ const RecipeList = props => {
 		const products = recipeData.products;
 		if (!products) return null;
 
-		let productItems = [];
-		for (const product in products) {
-			productItems.push(
-				<p key={product}>
-					{itemInfo[product].name}: {products[product]}
-					{recipeItem === product ? (
-						<span className="text-success"> (Crafting Product)</span>
-					) : itemInfo[product].make.length > 0 ? (
+		const productItems = Object.keys(products).map(product => (
+			<p key={product}>
+				{itemInfo[product].name}: {products[product]}
+				{recipeItem === product ? (
+					<span className="text-success"> (Crafting Product)</span>
+				) : (
+					itemInfo[product].make.length > 0 && (
 						<button
 							className="btn btn-sm btn-primary ml-2"
 							onClick={() => {
@@ -49,12 +48,12 @@ const RecipeList = props => {
 							}}>
 							Select As Crafting Product
 						</button>
-					) : null}
-				</p>
-			);
-		}
+					)
+				)}
+			</p>
+		));
 
-		return productItems;
+		return <>{productItems}</>;
 	}
 
 	function getRecipesIngredients(transformer, recipe) {
@@ -64,25 +63,22 @@ const RecipeList = props => {
 		const ingredients = recipeData.reagents;
 		if (!ingredients) return null;
 
-		let ingredientItems = [];
-		for (const ingredient in ingredients) {
-			ingredientItems.push(
-				<p key={ingredient}>
-					{itemInfo[ingredient].name}: {ingredients[ingredient]}
-					{itemInfo[ingredient].make.length > 0 ? (
-						<button
-							className="btn btn-sm btn-primary ml-2"
-							onClick={() => {
-								props.setFinalProduct(ingredient);
-							}}>
-							Select As Crafting Product
-						</button>
-					) : null}
-				</p>
-			);
-		}
+		const ingredientItems = Object.keys(ingredients).map(ingredient => (
+			<p key={ingredient}>
+				{itemInfo[ingredient].name}: {ingredients[ingredient]}
+				{itemInfo[ingredient].make.length > 0 && (
+					<button
+						className="btn btn-sm btn-primary ml-2"
+						onClick={() => {
+							props.setFinalProduct(ingredient);
+						}}>
+						Select As Crafting Product
+					</button>
+				)}
+			</p>
+		));
 
-		return ingredientItems;
+		return <>{ingredientItems}</>;
 	}
 
 	function calculateRecipeRuns(transformer, recipe) {
@@ -94,29 +90,25 @@ const RecipeList = props => {
 		let productWeight = 0;
 		let ingredientWeight = 0;
 
-		//Get the weight of the products
+		const mutiplier = Math.ceil(recipeAmountNeeded / products[recipeItem]);
+
 		for (const product in products) {
-			productWeight +=
-				products[product] * itemInfo[product].weight * recipeAmountNeeded;
+			productWeight += products[product] * itemInfo[product].weight * mutiplier;
 		}
 
-		//Get the weight of the ingredients
 		for (const ingredient in ingredients) {
 			ingredientWeight +=
-				ingredients[ingredient] *
-				itemInfo[ingredient].weight *
-				recipeAmountNeeded;
+				ingredients[ingredient] * itemInfo[ingredient].weight * mutiplier;
 		}
 
-		//Calculate the number of runs needed to make the final product
-		const runsNeeded =
-			Math.ceil(productWeight / trailerCapacity) >
-			Math.ceil(ingredientWeight / trailerCapacity)
-				? Math.ceil(productWeight / trailerCapacity)
-				: Math.ceil(ingredientWeight / trailerCapacity);
+		console.log(mutiplier);
 
-		//Return the number of runs needed to make the final product
-		return runsNeeded > 0 ? runsNeeded : 0;
+		const runsNeeded = Math.max(
+			Math.ceil(productWeight / trailerCapacity),
+			Math.ceil(ingredientWeight / trailerCapacity)
+		);
+
+		return Math.max(runsNeeded, 0);
 	}
 
 	function getRecipeIngredientAmountPerRun(transformer, recipe) {
@@ -128,17 +120,14 @@ const RecipeList = props => {
 
 		const runsNeeded = calculateRecipeRuns(transformer, recipe);
 
-		let ingredientItems = [];
-		for (const ingredient in ingredients) {
-			ingredientItems.push(
-				<p key={ingredient}>
-					{itemInfo[ingredient].name}:{' '}
-					{Math.floor(
-						ingredients[ingredient] * (recipeAmountNeeded / runsNeeded)
-					)}
-				</p>
-			);
-		}
+		const ingredientItems = Object.keys(ingredients).map(ingredient => (
+			<p key={ingredient}>
+				{itemInfo[ingredient].name}:{' '}
+				{Math.floor(
+					ingredients[ingredient] * (recipeAmountNeeded / runsNeeded)
+				)}
+			</p>
+		));
 
 		return ingredientItems;
 	}
