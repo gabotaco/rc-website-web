@@ -14,26 +14,49 @@ const ItemStorage = props => {
 	// Props
 
 	useEffect(() => {
-		if (props.item) {
-			setItemName(props.item);
-		}
+		if (props.item) setItemName(props.item);
 
-		if (props.amount) {
-			setItemAmount(Number(props.amount));
-		}
+		if (props.amount) setItemAmount(Number(props.amount));
 
-		if (props.needed) {
-			setItemNeeded(props.needed);
-		}
+		if (props.needed) setItemNeeded(props.needed);
 
-		if (props.storages) {
-			setItemStorages(props.storages);
-		}
+		if (props.storages) setItemStorages(props.storages);
 	}, [props]);
 
 	const completeColour = '#2ecc71';
 	const incompleteColour = '#e74b3c';
 
+	const renderProgressBar = value => (
+		<Progress multi>
+			<Progress
+				animated
+				bar
+				striped
+				value={value}
+				min={0}
+				max={itemNeeded}
+				style={{
+					backgroundColor:
+						value >= itemNeeded ? completeColour : incompleteColour,
+				}}
+			/>
+		</Progress>
+	);
+
+	const renderStorageItems = () => {
+		return Object.keys(itemStorages).map((storage, index) => {
+			if (storage === 'amount') return null;
+			return (
+				<div key={index}>
+					{storage}:{' '}
+					<>
+						<FormattedNumber num={itemStorages[storage]} />
+						{renderProgressBar(itemStorages[storage])}
+					</>
+				</div>
+			);
+		});
+	};
 	return (
 		<>
 			<div
@@ -44,63 +67,22 @@ const ItemStorage = props => {
 						{itemInfo[itemName] ? itemInfo[itemName].name : itemName}
 					</div>
 					<div className="col text-right">
-						{<FormattedNumber num={itemAmount} />}/
-						{<FormattedNumber num={itemNeeded} />}
+						<FormattedNumber num={itemAmount} />/
+						<FormattedNumber num={itemNeeded} />
 					</div>
 				</div>
 
-				<Progress multi className="m-2">
-					<Progress
-						animated
-						bar
-						striped
-						value={itemAmount}
-						min={0}
-						max={itemNeeded}
-						style={{
-							backgroundColor:
-								itemAmount >= itemNeeded ? completeColour : incompleteColour,
-						}}
-					/>
-				</Progress>
-				{Object.keys(itemStorages).length ? (
+				{renderProgressBar(itemAmount)}
+
+				{Object.keys(itemStorages).length > 0 && (
 					<div className="row p-2">
 						<div className="col">
 							Storages:
-							<div className="col">
-								{Object.keys(itemStorages).map((storage, index) => {
-									if (storage === 'amount') return null;
-									return (
-										<div key={index}>
-											{storage}:{' '}
-											{
-												<>
-													<FormattedNumber num={itemStorages[storage]} />
-													<Progress multi className="m-2">
-														<Progress
-															animated
-															bar
-															striped
-															value={itemStorages[storage]}
-															min={0}
-															max={itemNeeded}
-															style={{
-																backgroundColor:
-																	itemStorages[storage] >= itemNeeded
-																		? completeColour
-																		: incompleteColour,
-															}}
-														/>
-													</Progress>
-												</>
-											}
-										</div>
-									);
-								})}
-							</div>
+							<div className="col">{renderStorageItems()}</div>
 						</div>
 					</div>
-				) : null}
+				)}
+
 			</div>
 			<br />
 		</>

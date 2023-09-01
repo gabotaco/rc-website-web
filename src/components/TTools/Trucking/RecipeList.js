@@ -101,8 +101,6 @@ const RecipeList = props => {
 				ingredients[ingredient] * itemInfo[ingredient].weight * mutiplier;
 		}
 
-		console.log(mutiplier);
-
 		const runsNeeded = Math.max(
 			Math.ceil(productWeight / trailerCapacity),
 			Math.ceil(ingredientWeight / trailerCapacity)
