@@ -109,8 +109,12 @@ const IndexScreen = ({ history }) => {
 							}}></iframe>
 					</div>
 				</div>
-				<div>
+				<div
+					style={{
+						fontFamily: '"Rubik", sans-serif',
+					}}>
 					<Jarallax
+						className="jumbotron jumbotron-fluid bg-image d-flex align-items-center"
 						{...{
 							uid: 2,
 							options: {
@@ -121,174 +125,94 @@ const IndexScreen = ({ history }) => {
 								Height: '25%',
 							},
 						}}>
-						<div style={{ ...Styles.company, zIndex: '1' }}>
-							<div
-								style={{
-									display: 'grid',
-									gridTemplateColumns: '1fr 1fr 1fr',
-									padding: '90px 0',
-									placeItems: 'center',
-									margin: 'auto',
-									marginLeft: '20%',
-									marginRight: '20%',
-								}}>
-								<h2
-									style={{
-										textAlign: 'center',
-										gridRow: '1',
-										gridColumn: '1 / span 2',
-										color: '#ff7f9f',
-
-										fontSize: '2rem',
-										fontWeight: '700',
-									}}>
-									PIGS - Combat & Robbery
-								</h2>
-								<h3
-									style={{
-										textAlign: 'center',
-										gridRow: '2',
-										gridColumn: '1 / span 2',
-										fontFamily: "'Krona One', sans-serif",
-										fontSize: '1rem',
-									}}>
-									The only criminal enterprise in Tycoon. Take it all. Leave no
-									witnesses.
-								</h3>
-								<button
-									onClick={PIGSPage}
-									style={{
-										...Styles.companyButton,
-										gridRow: '1',
-										gridColumn: '3',
-										backgroundColor: '#ff7f9f',
-										justifySelf: 'right',
-									}}>
-									<span className="mbri-preview"></span>
-									<span
+						<div className="container">
+							<div className="row">
+								<div className="col-12 col-md-6 col-lg-8">
+									<h2
+										className="text-center text-md-left text-lg-center display-4"
 										style={{
-											fontFamily: "'Rubik', sans-serif",
-											fontWeight: '500',
-											fontSize: '16px',
-											paddingLeft: '0.5rem',
+											color: '#ff7f9f',
 										}}>
-										See More
-									</span>
-								</button>
-								<button
-									onClick={PIGSDiscord}
-									style={{
-										...Styles.companyButton,
-										gridRow: '2',
-										gridColumn: '3',
-										backgroundColor: '#ff7f9f',
-										justifySelf: 'right',
-									}}>
-									<span className="socicon-discord"></span>
-									<span
+										PIGS - Combat & Robbery
+									</h2>
+									<h3 className="text-center text-md-left text-lg-center lead">
+										The only criminal enterprise in Tycoon. Take it all. Leave
+										no witnesses.
+									</h3>
+								</div>
+								<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+									<button
+										className="btn btn-lg mb-2"
+										onClick={PIGSPage}
 										style={{
-											fontFamily: "'Rubik', sans-serif",
-											fontWeight: '500',
-											fontSize: '16px',
-											paddingLeft: '0.5rem',
+											backgroundColor: '#ff7f9f',
+											borderRadius: '100px',
 										}}>
-										Discord
-									</span>
-								</button>
+										<span className="mbri-preview"></span>
+										<span className="ml-2">See More</span>
+									</button>
+									<button
+										className="btn btn-lg mb-2"
+										onClick={PIGSDiscord}
+										style={{
+											backgroundColor: '#ff7f9f',
+											borderRadius: '100px',
+										}}>
+										<span className="socicon-discord"></span>
+										<span className="ml-2">Discord</span>
+									</button>
+								</div>
 							</div>
 						</div>
 					</Jarallax>
 					<div>
 						<div
+							className="jumbotron jumbotron-fluid bg-image d-flex align-items-center "
 							style={{
 								backgroundImage:
-									'url("../../../assets/images/unknown-2-2000x664.png',
-								...Styles.company,
-
-								backgroundPosition: '50% 50%',
-								backgroundPositionX: '50%',
-								backgroundPositionY: '50%',
-								backgroundRepeat: 'no-repeat',
-								backgroundRepeatX: 'no-repeat',
-								backgroundRepeatY: 'no-repeat',
-								backgroundSize: 'cover',
+									'url("../../../assets/images/unknown-2-2000x664.png")',
 							}}>
-							<div
-								style={{
-									display: 'grid',
-									gridTemplateColumns: '1fr 1fr 1fr',
-									padding: '90px 0',
-									placeItems: 'center',
-									margin: 'auto',
-									marginLeft: '20%',
-									marginRight: '20%',
-								}}>
-								<h2
-									style={{
-										textAlign: 'center',
-										gridRow: '1',
-										gridColumn: '2 / span 3',
-										color: '#ff8600',
-										fontFamily: "'Orbitron', sans-serif",
-
-										fontSize: '2rem',
-										fontWeight: '700',
-									}}>
-									Rockwell Transport Solutions
-								</h2>
-								<h3
-									style={{
-										textAlign: 'center',
-										gridRow: '2',
-										gridColumn: '2 / span 3',
-										fontFamily: "'Krona One', sans-serif",
-										fontSize: '1rem',
-										fontWeight: '300',
-									}}>
-									Get your dream job; drive performance vehicles, pilot exciting
-									aircraft, and deliver randomized heavy vehicles.
-								</h3>
-								<button
-									onClick={RTSPage}
-									style={{
-										...Styles.companyButton,
-										gridRow: '1',
-										gridColumn: '1',
-										backgroundColor: '#ff8600',
-										justifySelf: 'left',
-									}}>
-									<span className="mbri-preview"></span>
-									<span
-										style={{
-											fontFamily: "'Rubik', sans-serif",
-											fontWeight: '500',
-											fontSize: '16px',
-											paddingLeft: '0.5rem',
-										}}>
-										See More
-									</span>
-								</button>
-
-								<button
-									onClick={RTSDiscord}
-									style={{
-										...Styles.companyButton,
-										gridRow: '2',
-										gridColumn: '1',
-										backgroundColor: '#ff8600',
-										justifySelf: 'left',
-									}}>
-									<span className="socicon-discord"></span>
-									<span
-										style={{
-											fontFamily: "'Rubik', sans-serif",
-											fontWeight: '500',
-											fontSize: '16px',
-											paddingLeft: '0.5rem',
-										}}>
-										Discord
-									</span>
-								</button>
+							<div className="container">
+								<div className="row">
+									<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+										<button
+											className="btn btn-lg mb-2"
+											onClick={RTSPage}
+											style={{
+												backgroundColor: '#ff8600',
+												borderRadius: '100px',
+											}}>
+											<span className="mbri-preview"></span>
+											<span className="ml-2">See More</span>
+										</button>
+										<button
+											className="btn btn-lg mb-2"
+											onClick={RTSDiscord}
+											style={{
+												backgroundColor: '#ff8600',
+												borderRadius: '100px',
+											}}>
+											<span className="socicon-discord"></span>
+											<span className="ml-2">Discord</span>
+										</button>
+									</div>
+									<div className="col-12 col-md-6 col-lg-8">
+										<div className="d-flex flex-column">
+											<h2
+												className="text-center text-md-left text-lg-center display-4"
+												style={{
+													color: '#ff8600',
+												}}>
+												Rockwell Transport Solutions
+											</h2>
+											<h3 className="text-center text-md-left text-lg-center lead">
+												Get your dream job; drive performance vehicles, pilot
+												exciting aircraft, and deliver randomized heavy
+												vehicles.
+											</h3>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
