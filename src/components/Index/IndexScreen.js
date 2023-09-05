@@ -33,19 +33,17 @@ const IndexScreen = ({ history }) => {
 				<div
 					style={{
 						background: 'black',
-						minWidth: '100vw',
+						fontFamily: "'Rubik', sans-serif",
 					}}>
-					<div
-						style={{
-							display: 'flex',
-							flexFlow: 'row wrap',
-							placeContent: 'center',
-							alignItems: 'start',
-							margin: '0 auto',
-							maxWidth: '1110px',
-						}}>
-						<div style={Styles.card}>
-							<h4 style={Styles.cardHeader}>Dynamic Gameplay</h4>
+					<div className="container d-flex flex-wrap justify-content-centert">
+						<div
+							style={{
+								...Styles.card,
+							}}
+							className="align-items-center p-4 m-3">
+							<h4 style={Styles.cardHeader} className="pb-2">
+								Dynamic Gameplay
+							</h4>
 							<p>
 								Whether you're in the mood for solo play or want to team up in
 								epic combat, the Rockwell Corporation has you covered.
@@ -53,8 +51,14 @@ const IndexScreen = ({ history }) => {
 								More details can be found at the pages linked below.
 							</p>
 						</div>
-						<div style={Styles.card}>
-							<h4 style={Styles.cardHeader}>Dual Enrollment</h4>
+						<div
+							style={{
+								...Styles.card,
+							}}
+							className="align-items-center p-4 m-3">
+							<h4 style={Styles.cardHeader} className="pb-2">
+								Dual Enrollment
+							</h4>
 							<p>
 								Due to the unique structure of the Rockwell Corporation, you
 								have unfettered access to both PIGS and RTS. All you need is a
@@ -62,8 +66,14 @@ const IndexScreen = ({ history }) => {
 								progress is saved in both companies!
 							</p>
 						</div>
-						<div style={Styles.card}>
-							<h4 style={Styles.cardHeader}>Unique Features</h4>
+						<div
+							style={{
+								...Styles.card,
+							}}
+							className="align-items-center p-4 m-3">
+							<h4 style={Styles.cardHeader} className="pb-2">
+								Unique Features
+							</h4>
 							<p>
 								With our PIGS Tracker, you can see how many of your fellow
 								members are online and even see their locations.
@@ -74,8 +84,14 @@ const IndexScreen = ({ history }) => {
 								all!
 							</p>
 						</div>
-						<div style={Styles.card}>
-							<h4 style={Styles.cardHeader}>Alfred the Drunk Butler</h4>
+						<div
+							style={{
+								...Styles.card,
+							}}
+							className="align-items-center p-4 m-3">
+							<h4 style={Styles.cardHeader} className="pb-2">
+								Alfred the Drunk Butler
+							</h4>
 							<p>
 								When he's not passed out from a wild night, he can update your
 								roles, show your progress to the next level-up, your total
@@ -92,7 +108,7 @@ const IndexScreen = ({ history }) => {
 						width: '100%',
 						background: 'linear-gradient(0deg, #232323, #000000)',
 					}}>
-					<div className="container" style={Styles.rcTrailer}>
+					<div className="container p-5">
 						<iframe
 							title="RC Trailer"
 							className="mbr-embedded-video"
@@ -114,7 +130,6 @@ const IndexScreen = ({ history }) => {
 						fontFamily: '"Rubik", sans-serif',
 					}}>
 					<Jarallax
-						className="jumbotron jumbotron-fluid bg-image d-flex align-items-center"
 						{...{
 							uid: 2,
 							options: {
@@ -122,64 +137,35 @@ const IndexScreen = ({ history }) => {
 								...Styles.jarallax,
 							},
 							style: {
-								Height: '25%',
+								height: '25%',
 							},
 						}}>
-						<div className="container">
-							<div className="row">
-								<div className="col-12 col-md-6 col-lg-8">
-									<h2
-										className="text-center text-md-left text-lg-center display-4"
-										style={{
-											color: '#ff7f9f',
-										}}>
-										PIGS - Combat & Robbery
-									</h2>
-									<h3 className="text-center text-md-left text-lg-center lead">
-										The only criminal enterprise in Tycoon. Take it all. Leave
-										no witnesses.
-									</h3>
-								</div>
-								<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
-									<button
-										className="btn btn-lg mb-2"
-										onClick={PIGSPage}
-										style={{
-											backgroundColor: '#ff7f9f',
-											borderRadius: '100px',
-										}}>
-										<span className="mbri-preview"></span>
-										<span className="ml-2">See More</span>
-									</button>
-									<button
-										className="btn btn-lg mb-2"
-										onClick={PIGSDiscord}
-										style={{
-											backgroundColor: '#ff7f9f',
-											borderRadius: '100px',
-										}}>
-										<span className="socicon-discord"></span>
-										<span className="ml-2">Discord</span>
-									</button>
-								</div>
-							</div>
-						</div>
-					</Jarallax>
-					<div>
 						<div
-							className="jumbotron jumbotron-fluid bg-image d-flex align-items-center "
+							className="jumbotron jumbotron-fluid d-flex align-items-center m-0"
 							style={{
-								backgroundImage:
-									'url("../../../assets/images/unknown-2-2000x664.png")',
+								backgroundColor: 'rgba(0, 0, 0, 0.25)',
 							}}>
 							<div className="container">
-								<div className="row">
+								<div className="row p-5">
+									<div className="col-12 col-md-6 col-lg-8">
+										<h2
+											className="text-center text-md-left text-lg-center display-4"
+											style={{
+												color: '#ff7f9f',
+											}}>
+											PIGS - Combat & Robbery
+										</h2>
+										<h3 className="text-center text-md-left text-lg-center lead">
+											The only criminal enterprise in Tycoon. Take it all. Leave
+											no witnesses.
+										</h3>
+									</div>
 									<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
 										<button
 											className="btn btn-lg mb-2"
-											onClick={RTSPage}
+											onClick={PIGSPage}
 											style={{
-												backgroundColor: '#ff8600',
+												backgroundColor: '#ff7f9f',
 												borderRadius: '100px',
 											}}>
 											<span className="mbri-preview"></span>
@@ -187,29 +173,71 @@ const IndexScreen = ({ history }) => {
 										</button>
 										<button
 											className="btn btn-lg mb-2"
-											onClick={RTSDiscord}
+											onClick={PIGSDiscord}
 											style={{
-												backgroundColor: '#ff8600',
+												backgroundColor: '#ff7f9f',
 												borderRadius: '100px',
 											}}>
 											<span className="socicon-discord"></span>
 											<span className="ml-2">Discord</span>
 										</button>
 									</div>
-									<div className="col-12 col-md-6 col-lg-8">
-										<div className="d-flex flex-column">
-											<h2
-												className="text-center text-md-left text-lg-center display-4"
+								</div>
+							</div>
+						</div>
+					</Jarallax>
+					<div>
+						<div
+							className="jumbotron p-0 m-0"
+							style={{
+								backgroundImage:
+									'url("../../../assets/images/unknown-2-2000x664.png")',
+								backgroundSize: 'cover',
+							}}>
+							<div
+								className="jumbotron jumbotron-fluid d-flex align-items-center"
+								style={{
+									backgroundColor: 'rgba(0, 0, 0, 0.25)',
+								}}>
+								<div className="container p-5">
+									<div className="row">
+										<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+											<button
+												className="btn btn-lg mb-2"
+												onClick={RTSPage}
 												style={{
-													color: '#ff8600',
+													backgroundColor: '#ff8600',
+													borderRadius: '100px',
 												}}>
-												Rockwell Transport Solutions
-											</h2>
-											<h3 className="text-center text-md-left text-lg-center lead">
-												Get your dream job; drive performance vehicles, pilot
-												exciting aircraft, and deliver randomized heavy
-												vehicles.
-											</h3>
+												<span className="mbri-preview"></span>
+												<span className="ml-2">See More</span>
+											</button>
+											<button
+												className="btn btn-lg mb-2"
+												onClick={RTSDiscord}
+												style={{
+													backgroundColor: '#ff8600',
+													borderRadius: '100px',
+												}}>
+												<span className="socicon-discord"></span>
+												<span className="ml-2">Discord</span>
+											</button>
+										</div>
+										<div className="col-12 col-md-6 col-lg-8">
+											<div className="d-flex flex-column">
+												<h2
+													className="text-center text-md-left text-lg-center display-4"
+													style={{
+														color: '#ff8600',
+													}}>
+													Rockwell Transport Solutions
+												</h2>
+												<h3 className="text-center text-md-left text-lg-center lead">
+													Get your dream job; drive performance vehicles, pilot
+													exciting aircraft, and deliver randomized heavy
+													vehicles.
+												</h3>
+											</div>
 										</div>
 									</div>
 								</div>
@@ -233,47 +261,14 @@ const Styles = {
 		keepImg: false,
 	},
 	card: {
-		fontFamily: "'Rubik', sans-serif",
-		fontSize: '1rem',
-		fontStyle: 'normal',
 		color: '#767676',
 		backgroundColor: '#232323',
-		padding: '2rem',
-
 		flex: '1',
-		margin: '1rem',
 		lineHeight: '1.6',
 		minWidth: '225px',
 	},
 	cardHeader: {
 		fontSize: '1rem',
 		color: '#fff',
-		paddingBottom: '1rem',
-	},
-	company: {
-		fontFamily: "'Orbitron', sans-serif",
-		fontSize: '2rem',
-		fontDisplay: 'swap',
-
-		padding: '27.5px 0',
-	},
-	companyButton: {
-		borderRadius: '100px',
-		fontFamily: "'Rubik', sans-serif",
-		fontSize: '1.6rem',
-		padding: '1rem 3rem',
-		margin: '0 0 0.5rem 0',
-		border: 'none',
-		color: '#fff',
-		display: 'flex',
-	},
-	rcTrailer: {
-		maxWidth: '1140px',
-		paddingTop: '30px',
-		paddingRight: '15px',
-		paddingLeft: '15px',
-		paddingBottom: '60px',
-		marginLeft: 'auto',
-		marginRight: 'auto',
 	},
 };
