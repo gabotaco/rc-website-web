@@ -125,10 +125,7 @@ const IndexScreen = ({ history }) => {
 							}}></iframe>
 					</div>
 				</div>
-				<div
-					style={{
-						fontFamily: '"Rubik", sans-serif',
-					}}>
+				<div>
 					<Jarallax
 						{...{
 							uid: 2,
@@ -152,10 +149,15 @@ const IndexScreen = ({ history }) => {
 											className="text-center text-md-left text-lg-center display-4"
 											style={{
 												color: '#ff7f9f',
+												fontFamily: "'Orbitron', sans-serif",
 											}}>
 											PIGS - Combat & Robbery
 										</h2>
-										<h3 className="text-center text-md-left text-lg-center lead">
+										<h3
+											className="text-center text-md-left text-lg-center lead"
+											style={{
+												fontFamily: "'Krona One', sans-serif",
+											}}>
 											The only criminal enterprise in Tycoon. Take it all. Leave
 											no witnesses.
 										</h3>
@@ -167,6 +169,7 @@ const IndexScreen = ({ history }) => {
 											style={{
 												backgroundColor: '#ff7f9f',
 												borderRadius: '100px',
+												fontFamily: "'Rubik', sans-serif",
 											}}>
 											<span className="mbri-preview"></span>
 											<span className="ml-2">See More</span>
@@ -177,6 +180,7 @@ const IndexScreen = ({ history }) => {
 											style={{
 												backgroundColor: '#ff7f9f',
 												borderRadius: '100px',
+												fontFamily: "'Rubik', sans-serif",
 											}}>
 											<span className="socicon-discord"></span>
 											<span className="ml-2">Discord</span>
@@ -208,6 +212,7 @@ const IndexScreen = ({ history }) => {
 												style={{
 													backgroundColor: '#ff8600',
 													borderRadius: '100px',
+													fontFamily: "'Rubik', sans-serif",
 												}}>
 												<span className="mbri-preview"></span>
 												<span className="ml-2">See More</span>
@@ -218,6 +223,7 @@ const IndexScreen = ({ history }) => {
 												style={{
 													backgroundColor: '#ff8600',
 													borderRadius: '100px',
+													fontFamily: "'Rubik', sans-serif",
 												}}>
 												<span className="socicon-discord"></span>
 												<span className="ml-2">Discord</span>
@@ -229,10 +235,15 @@ const IndexScreen = ({ history }) => {
 													className="text-center text-md-left text-lg-center display-4"
 													style={{
 														color: '#ff8600',
+														fontFamily: "'Orbitron', sans-serif",
 													}}>
 													Rockwell Transport Solutions
 												</h2>
-												<h3 className="text-center text-md-left text-lg-center lead">
+												<h3
+													className="text-center text-md-left text-lg-center lead"
+													style={{
+														fontFamily: "'Krona One', sans-serif",
+													}}>
 													Get your dream job; drive performance vehicles, pilot
 													exciting aircraft, and deliver randomized heavy
 													vehicles.
