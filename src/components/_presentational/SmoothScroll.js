@@ -23,9 +23,11 @@ const SmoothScroll = ({ children }) => {
 	}, [windowSize, children]);
 
 	const setBodyHeight = () => {
-		document.body.style.height = `${
-			scrollingContainerRef.current.getBoundingClientRect().height
-		}px`;
+		setTimeout(() => {
+			document.body.style.height = `${
+				scrollingContainerRef.current.getBoundingClientRect().height
+			}px`;
+		}, 50);
 	};
 
 	// 5.
