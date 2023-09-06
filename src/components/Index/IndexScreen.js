@@ -198,8 +198,7 @@ const IndexScreen = ({ history }) => {
 						<div
 							className="jumbotron p-0 m-0"
 							style={{
-								backgroundImage:
-									'url("../../../assets/images/unknown-2-2000x664.png")',
+								backgroundImage: 'url("assets/images/unknown-2-2000x664.png")',
 								backgroundSize: 'cover',
 							}}>
 							<div
