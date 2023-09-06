@@ -4,11 +4,11 @@ import '../../assets/css/social-icons.css';
 
 import React, { useState } from 'react';
 
-const NavigationBar = props => {
-	const HomePage = () => props.history.push('/');
-	const ProfilePage = () => props.history.push('/home/profile');
-	const TToolsPage = () => props.history.push('/home/ttools');
-	const ApplyPage = () => props.history.push('/home/apply');
+const NavigationBar = ({ history }) => {
+	const HomePage = () => history.push('/');
+	const ProfilePage = () => history.push('/home/profile');
+	const TToolsPage = () => history.push('/home/ttools');
+	const ApplyPage = () => history.push('/home/apply');
 
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 
