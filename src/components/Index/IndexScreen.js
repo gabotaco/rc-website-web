@@ -175,7 +175,7 @@ const IndexScreen = ({ history }) => {
 												borderRadius: '100px',
 												fontFamily: "'Rubik', sans-serif",
 											}}>
-											<span className="mbri-preview"></span>
+											<span className="mbrib-preview"></span>
 											<span className="ml-2">See More</span>
 										</button>
 										<button
@@ -221,7 +221,7 @@ const IndexScreen = ({ history }) => {
 													borderRadius: '100px',
 													fontFamily: "'Rubik', sans-serif",
 												}}>
-												<span className="mbri-preview"></span>
+												<span className="mbrib-preview"></span>
 												<span className="ml-2">See More</span>
 											</button>
 											<button

@@ -1,5 +1,6 @@
 import { Button } from 'reactstrap';
 import '../../assets/css/mobirise-icons.css';
+import '../../assets/css/mobirise-icons-bold.css';
 import '../../assets/css/social-icons.css';
 
 import React, { useState } from 'react';
@@ -44,7 +45,7 @@ const NavigationBar = ({ history }) => {
 						className="nav-link link text-white font-weight-bold h5 d-flex"
 						href="home/profile/">
 						<span
-							className="mbri-home mbr-iconfont mbr-iconfont-btn mr-2"
+							className="mbrib-home mbr-iconfont mbr-iconfont-btn mr-2"
 							style={{
 								color: 'rgb(255, 134, 0)',
 								fontSize: '1.6rem',
@@ -56,7 +57,7 @@ const NavigationBar = ({ history }) => {
 						href="home/ttools/"
 						className="nav-link link text-white font-weight-bold h5 mr-2 d-flex">
 						<span
-							className="mobi-mbri mbri-sites mbr-iconfont mbr-iconfont-btn mr-2"
+							className="mbrib-sites mbr-iconfont mbr-iconfont-btn mr-2"
 							style={{
 								color: 'rgb(255, 134, 0)',
 								fontSize: '1.6rem',
@@ -72,6 +73,11 @@ const NavigationBar = ({ history }) => {
 							fontSize: '1.2rem',
 							borderRadius: '100px',
 						}}>
+						<span
+							className="mbrib-edit mr-2"
+							style={{
+								fontSize: '1.6rem',
+							}}></span>
 						Apply Now!
 					</Button>
 				</form>
