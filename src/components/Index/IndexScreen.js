@@ -162,7 +162,11 @@ const IndexScreen = ({ history }) => {
 											no witnesses.
 										</h3>
 									</div>
-									<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+									<div
+										className="col-12 col-md-6 col-lg-4 d-flex flex-column"
+										style={{
+											justifyContent: 'space-around',
+										}}>
 										<button
 											className="btn btn-lg mb-2"
 											onClick={PIGSPage}
@@ -205,7 +209,11 @@ const IndexScreen = ({ history }) => {
 								}}>
 								<div className="container p-5">
 									<div className="row">
-										<div className="col-12 col-md-6 col-lg-4 d-flex flex-column">
+										<div
+											className="col-12 col-md-6 col-lg-4 d-flex flex-column"
+											style={{
+												justifyContent: 'space-around',
+											}}>
 											<button
 												className="btn btn-lg mb-2"
 												onClick={RTSPage}
