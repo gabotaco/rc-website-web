@@ -1,13 +1,25 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavigationBar from './NavigationBar';
 import SmoothScroll from '../_presentational/SmoothScroll';
 
 const RTSScreen = () => {
+	const [showVideo, setShowVideo] = useState(false);
+
 	const RTSDiscord = () => window.open('https://discord.gg/9WRV87P');
 	const Handbook = () =>
 		window.open(
 			'https://docs.google.com/document/d/1FWgrc_7kowBbWLx2Ce0WHOIXy-vAcUCROe6UTMOszjM/edit'
 		);
+
+	const videoId = 'Mv0SdAn4Yi0';
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setShowVideo(true);
+		}, 1500);
+
+		return () => clearTimeout(timer);
+	}, []);
 
 	return (
 		<div>
@@ -23,9 +35,7 @@ const RTSScreen = () => {
 						title="RTS Video"
 						id="ytplayer"
 						type="text/html"
-						src={
-							'https://www.youtube.com/embed/Mv0SdAn4Yi0?autoplay=1&mute=1&controls=0&loop=1&playlist=Mv0SdAn4Yi0'
-						}
+						src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`}
 						width={window.innerWidth}
 						height={window.innerHeight}
 						frameBorder="0"
@@ -36,6 +46,10 @@ const RTSScreen = () => {
 					<div
 						className="jumbotron jumbotron-fluid d-flex align-items-center m-0"
 						style={{
+							backgroundImage: showVideo
+								? 'none'
+								: `url("https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg")`,
+							backgroundSize: 'cover',
 							backgroundColor: 'rgba(0, 0, 0, 0.05)',
 							position: 'relative',
 							height: '100vh',

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import NavigationBar from './NavigationBar';
 import SmoothScroll from '../_presentational/SmoothScroll';
 const Images = {
@@ -6,11 +6,22 @@ const Images = {
 };
 
 const PIGSScreen = () => {
+	const [showVideo, setShowVideo] = useState(false);
 	const PIGSDiscord = () => window.open('https://discord.gg/FXNyJfQ');
 	const Handbook = () =>
 		window.open(
 			'https://docs.google.com/document/d/1NTAP7AkkNBiQehwCn8A-OTAExUVsIUbpXjNXAYmGmsk/edit'
 		);
+
+	const videoId = '6Zqu8q7p9hc';
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setShowVideo(true);
+		}, 1500);
+
+		return () => clearTimeout(timer);
+	}, []);
 
 	return (
 		<div>
@@ -27,9 +38,7 @@ const PIGSScreen = () => {
 							title="PIGS Video"
 							id="ytplayer"
 							type="text/html"
-							src={
-								'https://www.youtube.com/embed/6Zqu8q7p9hc?autoplay=1&mute=1&controls=0&loop=1&playlist=6Zqu8q7p9hc'
-							}
+							src={`https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&controls=0&loop=1&playlist=${videoId}`}
 							width={window.innerWidth}
 							height={window.innerHeight}
 							frameBorder="0"
@@ -40,6 +49,10 @@ const PIGSScreen = () => {
 						<div
 							className="jumbotron jumbotron-fluid d-flex align-items-center m-0"
 							style={{
+								backgroundImage: showVideo
+									? 'none'
+									: `url("https://i.ytimg.com/vi/${videoId}/maxresdefault.jpg")`,
+								backgroundSize: 'cover',
 								backgroundColor: 'rgba(0, 0, 0, 0.05)',
 								position: 'relative',
 								height: '100vh',
@@ -144,26 +157,26 @@ const PIGSScreen = () => {
 										combat & robbery specialists take anything and everything.
 									</p>
 									<h4
-										class="text-lg-center display-7"
+										class="text-lg-left display-7"
 										style={{
 											color: '#ff3366',
 										}}>
 										Hundreds of cops
 									</h4>
-									<p class="text-lg-center display-7">
+									<p class="text-lg-left display-7">
 										Once you ready up, there's no turning back. You'll defend
 										the area from incumbent police until the loot is secure.
 										Afterwards you must exfiltrate through waves of cops that
 										are shooting to kill.
 									</p>
 									<h4
-										class="text-lg-center display-7"
+										class="text-lg-left display-7"
 										style={{
 											color: '#ff3366',
 										}}>
 										Defend the Party Leader
 									</h4>
-									<p class="text-lg-center display-7">
+									<p class="text-lg-left display-7">
 										Critical to success is defending the party leader. This
 										individual has secured the loot and if they're captured or
 										killed, the party's loot is diminished.
