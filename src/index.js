@@ -24,9 +24,15 @@ const RcApp = () => {
 	return (
 		<Router history={hist}>
 			<Switch>
-				<Route path="/" exact render={IndexScreen} />
-				<Route path="/rts" exact render={RTSScreen} />
-				<Route path="/pigs" exact render={PIGSScreen} />
+				<Route path="/" exact>
+					<IndexScreen history={hist} />
+				</Route>
+				<Route path="/rts" exact>
+					<RTSScreen history={hist} />
+				</Route>
+				<Route path="/pigs" exact>
+					<PIGSScreen history={hist} />
+				</Route>
 
 				<Redirect from="/auth" exact to="/auth/login" />
 				<Route path="/auth" render={props => <AuthLayout {...props} />} />
