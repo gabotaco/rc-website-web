@@ -20,7 +20,12 @@ const SmoothScroll = ({ children }) => {
 	// 4.
 	useEffect(() => {
 		setBodyHeight();
-	}, [windowSize, children]);
+	}, [windowSize]);
+
+	useEffect(() => {
+		setBodyHeight();
+		window.scrollTo(0, 0);
+	}, [children]);
 
 	const setBodyHeight = () => {
 		setTimeout(() => {

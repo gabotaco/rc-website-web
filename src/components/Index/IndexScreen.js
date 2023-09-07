@@ -15,7 +15,7 @@ const IndexScreen = ({ history }) => {
 	const PIGSDiscord = () => window.open('https://discord.gg/FXNyJfQ');
 
 	return (
-		<div>
+		<>
 			<NavigationBar />
 			<SmoothScroll>
 				<Jarallax
@@ -264,7 +264,7 @@ const IndexScreen = ({ history }) => {
 					</div>
 				</div>
 			</SmoothScroll>
-		</div>
+		</>
 	);
 };
 
