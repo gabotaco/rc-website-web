@@ -3,7 +3,7 @@ import '../../assets/css/mobirise-icons.css';
 import '../../assets/css/mobirise-icons-bold.css';
 import '../../assets/css/social-icons.css';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const NavigationBar = ({ history }) => {
 	const HomePage = () => history.push('/');
@@ -12,13 +12,28 @@ const NavigationBar = ({ history }) => {
 	const ApplyPage = () => history.push('/home/apply');
 
 	const [dropdownOpen, setDropdownOpen] = useState(false);
+	const [isTop, setIsTop] = useState(true);
+
+	useEffect(() => {
+		window.addEventListener('scroll', handleScroll, { passive: true });
+
+		return () => {
+			window.removeEventListener('scroll', handleScroll);
+		};
+	}, []);
+	const handleScroll = () => {
+		if (window.scrollY === 0) setIsTop(true);
+		else setIsTop(false);
+	};
 
 	return (
 		<nav
 			className={
 				'navbar navbar-expand-lg fixed-top navbar-dark' +
-				(dropdownOpen ? ' bg-dark' : ' ml-5 mr-5')
-			}>
+				(dropdownOpen ? ' bg-dark' : ' pl-5 pr-5') +
+				(!isTop ? ' bg-dark' : '')
+			}
+			style={{ backgroundColor: !isTop ? 'rgb(35, 35, 35)' : '' }}>
 			<a className="navbar-brand" onClick={HomePage} href="/">
 				<img
 					src="assets/images/logo-rc-376x226.png"
