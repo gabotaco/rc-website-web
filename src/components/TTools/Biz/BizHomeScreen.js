@@ -19,7 +19,6 @@ import React, { useEffect, useState } from 'react';
 import CustomTable from '../../_common/CustomTable';
 import FormattedNumber from '../../_common/FormattedNumber';
 import LoadingIcon from '../../_presentational/LoadingIcon';
-import $ from 'jquery';
 const businesses = require('./businesses.json');
 
 const BizHomeScreen = props => {
@@ -33,32 +32,6 @@ const BizHomeScreen = props => {
 	const [totalBonus, setSumTotalBonus] = useState('LOADING');
 	const [totalInvestment, setSumTotalInvestment] = useState('LOADING');
 	const [businessTable, setBusinessTable] = useState(<LoadingIcon />);
-
-	function getVisible() {
-		if (window.innerWidth <= 1199.98) {
-			document.getElementById('left-nav').style.top = '0px';
-			return;
-		}
-		if (!document.getElementById('navbar')) {
-			return setTimeout(() => {
-				getVisible();
-			}, 1);
-		}
-		const $el = $('#navbar');
-		const scrollTop = $(this).scrollTop();
-		const scrollBot = scrollTop + $(this).height();
-		const elTop = $el.offset().top;
-		const elBottom = elTop + $el.outerHeight();
-		const visibleTop = elTop < scrollTop ? scrollTop : elTop;
-		const visibleBottom = elBottom > scrollBot ? scrollBot : elBottom;
-
-		if (visibleBottom - visibleTop < 0) {
-			document.getElementById('left-nav').style.top = '0px';
-		} else {
-			document.getElementById('left-nav').style.top =
-				visibleBottom - visibleTop + 'px';
-		}
-	}
 
 	function calculateLevel(currentLevelExp) {
 		return Math.floor((Math.sqrt(1 + (8 * currentLevelExp) / 5) - 1) / 2);
@@ -171,12 +144,6 @@ const BizHomeScreen = props => {
 					alert('There was an error getting their tycoon businesses');
 				}
 			});
-
-		getVisible();
-		$(window).on('scroll resize', getVisible);
-		document.onresize = function () {
-			getVisible();
-		};
 	}, []);
 
 	return (
