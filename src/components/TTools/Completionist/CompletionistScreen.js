@@ -46,7 +46,7 @@ const CompletionistScreen = () => {
 
 		setOwnedVehiclesData(ownedVehicles);
 
-		Api.getCurrentVehicles().then(response => {
+		Api.getCurrentRTSVehicles().then(response => {
 			setCurrentVehiclesData(response.vehicles);
 		});
 	}
