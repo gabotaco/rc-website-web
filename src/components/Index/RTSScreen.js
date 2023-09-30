@@ -73,8 +73,8 @@ const RTSScreen = () => {
 										fontWeight: 'bold',
 										fontSize: '1.5rem',
 									}}>
-									You can drive a random selection of over 200 vehicles from
-									three categories: Performance, Heavy, and Aviation.
+									You can drive a random selection of over <b>600</b> vehicles
+									from three categories: Performance, Heavy, and Aviation.
 								</h3>
 							</div>
 						</div>
