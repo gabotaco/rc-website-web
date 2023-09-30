@@ -5,6 +5,8 @@ import '../../assets/css/social-icons.css';
 
 import React, { useState, useEffect } from 'react';
 
+import logo from '../../assets/img/logo/logo-rc-376x226.png';
+
 const NavigationBar = ({ history }) => {
 	const HomePage = () => history.push('/');
 	const ProfilePage = () => history.push('/home/profile');
@@ -41,12 +43,7 @@ const NavigationBar = ({ history }) => {
 				backgroundColor: !isTop ? 'rgba(35, 35, 35, ' + fadeFromTop + ')' : '',
 			}}>
 			<a className="navbar-brand" onClick={HomePage} href="/">
-				<img
-					src="assets/images/logo-rc-376x226.png"
-					alt="RC"
-					title=""
-					style={{ height: '4.9rem' }}
-				/>
+				<img src={logo} alt="RC" title="" style={{ height: '4.9rem' }} />
 			</a>
 			<button
 				className="navbar-toggler"
