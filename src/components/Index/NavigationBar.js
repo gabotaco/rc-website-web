@@ -13,6 +13,7 @@ const NavigationBar = ({ history }) => {
 
 	const [dropdownOpen, setDropdownOpen] = useState(false);
 	const [isTop, setIsTop] = useState(true);
+	const [fadeFromTop, setFadeFromTop] = useState(0);
 
 	useEffect(() => {
 		window.addEventListener('scroll', handleScroll, { passive: true });
@@ -23,17 +24,22 @@ const NavigationBar = ({ history }) => {
 	}, []);
 	const handleScroll = () => {
 		if (window.scrollY === 0) setIsTop(true);
-		else setIsTop(false);
+		else {
+			const heightQuater = window.innerHeight * 0.5;
+			setIsTop(false);
+			setFadeFromTop(window.scrollY / heightQuater);
+		}
 	};
 
 	return (
 		<nav
 			className={
 				'navbar navbar-expand-lg fixed-top navbar-dark' +
-				(dropdownOpen ? ' bg-dark' : ' pl-5 pr-5') +
-				(!isTop ? ' bg-dark' : '')
+				(dropdownOpen ? ' bg-dark' : ' pl-5 pr-5')
 			}
-			style={{ backgroundColor: !isTop ? 'rgb(35, 35, 35)' : '' }}>
+			style={{
+				backgroundColor: !isTop ? 'rgba(35, 35, 35, ' + fadeFromTop + ')' : '',
+			}}>
 			<a className="navbar-brand" onClick={HomePage} href="/">
 				<img
 					src="assets/images/logo-rc-376x226.png"
