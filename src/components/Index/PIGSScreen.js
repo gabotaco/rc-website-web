@@ -73,56 +73,56 @@ const PIGSScreen = () => {
 						}}>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/20190521232136-1-1920x969.jpg')}
+								src={require('../../assets/img/pigs/heist-deadguards.jpg')}
 								className="img-fluid"
 								alt="Pool of dead guards"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/20190521235638-1-1920x827.jpg')}
+								src={require('../../assets/img/pigs/heist-ammunation-dead.jpg')}
 								className="img-fluid"
 								alt="Amuniation store"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/20190521233212-1-1920x833.jpg')}
+								src={require('../../assets/img/pigs/heist-ammunation-explodingcars.jpg')}
 								className="img-fluid"
 								alt="Two exploding cars"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/20190521235645-1-1914x732.jpg')}
+								src={require('../../assets/img/pigs/heist-ammunation-ambulance.jpg')}
 								className="img-fluid"
 								alt="Ambulance at Ammuniation store"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/fivem-gtaprocess-2019-04-22-21-56-56-1920x1080.png')}
+								src={require('../../assets/img/pigs/heist-pacificstandard.png')}
 								className="img-fluid"
 								alt="Pafcic Standard Bank"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/fivem-gtaprocess-2019-04-22-20-56-4-1920x1080.png')}
+								src={require('../../assets/img/pigs/heist-slaughterhouse.png')}
 								className="img-fluid"
 								alt="Shooting from Slaughterhouse"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/screenshot-6-1600x900.png')}
+								src={require('../../assets/img/pigs/heist-ammunation.png')}
 								className="img-fluid"
 								alt="Ready to rob the ammuniation store"
 							/>
 						</div>
 						<div className="col-6 col-lg-3 p-4">
 							<img
-								src={require('../../assets/img/pigs/2-1630x783.png')}
+								src={require('../../assets/img/pigs/heist-humane.png')}
 								className="img-fluid"
 								alt="Shooting from Humane Labs"
 							/>
@@ -139,7 +139,7 @@ const PIGSScreen = () => {
 							<div className="row">
 								<div className="col-12 col-md-6 col-lg-8">
 									<img
-										src={require('../../assets/img/pigs/pigscity-807x750.png')}
+										src={require('../../assets/img/pigs/humvee.png')}
 										className="img-fluid"
 										alt="PIGS Humvee"
 									/>
