@@ -146,7 +146,7 @@ const PIGSScreen = () => {
 								</div>
 								<div className="col-12 col-md-6 col-lg-4">
 									<h2
-										class="text-lg-center pt-2 display-6"
+										className="text-lg-center pt-2 display-6"
 										style={{
 											color: '#ff7f9f',
 										}}>
@@ -157,26 +157,26 @@ const PIGSScreen = () => {
 										combat & robbery specialists take anything and everything.
 									</p>
 									<h4
-										class="text-lg-left display-7"
+										className="text-lg-left display-7"
 										style={{
 											color: '#ff3366',
 										}}>
 										Hundreds of cops
 									</h4>
-									<p class="text-lg-left display-7">
+									<p className="text-lg-left display-7">
 										Once you ready up, there's no turning back. You'll defend
 										the area from incumbent police until the loot is secure.
 										Afterwards you must exfiltrate through waves of cops that
 										are shooting to kill.
 									</p>
 									<h4
-										class="text-lg-left display-7"
+										className="text-lg-left display-7"
 										style={{
 											color: '#ff3366',
 										}}>
 										Defend the Party Leader
 									</h4>
-									<p class="text-lg-left display-7">
+									<p className="text-lg-left display-7">
 										Critical to success is defending the party leader. This
 										individual has secured the loot and if they're captured or
 										killed, the party's loot is diminished.
