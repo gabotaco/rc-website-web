@@ -29,7 +29,11 @@ const MemberDropdown = props => {
 	return (
 		<React.Fragment>
 			<SearchableDropdown
-				title={selectedMember ? selectedMember.in_game_name : 'Select'}
+				title={
+					selectedMember
+						? `${selectedMember.in_game_id}: ${selectedMember.in_game_name}`
+						: 'Select'
+				}
 				placeholder="Search (Discord ID, In game ID, In game name)"
 				data={
 					loading
