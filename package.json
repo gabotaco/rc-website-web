@@ -15,6 +15,7 @@
 		"datatables.net-bs4": "^3.2.2",
 		"datatables.net-datetime": "^1.1.0",
 		"dotenv": "^16.0.3",
+		"eslint-plugin-flowtype": "^8.0.3",
 		"graphql": "^14.1.1",
 		"history": "^4.9.0",
 		"jarallax": "^2.1.4",
