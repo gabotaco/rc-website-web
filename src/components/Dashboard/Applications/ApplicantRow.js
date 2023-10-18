@@ -263,16 +263,9 @@ const ApplicantRow = ({ applicant }) => {
 				</ModalFooter>
 			</Modal>
 			<td>
-				{app.status_info
-					? app.status === 'Contacted'
-						? app.status_info
-						: `${app.status} (${app.status_info})`
-					: app.status}
-			</td>
-			<td>{app.company.toUpperCase()}</td>
-			<td>
 				{app.in_game_id} {app.in_game_name}
 			</td>
+			<td>{app.company.toUpperCase()}</td>
 			<td>{app.country}</td>
 			<td data-order={new Date(app.createdAt).toISOString()}>
 				{new Date(app.createdAt).toDateString()}
@@ -281,6 +274,13 @@ const ApplicantRow = ({ applicant }) => {
 				<Button color="info" onClick={handleDetailsClick} disabled={loading}>
 					{loading ? <LoadingIcon /> : 'Details'}
 				</Button>
+			</td>
+			<td>
+				{app.status_info
+					? app.status === 'Contacted'
+						? app.status_info
+						: `${app.status} (${app.status_info})`
+					: app.status}
 			</td>
 		</tr>
 	);

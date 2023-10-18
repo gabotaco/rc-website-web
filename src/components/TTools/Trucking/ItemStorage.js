@@ -48,11 +48,8 @@ const ItemStorage = props => {
 			if (storage === 'amount') return null;
 			return (
 				<div key={index}>
-					{storage}:{' '}
-					<>
-						<FormattedNumber num={itemStorages[storage]} />
-						{renderProgressBar(itemStorages[storage])}
-					</>
+					{storage}: <FormattedNumber num={itemStorages[storage]} />
+					{renderProgressBar(itemStorages[storage])}
 				</div>
 			);
 		});
@@ -82,7 +79,6 @@ const ItemStorage = props => {
 						</div>
 					</div>
 				)}
-
 			</div>
 			<br />
 		</>
