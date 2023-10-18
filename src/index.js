@@ -11,6 +11,10 @@ import { createBrowserHistory } from 'history';
 // import "bootswatch/dist/darkly/bootstrap.min.css";
 // import "bootstrap/dist/css/bootstrap.css";
 
+import IndexScreen from './components/Index/IndexScreen';
+import PIGSScreen from './components/Index/PIGSScreen';
+import RTSScreen from './components/Index/RTSScreen';
+
 const hist = createBrowserHistory();
 const cache = new InMemoryCache({ addTypename: true });
 
@@ -24,11 +28,16 @@ const RcApp = () => {
 	return (
 		<Router history={hist}>
 			<Switch>
-				<Route
-					path="/"
-					exact
-					render={() => (window.location.href = 'home.html')}
-				/>
+				<Route path="/" exact>
+					<IndexScreen history={hist} />
+				</Route>
+				<Route path="/rts" exact>
+					<RTSScreen history={hist} />
+				</Route>
+				<Route path="/pigs" exact>
+					<PIGSScreen history={hist} />
+				</Route>
+
 				<Redirect from="/auth" exact to="/auth/login" />
 				<Route path="/auth" render={props => <AuthLayout {...props} />} />
 				<Route path="/home" render={props => <AppLayout {...props} />} />

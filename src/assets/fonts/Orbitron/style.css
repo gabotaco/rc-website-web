@@ -1,0 +1,42 @@
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 500;
+	src: url('./500.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 600;
+	src: url('./600.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 700;
+	src: url('./700.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 800;
+	src: url('./800.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Orbitron';
+	font-style: normal;
+	font-display: swap;
+	font-weight: 900;
+	src: url('./900.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Orbitron';
+	font-style: regular;
+	font-display: swap;
+	font-weight: 400;
+	src: url('./regular.ttf') format('truetype');
+}
